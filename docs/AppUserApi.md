@@ -1,0 +1,589 @@
+# swagger_client.AppUserApi
+
+All URIs are relative to *https://api.smooch.io/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**app_user_device_update**](AppUserApi.md#app_user_device_update) | **PUT** /appusers/{userId}/devices/{deviceId} | 
+[**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /appusers/{userId}/profile | 
+[**get_app_user**](AppUserApi.md#get_app_user) | **GET** /appusers/{userId} | 
+[**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /appusers/{userId}/channels | 
+[**link_app_user**](AppUserApi.md#link_app_user) | **POST** /appusers/{userId}/channels | 
+[**post_image_message**](AppUserApi.md#post_image_message) | **POST** /appusers/{userId}/images | 
+[**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /appusers | 
+[**track_event**](AppUserApi.md#track_event) | **POST** /appusers/{userId}/events | 
+[**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /appusers/{userId}/channels/{channel} | 
+[**update_app_user**](AppUserApi.md#update_app_user) | **PUT** /appusers/{userId} | 
+
+
+# **app_user_device_update**
+> ClientResponse app_user_device_update(user_id, device_id, app_user_device_update)
+
+
+
+Update specified device information.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+device_id = 'device_id_example' # str | Id of the device.
+app_user_device_update = swagger_client.DeviceUpdate() # DeviceUpdate | Supported properties for an updateAppUserDevice request.
+
+try: 
+    api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->app_user_device_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **device_id** | **str**| Id of the device. | 
+ **app_user_device_update** | [**DeviceUpdate**](DeviceUpdate.md)| Supported properties for an updateAppUserDevice request. | 
+
+### Return type
+
+[**ClientResponse**](ClientResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_app_user_profile**
+> AppUserResponse delete_app_user_profile(user_id)
+
+
+
+Delete specified app users profile.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+
+try: 
+    api_response = api_instance.delete_app_user_profile(user_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->delete_app_user_profile: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_app_user**
+> AppUserResponse get_app_user(user_id)
+
+
+
+Get the specified app user.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+
+try: 
+    api_response = api_instance.get_app_user(user_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->get_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_app_user_entity_ids**
+> AppUserResponse get_app_user_entity_ids(user_id)
+
+
+
+Get specified app users channel entity IDs.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+
+try: 
+    api_response = api_instance.get_app_user_entity_ids(user_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->get_app_user_entity_ids: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **link_app_user**
+> AppUserResponse link_app_user(user_id, app_user_link)
+
+
+
+Link specified app user to given channel.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+app_user_link = swagger_client.AppUserLink() # AppUserLink | Supported properties for a linkAppUser request.
+
+try: 
+    api_response = api_instance.link_app_user(user_id, app_user_link)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->link_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **app_user_link** | [**AppUserLink**](AppUserLink.md)| Supported properties for a linkAppUser request. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_image_message**
+> MessageResponse post_image_message(user_id, source, role)
+
+
+
+Send an image message to the conversation
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+source = '/path/to/file.txt' # file | Image to be uploaded
+role = 'role_example' # str | Role of the sender
+
+try: 
+    api_response = api_instance.post_image_message(user_id, source, role)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->post_image_message: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **source** | **file**| Image to be uploaded | 
+ **role** | **str**| Role of the sender | 
+
+### Return type
+
+[**MessageResponse**](MessageResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **pre_create_app_user**
+> AppUserResponse pre_create_app_user(app_user_pre_create)
+
+
+
+Pre-create an app user.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+app_user_pre_create = swagger_client.AppUserPreCreate() # AppUserPreCreate | Supported properties for a preCreateAppUser request.
+
+try: 
+    api_response = api_instance.pre_create_app_user(app_user_pre_create)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->pre_create_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_user_pre_create** | [**AppUserPreCreate**](AppUserPreCreate.md)| Supported properties for a preCreateAppUser request. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **track_event**
+> TrackEventResponse track_event(user_id, event)
+
+
+
+Track an event for the given app user.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+event = swagger_client.Event() # Event | Supported properties for a trackEvent request.
+
+try: 
+    api_response = api_instance.track_event(user_id, event)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->track_event: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **event** | [**Event**](Event.md)| Supported properties for a trackEvent request. | 
+
+### Return type
+
+[**TrackEventResponse**](TrackEventResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unlink_app_user**
+> unlink_app_user(user_id, channel)
+
+
+
+Unlink specified app user from given channel.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+channel = 'channel_example' # str | Name of the channel.
+
+try: 
+    api_instance.unlink_app_user(user_id, channel)
+except ApiException as e:
+    print("Exception when calling AppUserApi->unlink_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **channel** | **str**| Name of the channel. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_app_user**
+> AppUserResponse update_app_user(user_id, app_user_update)
+
+
+
+Update the specified app user.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.AppUserApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+app_user_update = swagger_client.AppUserUpdate() # AppUserUpdate | Supported properties for an updateAppUser request.
+
+try: 
+    api_response = api_instance.update_app_user(user_id, app_user_update)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->update_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **app_user_update** | [**AppUserUpdate**](AppUserUpdate.md)| Supported properties for an updateAppUser request. | 
+
+### Return type
+
+[**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
