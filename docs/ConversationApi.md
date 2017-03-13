@@ -1,4 +1,4 @@
-# swagger_client.ConversationApi
+# smooch.ConversationApi
 
 All URIs are relative to *https://api.smooch.io/v1*
 
@@ -20,21 +20,21 @@ Get the specified app users messages.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConversationApi()
+api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 before = 'before_example' # str | Timestamp of message. The API will return 100 messages before the specified timestamp (excluding any messages with the provided timestamp). (optional)
 after = 'after_example' # str | Timestamp of message. The API will return 100 messages after the specified timestamp (excluding any messages with the provided timestamp). (optional)
@@ -80,21 +80,21 @@ Reset the unread count of the conversation to 0. If the conversation has not yet
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConversationApi()
+api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try: 
@@ -135,23 +135,23 @@ Notify Smooch when an app maker starts or stops typing a response.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConversationApi()
+api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-typing_activity_trigger = swagger_client.TypingActivityTrigger() # TypingActivityTrigger | Supported properties for a triggerTypingActivity request.
+typing_activity_trigger = smooch.TypingActivityTrigger() # TypingActivityTrigger | Supported properties for a triggerTypingActivity request.
 
 try: 
     api_instance.trigger_typing_activity(user_id, typing_activity_trigger)

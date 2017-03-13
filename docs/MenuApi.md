@@ -1,4 +1,4 @@
-# swagger_client.MenuApi
+# smooch.MenuApi
 
 All URIs are relative to *https://api.smooch.io/v1*
 
@@ -20,21 +20,21 @@ Remove the specified app’s menu.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MenuApi()
+api_instance = smooch.MenuApi()
 
 try: 
     api_response = api_instance.delete_menu()
@@ -72,17 +72,17 @@ Get the specified app’s menu.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MenuApi()
+api_instance = smooch.MenuApi()
 
 try: 
     api_response = api_instance.get_menu()
@@ -120,18 +120,18 @@ Configure the specified app’s menu.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MenuApi()
-menu_update = swagger_client.Menu() # Menu | Supported properties for a updateMenu request.
+api_instance = smooch.MenuApi()
+menu_update = smooch.Menu() # Menu | Supported properties for a updateMenu request.
 
 try: 
     api_response = api_instance.update_menu(menu_update)

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.client_info import ClientInfo
+import smooch
+from smooch.rest import ApiException
+from smooch.models.client_info import ClientInfo
 
 
 class TestClientInfo(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestClientInfo(unittest.TestCase):
         """
         Test ClientInfo
         """
-        model = swagger_client.models.client_info.ClientInfo()
+        model = smooch.models.client_info.ClientInfo()
 
 
 if __name__ == '__main__':

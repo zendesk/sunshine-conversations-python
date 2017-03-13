@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.app_user_link import AppUserLink
+import smooch
+from smooch.rest import ApiException
+from smooch.models.app_user_link import AppUserLink
 
 
 class TestAppUserLink(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestAppUserLink(unittest.TestCase):
         """
         Test AppUserLink
         """
-        model = swagger_client.models.app_user_link.AppUserLink()
+        model = smooch.models.app_user_link.AppUserLink()
 
 
 if __name__ == '__main__':

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.app_user_pre_create import AppUserPreCreate
+import smooch
+from smooch.rest import ApiException
+from smooch.models.app_user_pre_create import AppUserPreCreate
 
 
 class TestAppUserPreCreate(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestAppUserPreCreate(unittest.TestCase):
         """
         Test AppUserPreCreate
         """
-        model = swagger_client.models.app_user_pre_create.AppUserPreCreate()
+        model = smooch.models.app_user_pre_create.AppUserPreCreate()
 
 
 if __name__ == '__main__':

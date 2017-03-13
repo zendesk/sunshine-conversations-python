@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.conversation import Conversation
+import smooch
+from smooch.rest import ApiException
+from smooch.models.conversation import Conversation
 
 
 class TestConversation(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestConversation(unittest.TestCase):
         """
         Test Conversation
         """
-        model = swagger_client.models.conversation.Conversation()
+        model = smooch.models.conversation.Conversation()
 
 
 if __name__ == '__main__':

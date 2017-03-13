@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.track_event_response import TrackEventResponse
+import smooch
+from smooch.rest import ApiException
+from smooch.models.track_event_response import TrackEventResponse
 
 
 class TestTrackEventResponse(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestTrackEventResponse(unittest.TestCase):
         """
         Test TrackEventResponse
         """
-        model = swagger_client.models.track_event_response.TrackEventResponse()
+        model = smooch.models.track_event_response.TrackEventResponse()
 
 
 if __name__ == '__main__':

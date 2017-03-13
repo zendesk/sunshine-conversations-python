@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.conversation_api import ConversationApi
+import smooch
+from smooch.rest import ApiException
+from smooch.apis.conversation_api import ConversationApi
 
 
 class TestConversationApi(unittest.TestCase):
     """ ConversationApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.conversation_api.ConversationApi()
+        self.api = smooch.apis.conversation_api.ConversationApi()
 
     def tearDown(self):
         pass

@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.menu_api import MenuApi
+import smooch
+from smooch.rest import ApiException
+from smooch.apis.menu_api import MenuApi
 
 
 class TestMenuApi(unittest.TestCase):
     """ MenuApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.menu_api.MenuApi()
+        self.api = smooch.apis.menu_api.MenuApi()
 
     def tearDown(self):
         pass

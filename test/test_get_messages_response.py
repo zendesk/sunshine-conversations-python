@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.get_messages_response import GetMessagesResponse
+import smooch
+from smooch.rest import ApiException
+from smooch.models.get_messages_response import GetMessagesResponse
 
 
 class TestGetMessagesResponse(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestGetMessagesResponse(unittest.TestCase):
         """
         Test GetMessagesResponse
         """
-        model = swagger_client.models.get_messages_response.GetMessagesResponse()
+        model = smooch.models.get_messages_response.GetMessagesResponse()
 
 
 if __name__ == '__main__':

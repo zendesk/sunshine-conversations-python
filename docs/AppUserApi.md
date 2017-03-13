@@ -1,4 +1,4 @@
-# swagger_client.AppUserApi
+# smooch.AppUserApi
 
 All URIs are relative to *https://api.smooch.io/v1*
 
@@ -27,24 +27,24 @@ Update specified device information.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 device_id = 'device_id_example' # str | Id of the device.
-app_user_device_update = swagger_client.DeviceUpdate() # DeviceUpdate | Supported properties for an updateAppUserDevice request.
+app_user_device_update = smooch.DeviceUpdate() # DeviceUpdate | Supported properties for an updateAppUserDevice request.
 
 try: 
     api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update)
@@ -87,21 +87,21 @@ Delete specified app users profile.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try: 
@@ -143,21 +143,21 @@ Get the specified app user.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try: 
@@ -199,21 +199,21 @@ Get specified app users channel entity IDs.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try: 
@@ -255,23 +255,23 @@ Link specified app user to given channel.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_link = swagger_client.AppUserLink() # AppUserLink | Supported properties for a linkAppUser request.
+app_user_link = smooch.AppUserLink() # AppUserLink | Supported properties for a linkAppUser request.
 
 try: 
     api_response = api_instance.link_app_user(user_id, app_user_link)
@@ -313,21 +313,21 @@ Send an image message to the conversation
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 source = '/path/to/file.txt' # file | Image to be uploaded
 role = 'role_example' # str | Role of the sender
@@ -373,18 +373,18 @@ Pre-create an app user.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
-app_user_pre_create = swagger_client.AppUserPreCreate() # AppUserPreCreate | Supported properties for a preCreateAppUser request.
+api_instance = smooch.AppUserApi()
+app_user_pre_create = smooch.AppUserPreCreate() # AppUserPreCreate | Supported properties for a preCreateAppUser request.
 
 try: 
     api_response = api_instance.pre_create_app_user(app_user_pre_create)
@@ -425,23 +425,23 @@ Track an event for the given app user.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-event = swagger_client.Event() # Event | Supported properties for a trackEvent request.
+event = smooch.Event() # Event | Supported properties for a trackEvent request.
 
 try: 
     api_response = api_instance.track_event(user_id, event)
@@ -483,21 +483,21 @@ Unlink specified app user from given channel.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 channel = 'channel_example' # str | Name of the channel.
 
@@ -540,23 +540,23 @@ Update the specified app user.
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import smooch
+from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: appToken
-swagger_client.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['app-token'] = 'Bearer'
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppUserApi()
+api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_update = swagger_client.AppUserUpdate() # AppUserUpdate | Supported properties for an updateAppUser request.
+app_user_update = smooch.AppUserUpdate() # AppUserUpdate | Supported properties for an updateAppUser request.
 
 try: 
     api_response = api_instance.update_app_user(user_id, app_user_update)

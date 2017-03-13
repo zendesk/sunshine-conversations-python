@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.menu import Menu
+import smooch
+from smooch.rest import ApiException
+from smooch.models.menu import Menu
 
 
 class TestMenu(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestMenu(unittest.TestCase):
         """
         Test Menu
         """
-        model = swagger_client.models.menu.Menu()
+        model = smooch.models.menu.Menu()
 
 
 if __name__ == '__main__':

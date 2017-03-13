@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.postback import Postback
+import smooch
+from smooch.rest import ApiException
+from smooch.models.postback import Postback
 
 
 class TestPostback(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestPostback(unittest.TestCase):
         """
         Test Postback
         """
-        model = swagger_client.models.postback.Postback()
+        model = smooch.models.postback.Postback()
 
 
 if __name__ == '__main__':

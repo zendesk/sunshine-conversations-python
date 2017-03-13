@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.device_update import DeviceUpdate
+import smooch
+from smooch.rest import ApiException
+from smooch.models.device_update import DeviceUpdate
 
 
 class TestDeviceUpdate(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestDeviceUpdate(unittest.TestCase):
         """
         Test DeviceUpdate
         """
-        model = swagger_client.models.device_update.DeviceUpdate()
+        model = smooch.models.device_update.DeviceUpdate()
 
 
 if __name__ == '__main__':

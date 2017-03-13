@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.typing_activity_trigger import TypingActivityTrigger
+import smooch
+from smooch.rest import ApiException
+from smooch.models.typing_activity_trigger import TypingActivityTrigger
 
 
 class TestTypingActivityTrigger(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestTypingActivityTrigger(unittest.TestCase):
         """
         Test TypingActivityTrigger
         """
-        model = swagger_client.models.typing_activity_trigger.TypingActivityTrigger()
+        model = smooch.models.typing_activity_trigger.TypingActivityTrigger()
 
 
 if __name__ == '__main__':
