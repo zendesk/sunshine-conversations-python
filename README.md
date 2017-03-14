@@ -165,12 +165,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## appToken
-
-- **Type**: API key
-- **API key parameter name**: app-token
-- **Location**: HTTP header
-
 ## jwt
 
 - **Type**: API key

@@ -205,13 +205,6 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         return {
-            'appToken':
-                {
-                    'type': 'api_key',
-                    'in': 'header',
-                    'key': 'app-token',
-                    'value': self.get_api_key_with_prefix('app-token')
-                },
             'jwt':
                 {
                     'type': 'api_key',

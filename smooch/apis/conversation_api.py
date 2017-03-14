@@ -127,7 +127,7 @@ class ConversationApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/messages', 'DELETE',
                                         path_params,
@@ -239,7 +239,7 @@ class ConversationApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/messages', 'GET',
                                         path_params,
@@ -350,7 +350,7 @@ class ConversationApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/messages', 'POST',
                                         path_params,
@@ -454,7 +454,7 @@ class ConversationApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/conversation/read', 'POST',
                                         path_params,
@@ -565,7 +565,7 @@ class ConversationApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/conversation/activity', 'POST',
                                         path_params,

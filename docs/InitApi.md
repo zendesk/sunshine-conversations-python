@@ -22,10 +22,6 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: appToken
-smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -54,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+[jwt](../README.md#jwt)
 
 ### HTTP request headers
 

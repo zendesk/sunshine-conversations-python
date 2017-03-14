@@ -127,7 +127,7 @@ class InitApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/init', 'POST',
                                         path_params,

@@ -141,7 +141,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/devices/{deviceId}', 'PUT',
                                         path_params,
@@ -245,7 +245,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/profile', 'DELETE',
                                         path_params,
@@ -349,7 +349,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}', 'GET',
                                         path_params,
@@ -453,7 +453,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/channels', 'GET',
                                         path_params,
@@ -564,7 +564,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/channels', 'POST',
                                         path_params,
@@ -682,7 +682,7 @@ class AppUserApi(object):
             select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/images', 'POST',
                                         path_params,
@@ -897,7 +897,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/events', 'POST',
                                         path_params,
@@ -1008,7 +1008,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}/channels/{channel}', 'DELETE',
                                         path_params,
@@ -1119,7 +1119,7 @@ class AppUserApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['appToken', 'jwt']
+        auth_settings = ['jwt']
 
         return self.api_client.call_api('/appusers/{userId}', 'PUT',
                                         path_params,
