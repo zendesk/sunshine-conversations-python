@@ -44,6 +44,7 @@ class JwtResponse(object):
     def jwt(self):
         """
         Gets the jwt of this JwtResponse.
+        The JWT.
 
         :return: The jwt of this JwtResponse.
         :rtype: str
@@ -54,6 +55,7 @@ class JwtResponse(object):
     def jwt(self, jwt):
         """
         Sets the jwt of this JwtResponse.
+        The JWT.
 
         :param jwt: The jwt of this JwtResponse.
         :type: str

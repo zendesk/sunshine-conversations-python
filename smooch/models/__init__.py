@@ -28,7 +28,9 @@ from .client_info import ClientInfo
 from .client_response import ClientResponse
 from .conversation import Conversation
 from .destination import Destination
+from .device_init import DeviceInit
 from .device_update import DeviceUpdate
+from .display_settings import DisplaySettings
 from .event import Event
 from .get_messages_response import GetMessagesResponse
 from .init import Init

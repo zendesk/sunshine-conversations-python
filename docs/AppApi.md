@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **create_app**
-> AppResponse create_app(app_create)
+> AppResponse create_app(app_create_body)
 
 
 
@@ -39,10 +39,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
-app_create = smooch.AppCreate() # AppCreate | Body for a createApp request.
+app_create_body = smooch.AppCreate() # AppCreate | Body for a createApp request.
 
 try: 
-    api_response = api_instance.create_app(app_create)
+    api_response = api_instance.create_app(app_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppApi->create_app: %s\n" % e)
@@ -52,7 +52,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_create** | [**AppCreate**](AppCreate.md)| Body for a createApp request. | 
+ **app_create_body** | [**AppCreate**](AppCreate.md)| Body for a createApp request. | 
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_secret_key**
-> SecretKeyResponse create_secret_key(app_id, secret_key_create)
+> SecretKeyResponse create_secret_key(app_id, secret_key_create_body)
 
 
 
@@ -92,10 +92,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-secret_key_create = smooch.SecretKeyCreate() # SecretKeyCreate | Body for a createSecretKey request.
+secret_key_create_body = smooch.SecretKeyCreate() # SecretKeyCreate | Body for a createSecretKey request.
 
 try: 
-    api_response = api_instance.create_secret_key(app_id, secret_key_create)
+    api_response = api_instance.create_secret_key(app_id, secret_key_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppApi->create_secret_key: %s\n" % e)
@@ -106,7 +106,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **secret_key_create** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
+ **secret_key_create_body** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
 
 ### Return type
 
@@ -197,7 +197,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-integration_id = 'integration_id_example' # str | Id of the integration.
+integration_id = 'integration_id_example' # str | Identifies the integration.
 
 try: 
     api_instance.delete_integration(app_id, integration_id)
@@ -210,7 +210,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **integration_id** | **str**| Id of the integration. | 
+ **integration_id** | **str**| Identifies the integration. | 
 
 ### Return type
 
@@ -250,7 +250,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-key_id = 'key_id_example' # str | Id of the secret key.
+key_id = 'key_id_example' # str | Identifies the secret key.
 
 try: 
     api_instance.delete_secret_key(app_id, key_id)
@@ -263,7 +263,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **key_id** | **str**| Id of the secret key. | 
+ **key_id** | **str**| Identifies the secret key. | 
 
 ### Return type
 
@@ -355,7 +355,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-key_id = 'key_id_example' # str | Id of the secret key.
+key_id = 'key_id_example' # str | Identifies the secret key.
 
 try: 
     api_response = api_instance.get_app_jwt(app_id, key_id)
@@ -369,7 +369,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **key_id** | **str**| Id of the secret key. | 
+ **key_id** | **str**| Identifies the secret key. | 
 
 ### Return type
 
@@ -409,7 +409,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-integration_id = 'integration_id_example' # str | Id of the integration.
+integration_id = 'integration_id_example' # str | Identifies the integration.
 
 try: 
     api_response = api_instance.get_integration(app_id, integration_id)
@@ -423,7 +423,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **integration_id** | **str**| Id of the integration. | 
+ **integration_id** | **str**| Identifies the integration. | 
 
 ### Return type
 
@@ -463,7 +463,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
-key_id = 'key_id_example' # str | Id of the secret key.
+key_id = 'key_id_example' # str | Identifies the secret key.
 
 try: 
     api_response = api_instance.get_secret_key(app_id, key_id)
@@ -477,7 +477,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **key_id** | **str**| Id of the secret key. | 
+ **key_id** | **str**| Identifies the secret key. | 
 
 ### Return type
 
@@ -516,8 +516,8 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
-limit = 3.4 # float | The number of records to return. (optional)
-offset = 3.4 # float | the number of initial records to skip before picking records to return. (optional)
+limit = 56 # int | The number of records to return. (optional)
+offset = 56 # int | The number of initial records to skip before picking records to return. (optional)
 
 try: 
     api_response = api_instance.list_apps(limit=limit, offset=offset)
@@ -530,8 +530,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float**| The number of records to return. | [optional] 
- **offset** | **float**| the number of initial records to skip before picking records to return. | [optional] 
+ **limit** | **int**| The number of records to return. | [optional] 
+ **offset** | **int**| The number of initial records to skip before picking records to return. | [optional] 
 
 ### Return type
 

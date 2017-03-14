@@ -53,6 +53,7 @@ class MenuItem(object):
     def text(self):
         """
         Gets the text of this MenuItem.
+        The button text of the menu item.
 
         :return: The text of this MenuItem.
         :rtype: str
@@ -63,6 +64,7 @@ class MenuItem(object):
     def text(self, text):
         """
         Sets the text of this MenuItem.
+        The button text of the menu item.
 
         :param text: The text of this MenuItem.
         :type: str
@@ -76,6 +78,7 @@ class MenuItem(object):
     def uri(self):
         """
         Gets the uri of this MenuItem.
+        A valid address, like http://smooch.io. Required for a *link* type item.
 
         :return: The uri of this MenuItem.
         :rtype: str
@@ -86,6 +89,7 @@ class MenuItem(object):
     def uri(self, uri):
         """
         Sets the uri of this MenuItem.
+        A valid address, like http://smooch.io. Required for a *link* type item.
 
         :param uri: The uri of this MenuItem.
         :type: str
@@ -122,6 +126,7 @@ class MenuItem(object):
     def postback(self):
         """
         Gets the postback of this MenuItem.
+        A payload for a postback. Required for a *postback* type item.
 
         :return: The postback of this MenuItem.
         :rtype: str
@@ -132,6 +137,7 @@ class MenuItem(object):
     def postback(self, postback):
         """
         Sets the postback of this MenuItem.
+        A payload for a postback. Required for a *postback* type item.
 
         :param postback: The postback of this MenuItem.
         :type: str

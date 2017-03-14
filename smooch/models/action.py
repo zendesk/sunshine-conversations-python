@@ -35,7 +35,7 @@ class Action(object):
             'text': 'str',
             'payload': 'str',
             'metadata': 'object',
-            'amount': 'str',
+            'amount': 'int',
             'currency': 'str',
             'default': 'bool',
             'icon_url': 'str',
@@ -68,7 +68,7 @@ class Action(object):
     def type(self):
         """
         Gets the type of this Action.
-        The action type. Supported values: *link*, *buy*, *postback*, *reply* and *locationRequest*. 
+        The action type.
 
         :return: The type of this Action.
         :rtype: str
@@ -79,13 +79,17 @@ class Action(object):
     def type(self, type):
         """
         Sets the type of this Action.
-        The action type. Supported values: *link*, *buy*, *postback*, *reply* and *locationRequest*. 
+        The action type.
 
         :param type: The type of this Action.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+        allowed_values = ["link", "buy", "postback", "reply", "locationRequest"]
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
@@ -118,7 +122,7 @@ class Action(object):
     def payload(self):
         """
         Gets the payload of this Action.
-        Required for *postback* and *reply* actions.
+        The payload to be sent with the resulting webhook. Required for *postback* and *reply* actions. 
 
         :return: The payload of this Action.
         :rtype: str
@@ -129,7 +133,7 @@ class Action(object):
     def payload(self, payload):
         """
         Sets the payload of this Action.
-        Required for *postback* and *reply* actions.
+        The payload to be sent with the resulting webhook. Required for *postback* and *reply* actions. 
 
         :param payload: The payload of this Action.
         :type: str
@@ -167,7 +171,7 @@ class Action(object):
         The amount being charged. It needs to be specified in cents and is an integer. Required for *buy* actions. 
 
         :return: The amount of this Action.
-        :rtype: str
+        :rtype: int
         """
         return self._amount
 
@@ -178,7 +182,7 @@ class Action(object):
         The amount being charged. It needs to be specified in cents and is an integer. Required for *buy* actions. 
 
         :param amount: The amount of this Action.
-        :type: str
+        :type: int
         """
 
         self._amount = amount
@@ -210,7 +214,7 @@ class Action(object):
     def default(self):
         """
         Gets the default of this Action.
-        Flag indicating the message action is the default for a message item in Facebook Messenger.
+        Flag indicating if the message action is the default for a message item in Facebook Messenger.
 
         :return: The default of this Action.
         :rtype: bool
@@ -221,7 +225,7 @@ class Action(object):
     def default(self, default):
         """
         Sets the default of this Action.
-        Flag indicating the message action is the default for a message item in Facebook Messenger.
+        Flag indicating if the message action is the default for a message item in Facebook Messenger.
 
         :param default: The default of this Action.
         :type: bool

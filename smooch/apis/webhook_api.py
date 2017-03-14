@@ -40,7 +40,7 @@ class WebhookApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_webhook(self, app_id, webhook_create, **kwargs):
+    def create_webhook(self, app_id, webhook_create_body, **kwargs):
         """
         Create a webhook for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -49,24 +49,24 @@ class WebhookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_webhook(app_id, webhook_create, callback=callback_function)
+        >>> thread = api.create_webhook(app_id, webhook_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param WebhookCreate webhook_create: Body for a createWebhook request.  (required)
+        :param WebhookCreate webhook_create_body: Body for a createWebhook request.  (required)
         :return: WebhookResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_webhook_with_http_info(app_id, webhook_create, **kwargs)
+            return self.create_webhook_with_http_info(app_id, webhook_create_body, **kwargs)
         else:
-            (data) = self.create_webhook_with_http_info(app_id, webhook_create, **kwargs)
+            (data) = self.create_webhook_with_http_info(app_id, webhook_create_body, **kwargs)
             return data
 
-    def create_webhook_with_http_info(self, app_id, webhook_create, **kwargs):
+    def create_webhook_with_http_info(self, app_id, webhook_create_body, **kwargs):
         """
         Create a webhook for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -75,18 +75,18 @@ class WebhookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_webhook_with_http_info(app_id, webhook_create, callback=callback_function)
+        >>> thread = api.create_webhook_with_http_info(app_id, webhook_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param WebhookCreate webhook_create: Body for a createWebhook request.  (required)
+        :param WebhookCreate webhook_create_body: Body for a createWebhook request.  (required)
         :return: WebhookResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_id', 'webhook_create']
+        all_params = ['app_id', 'webhook_create_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -104,9 +104,9 @@ class WebhookApi(object):
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params) or (params['app_id'] is None):
             raise ValueError("Missing the required parameter `app_id` when calling `create_webhook`")
-        # verify the required parameter 'webhook_create' is set
-        if ('webhook_create' not in params) or (params['webhook_create'] is None):
-            raise ValueError("Missing the required parameter `webhook_create` when calling `create_webhook`")
+        # verify the required parameter 'webhook_create_body' is set
+        if ('webhook_create_body' not in params) or (params['webhook_create_body'] is None):
+            raise ValueError("Missing the required parameter `webhook_create_body` when calling `create_webhook`")
 
 
         collection_formats = {}
@@ -123,8 +123,8 @@ class WebhookApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'webhook_create' in params:
-            body_params = params['webhook_create']
+        if 'webhook_create_body' in params:
+            body_params = params['webhook_create_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -477,7 +477,7 @@ class WebhookApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_webhook(self, app_id, webhook_id, webhook_update, **kwargs):
+    def update_webhook(self, app_id, webhook_id, webhook_update_body, **kwargs):
         """
         Update the specified webhook.
         This method makes a synchronous HTTP request by default. To make an
@@ -486,25 +486,25 @@ class WebhookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_webhook(app_id, webhook_id, webhook_update, callback=callback_function)
+        >>> thread = api.update_webhook(app_id, webhook_id, webhook_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
         :param str webhook_id: Identifies the webhook. (required)
-        :param WebhookUpdate webhook_update: Body for an updateWebhook request.  (required)
+        :param WebhookUpdate webhook_update_body: Body for an updateWebhook request.  (required)
         :return: WebhookResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_webhook_with_http_info(app_id, webhook_id, webhook_update, **kwargs)
+            return self.update_webhook_with_http_info(app_id, webhook_id, webhook_update_body, **kwargs)
         else:
-            (data) = self.update_webhook_with_http_info(app_id, webhook_id, webhook_update, **kwargs)
+            (data) = self.update_webhook_with_http_info(app_id, webhook_id, webhook_update_body, **kwargs)
             return data
 
-    def update_webhook_with_http_info(self, app_id, webhook_id, webhook_update, **kwargs):
+    def update_webhook_with_http_info(self, app_id, webhook_id, webhook_update_body, **kwargs):
         """
         Update the specified webhook.
         This method makes a synchronous HTTP request by default. To make an
@@ -513,19 +513,19 @@ class WebhookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_webhook_with_http_info(app_id, webhook_id, webhook_update, callback=callback_function)
+        >>> thread = api.update_webhook_with_http_info(app_id, webhook_id, webhook_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
         :param str webhook_id: Identifies the webhook. (required)
-        :param WebhookUpdate webhook_update: Body for an updateWebhook request.  (required)
+        :param WebhookUpdate webhook_update_body: Body for an updateWebhook request.  (required)
         :return: WebhookResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_id', 'webhook_id', 'webhook_update']
+        all_params = ['app_id', 'webhook_id', 'webhook_update_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -546,9 +546,9 @@ class WebhookApi(object):
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
             raise ValueError("Missing the required parameter `webhook_id` when calling `update_webhook`")
-        # verify the required parameter 'webhook_update' is set
-        if ('webhook_update' not in params) or (params['webhook_update'] is None):
-            raise ValueError("Missing the required parameter `webhook_update` when calling `update_webhook`")
+        # verify the required parameter 'webhook_update_body' is set
+        if ('webhook_update_body' not in params) or (params['webhook_update_body'] is None):
+            raise ValueError("Missing the required parameter `webhook_update_body` when calling `update_webhook`")
 
 
         collection_formats = {}
@@ -567,8 +567,8 @@ class WebhookApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'webhook_update' in params:
-            body_params = params['webhook_update']
+        if 'webhook_update_body' in params:
+            body_params = params['webhook_update_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

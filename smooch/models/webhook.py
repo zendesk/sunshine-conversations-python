@@ -53,6 +53,7 @@ class Webhook(object):
     def id(self):
         """
         Gets the id of this Webhook.
+        The webhook ID, generated automatically.
 
         :return: The id of this Webhook.
         :rtype: str
@@ -63,6 +64,7 @@ class Webhook(object):
     def id(self, id):
         """
         Sets the id of this Webhook.
+        The webhook ID, generated automatically.
 
         :param id: The id of this Webhook.
         :type: str

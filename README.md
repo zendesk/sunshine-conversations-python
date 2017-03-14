@@ -57,10 +57,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = smooch.AppApi()
-app_create = smooch.AppCreate() # AppCreate | Body for a createApp request.
+app_create_body = smooch.AppCreate() # AppCreate | Body for a createApp request.
 
 try:
-    api_response = api_instance.create_app(app_create)
+    api_response = api_instance.create_app(app_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppApi->create_app: %s\n" % e)
@@ -128,7 +128,9 @@ Class | Method | HTTP request | Description
  - [ClientResponse](docs/ClientResponse.md)
  - [Conversation](docs/Conversation.md)
  - [Destination](docs/Destination.md)
+ - [DeviceInit](docs/DeviceInit.md)
  - [DeviceUpdate](docs/DeviceUpdate.md)
+ - [DisplaySettings](docs/DisplaySettings.md)
  - [Event](docs/Event.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
  - [Init](docs/Init.md)

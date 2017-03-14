@@ -110,7 +110,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_menu**
-> MenuResponse update_menu(menu_update)
+> MenuResponse update_menu(menu_update_body)
 
 
 
@@ -131,10 +131,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
-menu_update = smooch.Menu() # Menu | Body for a updateMenu request.
+menu_update_body = smooch.Menu() # Menu | Body for a updateMenu request.
 
 try: 
-    api_response = api_instance.update_menu(menu_update)
+    api_response = api_instance.update_menu(menu_update_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MenuApi->update_menu: %s\n" % e)
@@ -144,7 +144,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_update** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
+ **menu_update_body** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
 
 ### Return type
 

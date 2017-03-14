@@ -44,6 +44,7 @@ class Event(object):
     def name(self):
         """
         Gets the name of this Event.
+        The name of the event.
 
         :return: The name of this Event.
         :rtype: str
@@ -54,6 +55,7 @@ class Event(object):
     def name(self, name):
         """
         Sets the name of this Event.
+        The name of the event.
 
         :param name: The name of this Event.
         :type: str

@@ -40,7 +40,7 @@ class IntegrationApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_integration(self, app_id, integration_create, **kwargs):
+    def create_integration(self, app_id, integration_create_body, **kwargs):
         """
         Create an integration for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -49,24 +49,24 @@ class IntegrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_integration(app_id, integration_create, callback=callback_function)
+        >>> thread = api.create_integration(app_id, integration_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param IntegrationCreate integration_create: Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  (required)
+        :param IntegrationCreate integration_create_body: Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  (required)
         :return: IntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_integration_with_http_info(app_id, integration_create, **kwargs)
+            return self.create_integration_with_http_info(app_id, integration_create_body, **kwargs)
         else:
-            (data) = self.create_integration_with_http_info(app_id, integration_create, **kwargs)
+            (data) = self.create_integration_with_http_info(app_id, integration_create_body, **kwargs)
             return data
 
-    def create_integration_with_http_info(self, app_id, integration_create, **kwargs):
+    def create_integration_with_http_info(self, app_id, integration_create_body, **kwargs):
         """
         Create an integration for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -75,18 +75,18 @@ class IntegrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_integration_with_http_info(app_id, integration_create, callback=callback_function)
+        >>> thread = api.create_integration_with_http_info(app_id, integration_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param IntegrationCreate integration_create: Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  (required)
+        :param IntegrationCreate integration_create_body: Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  (required)
         :return: IntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_id', 'integration_create']
+        all_params = ['app_id', 'integration_create_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -104,9 +104,9 @@ class IntegrationApi(object):
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params) or (params['app_id'] is None):
             raise ValueError("Missing the required parameter `app_id` when calling `create_integration`")
-        # verify the required parameter 'integration_create' is set
-        if ('integration_create' not in params) or (params['integration_create'] is None):
-            raise ValueError("Missing the required parameter `integration_create` when calling `create_integration`")
+        # verify the required parameter 'integration_create_body' is set
+        if ('integration_create_body' not in params) or (params['integration_create_body'] is None):
+            raise ValueError("Missing the required parameter `integration_create_body` when calling `create_integration`")
 
 
         collection_formats = {}
@@ -123,8 +123,8 @@ class IntegrationApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'integration_create' in params:
-            body_params = params['integration_create']
+        if 'integration_create_body' in params:
+            body_params = params['integration_create_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

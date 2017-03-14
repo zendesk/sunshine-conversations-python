@@ -40,7 +40,7 @@ class AppApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_app(self, app_create, **kwargs):
+    def create_app(self, app_create_body, **kwargs):
         """
         Create a new app.
         This method makes a synchronous HTTP request by default. To make an
@@ -49,23 +49,23 @@ class AppApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_app(app_create, callback=callback_function)
+        >>> thread = api.create_app(app_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppCreate app_create: Body for a createApp request. (required)
+        :param AppCreate app_create_body: Body for a createApp request. (required)
         :return: AppResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_app_with_http_info(app_create, **kwargs)
+            return self.create_app_with_http_info(app_create_body, **kwargs)
         else:
-            (data) = self.create_app_with_http_info(app_create, **kwargs)
+            (data) = self.create_app_with_http_info(app_create_body, **kwargs)
             return data
 
-    def create_app_with_http_info(self, app_create, **kwargs):
+    def create_app_with_http_info(self, app_create_body, **kwargs):
         """
         Create a new app.
         This method makes a synchronous HTTP request by default. To make an
@@ -74,17 +74,17 @@ class AppApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_app_with_http_info(app_create, callback=callback_function)
+        >>> thread = api.create_app_with_http_info(app_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppCreate app_create: Body for a createApp request. (required)
+        :param AppCreate app_create_body: Body for a createApp request. (required)
         :return: AppResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_create']
+        all_params = ['app_create_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -99,9 +99,9 @@ class AppApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'app_create' is set
-        if ('app_create' not in params) or (params['app_create'] is None):
-            raise ValueError("Missing the required parameter `app_create` when calling `create_app`")
+        # verify the required parameter 'app_create_body' is set
+        if ('app_create_body' not in params) or (params['app_create_body'] is None):
+            raise ValueError("Missing the required parameter `app_create_body` when calling `create_app`")
 
 
         collection_formats = {}
@@ -116,8 +116,8 @@ class AppApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_create' in params:
-            body_params = params['app_create']
+        if 'app_create_body' in params:
+            body_params = params['app_create_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -144,7 +144,7 @@ class AppApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_secret_key(self, app_id, secret_key_create, **kwargs):
+    def create_secret_key(self, app_id, secret_key_create_body, **kwargs):
         """
         Create a secret key for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -153,24 +153,24 @@ class AppApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_secret_key(app_id, secret_key_create, callback=callback_function)
+        >>> thread = api.create_secret_key(app_id, secret_key_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param SecretKeyCreate secret_key_create: Body for a createSecretKey request. (required)
+        :param SecretKeyCreate secret_key_create_body: Body for a createSecretKey request. (required)
         :return: SecretKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_secret_key_with_http_info(app_id, secret_key_create, **kwargs)
+            return self.create_secret_key_with_http_info(app_id, secret_key_create_body, **kwargs)
         else:
-            (data) = self.create_secret_key_with_http_info(app_id, secret_key_create, **kwargs)
+            (data) = self.create_secret_key_with_http_info(app_id, secret_key_create_body, **kwargs)
             return data
 
-    def create_secret_key_with_http_info(self, app_id, secret_key_create, **kwargs):
+    def create_secret_key_with_http_info(self, app_id, secret_key_create_body, **kwargs):
         """
         Create a secret key for the specified app.
         This method makes a synchronous HTTP request by default. To make an
@@ -179,18 +179,18 @@ class AppApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_secret_key_with_http_info(app_id, secret_key_create, callback=callback_function)
+        >>> thread = api.create_secret_key_with_http_info(app_id, secret_key_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param SecretKeyCreate secret_key_create: Body for a createSecretKey request. (required)
+        :param SecretKeyCreate secret_key_create_body: Body for a createSecretKey request. (required)
         :return: SecretKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_id', 'secret_key_create']
+        all_params = ['app_id', 'secret_key_create_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -208,9 +208,9 @@ class AppApi(object):
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params) or (params['app_id'] is None):
             raise ValueError("Missing the required parameter `app_id` when calling `create_secret_key`")
-        # verify the required parameter 'secret_key_create' is set
-        if ('secret_key_create' not in params) or (params['secret_key_create'] is None):
-            raise ValueError("Missing the required parameter `secret_key_create` when calling `create_secret_key`")
+        # verify the required parameter 'secret_key_create_body' is set
+        if ('secret_key_create_body' not in params) or (params['secret_key_create_body'] is None):
+            raise ValueError("Missing the required parameter `secret_key_create_body` when calling `create_secret_key`")
 
 
         collection_formats = {}
@@ -227,8 +227,8 @@ class AppApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'secret_key_create' in params:
-            body_params = params['secret_key_create']
+        if 'secret_key_create_body' in params:
+            body_params = params['secret_key_create_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -373,7 +373,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str integration_id: Id of the integration. (required)
+        :param str integration_id: Identifies the integration. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -399,7 +399,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str integration_id: Id of the integration. (required)
+        :param str integration_id: Identifies the integration. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -484,7 +484,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -510,7 +510,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -699,7 +699,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: JwtResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -725,7 +725,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: JwtResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -810,7 +810,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str integration_id: Id of the integration. (required)
+        :param str integration_id: Identifies the integration. (required)
         :return: IntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -836,7 +836,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str integration_id: Id of the integration. (required)
+        :param str integration_id: Identifies the integration. (required)
         :return: IntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -921,7 +921,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: SecretKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -947,7 +947,7 @@ class AppApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str app_id: Identifies the app. (required)
-        :param str key_id: Id of the secret key. (required)
+        :param str key_id: Identifies the secret key. (required)
         :return: SecretKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1031,8 +1031,8 @@ class AppApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param float limit: The number of records to return.
-        :param float offset: the number of initial records to skip before picking records to return.
+        :param int limit: The number of records to return.
+        :param int offset: The number of initial records to skip before picking records to return.
         :return: ListAppsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1057,8 +1057,8 @@ class AppApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param float limit: The number of records to return.
-        :param float offset: the number of initial records to skip before picking records to return.
+        :param int limit: The number of records to return.
+        :param int offset: The number of initial records to skip before picking records to return.
         :return: ListAppsResponse
                  If the method is called asynchronously,
                  returns the request thread.

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_integration**
-> IntegrationResponse create_integration(app_id, integration_create)
+> IntegrationResponse create_integration(app_id, integration_create_body)
 
 
 
@@ -31,10 +31,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.IntegrationApi()
 app_id = 'app_id_example' # str | Identifies the app.
-integration_create = smooch.IntegrationCreate() # IntegrationCreate | Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+integration_create_body = smooch.IntegrationCreate() # IntegrationCreate | Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
 
 try: 
-    api_response = api_instance.create_integration(app_id, integration_create)
+    api_response = api_instance.create_integration(app_id, integration_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IntegrationApi->create_integration: %s\n" % e)
@@ -45,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **integration_create** | [**IntegrationCreate**](IntegrationCreate.md)| Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+ **integration_create_body** | [**IntegrationCreate**](IntegrationCreate.md)| Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
 
 ### Return type
 

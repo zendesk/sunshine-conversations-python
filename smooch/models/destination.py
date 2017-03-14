@@ -47,6 +47,7 @@ class Destination(object):
     def integration_id(self):
         """
         Gets the integration_id of this Destination.
+        The ID of the target integration.
 
         :return: The integration_id of this Destination.
         :rtype: str
@@ -57,6 +58,7 @@ class Destination(object):
     def integration_id(self, integration_id):
         """
         Sets the integration_id of this Destination.
+        The ID of the target integration.
 
         :param integration_id: The integration_id of this Destination.
         :type: str
@@ -70,6 +72,7 @@ class Destination(object):
     def integration_type(self):
         """
         Gets the integration_type of this Destination.
+        The type of the target integration.
 
         :return: The integration_type of this Destination.
         :rtype: str
@@ -80,6 +83,7 @@ class Destination(object):
     def integration_type(self, integration_type):
         """
         Sets the integration_type of this Destination.
+        The type of the target integration.
 
         :param integration_type: The integration_type of this Destination.
         :type: str

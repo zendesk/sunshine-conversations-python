@@ -32,7 +32,7 @@ class Conversation(object):
         """
         self.swagger_types = {
             'id': 'str',
-            'unread_count': 'float'
+            'unread_count': 'int'
         }
 
         self.attribute_map = {
@@ -47,6 +47,7 @@ class Conversation(object):
     def id(self):
         """
         Gets the id of this Conversation.
+        The conversation ID, generated automatically.
 
         :return: The id of this Conversation.
         :rtype: str
@@ -57,6 +58,7 @@ class Conversation(object):
     def id(self, id):
         """
         Sets the id of this Conversation.
+        The conversation ID, generated automatically.
 
         :param id: The id of this Conversation.
         :type: str
@@ -70,9 +72,10 @@ class Conversation(object):
     def unread_count(self):
         """
         Gets the unread_count of this Conversation.
+        The number of unread messages in the conversation.
 
         :return: The unread_count of this Conversation.
-        :rtype: float
+        :rtype: int
         """
         return self._unread_count
 
@@ -80,9 +83,10 @@ class Conversation(object):
     def unread_count(self, unread_count):
         """
         Sets the unread_count of this Conversation.
+        The number of unread messages in the conversation.
 
         :param unread_count: The unread_count of this Conversation.
-        :type: float
+        :type: int
         """
         if unread_count is None:
             raise ValueError("Invalid value for `unread_count`, must not be `None`")

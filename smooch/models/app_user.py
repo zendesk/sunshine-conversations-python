@@ -181,7 +181,7 @@ class AppUser(object):
     def conversation_started(self):
         """
         Gets the conversation_started of this AppUser.
-        Flag specifying whether the conversation has started for the app user.
+        Flag indicating if the conversation has started for the app user.
 
         :return: The conversation_started of this AppUser.
         :rtype: bool
@@ -192,7 +192,7 @@ class AppUser(object):
     def conversation_started(self, conversation_started):
         """
         Sets the conversation_started of this AppUser.
-        Flag specifying whether the conversation has started for the app user.
+        Flag indicating if the conversation has started for the app user.
 
         :param conversation_started: The conversation_started of this AppUser.
         :type: bool

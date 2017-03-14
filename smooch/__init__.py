@@ -28,7 +28,9 @@ from .models.client_info import ClientInfo
 from .models.client_response import ClientResponse
 from .models.conversation import Conversation
 from .models.destination import Destination
+from .models.device_init import DeviceInit
 from .models.device_update import DeviceUpdate
+from .models.display_settings import DisplaySettings
 from .models.event import Event
 from .models.get_messages_response import GetMessagesResponse
 from .models.init import Init

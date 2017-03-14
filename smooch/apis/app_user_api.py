@@ -40,7 +40,7 @@ class AppUserApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def app_user_device_update(self, user_id, device_id, app_user_device_update, **kwargs):
+    def app_user_device_update(self, user_id, device_id, app_user_device_update_body, **kwargs):
         """
         Update specified device information.
         This method makes a synchronous HTTP request by default. To make an
@@ -49,25 +49,25 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.app_user_device_update(user_id, device_id, app_user_device_update, callback=callback_function)
+        >>> thread = api.app_user_device_update(user_id, device_id, app_user_device_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param str device_id: Id of the device. (required)
-        :param DeviceUpdate app_user_device_update: Body for an updateAppUserDevice request. (required)
+        :param str device_id: Identifies the device. (required)
+        :param DeviceUpdate app_user_device_update_body: Body for an updateAppUserDevice request. (required)
         :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update, **kwargs)
+            return self.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update_body, **kwargs)
         else:
-            (data) = self.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update, **kwargs)
+            (data) = self.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update_body, **kwargs)
             return data
 
-    def app_user_device_update_with_http_info(self, user_id, device_id, app_user_device_update, **kwargs):
+    def app_user_device_update_with_http_info(self, user_id, device_id, app_user_device_update_body, **kwargs):
         """
         Update specified device information.
         This method makes a synchronous HTTP request by default. To make an
@@ -76,19 +76,19 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update, callback=callback_function)
+        >>> thread = api.app_user_device_update_with_http_info(user_id, device_id, app_user_device_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param str device_id: Id of the device. (required)
-        :param DeviceUpdate app_user_device_update: Body for an updateAppUserDevice request. (required)
+        :param str device_id: Identifies the device. (required)
+        :param DeviceUpdate app_user_device_update_body: Body for an updateAppUserDevice request. (required)
         :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'device_id', 'app_user_device_update']
+        all_params = ['user_id', 'device_id', 'app_user_device_update_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -109,9 +109,9 @@ class AppUserApi(object):
         # verify the required parameter 'device_id' is set
         if ('device_id' not in params) or (params['device_id'] is None):
             raise ValueError("Missing the required parameter `device_id` when calling `app_user_device_update`")
-        # verify the required parameter 'app_user_device_update' is set
-        if ('app_user_device_update' not in params) or (params['app_user_device_update'] is None):
-            raise ValueError("Missing the required parameter `app_user_device_update` when calling `app_user_device_update`")
+        # verify the required parameter 'app_user_device_update_body' is set
+        if ('app_user_device_update_body' not in params) or (params['app_user_device_update_body'] is None):
+            raise ValueError("Missing the required parameter `app_user_device_update_body` when calling `app_user_device_update`")
 
 
         collection_formats = {}
@@ -130,8 +130,8 @@ class AppUserApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_user_device_update' in params:
-            body_params = params['app_user_device_update']
+        if 'app_user_device_update_body' in params:
+            body_params = params['app_user_device_update_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -470,7 +470,7 @@ class AppUserApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def link_app_user(self, user_id, app_user_link, **kwargs):
+    def link_app_user(self, user_id, app_user_link_body, **kwargs):
         """
         Link specified app user to given channel.
         This method makes a synchronous HTTP request by default. To make an
@@ -479,24 +479,24 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.link_app_user(user_id, app_user_link, callback=callback_function)
+        >>> thread = api.link_app_user(user_id, app_user_link_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserLink app_user_link: Body for a linkAppUser request. (required)
+        :param AppUserLink app_user_link_body: Body for a linkAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.link_app_user_with_http_info(user_id, app_user_link, **kwargs)
+            return self.link_app_user_with_http_info(user_id, app_user_link_body, **kwargs)
         else:
-            (data) = self.link_app_user_with_http_info(user_id, app_user_link, **kwargs)
+            (data) = self.link_app_user_with_http_info(user_id, app_user_link_body, **kwargs)
             return data
 
-    def link_app_user_with_http_info(self, user_id, app_user_link, **kwargs):
+    def link_app_user_with_http_info(self, user_id, app_user_link_body, **kwargs):
         """
         Link specified app user to given channel.
         This method makes a synchronous HTTP request by default. To make an
@@ -505,18 +505,18 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.link_app_user_with_http_info(user_id, app_user_link, callback=callback_function)
+        >>> thread = api.link_app_user_with_http_info(user_id, app_user_link_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserLink app_user_link: Body for a linkAppUser request. (required)
+        :param AppUserLink app_user_link_body: Body for a linkAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'app_user_link']
+        all_params = ['user_id', 'app_user_link_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -534,9 +534,9 @@ class AppUserApi(object):
         # verify the required parameter 'user_id' is set
         if ('user_id' not in params) or (params['user_id'] is None):
             raise ValueError("Missing the required parameter `user_id` when calling `link_app_user`")
-        # verify the required parameter 'app_user_link' is set
-        if ('app_user_link' not in params) or (params['app_user_link'] is None):
-            raise ValueError("Missing the required parameter `app_user_link` when calling `link_app_user`")
+        # verify the required parameter 'app_user_link_body' is set
+        if ('app_user_link_body' not in params) or (params['app_user_link_body'] is None):
+            raise ValueError("Missing the required parameter `app_user_link_body` when calling `link_app_user`")
 
 
         collection_formats = {}
@@ -553,8 +553,8 @@ class AppUserApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_user_link' in params:
-            body_params = params['app_user_link']
+        if 'app_user_link_body' in params:
+            body_params = params['app_user_link_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -699,7 +699,7 @@ class AppUserApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pre_create_app_user(self, app_user_pre_create, **kwargs):
+    def pre_create_app_user(self, app_user_pre_create_body, **kwargs):
         """
         Pre-create an app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -708,23 +708,23 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pre_create_app_user(app_user_pre_create, callback=callback_function)
+        >>> thread = api.pre_create_app_user(app_user_pre_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppUserPreCreate app_user_pre_create: Body for a preCreateAppUser request. (required)
+        :param AppUserPreCreate app_user_pre_create_body: Body for a preCreateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pre_create_app_user_with_http_info(app_user_pre_create, **kwargs)
+            return self.pre_create_app_user_with_http_info(app_user_pre_create_body, **kwargs)
         else:
-            (data) = self.pre_create_app_user_with_http_info(app_user_pre_create, **kwargs)
+            (data) = self.pre_create_app_user_with_http_info(app_user_pre_create_body, **kwargs)
             return data
 
-    def pre_create_app_user_with_http_info(self, app_user_pre_create, **kwargs):
+    def pre_create_app_user_with_http_info(self, app_user_pre_create_body, **kwargs):
         """
         Pre-create an app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -733,17 +733,17 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pre_create_app_user_with_http_info(app_user_pre_create, callback=callback_function)
+        >>> thread = api.pre_create_app_user_with_http_info(app_user_pre_create_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppUserPreCreate app_user_pre_create: Body for a preCreateAppUser request. (required)
+        :param AppUserPreCreate app_user_pre_create_body: Body for a preCreateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_user_pre_create']
+        all_params = ['app_user_pre_create_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -758,9 +758,9 @@ class AppUserApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'app_user_pre_create' is set
-        if ('app_user_pre_create' not in params) or (params['app_user_pre_create'] is None):
-            raise ValueError("Missing the required parameter `app_user_pre_create` when calling `pre_create_app_user`")
+        # verify the required parameter 'app_user_pre_create_body' is set
+        if ('app_user_pre_create_body' not in params) or (params['app_user_pre_create_body'] is None):
+            raise ValueError("Missing the required parameter `app_user_pre_create_body` when calling `pre_create_app_user`")
 
 
         collection_formats = {}
@@ -775,8 +775,8 @@ class AppUserApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_user_pre_create' in params:
-            body_params = params['app_user_pre_create']
+        if 'app_user_pre_create_body' in params:
+            body_params = params['app_user_pre_create_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -803,7 +803,7 @@ class AppUserApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def track_event(self, user_id, event, **kwargs):
+    def track_event(self, user_id, track_event_body, **kwargs):
         """
         Track an event for the given app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -812,24 +812,24 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.track_event(user_id, event, callback=callback_function)
+        >>> thread = api.track_event(user_id, track_event_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param Event event: Body for a trackEvent request. (required)
+        :param Event track_event_body: Body for a trackEvent request. (required)
         :return: TrackEventResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.track_event_with_http_info(user_id, event, **kwargs)
+            return self.track_event_with_http_info(user_id, track_event_body, **kwargs)
         else:
-            (data) = self.track_event_with_http_info(user_id, event, **kwargs)
+            (data) = self.track_event_with_http_info(user_id, track_event_body, **kwargs)
             return data
 
-    def track_event_with_http_info(self, user_id, event, **kwargs):
+    def track_event_with_http_info(self, user_id, track_event_body, **kwargs):
         """
         Track an event for the given app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -838,18 +838,18 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.track_event_with_http_info(user_id, event, callback=callback_function)
+        >>> thread = api.track_event_with_http_info(user_id, track_event_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param Event event: Body for a trackEvent request. (required)
+        :param Event track_event_body: Body for a trackEvent request. (required)
         :return: TrackEventResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'event']
+        all_params = ['user_id', 'track_event_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -867,9 +867,9 @@ class AppUserApi(object):
         # verify the required parameter 'user_id' is set
         if ('user_id' not in params) or (params['user_id'] is None):
             raise ValueError("Missing the required parameter `user_id` when calling `track_event`")
-        # verify the required parameter 'event' is set
-        if ('event' not in params) or (params['event'] is None):
-            raise ValueError("Missing the required parameter `event` when calling `track_event`")
+        # verify the required parameter 'track_event_body' is set
+        if ('track_event_body' not in params) or (params['track_event_body'] is None):
+            raise ValueError("Missing the required parameter `track_event_body` when calling `track_event`")
 
 
         collection_formats = {}
@@ -886,8 +886,8 @@ class AppUserApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'event' in params:
-            body_params = params['event']
+        if 'track_event_body' in params:
+            body_params = params['track_event_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -1025,7 +1025,7 @@ class AppUserApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_app_user(self, user_id, app_user_update, **kwargs):
+    def update_app_user(self, user_id, app_user_update_body, **kwargs):
         """
         Update the specified app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -1034,24 +1034,24 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_app_user(user_id, app_user_update, callback=callback_function)
+        >>> thread = api.update_app_user(user_id, app_user_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserUpdate app_user_update: Body for an updateAppUser request. (required)
+        :param AppUserUpdate app_user_update_body: Body for an updateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_app_user_with_http_info(user_id, app_user_update, **kwargs)
+            return self.update_app_user_with_http_info(user_id, app_user_update_body, **kwargs)
         else:
-            (data) = self.update_app_user_with_http_info(user_id, app_user_update, **kwargs)
+            (data) = self.update_app_user_with_http_info(user_id, app_user_update_body, **kwargs)
             return data
 
-    def update_app_user_with_http_info(self, user_id, app_user_update, **kwargs):
+    def update_app_user_with_http_info(self, user_id, app_user_update_body, **kwargs):
         """
         Update the specified app user.
         This method makes a synchronous HTTP request by default. To make an
@@ -1060,18 +1060,18 @@ class AppUserApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_app_user_with_http_info(user_id, app_user_update, callback=callback_function)
+        >>> thread = api.update_app_user_with_http_info(user_id, app_user_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserUpdate app_user_update: Body for an updateAppUser request. (required)
+        :param AppUserUpdate app_user_update_body: Body for an updateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'app_user_update']
+        all_params = ['user_id', 'app_user_update_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1089,9 +1089,9 @@ class AppUserApi(object):
         # verify the required parameter 'user_id' is set
         if ('user_id' not in params) or (params['user_id'] is None):
             raise ValueError("Missing the required parameter `user_id` when calling `update_app_user`")
-        # verify the required parameter 'app_user_update' is set
-        if ('app_user_update' not in params) or (params['app_user_update'] is None):
-            raise ValueError("Missing the required parameter `app_user_update` when calling `update_app_user`")
+        # verify the required parameter 'app_user_update_body' is set
+        if ('app_user_update_body' not in params) or (params['app_user_update_body'] is None):
+            raise ValueError("Missing the required parameter `app_user_update_body` when calling `update_app_user`")
 
 
         collection_formats = {}
@@ -1108,8 +1108,8 @@ class AppUserApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_user_update' in params:
-            body_params = params['app_user_update']
+        if 'app_user_update_body' in params:
+            body_params = params['app_user_update_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

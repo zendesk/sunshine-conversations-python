@@ -92,6 +92,7 @@ class GetMessagesResponse(object):
     def next(self):
         """
         Gets the next of this GetMessagesResponse.
+        The URI for the next set of messages in the conversation.
 
         :return: The next of this GetMessagesResponse.
         :rtype: str
@@ -102,6 +103,7 @@ class GetMessagesResponse(object):
     def next(self, next):
         """
         Sets the next of this GetMessagesResponse.
+        The URI for the next set of messages in the conversation.
 
         :param next: The next of this GetMessagesResponse.
         :type: str

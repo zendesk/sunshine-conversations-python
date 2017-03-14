@@ -31,7 +31,7 @@ class Init(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'device': 'Client',
+            'device': 'DeviceInit',
             'user_id': 'str'
         }
 
@@ -49,7 +49,7 @@ class Init(object):
         Gets the device of this Init.
 
         :return: The device of this Init.
-        :rtype: Client
+        :rtype: DeviceInit
         """
         return self._device
 
@@ -59,7 +59,7 @@ class Init(object):
         Sets the device of this Init.
 
         :param device: The device of this Init.
-        :type: Client
+        :type: DeviceInit
         """
         if device is None:
             raise ValueError("Invalid value for `device`, must not be `None`")

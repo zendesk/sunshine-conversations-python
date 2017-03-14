@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **app_user_device_update**
-> ClientResponse app_user_device_update(user_id, device_id, app_user_device_update)
+> ClientResponse app_user_device_update(user_id, device_id, app_user_device_update_body)
 
 
 
@@ -43,11 +43,11 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-device_id = 'device_id_example' # str | Id of the device.
-app_user_device_update = smooch.DeviceUpdate() # DeviceUpdate | Body for an updateAppUserDevice request.
+device_id = 'device_id_example' # str | Identifies the device.
+app_user_device_update_body = smooch.DeviceUpdate() # DeviceUpdate | Body for an updateAppUserDevice request.
 
 try: 
-    api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update)
+    api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppUserApi->app_user_device_update: %s\n" % e)
@@ -58,8 +58,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **device_id** | **str**| Id of the device. | 
- **app_user_device_update** | [**DeviceUpdate**](DeviceUpdate.md)| Body for an updateAppUserDevice request. | 
+ **device_id** | **str**| Identifies the device. | 
+ **app_user_device_update_body** | [**DeviceUpdate**](DeviceUpdate.md)| Body for an updateAppUserDevice request. | 
 
 ### Return type
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_app_user**
-> AppUserResponse link_app_user(user_id, app_user_link)
+> AppUserResponse link_app_user(user_id, app_user_link_body)
 
 
 
@@ -271,10 +271,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_link = smooch.AppUserLink() # AppUserLink | Body for a linkAppUser request.
+app_user_link_body = smooch.AppUserLink() # AppUserLink | Body for a linkAppUser request.
 
 try: 
-    api_response = api_instance.link_app_user(user_id, app_user_link)
+    api_response = api_instance.link_app_user(user_id, app_user_link_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppUserApi->link_app_user: %s\n" % e)
@@ -285,7 +285,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_link** | [**AppUserLink**](AppUserLink.md)| Body for a linkAppUser request. | 
+ **app_user_link_body** | [**AppUserLink**](AppUserLink.md)| Body for a linkAppUser request. | 
 
 ### Return type
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pre_create_app_user**
-> AppUserResponse pre_create_app_user(app_user_pre_create)
+> AppUserResponse pre_create_app_user(app_user_pre_create_body)
 
 
 
@@ -384,10 +384,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
-app_user_pre_create = smooch.AppUserPreCreate() # AppUserPreCreate | Body for a preCreateAppUser request.
+app_user_pre_create_body = smooch.AppUserPreCreate() # AppUserPreCreate | Body for a preCreateAppUser request.
 
 try: 
-    api_response = api_instance.pre_create_app_user(app_user_pre_create)
+    api_response = api_instance.pre_create_app_user(app_user_pre_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppUserApi->pre_create_app_user: %s\n" % e)
@@ -397,7 +397,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_user_pre_create** | [**AppUserPreCreate**](AppUserPreCreate.md)| Body for a preCreateAppUser request. | 
+ **app_user_pre_create_body** | [**AppUserPreCreate**](AppUserPreCreate.md)| Body for a preCreateAppUser request. | 
 
 ### Return type
 
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **track_event**
-> TrackEventResponse track_event(user_id, event)
+> TrackEventResponse track_event(user_id, track_event_body)
 
 
 
@@ -441,10 +441,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-event = smooch.Event() # Event | Body for a trackEvent request.
+track_event_body = smooch.Event() # Event | Body for a trackEvent request.
 
 try: 
-    api_response = api_instance.track_event(user_id, event)
+    api_response = api_instance.track_event(user_id, track_event_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppUserApi->track_event: %s\n" % e)
@@ -455,7 +455,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **event** | [**Event**](Event.md)| Body for a trackEvent request. | 
+ **track_event_body** | [**Event**](Event.md)| Body for a trackEvent request. | 
 
 ### Return type
 
@@ -530,7 +530,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app_user**
-> AppUserResponse update_app_user(user_id, app_user_update)
+> AppUserResponse update_app_user(user_id, app_user_update_body)
 
 
 
@@ -556,10 +556,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_update = smooch.AppUserUpdate() # AppUserUpdate | Body for an updateAppUser request.
+app_user_update_body = smooch.AppUserUpdate() # AppUserUpdate | Body for an updateAppUser request.
 
 try: 
-    api_response = api_instance.update_app_user(user_id, app_user_update)
+    api_response = api_instance.update_app_user(user_id, app_user_update_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppUserApi->update_app_user: %s\n" % e)
@@ -570,7 +570,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_update** | [**AppUserUpdate**](AppUserUpdate.md)| Body for an updateAppUser request. | 
+ **app_user_update_body** | [**AppUserUpdate**](AppUserUpdate.md)| Body for an updateAppUser request. | 
 
 ### Return type
 

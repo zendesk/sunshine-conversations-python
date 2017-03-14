@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_webhook**
-> WebhookResponse create_webhook(app_id, webhook_create)
+> WebhookResponse create_webhook(app_id, webhook_create_body)
 
 
 
@@ -34,10 +34,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
-webhook_create = smooch.WebhookCreate() # WebhookCreate | Body for a createWebhook request. 
+webhook_create_body = smooch.WebhookCreate() # WebhookCreate | Body for a createWebhook request. 
 
 try: 
-    api_response = api_instance.create_webhook(app_id, webhook_create)
+    api_response = api_instance.create_webhook(app_id, webhook_create_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WebhookApi->create_webhook: %s\n" % e)
@@ -48,7 +48,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **webhook_create** | [**WebhookCreate**](WebhookCreate.md)| Body for a createWebhook request.  | 
+ **webhook_create_body** | [**WebhookCreate**](WebhookCreate.md)| Body for a createWebhook request.  | 
 
 ### Return type
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_webhook**
-> WebhookResponse update_webhook(app_id, webhook_id, webhook_update)
+> WebhookResponse update_webhook(app_id, webhook_id, webhook_update_body)
 
 
 
@@ -248,10 +248,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
 webhook_id = 'webhook_id_example' # str | Identifies the webhook.
-webhook_update = smooch.WebhookUpdate() # WebhookUpdate | Body for an updateWebhook request. 
+webhook_update_body = smooch.WebhookUpdate() # WebhookUpdate | Body for an updateWebhook request. 
 
 try: 
-    api_response = api_instance.update_webhook(app_id, webhook_id, webhook_update)
+    api_response = api_instance.update_webhook(app_id, webhook_id, webhook_update_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WebhookApi->update_webhook: %s\n" % e)
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **webhook_id** | **str**| Identifies the webhook. | 
- **webhook_update** | [**WebhookUpdate**](WebhookUpdate.md)| Body for an updateWebhook request.  | 
+ **webhook_update_body** | [**WebhookUpdate**](WebhookUpdate.md)| Body for an updateWebhook request.  | 
 
 ### Return type
 

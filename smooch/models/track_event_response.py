@@ -44,6 +44,7 @@ class TrackEventResponse(object):
     def conversation_updated(self):
         """
         Gets the conversation_updated of this TrackEventResponse.
+        Flag indicating if the conversation was updated.
 
         :return: The conversation_updated of this TrackEventResponse.
         :rtype: bool
@@ -54,6 +55,7 @@ class TrackEventResponse(object):
     def conversation_updated(self, conversation_updated):
         """
         Sets the conversation_updated of this TrackEventResponse.
+        Flag indicating if the conversation was updated.
 
         :param conversation_updated: The conversation_updated of this TrackEventResponse.
         :type: bool

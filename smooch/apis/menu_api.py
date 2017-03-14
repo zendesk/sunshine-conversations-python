@@ -232,7 +232,7 @@ class MenuApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_menu(self, menu_update, **kwargs):
+    def update_menu(self, menu_update_body, **kwargs):
         """
         Configure the specified app’s menu.
         This method makes a synchronous HTTP request by default. To make an
@@ -241,23 +241,23 @@ class MenuApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_menu(menu_update, callback=callback_function)
+        >>> thread = api.update_menu(menu_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Menu menu_update: Body for a updateMenu request. (required)
+        :param Menu menu_update_body: Body for a updateMenu request. (required)
         :return: MenuResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_menu_with_http_info(menu_update, **kwargs)
+            return self.update_menu_with_http_info(menu_update_body, **kwargs)
         else:
-            (data) = self.update_menu_with_http_info(menu_update, **kwargs)
+            (data) = self.update_menu_with_http_info(menu_update_body, **kwargs)
             return data
 
-    def update_menu_with_http_info(self, menu_update, **kwargs):
+    def update_menu_with_http_info(self, menu_update_body, **kwargs):
         """
         Configure the specified app’s menu.
         This method makes a synchronous HTTP request by default. To make an
@@ -266,17 +266,17 @@ class MenuApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_menu_with_http_info(menu_update, callback=callback_function)
+        >>> thread = api.update_menu_with_http_info(menu_update_body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Menu menu_update: Body for a updateMenu request. (required)
+        :param Menu menu_update_body: Body for a updateMenu request. (required)
         :return: MenuResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['menu_update']
+        all_params = ['menu_update_body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -291,9 +291,9 @@ class MenuApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'menu_update' is set
-        if ('menu_update' not in params) or (params['menu_update'] is None):
-            raise ValueError("Missing the required parameter `menu_update` when calling `update_menu`")
+        # verify the required parameter 'menu_update_body' is set
+        if ('menu_update_body' not in params) or (params['menu_update_body'] is None):
+            raise ValueError("Missing the required parameter `menu_update_body` when calling `update_menu`")
 
 
         collection_formats = {}
@@ -308,8 +308,8 @@ class MenuApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'menu_update' in params:
-            body_params = params['menu_update']
+        if 'menu_update_body' in params:
+            body_params = params['menu_update_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

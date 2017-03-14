@@ -53,6 +53,7 @@ class TypingActivityTrigger(object):
     def role(self):
         """
         Gets the role of this TypingActivityTrigger.
+        The role of the actor. Must be *appMaker*.
 
         :return: The role of this TypingActivityTrigger.
         :rtype: str
@@ -63,6 +64,7 @@ class TypingActivityTrigger(object):
     def role(self, role):
         """
         Sets the role of this TypingActivityTrigger.
+        The role of the actor. Must be *appMaker*.
 
         :param role: The role of this TypingActivityTrigger.
         :type: str
@@ -76,6 +78,7 @@ class TypingActivityTrigger(object):
     def type(self):
         """
         Gets the type of this TypingActivityTrigger.
+        The type of activity to trigger. Must be either *typing:start* or *typing:stop*.
 
         :return: The type of this TypingActivityTrigger.
         :rtype: str
@@ -86,6 +89,7 @@ class TypingActivityTrigger(object):
     def type(self, type):
         """
         Sets the type of this TypingActivityTrigger.
+        The type of activity to trigger. Must be either *typing:start* or *typing:stop*.
 
         :param type: The type of this TypingActivityTrigger.
         :type: str
@@ -99,6 +103,7 @@ class TypingActivityTrigger(object):
     def name(self):
         """
         Gets the name of this TypingActivityTrigger.
+        The name of the app maker that starts or stops typing a response.
 
         :return: The name of this TypingActivityTrigger.
         :rtype: str
@@ -109,6 +114,7 @@ class TypingActivityTrigger(object):
     def name(self, name):
         """
         Sets the name of this TypingActivityTrigger.
+        The name of the app maker that starts or stops typing a response.
 
         :param name: The name of this TypingActivityTrigger.
         :type: str
@@ -120,6 +126,7 @@ class TypingActivityTrigger(object):
     def avatar_url(self):
         """
         Gets the avatar_url of this TypingActivityTrigger.
+        The avatar URL of the app maker that starts typing a response.
 
         :return: The avatar_url of this TypingActivityTrigger.
         :rtype: str
@@ -130,6 +137,7 @@ class TypingActivityTrigger(object):
     def avatar_url(self, avatar_url):
         """
         Sets the avatar_url of this TypingActivityTrigger.
+        The avatar URL of the app maker that starts typing a response.
 
         :param avatar_url: The avatar_url of this TypingActivityTrigger.
         :type: str

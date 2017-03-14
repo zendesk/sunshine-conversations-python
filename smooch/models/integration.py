@@ -92,6 +92,7 @@ class Integration(object):
     def id(self):
         """
         Gets the id of this Integration.
+        The integration ID, generated automatically.
 
         :return: The id of this Integration.
         :rtype: str
@@ -102,6 +103,7 @@ class Integration(object):
     def id(self, id):
         """
         Sets the id of this Integration.
+        The integration ID, generated automatically.
 
         :param id: The id of this Integration.
         :type: str
@@ -115,6 +117,7 @@ class Integration(object):
     def type(self):
         """
         Gets the type of this Integration.
+        The integration type.
 
         :return: The type of this Integration.
         :rtype: str
@@ -125,6 +128,7 @@ class Integration(object):
     def type(self, type):
         """
         Sets the type of this Integration.
+        The integration type.
 
         :param type: The type of this Integration.
         :type: str
@@ -138,6 +142,7 @@ class Integration(object):
     def page_access_token(self):
         """
         Gets the page_access_token of this Integration.
+        Facebook Page Access Token. Required for *messenger* integrations. 
 
         :return: The page_access_token of this Integration.
         :rtype: str
@@ -148,6 +153,7 @@ class Integration(object):
     def page_access_token(self, page_access_token):
         """
         Sets the page_access_token of this Integration.
+        Facebook Page Access Token. Required for *messenger* integrations. 
 
         :param page_access_token: The page_access_token of this Integration.
         :type: str
@@ -159,6 +165,7 @@ class Integration(object):
     def app_id(self):
         """
         Gets the app_id of this Integration.
+        Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations. 
 
         :return: The app_id of this Integration.
         :rtype: str
@@ -169,6 +176,7 @@ class Integration(object):
     def app_id(self, app_id):
         """
         Sets the app_id of this Integration.
+        Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations. 
 
         :param app_id: The app_id of this Integration.
         :type: str
@@ -180,6 +188,7 @@ class Integration(object):
     def app_secret(self):
         """
         Gets the app_secret of this Integration.
+        Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations. 
 
         :return: The app_secret of this Integration.
         :rtype: str
@@ -190,6 +199,7 @@ class Integration(object):
     def app_secret(self, app_secret):
         """
         Sets the app_secret of this Integration.
+        Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations. 
 
         :param app_secret: The app_secret of this Integration.
         :type: str
@@ -201,6 +211,7 @@ class Integration(object):
     def account_sid(self):
         """
         Gets the account_sid of this Integration.
+        Twilio Account SID. Required for *twilio* integrations. 
 
         :return: The account_sid of this Integration.
         :rtype: str
@@ -211,6 +222,7 @@ class Integration(object):
     def account_sid(self, account_sid):
         """
         Sets the account_sid of this Integration.
+        Twilio Account SID. Required for *twilio* integrations. 
 
         :param account_sid: The account_sid of this Integration.
         :type: str
@@ -222,6 +234,7 @@ class Integration(object):
     def auth_token(self):
         """
         Gets the auth_token of this Integration.
+        Twilio Auth Token. Required for *twilio* integrations. 
 
         :return: The auth_token of this Integration.
         :rtype: str
@@ -232,6 +245,7 @@ class Integration(object):
     def auth_token(self, auth_token):
         """
         Sets the auth_token of this Integration.
+        Twilio Auth Token. Required for *twilio* integrations. 
 
         :param auth_token: The auth_token of this Integration.
         :type: str
@@ -243,6 +257,7 @@ class Integration(object):
     def phone_number_sid(self):
         """
         Gets the phone_number_sid of this Integration.
+        SID for specific phone number. Required for *twilio* integrations. 
 
         :return: The phone_number_sid of this Integration.
         :rtype: str
@@ -253,6 +268,7 @@ class Integration(object):
     def phone_number_sid(self, phone_number_sid):
         """
         Sets the phone_number_sid of this Integration.
+        SID for specific phone number. Required for *twilio* integrations. 
 
         :param phone_number_sid: The phone_number_sid of this Integration.
         :type: str
@@ -264,6 +280,7 @@ class Integration(object):
     def token(self):
         """
         Gets the token of this Integration.
+        Telegram Bot Token OR Viber Public Account token. Required for *twilio* and *viber* integrations. 
 
         :return: The token of this Integration.
         :rtype: str
@@ -274,6 +291,7 @@ class Integration(object):
     def token(self, token):
         """
         Sets the token of this Integration.
+        Telegram Bot Token OR Viber Public Account token. Required for *twilio* and *viber* integrations. 
 
         :param token: The token of this Integration.
         :type: str
@@ -285,6 +303,7 @@ class Integration(object):
     def channel_access_token(self):
         """
         Gets the channel_access_token of this Integration.
+        LINE Channel Access Token. Required for *line* integrations. 
 
         :return: The channel_access_token of this Integration.
         :rtype: str
@@ -295,6 +314,7 @@ class Integration(object):
     def channel_access_token(self, channel_access_token):
         """
         Sets the channel_access_token of this Integration.
+        LINE Channel Access Token. Required for *line* integrations. 
 
         :param channel_access_token: The channel_access_token of this Integration.
         :type: str
@@ -306,6 +326,7 @@ class Integration(object):
     def encoding_aes_key(self):
         """
         Gets the encoding_aes_key of this Integration.
+        AES Encoding Key. (Optional) Used for *wechat* integrations. 
 
         :return: The encoding_aes_key of this Integration.
         :rtype: str
@@ -316,6 +337,7 @@ class Integration(object):
     def encoding_aes_key(self, encoding_aes_key):
         """
         Sets the encoding_aes_key of this Integration.
+        AES Encoding Key. (Optional) Used for *wechat* integrations. 
 
         :param encoding_aes_key: The encoding_aes_key of this Integration.
         :type: str
@@ -327,6 +349,7 @@ class Integration(object):
     def from_address(self):
         """
         Gets the from_address of this Integration.
+        Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations. 
 
         :return: The from_address of this Integration.
         :rtype: str
@@ -337,6 +360,7 @@ class Integration(object):
     def from_address(self, from_address):
         """
         Sets the from_address of this Integration.
+        Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations. 
 
         :param from_address: The from_address of this Integration.
         :type: str
@@ -348,6 +372,7 @@ class Integration(object):
     def certificate(self):
         """
         Gets the certificate of this Integration.
+        The binary of your APN certificate base64 encoded. Required for *apn* integrations. 
 
         :return: The certificate of this Integration.
         :rtype: str
@@ -358,6 +383,7 @@ class Integration(object):
     def certificate(self, certificate):
         """
         Sets the certificate of this Integration.
+        The binary of your APN certificate base64 encoded. Required for *apn* integrations. 
 
         :param certificate: The certificate of this Integration.
         :type: str
@@ -369,6 +395,7 @@ class Integration(object):
     def password(self):
         """
         Gets the password of this Integration.
+        The password for your APN certificate. (Optional) Used for *apn* integrations. 
 
         :return: The password of this Integration.
         :rtype: str
@@ -379,6 +406,7 @@ class Integration(object):
     def password(self, password):
         """
         Sets the password of this Integration.
+        The password for your APN certificate. (Optional) Used for *apn* integrations. 
 
         :param password: The password of this Integration.
         :type: str
@@ -390,6 +418,7 @@ class Integration(object):
     def auto_update_badge(self):
         """
         Gets the auto_update_badge of this Integration.
+        Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations. 
 
         :return: The auto_update_badge of this Integration.
         :rtype: bool
@@ -400,6 +429,7 @@ class Integration(object):
     def auto_update_badge(self, auto_update_badge):
         """
         Sets the auto_update_badge of this Integration.
+        Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations. 
 
         :param auto_update_badge: The auto_update_badge of this Integration.
         :type: bool
@@ -411,6 +441,7 @@ class Integration(object):
     def server_key(self):
         """
         Gets the server_key of this Integration.
+        Your server key from the fcm console. Required for *fcm* integrations. 
 
         :return: The server_key of this Integration.
         :rtype: str
@@ -421,6 +452,7 @@ class Integration(object):
     def server_key(self, server_key):
         """
         Sets the server_key of this Integration.
+        Your server key from the fcm console. Required for *fcm* integrations. 
 
         :param server_key: The server_key of this Integration.
         :type: str
@@ -432,6 +464,7 @@ class Integration(object):
     def sender_id(self):
         """
         Gets the sender_id of this Integration.
+        Your sender id from the fcm console. Required for *fcm* integrations. 
 
         :return: The sender_id of this Integration.
         :rtype: str
@@ -442,6 +475,7 @@ class Integration(object):
     def sender_id(self, sender_id):
         """
         Sets the sender_id of this Integration.
+        Your sender id from the fcm console. Required for *fcm* integrations. 
 
         :param sender_id: The sender_id of this Integration.
         :type: str

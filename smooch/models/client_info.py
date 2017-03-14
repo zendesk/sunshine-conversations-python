@@ -65,6 +65,7 @@ class ClientInfo(object):
     def app_name(self):
         """
         Gets the app_name of this ClientInfo.
+        Name of the app associated with the client.
 
         :return: The app_name of this ClientInfo.
         :rtype: str
@@ -75,6 +76,7 @@ class ClientInfo(object):
     def app_name(self, app_name):
         """
         Sets the app_name of this ClientInfo.
+        Name of the app associated with the client.
 
         :param app_name: The app_name of this ClientInfo.
         :type: str
@@ -86,6 +88,7 @@ class ClientInfo(object):
     def device_model(self):
         """
         Gets the device_model of this ClientInfo.
+        The client's device model.
 
         :return: The device_model of this ClientInfo.
         :rtype: str
@@ -96,6 +99,7 @@ class ClientInfo(object):
     def device_model(self, device_model):
         """
         Sets the device_model of this ClientInfo.
+        The client's device model.
 
         :param device_model: The device_model of this ClientInfo.
         :type: str
@@ -107,6 +111,7 @@ class ClientInfo(object):
     def os(self):
         """
         Gets the os of this ClientInfo.
+        The client's OS.
 
         :return: The os of this ClientInfo.
         :rtype: str
@@ -117,6 +122,7 @@ class ClientInfo(object):
     def os(self, os):
         """
         Sets the os of this ClientInfo.
+        The client's OS.
 
         :param os: The os of this ClientInfo.
         :type: str
@@ -128,6 +134,7 @@ class ClientInfo(object):
     def os_version(self):
         """
         Gets the os_version of this ClientInfo.
+        The client's OS version.
 
         :return: The os_version of this ClientInfo.
         :rtype: str
@@ -138,6 +145,7 @@ class ClientInfo(object):
     def os_version(self, os_version):
         """
         Sets the os_version of this ClientInfo.
+        The client's OS version.
 
         :param os_version: The os_version of this ClientInfo.
         :type: str
@@ -149,6 +157,7 @@ class ClientInfo(object):
     def radio_access_technology(self):
         """
         Gets the radio_access_technology of this ClientInfo.
+        The client's radioAccessTechnology (Ex. HSDPA).
 
         :return: The radio_access_technology of this ClientInfo.
         :rtype: str
@@ -159,6 +168,7 @@ class ClientInfo(object):
     def radio_access_technology(self, radio_access_technology):
         """
         Sets the radio_access_technology of this ClientInfo.
+        The client's radioAccessTechnology (Ex. HSDPA).
 
         :param radio_access_technology: The radio_access_technology of this ClientInfo.
         :type: str
@@ -170,6 +180,7 @@ class ClientInfo(object):
     def carrier(self):
         """
         Gets the carrier of this ClientInfo.
+        The client's carrier.
 
         :return: The carrier of this ClientInfo.
         :rtype: str
@@ -180,6 +191,7 @@ class ClientInfo(object):
     def carrier(self, carrier):
         """
         Sets the carrier of this ClientInfo.
+        The client's carrier.
 
         :param carrier: The carrier of this ClientInfo.
         :type: str
@@ -191,6 +203,7 @@ class ClientInfo(object):
     def device_platform(self):
         """
         Gets the device_platform of this ClientInfo.
+        The client's device platform.
 
         :return: The device_platform of this ClientInfo.
         :rtype: str
@@ -201,6 +214,7 @@ class ClientInfo(object):
     def device_platform(self, device_platform):
         """
         Sets the device_platform of this ClientInfo.
+        The client's device platform.
 
         :param device_platform: The device_platform of this ClientInfo.
         :type: str
@@ -212,6 +226,7 @@ class ClientInfo(object):
     def wifi(self):
         """
         Gets the wifi of this ClientInfo.
+        Whether or not the client has wifi.
 
         :return: The wifi of this ClientInfo.
         :rtype: str
@@ -222,6 +237,7 @@ class ClientInfo(object):
     def wifi(self, wifi):
         """
         Sets the wifi of this ClientInfo.
+        Whether or not the client has wifi.
 
         :param wifi: The wifi of this ClientInfo.
         :type: str

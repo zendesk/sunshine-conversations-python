@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_message**
-> PostMessagesResponse post_message(user_id, message_post)
+> PostMessagesResponse post_message(user_id, message_post_body)
 
 
 
@@ -153,10 +153,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-message_post = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
+message_post_body = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
 
 try: 
-    api_response = api_instance.post_message(user_id, message_post)
+    api_response = api_instance.post_message(user_id, message_post_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConversationApi->post_message: %s\n" % e)
@@ -167,7 +167,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **message_post** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
+ **message_post_body** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
 
 ### Return type
 
@@ -240,7 +240,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trigger_typing_activity**
-> trigger_typing_activity(user_id, typing_activity_trigger)
+> trigger_typing_activity(user_id, typing_activity_trigger_body)
 
 
 
@@ -266,10 +266,10 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-typing_activity_trigger = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
+typing_activity_trigger_body = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
 
 try: 
-    api_instance.trigger_typing_activity(user_id, typing_activity_trigger)
+    api_instance.trigger_typing_activity(user_id, typing_activity_trigger_body)
 except ApiException as e:
     print("Exception when calling ConversationApi->trigger_typing_activity: %s\n" % e)
 ```
@@ -279,7 +279,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **typing_activity_trigger** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
+ **typing_activity_trigger_body** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 
 ### Return type
 
