@@ -51,25 +51,19 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: appToken
-smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
 # Configure API key authorization: jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
-api_instance = smooch.AppUserApi()
-user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-device_id = 'device_id_example' # str | Id of the device.
-app_user_device_update = smooch.DeviceUpdate() # DeviceUpdate | Supported properties for an updateAppUserDevice request.
+api_instance = smooch.AppApi()
+app_create = smooch.AppCreate() # AppCreate | Body for a createApp request.
 
 try:
-    api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update)
+    api_response = api_instance.create_app(app_create)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppUserApi->app_user_device_update: %s\n" % e)
+    print("Exception when calling AppApi->create_app: %s\n" % e)
 
 ```
 
@@ -79,6 +73,17 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AppApi* | [**create_app**](docs/AppApi.md#create_app) | **POST** /apps | 
+*AppApi* | [**create_secret_key**](docs/AppApi.md#create_secret_key) | **POST** /apps/{appId}/keys | 
+*AppApi* | [**delete_app**](docs/AppApi.md#delete_app) | **DELETE** /apps/{appId} | 
+*AppApi* | [**delete_integration**](docs/AppApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
+*AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /apps/{appId}/keys/{keyId} | 
+*AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /apps/{appId} | 
+*AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /apps/{appId}/keys/{keyId}/jwt | 
+*AppApi* | [**get_integration**](docs/AppApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
+*AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
+*AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
+*AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
 *AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /appusers/{userId}/devices/{deviceId} | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /appusers/{userId} | 
@@ -89,16 +94,30 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**track_event**](docs/AppUserApi.md#track_event) | **POST** /appusers/{userId}/events | 
 *AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /appusers/{userId}/channels/{channel} | 
 *AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /appusers/{userId} | 
+*ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
 *ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
+*ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
 *ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /appusers/{userId}/conversation/read | 
 *ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
+*InitApi* | [**init**](docs/InitApi.md#init) | **POST** /init | 
+*IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
+*IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /menu | 
+*WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /apps/{appId}/webhooks | 
+*WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /apps/{appId}/webhooks/{webhookId} | 
+*WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /apps/{appId}/webhooks/{webhookId} | 
+*WebhookApi* | [**list_webhooks**](docs/WebhookApi.md#list_webhooks) | **GET** /apps/{appId}/webhooks | 
+*WebhookApi* | [**update_webhook**](docs/WebhookApi.md#update_webhook) | **PUT** /apps/{appId}/webhooks/{webhookId} | 
 
 
 ## Documentation For Models
 
+ - [Action](docs/Action.md)
+ - [App](docs/App.md)
+ - [AppCreate](docs/AppCreate.md)
+ - [AppResponse](docs/AppResponse.md)
  - [AppUser](docs/AppUser.md)
  - [AppUserLink](docs/AppUserLink.md)
  - [AppUserPreCreate](docs/AppUserPreCreate.md)
@@ -108,17 +127,37 @@ Class | Method | HTTP request | Description
  - [ClientInfo](docs/ClientInfo.md)
  - [ClientResponse](docs/ClientResponse.md)
  - [Conversation](docs/Conversation.md)
+ - [Destination](docs/Destination.md)
  - [DeviceUpdate](docs/DeviceUpdate.md)
  - [Event](docs/Event.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
+ - [Init](docs/Init.md)
+ - [InitResponse](docs/InitResponse.md)
+ - [Integration](docs/Integration.md)
+ - [IntegrationCreate](docs/IntegrationCreate.md)
+ - [IntegrationResponse](docs/IntegrationResponse.md)
+ - [JwtResponse](docs/JwtResponse.md)
+ - [ListAppsResponse](docs/ListAppsResponse.md)
+ - [ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
+ - [ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
+ - [ListWebhooksResponse](docs/ListWebhooksResponse.md)
  - [Menu](docs/Menu.md)
  - [MenuItem](docs/MenuItem.md)
  - [MenuResponse](docs/MenuResponse.md)
  - [Message](docs/Message.md)
+ - [MessageItem](docs/MessageItem.md)
+ - [MessagePost](docs/MessagePost.md)
  - [MessageResponse](docs/MessageResponse.md)
- - [Postback](docs/Postback.md)
+ - [PostMessagesResponse](docs/PostMessagesResponse.md)
+ - [SecretKey](docs/SecretKey.md)
+ - [SecretKeyCreate](docs/SecretKeyCreate.md)
+ - [SecretKeyResponse](docs/SecretKeyResponse.md)
  - [TrackEventResponse](docs/TrackEventResponse.md)
  - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
+ - [Webhook](docs/Webhook.md)
+ - [WebhookCreate](docs/WebhookCreate.md)
+ - [WebhookResponse](docs/WebhookResponse.md)
+ - [WebhookUpdate](docs/WebhookUpdate.md)
 
 
 ## Documentation For Authorization

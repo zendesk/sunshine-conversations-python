@@ -40,9 +40,113 @@ class ConversationApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
+    def delete_messages(self, user_id, **kwargs):
+        """
+        Clears the message history for a user, permanently deleting all messages, but leaving any connections to Messaging Channels and Business Systems intact. These connections allow for the conversation to continue in the future, while still being associated to the same appUser. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_messages(user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_messages_with_http_info(user_id, **kwargs)
+        else:
+            (data) = self.delete_messages_with_http_info(user_id, **kwargs)
+            return data
+
+    def delete_messages_with_http_info(self, user_id, **kwargs):
+        """
+        Clears the message history for a user, permanently deleting all messages, but leaving any connections to Messaging Channels and Business Systems intact. These connections allow for the conversation to continue in the future, while still being associated to the same appUser. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_messages_with_http_info(user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['user_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_messages" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `delete_messages`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['appToken', 'jwt']
+
+        return self.api_client.call_api('/appusers/{userId}/messages', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_messages(self, user_id, **kwargs):
         """
-        Get the specified app users messages.
+        Get the specified app user's messages.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,7 +173,7 @@ class ConversationApi(object):
 
     def get_messages_with_http_info(self, user_id, **kwargs):
         """
-        Get the specified app users messages.
+        Get the specified app user's messages.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -152,9 +256,120 @@ class ConversationApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def post_message(self, user_id, message_post, **kwargs):
+        """
+        Post a message to or from the app user.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_message(user_id, message_post, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :param MessagePost message_post: Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  (required)
+        :return: PostMessagesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_message_with_http_info(user_id, message_post, **kwargs)
+        else:
+            (data) = self.post_message_with_http_info(user_id, message_post, **kwargs)
+            return data
+
+    def post_message_with_http_info(self, user_id, message_post, **kwargs):
+        """
+        Post a message to or from the app user.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_message_with_http_info(user_id, message_post, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :param MessagePost message_post: Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  (required)
+        :return: PostMessagesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['user_id', 'message_post']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_message" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `post_message`")
+        # verify the required parameter 'message_post' is set
+        if ('message_post' not in params) or (params['message_post'] is None):
+            raise ValueError("Missing the required parameter `message_post` when calling `post_message`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'message_post' in params:
+            body_params = params['message_post']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['appToken', 'jwt']
+
+        return self.api_client.call_api('/appusers/{userId}/messages', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PostMessagesResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def reset_unread_count(self, user_id, **kwargs):
         """
-        Reset the unread count of the conversation to 0. If the conversation has not yet been created for the specified app user 404 will be returned.
+        Reset the unread count of the conversation to 0.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -179,7 +394,7 @@ class ConversationApi(object):
 
     def reset_unread_count_with_http_info(self, user_id, **kwargs):
         """
-        Reset the unread count of the conversation to 0. If the conversation has not yet been created for the specified app user 404 will be returned.
+        Reset the unread count of the conversation to 0.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -270,7 +485,7 @@ class ConversationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param TypingActivityTrigger typing_activity_trigger: Supported properties for a triggerTypingActivity request. (required)
+        :param TypingActivityTrigger typing_activity_trigger: Body for a triggerTypingActivity request. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -296,7 +511,7 @@ class ConversationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param TypingActivityTrigger typing_activity_trigger: Supported properties for a triggerTypingActivity request. (required)
+        :param TypingActivityTrigger typing_activity_trigger: Body for a triggerTypingActivity request. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.

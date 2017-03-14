@@ -93,8 +93,6 @@ class Client(object):
         :param active: The active of this Client.
         :type: bool
         """
-        if active is None:
-            raise ValueError("Invalid value for `active`, must not be `None`")
 
         self._active = active
 
@@ -116,8 +114,6 @@ class Client(object):
         :param last_seen: The last_seen of this Client.
         :type: str
         """
-        if last_seen is None:
-            raise ValueError("Invalid value for `last_seen`, must not be `None`")
 
         self._last_seen = last_seen
 
@@ -162,8 +158,6 @@ class Client(object):
         :param info: The info of this Client.
         :type: ClientInfo
         """
-        if info is None:
-            raise ValueError("Invalid value for `info`, must not be `None`")
 
         self._info = info
 

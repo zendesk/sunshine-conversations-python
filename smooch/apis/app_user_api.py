@@ -55,7 +55,7 @@ class AppUserApi(object):
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
         :param str device_id: Id of the device. (required)
-        :param DeviceUpdate app_user_device_update: Supported properties for an updateAppUserDevice request. (required)
+        :param DeviceUpdate app_user_device_update: Body for an updateAppUserDevice request. (required)
         :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -82,7 +82,7 @@ class AppUserApi(object):
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
         :param str device_id: Id of the device. (required)
-        :param DeviceUpdate app_user_device_update: Supported properties for an updateAppUserDevice request. (required)
+        :param DeviceUpdate app_user_device_update: Body for an updateAppUserDevice request. (required)
         :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -160,7 +160,7 @@ class AppUserApi(object):
 
     def delete_app_user_profile(self, user_id, **kwargs):
         """
-        Delete specified app users profile.
+        Delete specified app user's profile.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -185,7 +185,7 @@ class AppUserApi(object):
 
     def delete_app_user_profile_with_http_info(self, user_id, **kwargs):
         """
-        Delete specified app users profile.
+        Delete specified app user's profile.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -368,7 +368,7 @@ class AppUserApi(object):
 
     def get_app_user_entity_ids(self, user_id, **kwargs):
         """
-        Get specified app users channel entity IDs.
+        Get specified app user's channel entity IDs.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -393,7 +393,7 @@ class AppUserApi(object):
 
     def get_app_user_entity_ids_with_http_info(self, user_id, **kwargs):
         """
-        Get specified app users channel entity IDs.
+        Get specified app user's channel entity IDs.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -484,7 +484,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserLink app_user_link: Supported properties for a linkAppUser request. (required)
+        :param AppUserLink app_user_link: Body for a linkAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -510,7 +510,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserLink app_user_link: Supported properties for a linkAppUser request. (required)
+        :param AppUserLink app_user_link: Body for a linkAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -583,7 +583,7 @@ class AppUserApi(object):
 
     def post_image_message(self, user_id, source, role, **kwargs):
         """
-        Send an image message to the conversation
+        Send an image message to the conversation.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -610,7 +610,7 @@ class AppUserApi(object):
 
     def post_image_message_with_http_info(self, user_id, source, role, **kwargs):
         """
-        Send an image message to the conversation
+        Send an image message to the conversation.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -712,7 +712,7 @@ class AppUserApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppUserPreCreate app_user_pre_create: Supported properties for a preCreateAppUser request. (required)
+        :param AppUserPreCreate app_user_pre_create: Body for a preCreateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -737,7 +737,7 @@ class AppUserApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AppUserPreCreate app_user_pre_create: Supported properties for a preCreateAppUser request. (required)
+        :param AppUserPreCreate app_user_pre_create: Body for a preCreateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -817,7 +817,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param Event event: Supported properties for a trackEvent request. (required)
+        :param Event event: Body for a trackEvent request. (required)
         :return: TrackEventResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -843,7 +843,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param Event event: Supported properties for a trackEvent request. (required)
+        :param Event event: Body for a trackEvent request. (required)
         :return: TrackEventResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1039,7 +1039,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserUpdate app_user_update: Supported properties for an updateAppUser request. (required)
+        :param AppUserUpdate app_user_update: Body for an updateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1065,7 +1065,7 @@ class AppUserApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param AppUserUpdate app_user_update: Supported properties for an updateAppUser request. (required)
+        :param AppUserUpdate app_user_update: Body for an updateAppUser request. (required)
         :return: AppUserResponse
                  If the method is called asynchronously,
                  returns the request thread.

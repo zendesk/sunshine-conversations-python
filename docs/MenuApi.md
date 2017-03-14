@@ -131,7 +131,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
-menu_update = smooch.Menu() # Menu | Supported properties for a updateMenu request.
+menu_update = smooch.Menu() # Menu | Body for a updateMenu request.
 
 try: 
     api_response = api_instance.update_menu(menu_update)
@@ -144,7 +144,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_update** | [**Menu**](Menu.md)| Supported properties for a updateMenu request. | 
+ **menu_update** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
 
 ### Return type
 

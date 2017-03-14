@@ -62,6 +62,7 @@ class AppUser(object):
     def id(self):
         """
         Gets the id of this AppUser.
+        The app user's ID, generated automatically.
 
         :return: The id of this AppUser.
         :rtype: str
@@ -72,6 +73,7 @@ class AppUser(object):
     def id(self, id):
         """
         Sets the id of this AppUser.
+        The app user's ID, generated automatically.
 
         :param id: The id of this AppUser.
         :type: str
@@ -85,6 +87,7 @@ class AppUser(object):
     def user_id(self):
         """
         Gets the user_id of this AppUser.
+        The app user's userId. This ID is specified by the appMaker. 
 
         :return: The user_id of this AppUser.
         :rtype: str
@@ -95,6 +98,7 @@ class AppUser(object):
     def user_id(self, user_id):
         """
         Sets the user_id of this AppUser.
+        The app user's userId. This ID is specified by the appMaker. 
 
         :param user_id: The user_id of this AppUser.
         :type: str
@@ -106,6 +110,7 @@ class AppUser(object):
     def given_name(self):
         """
         Gets the given_name of this AppUser.
+        The app user's given name.
 
         :return: The given_name of this AppUser.
         :rtype: str
@@ -116,6 +121,7 @@ class AppUser(object):
     def given_name(self, given_name):
         """
         Sets the given_name of this AppUser.
+        The app user's given name.
 
         :param given_name: The given_name of this AppUser.
         :type: str
@@ -127,6 +133,7 @@ class AppUser(object):
     def surname(self):
         """
         Gets the surname of this AppUser.
+        The app user's surname.
 
         :return: The surname of this AppUser.
         :rtype: str
@@ -137,6 +144,7 @@ class AppUser(object):
     def surname(self, surname):
         """
         Sets the surname of this AppUser.
+        The app user's surname.
 
         :param surname: The surname of this AppUser.
         :type: str
@@ -148,6 +156,7 @@ class AppUser(object):
     def properties(self):
         """
         Gets the properties of this AppUser.
+        Custom properties for the app user.
 
         :return: The properties of this AppUser.
         :rtype: object
@@ -158,6 +167,7 @@ class AppUser(object):
     def properties(self, properties):
         """
         Sets the properties of this AppUser.
+        Custom properties for the app user.
 
         :param properties: The properties of this AppUser.
         :type: object
@@ -171,6 +181,7 @@ class AppUser(object):
     def conversation_started(self):
         """
         Gets the conversation_started of this AppUser.
+        Flag specifying whether the conversation has started for the app user.
 
         :return: The conversation_started of this AppUser.
         :rtype: bool
@@ -181,6 +192,7 @@ class AppUser(object):
     def conversation_started(self, conversation_started):
         """
         Sets the conversation_started of this AppUser.
+        Flag specifying whether the conversation has started for the app user.
 
         :param conversation_started: The conversation_started of this AppUser.
         :type: bool
@@ -194,6 +206,7 @@ class AppUser(object):
     def clients(self):
         """
         Gets the clients of this AppUser.
+        List of clients associated with the app user.
 
         :return: The clients of this AppUser.
         :rtype: list[Client]
@@ -204,6 +217,7 @@ class AppUser(object):
     def clients(self, clients):
         """
         Sets the clients of this AppUser.
+        List of clients associated with the app user.
 
         :param clients: The clients of this AppUser.
         :type: list[Client]

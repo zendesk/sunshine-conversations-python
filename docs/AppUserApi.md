@@ -44,7 +44,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 device_id = 'device_id_example' # str | Id of the device.
-app_user_device_update = smooch.DeviceUpdate() # DeviceUpdate | Supported properties for an updateAppUserDevice request.
+app_user_device_update = smooch.DeviceUpdate() # DeviceUpdate | Body for an updateAppUserDevice request.
 
 try: 
     api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update)
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
  **device_id** | **str**| Id of the device. | 
- **app_user_device_update** | [**DeviceUpdate**](DeviceUpdate.md)| Supported properties for an updateAppUserDevice request. | 
+ **app_user_device_update** | [**DeviceUpdate**](DeviceUpdate.md)| Body for an updateAppUserDevice request. | 
 
 ### Return type
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 
 
-Delete specified app users profile.
+Delete specified app user's profile.
 
 ### Example 
 ```python
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 
 
-Get specified app users channel entity IDs.
+Get specified app user's channel entity IDs.
 
 ### Example 
 ```python
@@ -271,7 +271,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_link = smooch.AppUserLink() # AppUserLink | Supported properties for a linkAppUser request.
+app_user_link = smooch.AppUserLink() # AppUserLink | Body for a linkAppUser request.
 
 try: 
     api_response = api_instance.link_app_user(user_id, app_user_link)
@@ -285,7 +285,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_link** | [**AppUserLink**](AppUserLink.md)| Supported properties for a linkAppUser request. | 
+ **app_user_link** | [**AppUserLink**](AppUserLink.md)| Body for a linkAppUser request. | 
 
 ### Return type
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 
 
-Send an image message to the conversation
+Send an image message to the conversation.
 
 ### Example 
 ```python
@@ -384,7 +384,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
-app_user_pre_create = smooch.AppUserPreCreate() # AppUserPreCreate | Supported properties for a preCreateAppUser request.
+app_user_pre_create = smooch.AppUserPreCreate() # AppUserPreCreate | Body for a preCreateAppUser request.
 
 try: 
     api_response = api_instance.pre_create_app_user(app_user_pre_create)
@@ -397,7 +397,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_user_pre_create** | [**AppUserPreCreate**](AppUserPreCreate.md)| Supported properties for a preCreateAppUser request. | 
+ **app_user_pre_create** | [**AppUserPreCreate**](AppUserPreCreate.md)| Body for a preCreateAppUser request. | 
 
 ### Return type
 
@@ -441,7 +441,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-event = smooch.Event() # Event | Supported properties for a trackEvent request.
+event = smooch.Event() # Event | Body for a trackEvent request.
 
 try: 
     api_response = api_instance.track_event(user_id, event)
@@ -455,7 +455,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **event** | [**Event**](Event.md)| Supported properties for a trackEvent request. | 
+ **event** | [**Event**](Event.md)| Body for a trackEvent request. | 
 
 ### Return type
 
@@ -556,7 +556,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-app_user_update = smooch.AppUserUpdate() # AppUserUpdate | Supported properties for an updateAppUser request.
+app_user_update = smooch.AppUserUpdate() # AppUserUpdate | Body for an updateAppUser request.
 
 try: 
     api_response = api_instance.update_app_user(user_id, app_user_update)
@@ -570,7 +570,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_update** | [**AppUserUpdate**](AppUserUpdate.md)| Supported properties for an updateAppUser request. | 
+ **app_user_update** | [**AppUserUpdate**](AppUserUpdate.md)| Body for an updateAppUser request. | 
 
 ### Return type
 

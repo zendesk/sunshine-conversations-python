@@ -4,17 +4,74 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
 [**get_messages**](ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
+[**post_message**](ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
 [**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /appusers/{userId}/conversation/read | 
 [**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
 
+
+# **delete_messages**
+> delete_messages(user_id)
+
+
+
+Clears the message history for a user, permanently deleting all messages, but leaving any connections to Messaging Channels and Business Systems intact. These connections allow for the conversation to continue in the future, while still being associated to the same appUser. 
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.ConversationApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+
+try: 
+    api_instance.delete_messages(user_id)
+except ApiException as e:
+    print("Exception when calling ConversationApi->delete_messages: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_messages**
 > GetMessagesResponse get_messages(user_id, before=before, after=after)
 
 
 
-Get the specified app users messages.
+Get the specified app user's messages.
 
 ### Example 
 ```python
@@ -69,12 +126,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **post_message**
+> PostMessagesResponse post_message(user_id, message_post)
+
+
+
+Post a message to or from the app user.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: appToken
+smooch.configuration.api_key['app-token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# smooch.configuration.api_key_prefix['app-token'] = 'Bearer'
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.ConversationApi()
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+message_post = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
+
+try: 
+    api_response = api_instance.post_message(user_id, message_post)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ConversationApi->post_message: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **message_post** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
+
+### Return type
+
+[**PostMessagesResponse**](PostMessagesResponse.md)
+
+### Authorization
+
+[appToken](../README.md#appToken), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **reset_unread_count**
 > reset_unread_count(user_id)
 
 
 
-Reset the unread count of the conversation to 0. If the conversation has not yet been created for the specified app user 404 will be returned.
+Reset the unread count of the conversation to 0.
 
 ### Example 
 ```python
@@ -151,7 +266,7 @@ smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-typing_activity_trigger = smooch.TypingActivityTrigger() # TypingActivityTrigger | Supported properties for a triggerTypingActivity request.
+typing_activity_trigger = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
 
 try: 
     api_instance.trigger_typing_activity(user_id, typing_activity_trigger)
@@ -164,7 +279,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **typing_activity_trigger** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Supported properties for a triggerTypingActivity request. | 
+ **typing_activity_trigger** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 
 ### Return type
 
