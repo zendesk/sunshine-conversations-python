@@ -44,6 +44,7 @@ class AppCreate(object):
     def name(self):
         """
         Gets the name of this AppCreate.
+        The app's name.
 
         :return: The name of this AppCreate.
         :rtype: str
@@ -54,6 +55,7 @@ class AppCreate(object):
     def name(self, name):
         """
         Sets the name of this AppCreate.
+        The app's name.
 
         :param name: The name of this AppCreate.
         :type: str
