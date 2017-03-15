@@ -3,7 +3,7 @@
 """
     Smooch
 
-    The Smooch API allows you to craft entirely unique messaging experiences for your app and website as well as talk to any backend or external service. For more information, visit our [official documentation](https://docs.smooch.io/rest/). 
+    The Smooch API is a unified interface for powering messaging in your customers' experiences across every channel. Our API speeds access to new markets, reduces time to ship, eliminates complexity, and helps you build the best experiences for your customers. For more information, visit our official documentation.
 
     OpenAPI spec version: 1.0.0
     
