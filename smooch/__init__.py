@@ -25,10 +25,10 @@ from .models.app_user_response import AppUserResponse
 from .models.app_user_update import AppUserUpdate
 from .models.client import Client
 from .models.client_info import ClientInfo
+from .models.client_response import ClientResponse
 from .models.conversation import Conversation
 from .models.destination import Destination
 from .models.device_init import DeviceInit
-from .models.device_response import DeviceResponse
 from .models.device_update import DeviceUpdate
 from .models.display_settings import DisplaySettings
 from .models.event import Event

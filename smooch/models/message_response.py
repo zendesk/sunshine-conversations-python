@@ -47,7 +47,6 @@ class MessageResponse(object):
     def message(self):
         """
         Gets the message of this MessageResponse.
-        The message.
 
         :return: The message of this MessageResponse.
         :rtype: object
@@ -58,7 +57,6 @@ class MessageResponse(object):
     def message(self, message):
         """
         Sets the message of this MessageResponse.
-        The message.
 
         :param message: The message of this MessageResponse.
         :type: object
@@ -72,7 +70,6 @@ class MessageResponse(object):
     def conversation(self):
         """
         Gets the conversation of this MessageResponse.
-        The conversation.
 
         :return: The conversation of this MessageResponse.
         :rtype: Conversation
@@ -83,7 +80,6 @@ class MessageResponse(object):
     def conversation(self, conversation):
         """
         Sets the conversation of this MessageResponse.
-        The conversation.
 
         :param conversation: The conversation of this MessageResponse.
         :type: Conversation

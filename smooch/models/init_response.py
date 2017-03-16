@@ -47,7 +47,6 @@ class InitResponse(object):
     def app_user(self):
         """
         Gets the app_user of this InitResponse.
-        The app user.
 
         :return: The app_user of this InitResponse.
         :rtype: AppUser
@@ -58,7 +57,6 @@ class InitResponse(object):
     def app_user(self, app_user):
         """
         Sets the app_user of this InitResponse.
-        The app user.
 
         :param app_user: The app_user of this InitResponse.
         :type: AppUser
@@ -72,7 +70,6 @@ class InitResponse(object):
     def app(self):
         """
         Gets the app of this InitResponse.
-        The app.
 
         :return: The app of this InitResponse.
         :rtype: App
@@ -83,7 +80,6 @@ class InitResponse(object):
     def app(self, app):
         """
         Sets the app of this InitResponse.
-        The app.
 
         :param app: The app of this InitResponse.
         :type: App

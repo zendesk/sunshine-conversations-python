@@ -62,7 +62,6 @@ class AppUserPreCreate(object):
     def user_id(self):
         """
         Gets the user_id of this AppUserPreCreate.
-        The app user's userId. This ID is specified by the appMaker. 
 
         :return: The user_id of this AppUserPreCreate.
         :rtype: str
@@ -73,7 +72,6 @@ class AppUserPreCreate(object):
     def user_id(self, user_id):
         """
         Sets the user_id of this AppUserPreCreate.
-        The app user's userId. This ID is specified by the appMaker. 
 
         :param user_id: The user_id of this AppUserPreCreate.
         :type: str
@@ -87,7 +85,6 @@ class AppUserPreCreate(object):
     def credential_required(self):
         """
         Gets the credential_required of this AppUserPreCreate.
-        Flag indicating if the appUser is secured by a JSON Web Token or not.
 
         :return: The credential_required of this AppUserPreCreate.
         :rtype: bool
@@ -98,7 +95,6 @@ class AppUserPreCreate(object):
     def credential_required(self, credential_required):
         """
         Sets the credential_required of this AppUserPreCreate.
-        Flag indicating if the appUser is secured by a JSON Web Token or not.
 
         :param credential_required: The credential_required of this AppUserPreCreate.
         :type: bool
@@ -110,7 +106,6 @@ class AppUserPreCreate(object):
     def given_name(self):
         """
         Gets the given_name of this AppUserPreCreate.
-        The app user's given name.
 
         :return: The given_name of this AppUserPreCreate.
         :rtype: str
@@ -121,7 +116,6 @@ class AppUserPreCreate(object):
     def given_name(self, given_name):
         """
         Sets the given_name of this AppUserPreCreate.
-        The app user's given name.
 
         :param given_name: The given_name of this AppUserPreCreate.
         :type: str
@@ -133,7 +127,6 @@ class AppUserPreCreate(object):
     def surname(self):
         """
         Gets the surname of this AppUserPreCreate.
-        The app user's surname.
 
         :return: The surname of this AppUserPreCreate.
         :rtype: str
@@ -144,7 +137,6 @@ class AppUserPreCreate(object):
     def surname(self, surname):
         """
         Sets the surname of this AppUserPreCreate.
-        The app user's surname.
 
         :param surname: The surname of this AppUserPreCreate.
         :type: str
@@ -156,7 +148,6 @@ class AppUserPreCreate(object):
     def email(self):
         """
         Gets the email of this AppUserPreCreate.
-        The app user's email.
 
         :return: The email of this AppUserPreCreate.
         :rtype: str
@@ -167,7 +158,6 @@ class AppUserPreCreate(object):
     def email(self, email):
         """
         Sets the email of this AppUserPreCreate.
-        The app user's email.
 
         :param email: The email of this AppUserPreCreate.
         :type: str
@@ -179,7 +169,6 @@ class AppUserPreCreate(object):
     def signed_up_at(self):
         """
         Gets the signed_up_at of this AppUserPreCreate.
-        A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created.
 
         :return: The signed_up_at of this AppUserPreCreate.
         :rtype: str
@@ -190,7 +179,6 @@ class AppUserPreCreate(object):
     def signed_up_at(self, signed_up_at):
         """
         Sets the signed_up_at of this AppUserPreCreate.
-        A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created.
 
         :param signed_up_at: The signed_up_at of this AppUserPreCreate.
         :type: str
@@ -202,7 +190,6 @@ class AppUserPreCreate(object):
     def properties(self):
         """
         Gets the properties of this AppUserPreCreate.
-        Custom properties for the app user.
 
         :return: The properties of this AppUserPreCreate.
         :rtype: object
@@ -213,7 +200,6 @@ class AppUserPreCreate(object):
     def properties(self, properties):
         """
         Sets the properties of this AppUserPreCreate.
-        Custom properties for the app user.
 
         :param properties: The properties of this AppUserPreCreate.
         :type: object

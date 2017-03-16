@@ -44,7 +44,6 @@ class AppResponse(object):
     def app(self):
         """
         Gets the app of this AppResponse.
-        The app.
 
         :return: The app of this AppResponse.
         :rtype: App
@@ -55,7 +54,6 @@ class AppResponse(object):
     def app(self, app):
         """
         Sets the app of this AppResponse.
-        The app.
 
         :param app: The app of this AppResponse.
         :type: App

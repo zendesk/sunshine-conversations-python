@@ -44,7 +44,6 @@ class SecretKeyCreate(object):
     def name(self):
         """
         Gets the name of this SecretKeyCreate.
-        A friendly identifier for the secret key.
 
         :return: The name of this SecretKeyCreate.
         :rtype: str
@@ -55,7 +54,6 @@ class SecretKeyCreate(object):
     def name(self, name):
         """
         Sets the name of this SecretKeyCreate.
-        A friendly identifier for the secret key.
 
         :param name: The name of this SecretKeyCreate.
         :type: str

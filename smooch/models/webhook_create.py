@@ -47,7 +47,6 @@ class WebhookCreate(object):
     def target(self):
         """
         Gets the target of this WebhookCreate.
-        URL to be called when the webhook is triggered.
 
         :return: The target of this WebhookCreate.
         :rtype: str
@@ -58,7 +57,6 @@ class WebhookCreate(object):
     def target(self, target):
         """
         Sets the target of this WebhookCreate.
-        URL to be called when the webhook is triggered.
 
         :param target: The target of this WebhookCreate.
         :type: str
@@ -72,7 +70,6 @@ class WebhookCreate(object):
     def triggers(self):
         """
         Gets the triggers of this WebhookCreate.
-        An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
 
         :return: The triggers of this WebhookCreate.
         :rtype: list[str]
@@ -83,18 +80,10 @@ class WebhookCreate(object):
     def triggers(self, triggers):
         """
         Sets the triggers of this WebhookCreate.
-        An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
 
         :param triggers: The triggers of this WebhookCreate.
         :type: list[str]
         """
-        allowed_values = ["message", "message:appUser", "message:appMaker", "conversation:start", "conversation:read", "postback", "merge:appUser", "delivery:success", "delivery:failure", "payment:success", "*"]
-        if not set(triggers).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `triggers` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(triggers)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._triggers = triggers
 

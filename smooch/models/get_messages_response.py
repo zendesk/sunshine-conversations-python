@@ -50,7 +50,6 @@ class GetMessagesResponse(object):
     def conversation(self):
         """
         Gets the conversation of this GetMessagesResponse.
-        The conversation.
 
         :return: The conversation of this GetMessagesResponse.
         :rtype: Conversation
@@ -61,7 +60,6 @@ class GetMessagesResponse(object):
     def conversation(self, conversation):
         """
         Sets the conversation of this GetMessagesResponse.
-        The conversation.
 
         :param conversation: The conversation of this GetMessagesResponse.
         :type: Conversation
@@ -73,7 +71,6 @@ class GetMessagesResponse(object):
     def messages(self):
         """
         Gets the messages of this GetMessagesResponse.
-        The messages.
 
         :return: The messages of this GetMessagesResponse.
         :rtype: list[Message]
@@ -84,7 +81,6 @@ class GetMessagesResponse(object):
     def messages(self, messages):
         """
         Sets the messages of this GetMessagesResponse.
-        The messages.
 
         :param messages: The messages of this GetMessagesResponse.
         :type: list[Message]

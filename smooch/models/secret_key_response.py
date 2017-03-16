@@ -44,7 +44,6 @@ class SecretKeyResponse(object):
     def key(self):
         """
         Gets the key of this SecretKeyResponse.
-        The secret key.
 
         :return: The key of this SecretKeyResponse.
         :rtype: SecretKey
@@ -55,7 +54,6 @@ class SecretKeyResponse(object):
     def key(self, key):
         """
         Sets the key of this SecretKeyResponse.
-        The secret key.
 
         :param key: The key of this SecretKeyResponse.
         :type: SecretKey

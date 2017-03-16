@@ -44,7 +44,6 @@ class WebhookResponse(object):
     def webhook(self):
         """
         Gets the webhook of this WebhookResponse.
-        The webhook.
 
         :return: The webhook of this WebhookResponse.
         :rtype: Webhook
@@ -55,7 +54,6 @@ class WebhookResponse(object):
     def webhook(self, webhook):
         """
         Sets the webhook of this WebhookResponse.
-        The webhook.
 
         :param webhook: The webhook of this WebhookResponse.
         :type: Webhook

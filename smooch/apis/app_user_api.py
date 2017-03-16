@@ -56,7 +56,7 @@ class AppUserApi(object):
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
         :param str device_id: Identifies the device. (required)
         :param DeviceUpdate app_user_device_update_body: Body for an updateAppUserDevice request. (required)
-        :return: DeviceResponse
+        :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class AppUserApi(object):
         :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
         :param str device_id: Identifies the device. (required)
         :param DeviceUpdate app_user_device_update_body: Body for an updateAppUserDevice request. (required)
-        :return: DeviceResponse
+        :return: ClientResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -150,7 +150,7 @@ class AppUserApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeviceResponse',
+                                        response_type='ClientResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
