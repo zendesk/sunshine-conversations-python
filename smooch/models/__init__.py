@@ -25,10 +25,10 @@ from .app_user_response import AppUserResponse
 from .app_user_update import AppUserUpdate
 from .client import Client
 from .client_info import ClientInfo
-from .client_response import ClientResponse
 from .conversation import Conversation
 from .destination import Destination
 from .device_init import DeviceInit
+from .device_response import DeviceResponse
 from .device_update import DeviceUpdate
 from .display_settings import DisplaySettings
 from .event import Event

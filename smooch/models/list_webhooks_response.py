@@ -44,6 +44,7 @@ class ListWebhooksResponse(object):
     def webhooks(self):
         """
         Gets the webhooks of this ListWebhooksResponse.
+        The list of webhooks.
 
         :return: The webhooks of this ListWebhooksResponse.
         :rtype: list[Webhook]
@@ -54,6 +55,7 @@ class ListWebhooksResponse(object):
     def webhooks(self, webhooks):
         """
         Sets the webhooks of this ListWebhooksResponse.
+        The list of webhooks.
 
         :param webhooks: The webhooks of this ListWebhooksResponse.
         :type: list[Webhook]

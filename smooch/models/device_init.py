@@ -56,6 +56,7 @@ class DeviceInit(object):
     def id(self):
         """
         Gets the id of this DeviceInit.
+        An identifier for the client. Must be globally unique.
 
         :return: The id of this DeviceInit.
         :rtype: str
@@ -66,6 +67,7 @@ class DeviceInit(object):
     def id(self, id):
         """
         Sets the id of this DeviceInit.
+        An identifier for the client. Must be globally unique.
 
         :param id: The id of this DeviceInit.
         :type: str
@@ -79,6 +81,7 @@ class DeviceInit(object):
     def platform(self):
         """
         Gets the platform of this DeviceInit.
+        The client's platform.
 
         :return: The platform of this DeviceInit.
         :rtype: str
@@ -89,12 +92,17 @@ class DeviceInit(object):
     def platform(self, platform):
         """
         Sets the platform of this DeviceInit.
+        The client's platform.
 
         :param platform: The platform of this DeviceInit.
         :type: str
         """
-        if platform is None:
-            raise ValueError("Invalid value for `platform`, must not be `None`")
+        allowed_values = ["ios", "android", "web", "other"]
+        if platform not in allowed_values:
+            raise ValueError(
+                "Invalid value for `platform` ({0}), must be one of {1}"
+                .format(platform, allowed_values)
+            )
 
         self._platform = platform
 
@@ -102,6 +110,7 @@ class DeviceInit(object):
     def push_notification_token(self):
         """
         Gets the push_notification_token of this DeviceInit.
+        The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients. 
 
         :return: The push_notification_token of this DeviceInit.
         :rtype: str
@@ -112,6 +121,7 @@ class DeviceInit(object):
     def push_notification_token(self, push_notification_token):
         """
         Sets the push_notification_token of this DeviceInit.
+        The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients. 
 
         :param push_notification_token: The push_notification_token of this DeviceInit.
         :type: str
@@ -123,6 +133,7 @@ class DeviceInit(object):
     def app_version(self):
         """
         Gets the app_version of this DeviceInit.
+        A reserved string field for reporting the app version running on the device.
 
         :return: The app_version of this DeviceInit.
         :rtype: str
@@ -133,6 +144,7 @@ class DeviceInit(object):
     def app_version(self, app_version):
         """
         Sets the app_version of this DeviceInit.
+        A reserved string field for reporting the app version running on the device.
 
         :param app_version: The app_version of this DeviceInit.
         :type: str

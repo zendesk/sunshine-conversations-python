@@ -133,6 +133,7 @@ class Client(object):
     def platform(self):
         """
         Gets the platform of this Client.
+        The client's platform.
 
         :return: The platform of this Client.
         :rtype: str
@@ -143,12 +144,17 @@ class Client(object):
     def platform(self, platform):
         """
         Sets the platform of this Client.
+        The client's platform.
 
         :param platform: The platform of this Client.
         :type: str
         """
-        if platform is None:
-            raise ValueError("Invalid value for `platform`, must not be `None`")
+        allowed_values = ["ios", "android", "web", "other"]
+        if platform not in allowed_values:
+            raise ValueError(
+                "Invalid value for `platform` ({0}), must be one of {1}"
+                .format(platform, allowed_values)
+            )
 
         self._platform = platform
 

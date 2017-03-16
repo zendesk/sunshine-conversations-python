@@ -44,6 +44,7 @@ class AppUserResponse(object):
     def app_user(self):
         """
         Gets the app_user of this AppUserResponse.
+        The app user.
 
         :return: The app_user of this AppUserResponse.
         :rtype: AppUser
@@ -54,6 +55,7 @@ class AppUserResponse(object):
     def app_user(self, app_user):
         """
         Sets the app_user of this AppUserResponse.
+        The app user.
 
         :param app_user: The app_user of this AppUserResponse.
         :type: AppUser

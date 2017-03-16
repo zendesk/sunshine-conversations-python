@@ -32,7 +32,7 @@ class AppUserLink(object):
         """
         self.swagger_types = {
             'type': 'str',
-            'skip_confirmation': 'bool'
+            'skip_confirmation': 'str'
         }
 
         self.attribute_map = {
@@ -47,6 +47,7 @@ class AppUserLink(object):
     def type(self):
         """
         Gets the type of this AppUserLink.
+        The type of the channel to link.
 
         :return: The type of this AppUserLink.
         :rtype: str
@@ -57,12 +58,17 @@ class AppUserLink(object):
     def type(self, type):
         """
         Sets the type of this AppUserLink.
+        The type of the channel to link.
 
         :param type: The type of this AppUserLink.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+        allowed_values = ["twilio"]
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
@@ -70,9 +76,10 @@ class AppUserLink(object):
     def skip_confirmation(self):
         """
         Gets the skip_confirmation of this AppUserLink.
+        Flag indicating if the linking confirmation should be skipped.
 
         :return: The skip_confirmation of this AppUserLink.
-        :rtype: bool
+        :rtype: str
         """
         return self._skip_confirmation
 
@@ -80,9 +87,10 @@ class AppUserLink(object):
     def skip_confirmation(self, skip_confirmation):
         """
         Sets the skip_confirmation of this AppUserLink.
+        Flag indicating if the linking confirmation should be skipped.
 
         :param skip_confirmation: The skip_confirmation of this AppUserLink.
-        :type: bool
+        :type: str
         """
 
         self._skip_confirmation = skip_confirmation

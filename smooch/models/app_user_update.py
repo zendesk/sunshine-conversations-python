@@ -56,6 +56,7 @@ class AppUserUpdate(object):
     def given_name(self):
         """
         Gets the given_name of this AppUserUpdate.
+        The app user's given name.
 
         :return: The given_name of this AppUserUpdate.
         :rtype: str
@@ -66,6 +67,7 @@ class AppUserUpdate(object):
     def given_name(self, given_name):
         """
         Sets the given_name of this AppUserUpdate.
+        The app user's given name.
 
         :param given_name: The given_name of this AppUserUpdate.
         :type: str
@@ -77,6 +79,7 @@ class AppUserUpdate(object):
     def surname(self):
         """
         Gets the surname of this AppUserUpdate.
+        The app user's surname.
 
         :return: The surname of this AppUserUpdate.
         :rtype: str
@@ -87,6 +90,7 @@ class AppUserUpdate(object):
     def surname(self, surname):
         """
         Sets the surname of this AppUserUpdate.
+        The app user's surname.
 
         :param surname: The surname of this AppUserUpdate.
         :type: str
@@ -98,6 +102,7 @@ class AppUserUpdate(object):
     def email(self):
         """
         Gets the email of this AppUserUpdate.
+        The app user's email.
 
         :return: The email of this AppUserUpdate.
         :rtype: str
@@ -108,6 +113,7 @@ class AppUserUpdate(object):
     def email(self, email):
         """
         Sets the email of this AppUserUpdate.
+        The app user's email.
 
         :param email: The email of this AppUserUpdate.
         :type: str
@@ -119,6 +125,7 @@ class AppUserUpdate(object):
     def signed_up_at(self):
         """
         Gets the signed_up_at of this AppUserUpdate.
+        A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created.
 
         :return: The signed_up_at of this AppUserUpdate.
         :rtype: str
@@ -129,6 +136,7 @@ class AppUserUpdate(object):
     def signed_up_at(self, signed_up_at):
         """
         Sets the signed_up_at of this AppUserUpdate.
+        A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created.
 
         :param signed_up_at: The signed_up_at of this AppUserUpdate.
         :type: str
@@ -140,6 +148,7 @@ class AppUserUpdate(object):
     def properties(self):
         """
         Gets the properties of this AppUserUpdate.
+        Custom properties for the app user.
 
         :return: The properties of this AppUserUpdate.
         :rtype: object
@@ -150,6 +159,7 @@ class AppUserUpdate(object):
     def properties(self, properties):
         """
         Sets the properties of this AppUserUpdate.
+        Custom properties for the app user.
 
         :param properties: The properties of this AppUserUpdate.
         :type: object

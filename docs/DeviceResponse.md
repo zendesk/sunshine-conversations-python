@@ -1,9 +1,9 @@
-# SecretKeyResponse
+# DeviceResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | [**SecretKey**](SecretKey.md) | The secret key. | [optional] 
+**device** | [**Client**](Client.md) | The device. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
