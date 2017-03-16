@@ -44,6 +44,7 @@ class ListSecretKeysResponse(object):
     def keys(self):
         """
         Gets the keys of this ListSecretKeysResponse.
+        The list of secret keys.
 
         :return: The keys of this ListSecretKeysResponse.
         :rtype: list[SecretKey]
@@ -54,6 +55,7 @@ class ListSecretKeysResponse(object):
     def keys(self, keys):
         """
         Sets the keys of this ListSecretKeysResponse.
+        The list of secret keys.
 
         :param keys: The keys of this ListSecretKeysResponse.
         :type: list[SecretKey]

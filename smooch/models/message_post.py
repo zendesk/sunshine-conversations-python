@@ -80,6 +80,7 @@ class MessagePost(object):
     def role(self):
         """
         Gets the role of this MessagePost.
+        The role of the individual posting the message. Can be either *appUser* or *appMaker*.
 
         :return: The role of this MessagePost.
         :rtype: str
@@ -90,6 +91,7 @@ class MessagePost(object):
     def role(self, role):
         """
         Sets the role of this MessagePost.
+        The role of the individual posting the message. Can be either *appUser* or *appMaker*.
 
         :param role: The role of this MessagePost.
         :type: str
@@ -103,6 +105,7 @@ class MessagePost(object):
     def type(self):
         """
         Gets the type of this MessagePost.
+        The message type.
 
         :return: The type of this MessagePost.
         :rtype: str
@@ -113,12 +116,17 @@ class MessagePost(object):
     def type(self, type):
         """
         Sets the type of this MessagePost.
+        The message type.
 
         :param type: The type of this MessagePost.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+        allowed_values = ["text", "image", "carousel", "list"]
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
@@ -126,6 +134,7 @@ class MessagePost(object):
     def name(self):
         """
         Gets the name of this MessagePost.
+        The display name of the message author.
 
         :return: The name of this MessagePost.
         :rtype: str
@@ -136,6 +145,7 @@ class MessagePost(object):
     def name(self, name):
         """
         Sets the name of this MessagePost.
+        The display name of the message author.
 
         :param name: The name of this MessagePost.
         :type: str
@@ -147,6 +157,7 @@ class MessagePost(object):
     def email(self):
         """
         Gets the email of this MessagePost.
+        The email address of the message author.
 
         :return: The email of this MessagePost.
         :rtype: str
@@ -157,6 +168,7 @@ class MessagePost(object):
     def email(self, email):
         """
         Sets the email of this MessagePost.
+        The email address of the message author.
 
         :param email: The email of this MessagePost.
         :type: str
@@ -168,6 +180,7 @@ class MessagePost(object):
     def avatar_url(self):
         """
         Gets the avatar_url of this MessagePost.
+        The URL of the desired message avatar image.
 
         :return: The avatar_url of this MessagePost.
         :rtype: str
@@ -178,6 +191,7 @@ class MessagePost(object):
     def avatar_url(self, avatar_url):
         """
         Sets the avatar_url of this MessagePost.
+        The URL of the desired message avatar image.
 
         :param avatar_url: The avatar_url of this MessagePost.
         :type: str
@@ -189,6 +203,7 @@ class MessagePost(object):
     def metadata(self):
         """
         Gets the metadata of this MessagePost.
+        Flat JSON object containing any custom properties associated with the message.
 
         :return: The metadata of this MessagePost.
         :rtype: object
@@ -199,6 +214,7 @@ class MessagePost(object):
     def metadata(self, metadata):
         """
         Sets the metadata of this MessagePost.
+        Flat JSON object containing any custom properties associated with the message.
 
         :param metadata: The metadata of this MessagePost.
         :type: object
@@ -210,6 +226,7 @@ class MessagePost(object):
     def payload(self):
         """
         Gets the payload of this MessagePost.
+        The payload of a reply action, if applicable.
 
         :return: The payload of this MessagePost.
         :rtype: str
@@ -220,6 +237,7 @@ class MessagePost(object):
     def payload(self, payload):
         """
         Sets the payload of this MessagePost.
+        The payload of a reply action, if applicable.
 
         :param payload: The payload of this MessagePost.
         :type: str
@@ -231,6 +249,7 @@ class MessagePost(object):
     def text(self):
         """
         Gets the text of this MessagePost.
+        The message text. Required for text messages. 
 
         :return: The text of this MessagePost.
         :rtype: str
@@ -241,6 +260,7 @@ class MessagePost(object):
     def text(self, text):
         """
         Sets the text of this MessagePost.
+        The message text. Required for text messages. 
 
         :param text: The text of this MessagePost.
         :type: str
@@ -252,6 +272,7 @@ class MessagePost(object):
     def media_url(self):
         """
         Gets the media_url of this MessagePost.
+        The mediaUrl for the image. Required for image messages. 
 
         :return: The media_url of this MessagePost.
         :rtype: str
@@ -262,6 +283,7 @@ class MessagePost(object):
     def media_url(self, media_url):
         """
         Sets the media_url of this MessagePost.
+        The mediaUrl for the image. Required for image messages. 
 
         :param media_url: The media_url of this MessagePost.
         :type: str
@@ -273,6 +295,7 @@ class MessagePost(object):
     def media_type(self):
         """
         Gets the media_type of this MessagePost.
+        The mediaType for the image. Required for image messages. 
 
         :return: The media_type of this MessagePost.
         :rtype: str
@@ -283,6 +306,7 @@ class MessagePost(object):
     def media_type(self, media_type):
         """
         Sets the media_type of this MessagePost.
+        The mediaType for the image. Required for image messages. 
 
         :param media_type: The media_type of this MessagePost.
         :type: str
@@ -294,6 +318,7 @@ class MessagePost(object):
     def items(self):
         """
         Gets the items of this MessagePost.
+        The items in the message list. Required for carousel and list messages. 
 
         :return: The items of this MessagePost.
         :rtype: list[MessageItem]
@@ -304,6 +329,7 @@ class MessagePost(object):
     def items(self, items):
         """
         Sets the items of this MessagePost.
+        The items in the message list. Required for carousel and list messages. 
 
         :param items: The items of this MessagePost.
         :type: list[MessageItem]
@@ -315,6 +341,7 @@ class MessagePost(object):
     def actions(self):
         """
         Gets the actions of this MessagePost.
+        The actions in the message.
 
         :return: The actions of this MessagePost.
         :rtype: list[Action]
@@ -325,6 +352,7 @@ class MessagePost(object):
     def actions(self, actions):
         """
         Sets the actions of this MessagePost.
+        The actions in the message.
 
         :param actions: The actions of this MessagePost.
         :type: list[Action]

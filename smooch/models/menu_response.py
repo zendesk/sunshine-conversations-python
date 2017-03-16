@@ -44,6 +44,7 @@ class MenuResponse(object):
     def menu(self):
         """
         Gets the menu of this MenuResponse.
+        The menu.
 
         :return: The menu of this MenuResponse.
         :rtype: Menu
@@ -54,6 +55,7 @@ class MenuResponse(object):
     def menu(self, menu):
         """
         Sets the menu of this MenuResponse.
+        The menu.
 
         :param menu: The menu of this MenuResponse.
         :type: Menu

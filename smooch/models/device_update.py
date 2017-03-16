@@ -50,6 +50,7 @@ class DeviceUpdate(object):
     def push_notification_token(self):
         """
         Gets the push_notification_token of this DeviceUpdate.
+        The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients. 
 
         :return: The push_notification_token of this DeviceUpdate.
         :rtype: str
@@ -60,6 +61,7 @@ class DeviceUpdate(object):
     def push_notification_token(self, push_notification_token):
         """
         Sets the push_notification_token of this DeviceUpdate.
+        The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients. 
 
         :param push_notification_token: The push_notification_token of this DeviceUpdate.
         :type: str
@@ -71,6 +73,7 @@ class DeviceUpdate(object):
     def app_version(self):
         """
         Gets the app_version of this DeviceUpdate.
+        A reserved string field for reporting the app version running on the device.
 
         :return: The app_version of this DeviceUpdate.
         :rtype: str
@@ -81,6 +84,7 @@ class DeviceUpdate(object):
     def app_version(self, app_version):
         """
         Sets the app_version of this DeviceUpdate.
+        A reserved string field for reporting the app version running on the device.
 
         :param app_version: The app_version of this DeviceUpdate.
         :type: str

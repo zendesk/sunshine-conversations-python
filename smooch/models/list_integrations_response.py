@@ -44,6 +44,7 @@ class ListIntegrationsResponse(object):
     def integrations(self):
         """
         Gets the integrations of this ListIntegrationsResponse.
+        The list of integrations.
 
         :return: The integrations of this ListIntegrationsResponse.
         :rtype: list[Integration]
@@ -54,6 +55,7 @@ class ListIntegrationsResponse(object):
     def integrations(self, integrations):
         """
         Sets the integrations of this ListIntegrationsResponse.
+        The list of integrations.
 
         :param integrations: The integrations of this ListIntegrationsResponse.
         :type: list[Integration]

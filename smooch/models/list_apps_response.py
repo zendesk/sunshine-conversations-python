@@ -50,6 +50,7 @@ class ListAppsResponse(object):
     def apps(self):
         """
         Gets the apps of this ListAppsResponse.
+        The list of apps.
 
         :return: The apps of this ListAppsResponse.
         :rtype: list[App]
@@ -60,6 +61,7 @@ class ListAppsResponse(object):
     def apps(self, apps):
         """
         Sets the apps of this ListAppsResponse.
+        The list of apps.
 
         :param apps: The apps of this ListAppsResponse.
         :type: list[App]

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **app_user_device_update**
-> ClientResponse app_user_device_update(user_id, device_id, app_user_device_update_body)
+> DeviceResponse app_user_device_update(user_id, device_id, app_user_device_update_body)
 
 
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClientResponse**](ClientResponse.md)
+[**DeviceResponse**](DeviceResponse.md)
 
 ### Authorization
 

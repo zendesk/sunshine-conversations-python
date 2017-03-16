@@ -44,6 +44,7 @@ class IntegrationResponse(object):
     def integration(self):
         """
         Gets the integration of this IntegrationResponse.
+        The integration.
 
         :return: The integration of this IntegrationResponse.
         :rtype: Integration
@@ -54,6 +55,7 @@ class IntegrationResponse(object):
     def integration(self, integration):
         """
         Sets the integration of this IntegrationResponse.
+        The integration.
 
         :param integration: The integration of this IntegrationResponse.
         :type: Integration

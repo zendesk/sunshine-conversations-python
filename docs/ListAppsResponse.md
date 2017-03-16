@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apps** | [**list[App]**](App.md) |  | [optional] 
+**apps** | [**list[App]**](App.md) | The list of apps. | [optional] 
 **has_more** | **bool** | Flag indicating if there are more apps that are not present in the response. | [optional] 
 **offset** | **int** | The number of app records skipped in the returned list. | [optional] 
 
