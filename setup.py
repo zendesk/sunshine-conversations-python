@@ -15,7 +15,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "smooch"
-VERSION = "1.2.2"
+VERSION = "0.1.0"
 # To install the library, run the following
 #
 # python setup.py install
