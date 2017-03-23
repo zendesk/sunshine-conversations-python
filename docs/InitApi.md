@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 This API is called by an iOS, Android, or browser client when the app is first loaded. It serves a number of purposes. 1. Initializes a new *appUser* and *client* if they don’t yet exist. 2. Updates an existing app user’s profile and client information. 3. Authenticates the *appUser* if *jwt* credentials are provided. 
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -23,15 +23,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.InitApi()
 init_body = smooch.Init() # Init | Body for an init request.
 
-try: 
+try:
     api_response = api_instance.init(init_body)
     pprint(api_response)
 except ApiException as e:

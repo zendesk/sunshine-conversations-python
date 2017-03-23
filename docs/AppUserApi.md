@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 Update specified device information.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -32,9 +32,8 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
@@ -42,7 +41,7 @@ user_id = 'user_id_example' # str | Identifies the user. Can be either the smooc
 device_id = 'device_id_example' # str | Identifies the device.
 app_user_device_update_body = smooch.DeviceUpdate() # DeviceUpdate | Body for an updateAppUserDevice request.
 
-try: 
+try:
     api_response = api_instance.app_user_device_update(user_id, device_id, app_user_device_update_body)
     pprint(api_response)
 except ApiException as e:
@@ -79,7 +78,7 @@ Name | Type | Description  | Notes
 
 Delete specified app user's profile.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -88,15 +87,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
-try: 
+try:
     api_response = api_instance.delete_app_user_profile(user_id)
     pprint(api_response)
 except ApiException as e:
@@ -131,7 +129,7 @@ Name | Type | Description  | Notes
 
 Get the specified app user.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -140,15 +138,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
-try: 
+try:
     api_response = api_instance.get_app_user(user_id)
     pprint(api_response)
 except ApiException as e:
@@ -183,7 +180,7 @@ Name | Type | Description  | Notes
 
 Get specified app user's channel entity IDs.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -192,15 +189,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
-try: 
+try:
     api_response = api_instance.get_app_user_entity_ids(user_id)
     pprint(api_response)
 except ApiException as e:
@@ -235,7 +231,7 @@ Name | Type | Description  | Notes
 
 Link specified app user to given channel.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -244,16 +240,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 app_user_link_body = smooch.AppUserLink() # AppUserLink | Body for a linkAppUser request.
 
-try: 
+try:
     api_response = api_instance.link_app_user(user_id, app_user_link_body)
     pprint(api_response)
 except ApiException as e:
@@ -289,7 +284,7 @@ Name | Type | Description  | Notes
 
 Send an image message to the conversation.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -298,9 +293,8 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
@@ -308,7 +302,7 @@ user_id = 'user_id_example' # str | Identifies the user. Can be either the smooc
 source = '/path/to/file.txt' # file | Image to be uploaded
 role = 'role_example' # str | Role of the sender
 
-try: 
+try:
     api_response = api_instance.post_image_message(user_id, source, role)
     pprint(api_response)
 except ApiException as e:
@@ -345,7 +339,7 @@ Name | Type | Description  | Notes
 
 Pre-create an app user.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -354,15 +348,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 app_user_pre_create_body = smooch.AppUserPreCreate() # AppUserPreCreate | Body for a preCreateAppUser request.
 
-try: 
+try:
     api_response = api_instance.pre_create_app_user(app_user_pre_create_body)
     pprint(api_response)
 except ApiException as e:
@@ -397,7 +390,7 @@ Name | Type | Description  | Notes
 
 Track an event for the given app user.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -406,16 +399,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 track_event_body = smooch.Event() # Event | Body for a trackEvent request.
 
-try: 
+try:
     api_response = api_instance.track_event(user_id, track_event_body)
     pprint(api_response)
 except ApiException as e:
@@ -451,7 +443,7 @@ Name | Type | Description  | Notes
 
 Unlink specified app user from given channel.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -460,16 +452,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 channel = 'channel_example' # str | Name of the channel.
 
-try: 
+try:
     api_instance.unlink_app_user(user_id, channel)
 except ApiException as e:
     print("Exception when calling AppUserApi->unlink_app_user: %s\n" % e)
@@ -504,7 +495,7 @@ void (empty response body)
 
 Update the specified app user.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -513,16 +504,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 app_user_update_body = smooch.AppUserUpdate() # AppUserUpdate | Body for an updateAppUser request.
 
-try: 
+try:
     api_response = api_instance.update_app_user(user_id, app_user_update_body)
     pprint(api_response)
 except ApiException as e:

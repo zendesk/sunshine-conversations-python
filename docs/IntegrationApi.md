@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Create an integration for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -24,16 +24,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.IntegrationApi()
 app_id = 'app_id_example' # str | Identifies the app.
 integration_create_body = smooch.IntegrationCreate() # IntegrationCreate | Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
 
-try: 
+try:
     api_response = api_instance.create_integration(app_id, integration_create_body)
     pprint(api_response)
 except ApiException as e:
@@ -69,7 +68,7 @@ Name | Type | Description  | Notes
 
 List integrations for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -78,16 +77,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.IntegrationApi()
 app_id = 'app_id_example' # str | Identifies the app.
 types = 'types_example' # str | List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types=*twilio*,*line*.  (optional)
 
-try: 
+try:
     api_response = api_instance.list_integrations(app_id, types=types)
     pprint(api_response)
 except ApiException as e:

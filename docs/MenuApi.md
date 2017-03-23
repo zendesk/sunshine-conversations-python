@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Remove the specified app’s menu.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -25,14 +25,13 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
 
-try: 
+try:
     api_response = api_instance.delete_menu()
     pprint(api_response)
 except ApiException as e:
@@ -64,7 +63,7 @@ This endpoint does not need any parameter.
 
 Get the specified app’s menu.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -73,14 +72,13 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
 
-try: 
+try:
     api_response = api_instance.get_menu()
     pprint(api_response)
 except ApiException as e:
@@ -112,7 +110,7 @@ This endpoint does not need any parameter.
 
 Configure the specified app’s menu.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -121,15 +119,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
 menu_update_body = smooch.Menu() # Menu | Body for a updateMenu request.
 
-try: 
+try:
     api_response = api_instance.update_menu(menu_update_body)
     pprint(api_response)
 except ApiException as e:

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Create a webhook for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -27,16 +27,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
 webhook_create_body = smooch.WebhookCreate() # WebhookCreate | Body for a createWebhook request. 
 
-try: 
+try:
     api_response = api_instance.create_webhook(app_id, webhook_create_body)
     pprint(api_response)
 except ApiException as e:
@@ -72,7 +71,7 @@ Name | Type | Description  | Notes
 
 Delete the specified webhook.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -81,16 +80,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
 webhook_id = 'webhook_id_example' # str | Identifies the webhook.
 
-try: 
+try:
     api_instance.delete_webhook(app_id, webhook_id)
 except ApiException as e:
     print("Exception when calling WebhookApi->delete_webhook: %s\n" % e)
@@ -125,7 +123,7 @@ void (empty response body)
 
 Get the specified webhook.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -134,16 +132,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
 webhook_id = 'webhook_id_example' # str | Identifies the webhook.
 
-try: 
+try:
     api_response = api_instance.get_webhook(app_id, webhook_id)
     pprint(api_response)
 except ApiException as e:
@@ -179,7 +176,7 @@ Name | Type | Description  | Notes
 
 List webhooks for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -188,15 +185,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
 app_id = 'app_id_example' # str | Identifies the app.
 
-try: 
+try:
     api_response = api_instance.list_webhooks(app_id)
     pprint(api_response)
 except ApiException as e:
@@ -231,7 +227,7 @@ Name | Type | Description  | Notes
 
 Update the specified webhook.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -240,9 +236,8 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.WebhookApi()
@@ -250,7 +245,7 @@ app_id = 'app_id_example' # str | Identifies the app.
 webhook_id = 'webhook_id_example' # str | Identifies the webhook.
 webhook_update_body = smooch.WebhookUpdate() # WebhookUpdate | Body for an updateWebhook request. 
 
-try: 
+try:
     api_response = api_instance.update_webhook(app_id, webhook_id, webhook_update_body)
     pprint(api_response)
 except ApiException as e:

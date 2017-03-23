@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 Create a new app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -33,15 +33,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_create_body = smooch.AppCreate() # AppCreate | Body for a createApp request.
 
-try: 
+try:
     api_response = api_instance.create_app(app_create_body)
     pprint(api_response)
 except ApiException as e:
@@ -76,7 +75,7 @@ Name | Type | Description  | Notes
 
 Create a secret key for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -85,16 +84,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 secret_key_create_body = smooch.SecretKeyCreate() # SecretKeyCreate | Body for a createSecretKey request.
 
-try: 
+try:
     api_response = api_instance.create_secret_key(app_id, secret_key_create_body)
     pprint(api_response)
 except ApiException as e:
@@ -130,7 +128,7 @@ Name | Type | Description  | Notes
 
 Delete the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -139,15 +137,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 
-try: 
+try:
     api_instance.delete_app(app_id)
 except ApiException as e:
     print("Exception when calling AppApi->delete_app: %s\n" % e)
@@ -181,7 +178,7 @@ void (empty response body)
 
 Delete the specified integration.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -190,16 +187,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 integration_id = 'integration_id_example' # str | Identifies the integration.
 
-try: 
+try:
     api_instance.delete_integration(app_id, integration_id)
 except ApiException as e:
     print("Exception when calling AppApi->delete_integration: %s\n" % e)
@@ -234,7 +230,7 @@ void (empty response body)
 
 Delete the specified secret key.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -243,16 +239,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 key_id = 'key_id_example' # str | Identifies the secret key.
 
-try: 
+try:
     api_instance.delete_secret_key(app_id, key_id)
 except ApiException as e:
     print("Exception when calling AppApi->delete_secret_key: %s\n" % e)
@@ -287,7 +282,7 @@ void (empty response body)
 
 Get the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -296,15 +291,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 
-try: 
+try:
     api_response = api_instance.get_app(app_id)
     pprint(api_response)
 except ApiException as e:
@@ -339,7 +333,7 @@ Name | Type | Description  | Notes
 
 Get an app-scoped JWT for the specified secret key.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -348,16 +342,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 key_id = 'key_id_example' # str | Identifies the secret key.
 
-try: 
+try:
     api_response = api_instance.get_app_jwt(app_id, key_id)
     pprint(api_response)
 except ApiException as e:
@@ -393,7 +386,7 @@ Name | Type | Description  | Notes
 
 Get the specified integration.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -402,16 +395,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 integration_id = 'integration_id_example' # str | Identifies the integration.
 
-try: 
+try:
     api_response = api_instance.get_integration(app_id, integration_id)
     pprint(api_response)
 except ApiException as e:
@@ -447,7 +439,7 @@ Name | Type | Description  | Notes
 
 Get the specified secret key.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -456,16 +448,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 key_id = 'key_id_example' # str | Identifies the secret key.
 
-try: 
+try:
     api_response = api_instance.get_secret_key(app_id, key_id)
     pprint(api_response)
 except ApiException as e:
@@ -501,7 +492,7 @@ Name | Type | Description  | Notes
 
 List all apps configured.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -510,16 +501,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 limit = 56 # int | The number of records to return. (optional)
 offset = 56 # int | The number of initial records to skip before picking records to return. (optional)
 
-try: 
+try:
     api_response = api_instance.list_apps(limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
@@ -555,7 +545,7 @@ Name | Type | Description  | Notes
 
 List the secret keys for the specified app.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -564,15 +554,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_id = 'app_id_example' # str | Identifies the app.
 
-try: 
+try:
     api_response = api_instance.list_secret_keys(app_id)
     pprint(api_response)
 except ApiException as e:

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Clears the message history for a user, permanently deleting all messages, but leaving any connections to Messaging Channels and Business Systems intact. These connections allow for the conversation to continue in the future, while still being associated to the same appUser. 
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -27,15 +27,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
-try: 
+try:
     api_instance.delete_messages(user_id)
 except ApiException as e:
     print("Exception when calling ConversationApi->delete_messages: %s\n" % e)
@@ -69,7 +68,7 @@ void (empty response body)
 
 Get the specified app user's messages.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -78,9 +77,8 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
@@ -88,7 +86,7 @@ user_id = 'user_id_example' # str | Identifies the user. Can be either the smooc
 before = 'before_example' # str | Timestamp of message. The API will return 100 messages before the specified timestamp (excluding any messages with the provided timestamp). (optional)
 after = 'after_example' # str | Timestamp of message. The API will return 100 messages after the specified timestamp (excluding any messages with the provided timestamp). (optional)
 
-try: 
+try:
     api_response = api_instance.get_messages(user_id, before=before, after=after)
     pprint(api_response)
 except ApiException as e:
@@ -125,7 +123,7 @@ Name | Type | Description  | Notes
 
 Post a message to or from the app user.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -134,16 +132,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 message_post_body = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
 
-try: 
+try:
     api_response = api_instance.post_message(user_id, message_post_body)
     pprint(api_response)
 except ApiException as e:
@@ -179,7 +176,7 @@ Name | Type | Description  | Notes
 
 Reset the unread count of the conversation to 0.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -188,15 +185,14 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
-try: 
+try:
     api_instance.reset_unread_count(user_id)
 except ApiException as e:
     print("Exception when calling ConversationApi->reset_unread_count: %s\n" % e)
@@ -230,7 +226,7 @@ void (empty response body)
 
 Notify Smooch when an app maker starts or stops typing a response.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -239,16 +235,15 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 typing_activity_trigger_body = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
 
-try: 
+try:
     api_instance.trigger_typing_activity(user_id, typing_activity_trigger_body)
 except ApiException as e:
     print("Exception when calling ConversationApi->trigger_typing_activity: %s\n" % e)
