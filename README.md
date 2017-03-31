@@ -72,11 +72,9 @@ Class | Method | HTTP request | Description
 *AppApi* | [**create_app**](docs/AppApi.md#create_app) | **POST** /apps | 
 *AppApi* | [**create_secret_key**](docs/AppApi.md#create_secret_key) | **POST** /apps/{appId}/keys | 
 *AppApi* | [**delete_app**](docs/AppApi.md#delete_app) | **DELETE** /apps/{appId} | 
-*AppApi* | [**delete_integration**](docs/AppApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
 *AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /apps/{appId}/keys/{keyId} | 
 *AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /apps/{appId} | 
 *AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /apps/{appId}/keys/{keyId}/jwt | 
-*AppApi* | [**get_integration**](docs/AppApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 *AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
@@ -97,7 +95,13 @@ Class | Method | HTTP request | Description
 *ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
 *InitApi* | [**init**](docs/InitApi.md#init) | **POST** /init | 
 *IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
+*IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
+*IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
+*IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /apps/{appId}/integrations/{integrationId}/menu | 
+*IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
+*IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+*IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /menu | 

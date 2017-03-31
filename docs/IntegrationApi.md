@@ -5,7 +5,13 @@ All URIs are relative to *https://api.smooch.io/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_integration**](IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
+[**create_integration_menu**](IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
+[**delete_integration**](IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
+[**delete_integration_menu**](IntegrationApi.md#delete_integration_menu) | **DELETE** /apps/{appId}/integrations/{integrationId}/menu | 
+[**get_integration**](IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
+[**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+[**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 
 
 # **create_integration**
@@ -61,6 +67,271 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_integration_menu**
+> MenuResponse create_integration_menu(app_id, integration_id, menu_create_body)
+
+
+
+Create the specified integration’s menu, overriding the app menu if configured.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+menu_create_body = smooch.Menu() # Menu | Body for a createMenu request.
+
+try:
+    api_response = api_instance.create_integration_menu(app_id, integration_id, menu_create_body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->create_integration_menu: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+ **menu_create_body** | [**Menu**](Menu.md)| Body for a createMenu request. | 
+
+### Return type
+
+[**MenuResponse**](MenuResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_integration**
+> delete_integration(app_id, integration_id)
+
+
+
+Delete the specified integration.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+
+try:
+    api_instance.delete_integration(app_id, integration_id)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->delete_integration: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_integration_menu**
+> delete_integration_menu(app_id, integration_id)
+
+
+
+Delete the specified integration’s menu.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+
+try:
+    api_instance.delete_integration_menu(app_id, integration_id)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->delete_integration_menu: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_integration**
+> IntegrationResponse get_integration(app_id, integration_id)
+
+
+
+Get the specified integration.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+
+try:
+    api_response = api_instance.get_integration(app_id, integration_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->get_integration: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+
+### Return type
+
+[**IntegrationResponse**](IntegrationResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_integration_menu**
+> MenuResponse get_integration_menu(app_id, integration_id)
+
+
+
+Get the specified integration's menu.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+
+try:
+    api_response = api_instance.get_integration_menu(app_id, integration_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->get_integration_menu: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+
+### Return type
+
+[**MenuResponse**](MenuResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_integrations**
 > ListIntegrationsResponse list_integrations(app_id, types=types)
 
@@ -102,6 +373,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListIntegrationsResponse**](ListIntegrationsResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_integration_menu**
+> MenuResponse update_integration_menu(app_id, integration_id, menu_update_body)
+
+
+
+Update the specified integration’s menu.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+menu_update_body = smooch.Menu() # Menu | Body for a updateMenu request.
+
+try:
+    api_response = api_instance.update_integration_menu(app_id, integration_id, menu_update_body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->update_integration_menu: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+ **menu_update_body** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
+
+### Return type
+
+[**MenuResponse**](MenuResponse.md)
 
 ### Authorization
 
