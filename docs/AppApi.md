@@ -399,8 +399,8 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.AppApi()
-limit = 56 # int | The number of records to return. (optional)
-offset = 56 # int | The number of initial records to skip before picking records to return. (optional)
+limit = 0 # int | The number of records to return. (optional) (default to 0)
+offset = 0 # int | The number of initial records to skip before picking records to return. (optional) (default to 0)
 
 try:
     api_response = api_instance.list_apps(limit=limit, offset=offset)
@@ -413,8 +413,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **int**| The number of records to return. | [optional] 
- **offset** | **int**| The number of initial records to skip before picking records to return. | [optional] 
+ **limit** | **int**| The number of records to return. | [optional] [default to 0]
+ **offset** | **int**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
 
 ### Return type
 
