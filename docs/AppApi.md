@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**get_secret_key**](AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 [**list_apps**](AppApi.md#list_apps) | **GET** /apps | 
 [**list_secret_keys**](AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
+[**update_app**](AppApi.md#update_app) | **PUT** /apps/{appId} | 
 
 
 # **create_app**
@@ -470,6 +471,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListSecretKeysResponse**](ListSecretKeysResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_app**
+> AppResponse update_app(app_id, app_update_body)
+
+
+
+Update the specified app.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AppApi()
+app_id = 'app_id_example' # str | Identifies the app.
+app_update_body = smooch.AppUpdate() # AppUpdate | Body for an updateApp request.
+
+try:
+    api_response = api_instance.update_app(app_id, app_update_body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppApi->update_app: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **app_update_body** | [**AppUpdate**](AppUpdate.md)| Body for an updateApp request. | 
+
+### Return type
+
+[**AppResponse**](AppResponse.md)
 
 ### Authorization
 

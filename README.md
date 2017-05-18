@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
+*AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
 *AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /appusers/{userId}/devices/{deviceId} | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /appusers/{userId} | 
@@ -118,6 +119,8 @@ Class | Method | HTTP request | Description
  - [App](docs/App.md)
  - [AppCreate](docs/AppCreate.md)
  - [AppResponse](docs/AppResponse.md)
+ - [AppSettings](docs/AppSettings.md)
+ - [AppUpdate](docs/AppUpdate.md)
  - [AppUser](docs/AppUser.md)
  - [AppUserLink](docs/AppUserLink.md)
  - [AppUserPreCreate](docs/AppUserPreCreate.md)
