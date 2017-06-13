@@ -36,14 +36,16 @@ Using the [pyjwt](https://github.com/jpadilla/pyjwt/) module:
 
 ```python
 import jwt
-token = jwt.encode({'scope': 'app'}, SECRET, algorithm='HS256', headers={'kid': KEY_ID})
+token_bytes = jwt.encode({'scope': 'app'},
+                         'SECRET',
+                         algorithm='HS256',
+                         headers={'kid': 'KEY_ID'})
+token = token_bytes.decode('utf-8')
 ```
 
 ### Running the code
 
 ```python
-from __future__ import print_function
-import time
 import smooch
 from smooch.rest import ApiException
 from pprint import pprint
@@ -51,6 +53,7 @@ from pprint import pprint
 # Configure API key authorization: jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = smooch.AppApi()
 app_create_body = smooch.AppCreate() # AppCreate | Body for a createApp request.
@@ -153,7 +156,6 @@ Class | Method | HTTP request | Description
  - [MessageItem](docs/MessageItem.md)
  - [MessagePost](docs/MessagePost.md)
  - [MessageResponse](docs/MessageResponse.md)
- - [PostMessagesResponse](docs/PostMessagesResponse.md)
  - [SecretKey](docs/SecretKey.md)
  - [SecretKeyCreate](docs/SecretKeyCreate.md)
  - [SecretKeyResponse](docs/SecretKeyResponse.md)

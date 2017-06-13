@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_message**
-> PostMessagesResponse post_message(user_id, message_post_body)
+> MessageResponse post_message(user_id, message_post_body)
 
 
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PostMessagesResponse**](PostMessagesResponse.md)
+[**MessageResponse**](MessageResponse.md)
 
 ### Authorization
 
