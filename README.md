@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
  - [AttachmentResponse](docs/AttachmentResponse.md)
  - [Client](docs/Client.md)
  - [ClientInfo](docs/ClientInfo.md)
+ - [Confirmation](docs/Confirmation.md)
  - [Conversation](docs/Conversation.md)
  - [Destination](docs/Destination.md)
  - [DeviceInit](docs/DeviceInit.md)
