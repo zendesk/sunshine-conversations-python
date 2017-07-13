@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **author_id** | **str** | The ID of the message&#39;s author. | 
 **role** | **str** | The role of the individual posting the message. Can be either *appUser* or *appMaker*. | 
 **type** | **str** | The message type. | 
+**source** | [**Source**](Source.md) | The source of the message. | [optional] 
 **name** | **str** | The display name of the message author. | 
 **text** | **str** | The message text. Required for text messages.  | 
 **email** | **str** | The email address of the message author. | [optional] 
