@@ -4,13 +4,13 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_menu**](MenuApi.md#delete_menu) | **DELETE** /menu | 
-[**get_menu**](MenuApi.md#get_menu) | **GET** /menu | 
-[**update_menu**](MenuApi.md#update_menu) | **PUT** /menu | 
+[**delete_menu**](MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
+[**get_menu**](MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
+[**update_menu**](MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
 
 
 # **delete_menu**
-> MenuResponse delete_menu()
+> MenuResponse delete_menu(app_id)
 
 
 
@@ -30,16 +30,20 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
+app_id = 'app_id_example' # str | Identifies the app.
 
 try:
-    api_response = api_instance.delete_menu()
+    api_response = api_instance.delete_menu(app_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MenuApi->delete_menu: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
 
 ### Return type
 
@@ -57,7 +61,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_menu**
-> MenuResponse get_menu()
+> MenuResponse get_menu(app_id)
 
 
 
@@ -77,16 +81,20 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
+app_id = 'app_id_example' # str | Identifies the app.
 
 try:
-    api_response = api_instance.get_menu()
+    api_response = api_instance.get_menu(app_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MenuApi->get_menu: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
 
 ### Return type
 
@@ -104,7 +112,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_menu**
-> MenuResponse update_menu(menu_update_body)
+> MenuResponse update_menu(app_id, menu_update_body)
 
 
 
@@ -124,10 +132,11 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.MenuApi()
+app_id = 'app_id_example' # str | Identifies the app.
 menu_update_body = smooch.Menu() # Menu | Body for a updateMenu request.
 
 try:
-    api_response = api_instance.update_menu(menu_update_body)
+    api_response = api_instance.update_menu(app_id, menu_update_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MenuApi->update_menu: %s\n" % e)
@@ -137,6 +146,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **menu_update_body** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
 
 ### Return type

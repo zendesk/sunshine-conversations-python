@@ -82,23 +82,21 @@ Class | Method | HTTP request | Description
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
 *AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
-*AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /appusers/{userId}/devices/{deviceId} | 
-*AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /appusers/{userId}/profile | 
-*AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /appusers/{userId} | 
-*AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /appusers/{userId}/channels | 
-*AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /appusers/{userId}/channels | 
-*AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /appusers/{userId}/images | 
-*AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /appusers | 
-*AppUserApi* | [**track_event**](docs/AppUserApi.md#track_event) | **POST** /appusers/{userId}/events | 
-*AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /appusers/{userId}/channels/{channel} | 
-*AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /appusers/{userId} | 
+*AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /apps/{appId}/appusers/{userId}/devices/{deviceId} | 
+*AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
+*AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
+*AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
+*AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
+*AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
+*AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
+*AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /apps/{appId}/appusers/{userId}/channels/{channel} | 
+*AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /apps/{appId}/appusers/{userId} | 
 *AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /apps/{appId}/attachments | 
-*ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
-*ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
-*ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
-*ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /appusers/{userId}/conversation/read | 
-*ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
-*InitApi* | [**init**](docs/InitApi.md#init) | **POST** /init | 
+*ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /apps/{appId}/appusers/{userId}/messages | 
+*ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /apps/{appId}/appusers/{userId}/messages | 
+*ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /apps/{appId}/appusers/{userId}/messages | 
+*ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /apps/{appId}/appusers/{userId}/conversation/read | 
+*ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /apps/{appId}/appusers/{userId}/conversation/activity | 
 *IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
 *IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
@@ -107,9 +105,9 @@ Class | Method | HTTP request | Description
 *IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
 *IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
-*MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /menu | 
-*MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /menu | 
-*MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /menu | 
+*MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
+*MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
+*MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
 *WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /apps/{appId}/webhooks | 
 *WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /apps/{appId}/webhooks/{webhookId} | 
 *WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /apps/{appId}/webhooks/{webhookId} | 
@@ -136,14 +134,10 @@ Class | Method | HTTP request | Description
  - [Confirmation](docs/Confirmation.md)
  - [Conversation](docs/Conversation.md)
  - [Destination](docs/Destination.md)
- - [DeviceInit](docs/DeviceInit.md)
  - [DeviceResponse](docs/DeviceResponse.md)
  - [DeviceUpdate](docs/DeviceUpdate.md)
  - [DisplaySettings](docs/DisplaySettings.md)
- - [Event](docs/Event.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
- - [Init](docs/Init.md)
- - [InitResponse](docs/InitResponse.md)
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
  - [IntegrationResponse](docs/IntegrationResponse.md)
@@ -163,7 +157,6 @@ Class | Method | HTTP request | Description
  - [SecretKeyCreate](docs/SecretKeyCreate.md)
  - [SecretKeyResponse](docs/SecretKeyResponse.md)
  - [Source](docs/Source.md)
- - [TrackEventResponse](docs/TrackEventResponse.md)
  - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreate](docs/WebhookCreate.md)

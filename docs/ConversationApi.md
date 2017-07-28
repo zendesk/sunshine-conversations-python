@@ -4,15 +4,15 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
-[**get_messages**](ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
-[**post_message**](ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
-[**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /appusers/{userId}/conversation/read | 
-[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
+[**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /apps/{appId}/appusers/{userId}/messages | 
+[**get_messages**](ConversationApi.md#get_messages) | **GET** /apps/{appId}/appusers/{userId}/messages | 
+[**post_message**](ConversationApi.md#post_message) | **POST** /apps/{appId}/appusers/{userId}/messages | 
+[**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /apps/{appId}/appusers/{userId}/conversation/read | 
+[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /apps/{appId}/appusers/{userId}/conversation/activity | 
 
 
 # **delete_messages**
-> delete_messages(user_id)
+> delete_messages(app_id, user_id)
 
 
 
@@ -32,10 +32,11 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try:
-    api_instance.delete_messages(user_id)
+    api_instance.delete_messages(app_id, user_id)
 except ApiException as e:
     print("Exception when calling ConversationApi->delete_messages: %s\n" % e)
 ```
@@ -44,6 +45,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
@@ -62,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_messages**
-> GetMessagesResponse get_messages(user_id, before=before, after=after)
+> GetMessagesResponse get_messages(app_id, user_id, before=before, after=after)
 
 
 
@@ -82,12 +84,13 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 before = 'before_example' # str | Timestamp of message. The API will return 100 messages before the specified timestamp (excluding any messages with the provided timestamp). (optional)
 after = 'after_example' # str | Timestamp of message. The API will return 100 messages after the specified timestamp (excluding any messages with the provided timestamp). (optional)
 
 try:
-    api_response = api_instance.get_messages(user_id, before=before, after=after)
+    api_response = api_instance.get_messages(app_id, user_id, before=before, after=after)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConversationApi->get_messages: %s\n" % e)
@@ -97,6 +100,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
  **before** | **str**| Timestamp of message. The API will return 100 messages before the specified timestamp (excluding any messages with the provided timestamp). | [optional] 
  **after** | **str**| Timestamp of message. The API will return 100 messages after the specified timestamp (excluding any messages with the provided timestamp). | [optional] 
@@ -117,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_message**
-> MessageResponse post_message(user_id, message_post_body)
+> MessageResponse post_message(app_id, user_id, message_post_body)
 
 
 
@@ -137,11 +141,12 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 message_post_body = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
 
 try:
-    api_response = api_instance.post_message(user_id, message_post_body)
+    api_response = api_instance.post_message(app_id, user_id, message_post_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConversationApi->post_message: %s\n" % e)
@@ -151,6 +156,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
  **message_post_body** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
 
@@ -170,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reset_unread_count**
-> reset_unread_count(user_id)
+> reset_unread_count(app_id, user_id)
 
 
 
@@ -190,10 +196,11 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try:
-    api_instance.reset_unread_count(user_id)
+    api_instance.reset_unread_count(app_id, user_id)
 except ApiException as e:
     print("Exception when calling ConversationApi->reset_unread_count: %s\n" % e)
 ```
@@ -202,6 +209,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
@@ -220,7 +228,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trigger_typing_activity**
-> trigger_typing_activity(user_id, typing_activity_trigger_body)
+> trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
 
 
 
@@ -240,11 +248,12 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 typing_activity_trigger_body = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
 
 try:
-    api_instance.trigger_typing_activity(user_id, typing_activity_trigger_body)
+    api_instance.trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
 except ApiException as e:
     print("Exception when calling ConversationApi->trigger_typing_activity: %s\n" % e)
 ```
@@ -253,6 +262,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
  **typing_activity_trigger_body** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 
