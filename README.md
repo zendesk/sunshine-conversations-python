@@ -82,7 +82,6 @@ Class | Method | HTTP request | Description
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
 *AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
-*AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /apps/{appId}/appusers/{userId}/devices/{deviceId} | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
 *AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
@@ -134,8 +133,6 @@ Class | Method | HTTP request | Description
  - [Confirmation](docs/Confirmation.md)
  - [Conversation](docs/Conversation.md)
  - [Destination](docs/Destination.md)
- - [DeviceResponse](docs/DeviceResponse.md)
- - [DeviceUpdate](docs/DeviceUpdate.md)
  - [DisplaySettings](docs/DisplaySettings.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
  - [Integration](docs/Integration.md)

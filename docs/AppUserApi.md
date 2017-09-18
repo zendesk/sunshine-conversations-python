@@ -4,7 +4,6 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**app_user_device_update**](AppUserApi.md#app_user_device_update) | **PUT** /apps/{appId}/appusers/{userId}/devices/{deviceId} | 
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
@@ -14,63 +13,6 @@ Method | HTTP request | Description
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /apps/{appId}/appusers/{userId}/channels/{channel} | 
 [**update_app_user**](AppUserApi.md#update_app_user) | **PUT** /apps/{appId}/appusers/{userId} | 
 
-
-# **app_user_device_update**
-> DeviceResponse app_user_device_update(app_id, user_id, device_id, app_user_device_update_body)
-
-
-
-Update specified device information.
-
-### Example
-```python
-from __future__ import print_statement
-import time
-import smooch
-from smooch.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
-smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = smooch.AppUserApi()
-app_id = 'app_id_example' # str | Identifies the app.
-user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-device_id = 'device_id_example' # str | Identifies the device.
-app_user_device_update_body = smooch.DeviceUpdate() # DeviceUpdate | Body for an updateAppUserDevice request.
-
-try:
-    api_response = api_instance.app_user_device_update(app_id, user_id, device_id, app_user_device_update_body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AppUserApi->app_user_device_update: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **str**| Identifies the app. | 
- **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **device_id** | **str**| Identifies the device. | 
- **app_user_device_update_body** | [**DeviceUpdate**](DeviceUpdate.md)| Body for an updateAppUserDevice request. | 
-
-### Return type
-
-[**DeviceResponse**](DeviceResponse.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app_user_profile**
 > AppUserResponse delete_app_user_profile(app_id, user_id)
