@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
+*AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 *AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
 *AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
 *AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
@@ -123,11 +124,15 @@ Class | Method | HTTP request | Description
  - [AppSettings](docs/AppSettings.md)
  - [AppUpdate](docs/AppUpdate.md)
  - [AppUser](docs/AppUser.md)
+ - [AppUserBusinessSystemsResponse](docs/AppUserBusinessSystemsResponse.md)
+ - [AppUserChannelsResponse](docs/AppUserChannelsResponse.md)
  - [AppUserLink](docs/AppUserLink.md)
  - [AppUserPreCreate](docs/AppUserPreCreate.md)
  - [AppUserResponse](docs/AppUserResponse.md)
  - [AppUserUpdate](docs/AppUserUpdate.md)
  - [AttachmentResponse](docs/AttachmentResponse.md)
+ - [BusinessSystemItem](docs/BusinessSystemItem.md)
+ - [ChannelEntityItem](docs/ChannelEntityItem.md)
  - [Client](docs/Client.md)
  - [ClientInfo](docs/ClientInfo.md)
  - [Confirmation](docs/Confirmation.md)
