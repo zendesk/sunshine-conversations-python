@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
+*AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 *AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 *AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
 *AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
@@ -131,6 +132,7 @@ Class | Method | HTTP request | Description
  - [AppUserResponse](docs/AppUserResponse.md)
  - [AppUserUpdate](docs/AppUserUpdate.md)
  - [AttachmentResponse](docs/AttachmentResponse.md)
+ - [AuthCodeResponse](docs/AuthCodeResponse.md)
  - [BusinessSystemItem](docs/BusinessSystemItem.md)
  - [ChannelEntityItem](docs/ChannelEntityItem.md)
  - [Client](docs/Client.md)
