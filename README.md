@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 *AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 *AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
+*AppUserApi* | [**get_link_requests**](docs/AppUserApi.md#get_link_requests) | **GET** /apps/{appId}/appusers/{userId}/linkrequest | 
 *AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
 *AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
 *AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
@@ -146,6 +147,8 @@ Class | Method | HTTP request | Description
  - [IntegrationCreate](docs/IntegrationCreate.md)
  - [IntegrationResponse](docs/IntegrationResponse.md)
  - [JwtResponse](docs/JwtResponse.md)
+ - [LinkRequestResponse](docs/LinkRequestResponse.md)
+ - [LinkRequestResponseLinkRequests](docs/LinkRequestResponseLinkRequests.md)
  - [ListAppsResponse](docs/ListAppsResponse.md)
  - [ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [ListSecretKeysResponse](docs/ListSecretKeysResponse.md)

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 [**get_app_user_business_system_ids**](AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
+[**get_link_requests**](AppUserApi.md#get_link_requests) | **GET** /apps/{appId}/appusers/{userId}/linkrequest | 
 [**link_app_user**](AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
 [**post_image_message**](AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
@@ -269,6 +270,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppUserChannelsResponse**](AppUserChannelsResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_link_requests**
+> LinkRequestResponse get_link_requests(app_id, user_id, integration_ids)
+
+
+
+Fetch link requests for the specified app user.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AppUserApi()
+app_id = 'app_id_example' # str | Identifies the app.
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+integration_ids = 'integration_ids_example' # str | Comma separated list of integration IDs
+
+try:
+    api_response = api_instance.get_link_requests(app_id, user_id, integration_ids)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppUserApi->get_link_requests: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **integration_ids** | **str**| Comma separated list of integration IDs | 
+
+### Return type
+
+[**LinkRequestResponse**](LinkRequestResponse.md)
 
 ### Authorization
 
