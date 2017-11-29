@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **consumer_secret** | **str** | The consumer secret for your Twitter app. Required for *twitter* integrations.  | [optional] 
 **access_token_key** | **str** | The access token key obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
 **access_token_secret** | **str** | The access token secret obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
+**access_key** | **str** | The public API key of your MessageBird account. Required for *messagebird* integrations.  | [optional] 
+**originator** | **str** | Smooch will receive all messages sent to this phone number. Required for *messagebird* integrations.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
