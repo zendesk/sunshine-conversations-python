@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_integration**](IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 [**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+[**update_integration**](IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
 [**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 
 
@@ -373,6 +374,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListIntegrationsResponse**](ListIntegrationsResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_integration**
+> IntegrationResponse update_integration(app_id, integration_id, integration_update_body)
+
+
+
+Update the specified integration.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+integration_update_body = smooch.IntegrationUpdate() # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+
+try:
+    api_response = api_instance.update_integration(app_id, integration_id, integration_update_body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->update_integration: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+ **integration_update_body** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+
+### Return type
+
+[**IntegrationResponse**](IntegrationResponse.md)
 
 ### Authorization
 

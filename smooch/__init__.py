@@ -41,6 +41,7 @@ from .models.get_messages_response import GetMessagesResponse
 from .models.integration import Integration
 from .models.integration_create import IntegrationCreate
 from .models.integration_response import IntegrationResponse
+from .models.integration_update import IntegrationUpdate
 from .models.jwt_response import JwtResponse
 from .models.link_request_response import LinkRequestResponse
 from .models.link_request_response_link_requests import LinkRequestResponseLinkRequests

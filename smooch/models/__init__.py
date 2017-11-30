@@ -41,6 +41,7 @@ from .get_messages_response import GetMessagesResponse
 from .integration import Integration
 from .integration_create import IntegrationCreate
 from .integration_response import IntegrationResponse
+from .integration_update import IntegrationUpdate
 from .jwt_response import JwtResponse
 from .link_request_response import LinkRequestResponse
 from .link_request_response_link_requests import LinkRequestResponseLinkRequests

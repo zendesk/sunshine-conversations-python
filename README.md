@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
 *IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 *IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+*IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
 *IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
@@ -146,6 +147,7 @@ Class | Method | HTTP request | Description
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
  - [IntegrationResponse](docs/IntegrationResponse.md)
+ - [IntegrationUpdate](docs/IntegrationUpdate.md)
  - [JwtResponse](docs/JwtResponse.md)
  - [LinkRequestResponse](docs/LinkRequestResponse.md)
  - [LinkRequestResponseLinkRequests](docs/LinkRequestResponseLinkRequests.md)
