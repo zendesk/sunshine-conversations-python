@@ -305,7 +305,7 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = smooch.AppUserApi()
 app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-integration_ids = 'integration_ids_example' # str | Comma separated list of integration IDs
+integration_ids = ['integration_ids_example'] # list[str] | List of integration IDs
 
 try:
     api_response = api_instance.get_link_requests(app_id, user_id, integration_ids)
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **integration_ids** | **str**| Comma separated list of integration IDs | 
+ **integration_ids** | [**list[str]**](str.md)| List of integration IDs | 
 
 ### Return type
 
