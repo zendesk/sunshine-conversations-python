@@ -111,6 +111,16 @@ Class | Method | HTTP request | Description
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
+*ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /serviceaccounts/{serviceAccountId}/keys | 
+*ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /serviceaccounts | 
+*ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*ServiceAccountApi* | [**delete_service_account**](docs/ServiceAccountApi.md#delete_service_account) | **DELETE** /serviceaccounts/{serviceAccountId} | 
+*ServiceAccountApi* | [**get_jwt**](docs/ServiceAccountApi.md#get_jwt) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
+*ServiceAccountApi* | [**get_secret_key**](docs/ServiceAccountApi.md#get_secret_key) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*ServiceAccountApi* | [**get_service_account**](docs/ServiceAccountApi.md#get_service_account) | **GET** /serviceaccounts/{serviceAccountId} | 
+*ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /serviceaccounts/{serviceAccountId}/keys | 
+*ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /serviceaccounts | 
+*ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /serviceaccounts/{serviceAccountId} | 
 *WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /apps/{appId}/webhooks | 
 *WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /apps/{appId}/webhooks/{webhookId} | 
 *WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /apps/{appId}/webhooks/{webhookId} | 
@@ -154,6 +164,7 @@ Class | Method | HTTP request | Description
  - [ListAppsResponse](docs/ListAppsResponse.md)
  - [ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
+ - [ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
  - [ListWebhooksResponse](docs/ListWebhooksResponse.md)
  - [Menu](docs/Menu.md)
  - [MenuItem](docs/MenuItem.md)
@@ -165,6 +176,10 @@ Class | Method | HTTP request | Description
  - [SecretKey](docs/SecretKey.md)
  - [SecretKeyCreate](docs/SecretKeyCreate.md)
  - [SecretKeyResponse](docs/SecretKeyResponse.md)
+ - [ServiceAccount](docs/ServiceAccount.md)
+ - [ServiceAccountCreate](docs/ServiceAccountCreate.md)
+ - [ServiceAccountResponse](docs/ServiceAccountResponse.md)
+ - [ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [Source](docs/Source.md)
  - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [Webhook](docs/Webhook.md)
