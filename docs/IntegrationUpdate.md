@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **integration_order** | **list[str]** | A custom business name for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **business_name** | **str** | A custom business name for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **business_icon_url** | **str** | A custom business icon url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
+**background_image_url** | **str** | A custom background url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
