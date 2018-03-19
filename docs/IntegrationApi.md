@@ -1,18 +1,18 @@
 # smooch.IntegrationApi
 
-All URIs are relative to *https://api.smooch.io/v1*
+All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_integration**](IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
-[**create_integration_menu**](IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
-[**delete_integration**](IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
-[**delete_integration_menu**](IntegrationApi.md#delete_integration_menu) | **DELETE** /apps/{appId}/integrations/{integrationId}/menu | 
-[**get_integration**](IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
-[**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
-[**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
-[**update_integration**](IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
-[**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
+[**create_integration**](IntegrationApi.md#create_integration) | **POST** /v1/apps/{appId}/integrations | 
+[**create_integration_menu**](IntegrationApi.md#create_integration_menu) | **POST** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+[**delete_integration**](IntegrationApi.md#delete_integration) | **DELETE** /v1/apps/{appId}/integrations/{integrationId} | 
+[**delete_integration_menu**](IntegrationApi.md#delete_integration_menu) | **DELETE** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+[**get_integration**](IntegrationApi.md#get_integration) | **GET** /v1/apps/{appId}/integrations/{integrationId} | 
+[**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+[**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /v1/apps/{appId}/integrations | 
+[**update_integration**](IntegrationApi.md#update_integration) | **PUT** /v1/apps/{appId}/integrations/{integrationId} | 
+[**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/menu | 
 
 
 # **create_integration**
