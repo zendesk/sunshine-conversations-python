@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **name** | **str** | Name on the account. Returned on successful *twilio* integrations.  | [optional] 
 **token** | **str** | Telegram Bot Token OR Viber Public Account token. Required for *twilio* and *viber* integrations.  | [optional] 
 **uri** | **str** | The viber URI to find the account. Returned on successful *viber* integrations.  | [optional] 
+**channel_id** | **str** | LINE Channel ID. Required for *line* integrations.  | [optional] 
+**channel_secret** | **str** | LINE Channel Secret. Required for *line* integrations.  | [optional] 
 **channel_access_token** | **str** | LINE Channel Access Token. Required for *line* integrations.  | [optional] 
 **bot_name** | **str** | The bot&#39;s name. Returned on successful *line* integrations.  | [optional] 
 **encoding_aes_key** | **str** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
