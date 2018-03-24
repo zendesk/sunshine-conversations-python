@@ -471,7 +471,8 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 app_id = 'app_id_example' # str | Identifies the app.
-app_user_pre_create_body = smooch.AppUserPreCreate() # AppUserPreCreate | Body for a preCreateAppUser request.
+user_id = 'user_id_example' # str | Identifies the user. Set an identifier for the user to be created.
+app_user_pre_create_body = smooch.AppUserPreCreate(user_id=user_id) # AppUserPreCreate | Body for a preCreateAppUser request.
 
 try:
     api_response = api_instance.pre_create_app_user(app_id, app_user_pre_create_body)
