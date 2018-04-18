@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **app_token** | **str** | The appToken, used to initialize the Web, iOS and Android clients and to make calls to the app user facing API. | 
 **name** | **str** | The app&#39;s name. | 
 **settings** | [**AppSettings**](AppSettings.md) |  | [optional] 
+**metadata** | **object** | Flat JSON object containing any custom properties associated with the app. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
