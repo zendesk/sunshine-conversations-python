@@ -4,12 +4,67 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_message**](ConversationApi.md#delete_message) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 [**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**get_messages**](ConversationApi.md#get_messages) | **GET** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**post_message**](ConversationApi.md#post_message) | **POST** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/read | 
 [**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/activity | 
 
+
+# **delete_message**
+> delete_message(app_id, user_id, message_id)
+
+
+
+Deletes a single message.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+message_id = 'message_id_example' # str | Identifies the message.
+
+try:
+    api_instance.delete_message(app_id, user_id, message_id)
+except ApiException as e:
+    print("Exception when calling ConversationApi->delete_message: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **message_id** | **str**| Identifies the message. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_messages**
 > delete_messages(app_id, user_id)

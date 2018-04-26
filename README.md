@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
 *AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
 *AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
+*ConversationApi* | [**delete_message**](docs/ConversationApi.md#delete_message) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 *ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1/apps/{appId}/appusers/{userId}/messages | 
