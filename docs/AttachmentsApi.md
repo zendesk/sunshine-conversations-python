@@ -4,8 +4,61 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**remove_attachment**](AttachmentsApi.md#remove_attachment) | **POST** /v1/apps/{appId}/attachments/remove | 
 [**upload_attachment**](AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
 
+
+# **remove_attachment**
+> remove_attachment(app_id, attachment_remove_body)
+
+
+
+Remove an attachment uploaded to Smooch.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AttachmentsApi()
+app_id = 'app_id_example' # str | Identifies the app.
+attachment_remove_body = smooch.AttachmentRemove() # AttachmentRemove | Body for a removeAttachment request. 
+
+try:
+    api_instance.remove_attachment(app_id, attachment_remove_body)
+except ApiException as e:
+    print("Exception when calling AttachmentsApi->remove_attachment: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **attachment_remove_body** | [**AttachmentRemove**](AttachmentRemove.md)| Body for a removeAttachment request.  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upload_attachment**
 > AttachmentResponse upload_attachment(app_id, source, access)

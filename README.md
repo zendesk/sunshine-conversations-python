@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /v1/apps/{appId}/appusers | 
 *AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
 *AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
+*AttachmentsApi* | [**remove_attachment**](docs/AttachmentsApi.md#remove_attachment) | **POST** /v1/apps/{appId}/attachments/remove | 
 *AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
 *ConversationApi* | [**delete_message**](docs/ConversationApi.md#delete_message) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 *ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
@@ -152,6 +153,7 @@ Class | Method | HTTP request | Description
  - [AppUserPreCreate](docs/AppUserPreCreate.md)
  - [AppUserResponse](docs/AppUserResponse.md)
  - [AppUserUpdate](docs/AppUserUpdate.md)
+ - [AttachmentRemove](docs/AttachmentRemove.md)
  - [AttachmentResponse](docs/AttachmentResponse.md)
  - [AuthCodeResponse](docs/AuthCodeResponse.md)
  - [BusinessSystemItem](docs/BusinessSystemItem.md)
