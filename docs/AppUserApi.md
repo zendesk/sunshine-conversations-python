@@ -4,6 +4,7 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_app_user**](AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers | 
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
 [**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
@@ -16,6 +17,56 @@ Method | HTTP request | Description
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
 [**update_app_user**](AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
 
+
+# **delete_app_user**
+> delete_app_user(app_id)
+
+
+
+Delete specified app user.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AppUserApi()
+app_id = 'app_id_example' # str | Identifies the app.
+
+try:
+    api_instance.delete_app_user(app_id)
+except ApiException as e:
+    print("Exception when calling AppUserApi->delete_app_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app_user_profile**
 > AppUserResponse delete_app_user_profile(app_id, user_id)

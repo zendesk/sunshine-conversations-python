@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /v1/apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /v1/apps/{appId}/keys | 
 *AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /v1/apps/{appId} | 
+*AppUserApi* | [**delete_app_user**](docs/AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers | 
 *AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
 *AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
 *AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
