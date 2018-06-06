@@ -167,6 +167,9 @@ class AttachmentsApi(object):
         :param str app_id: Identifies the app. (required)
         :param file source: File to be uploaded (required)
         :param str access: Access level for the resulting file (required)
+        :param str _for: The intended container for the attachment
+        :param str app_user_id: The appUserId of the user that will receive the attachment Used in attachments for messages 
+        :param str user_id: The userId of the user that will receive the attachment Used in attachments for messages 
         :return: AttachmentResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -194,12 +197,15 @@ class AttachmentsApi(object):
         :param str app_id: Identifies the app. (required)
         :param file source: File to be uploaded (required)
         :param str access: Access level for the resulting file (required)
+        :param str _for: The intended container for the attachment
+        :param str app_user_id: The appUserId of the user that will receive the attachment Used in attachments for messages 
+        :param str user_id: The userId of the user that will receive the attachment Used in attachments for messages 
         :return: AttachmentResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['app_id', 'source', 'access']
+        all_params = ['app_id', 'source', 'access', '_for', 'app_user_id', 'user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -234,6 +240,12 @@ class AttachmentsApi(object):
         query_params = []
         if 'access' in params:
             query_params.append(('access', params['access']))
+        if '_for' in params:
+            query_params.append(('for', params['_for']))
+        if 'app_user_id' in params:
+            query_params.append(('appUserId', params['app_user_id']))
+        if 'user_id' in params:
+            query_params.append(('userId', params['user_id']))
 
         header_params = {}
 

@@ -61,7 +61,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upload_attachment**
-> AttachmentResponse upload_attachment(app_id, source, access)
+> AttachmentResponse upload_attachment(app_id, source, access, _for=_for, app_user_id=app_user_id, user_id=user_id)
 
 
 
@@ -84,9 +84,12 @@ api_instance = smooch.AttachmentsApi()
 app_id = 'app_id_example' # str | Identifies the app.
 source = '/path/to/file.txt' # file | File to be uploaded
 access = 'access_example' # str | Access level for the resulting file
+_for = '_for_example' # str | The intended container for the attachment (optional)
+app_user_id = 'app_user_id_example' # str | The appUserId of the user that will receive the attachment Used in attachments for messages  (optional)
+user_id = 'user_id_example' # str | The userId of the user that will receive the attachment Used in attachments for messages  (optional)
 
 try:
-    api_response = api_instance.upload_attachment(app_id, source, access)
+    api_response = api_instance.upload_attachment(app_id, source, access, _for=_for, app_user_id=app_user_id, user_id=user_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AttachmentsApi->upload_attachment: %s\n" % e)
@@ -99,6 +102,9 @@ Name | Type | Description  | Notes
  **app_id** | **str**| Identifies the app. | 
  **source** | **file**| File to be uploaded | 
  **access** | **str**| Access level for the resulting file | 
+ **_for** | **str**| The intended container for the attachment | [optional] 
+ **app_user_id** | **str**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
+ **user_id** | **str**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
 
 ### Return type
 
