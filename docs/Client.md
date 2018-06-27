@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **app_version** | **str** | A reserved string field for reporting the app version running on the device. | [optional] 
 **display_name** | **str** | The client&#39;s display name. | [optional] 
 **info** | [**ClientInfo**](ClientInfo.md) |  | [optional] 
+**raw** | **object** | An Object with raw properties that vary for each client platform. All keys are optional and not guaranteed to be available. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
