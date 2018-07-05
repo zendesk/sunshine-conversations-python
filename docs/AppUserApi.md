@@ -4,7 +4,7 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_app_user**](AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers | 
+[**delete_app_user**](AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId} | 
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
 [**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **delete_app_user**
-> delete_app_user(app_id)
+> delete_app_user(app_id, user_id)
 
 
 
@@ -40,9 +40,10 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = smooch.AppUserApi()
 app_id = 'app_id_example' # str | Identifies the app.
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
 
 try:
-    api_instance.delete_app_user(app_id)
+    api_instance.delete_app_user(app_id, user_id)
 except ApiException as e:
     print("Exception when calling AppUserApi->delete_app_user: %s\n" % e)
 ```
@@ -52,6 +53,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
