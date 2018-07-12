@@ -193,6 +193,7 @@ Class | Method | HTTP request | Description
  - [ServiceAccountResponse](docs/ServiceAccountResponse.md)
  - [ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [Source](docs/Source.md)
+ - [SubMenuItem](docs/SubMenuItem.md)
  - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreate](docs/WebhookCreate.md)
