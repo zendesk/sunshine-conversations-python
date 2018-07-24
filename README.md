@@ -132,6 +132,11 @@ Class | Method | HTTP request | Description
 *ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys | 
 *ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /v1/serviceaccounts | 
 *ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /v1/serviceaccounts/{serviceAccountId} | 
+*TemplateApi* | [**create_template**](docs/TemplateApi.md#create_template) | **POST** /v1/apps/{appId}/templates | 
+*TemplateApi* | [**delete_template**](docs/TemplateApi.md#delete_template) | **DELETE** /v1/apps/{appId}/templates/{templateId} | 
+*TemplateApi* | [**get_template**](docs/TemplateApi.md#get_template) | **GET** /v1/apps/{appId}/templates/{templateId} | 
+*TemplateApi* | [**list_templates**](docs/TemplateApi.md#list_templates) | **GET** /v1/apps/{appId}/templates | 
+*TemplateApi* | [**update_template**](docs/TemplateApi.md#update_template) | **PUT** /v1/apps/{appId}/templates/{templateId} | 
 *WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /v1/apps/{appId}/webhooks | 
 *WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /v1/apps/{appId}/webhooks/{webhookId} | 
 *WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /v1/apps/{appId}/webhooks/{webhookId} | 
@@ -177,6 +182,7 @@ Class | Method | HTTP request | Description
  - [ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
  - [ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
+ - [ListTemplatesResponse](docs/ListTemplatesResponse.md)
  - [ListWebhooksResponse](docs/ListWebhooksResponse.md)
  - [Menu](docs/Menu.md)
  - [MenuItem](docs/MenuItem.md)
@@ -194,6 +200,10 @@ Class | Method | HTTP request | Description
  - [ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [Source](docs/Source.md)
  - [SubMenuItem](docs/SubMenuItem.md)
+ - [Template](docs/Template.md)
+ - [TemplateCreate](docs/TemplateCreate.md)
+ - [TemplateResponse](docs/TemplateResponse.md)
+ - [TemplateUpdate](docs/TemplateUpdate.md)
  - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreate](docs/WebhookCreate.md)

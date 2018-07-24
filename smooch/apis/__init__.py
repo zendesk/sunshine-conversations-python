@@ -8,4 +8,5 @@ from .conversation_api import ConversationApi
 from .integration_api import IntegrationApi
 from .menu_api import MenuApi
 from .service_account_api import ServiceAccountApi
+from .template_api import TemplateApi
 from .webhook_api import WebhookApi
