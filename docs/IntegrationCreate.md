@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **consumer_secret** | **str** | The consumer secret for your Twitter app. Required for *twitter* integrations.  | [optional] 
 **access_token_key** | **str** | The access token key obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
 **access_token_secret** | **str** | The access token secret obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
+**access_token_url** | **str** | Optional endpoint to generate access tokens for WeChat. Used to coordinate API access with third party systems.  | [optional] 
 **access_key** | **str** | The public API key of your MessageBird account. Required for *messagebird* integrations.  | [optional] 
 **originator** | **str** | Smooch will receive all messages sent to this phone number. Required for *messagebird* integrations.  | [optional] 
 **brand_color** | **str** | This color will be used in the messenger header and the button or tab in idle state. (Optional) Used for *Web Messenger* integrations.  | [optional] 
