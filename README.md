@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /v1/apps/{appId}/integrations | 
 *IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /v1/apps/{appId}/integrations/{integrationId} | 
 *IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*IntegrationApi* | [**update_integration_profile**](docs/IntegrationApi.md#update_integration_profile) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/profile | 
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1/apps/{appId}/menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1/apps/{appId}/menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1/apps/{appId}/menu | 
@@ -173,6 +174,7 @@ Class | Method | HTTP request | Description
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
+ - [IntegrationProfileUpdate](docs/IntegrationProfileUpdate.md)
  - [IntegrationResponse](docs/IntegrationResponse.md)
  - [IntegrationUpdate](docs/IntegrationUpdate.md)
  - [JwtResponse](docs/JwtResponse.md)

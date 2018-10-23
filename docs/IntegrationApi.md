@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /v1/apps/{appId}/integrations | 
 [**update_integration**](IntegrationApi.md#update_integration) | **PUT** /v1/apps/{appId}/integrations/{integrationId} | 
 [**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+[**update_integration_profile**](IntegrationApi.md#update_integration_profile) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/profile | 
 
 
 # **create_integration**
@@ -484,6 +485,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MenuResponse**](MenuResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_integration_profile**
+> update_integration_profile(app_id, integration_id, integration_profile_body)
+
+
+
+Update the specified integration’s profile.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+integration_profile_body = smooch.IntegrationProfileUpdate() # IntegrationProfileUpdate | Body for a profileUpdate request.
+
+try:
+    api_instance.update_integration_profile(app_id, integration_id, integration_profile_body)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->update_integration_profile: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+ **integration_profile_body** | [**IntegrationProfileUpdate**](IntegrationProfileUpdate.md)| Body for a profileUpdate request. | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
