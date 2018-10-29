@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **signed_up_at** | **str** | A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created. | [optional] 
 **properties** | **object** | Custom properties for the app user. | 
 **conversation_started** | **bool** | Flag indicating if the conversation has started for the app user. | 
-**credential_required** | **bool** | Flag indicating if the appUser is secured by a JSON Web Token or not. | [optional] 
 **clients** | [**list[Client]**](Client.md) | List of clients associated with the app user. | [optional] 
 **pending_clients** | [**list[Client]**](Client.md) | As clients, but containing linked clients which have not been confirmed yet (i.e. Twilio SMS). | [optional] 
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_secret_key**](ServiceAccountApi.md#create_secret_key) | **POST** /v1/serviceaccounts/{serviceAccountId}/keys | 
-[**create_service_account**](ServiceAccountApi.md#create_service_account) | **POST** /v1/serviceaccounts | 
-[**delete_secret_key**](ServiceAccountApi.md#delete_secret_key) | **DELETE** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
-[**delete_service_account**](ServiceAccountApi.md#delete_service_account) | **DELETE** /v1/serviceaccounts/{serviceAccountId} | 
-[**get_jwt**](ServiceAccountApi.md#get_jwt) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
-[**get_secret_key**](ServiceAccountApi.md#get_secret_key) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
-[**get_service_account**](ServiceAccountApi.md#get_service_account) | **GET** /v1/serviceaccounts/{serviceAccountId} | 
-[**list_secret_keys**](ServiceAccountApi.md#list_secret_keys) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys | 
-[**list_service_accounts**](ServiceAccountApi.md#list_service_accounts) | **GET** /v1/serviceaccounts | 
-[**update_service_account**](ServiceAccountApi.md#update_service_account) | **PUT** /v1/serviceaccounts/{serviceAccountId} | 
+[**create_secret_key**](ServiceAccountApi.md#create_secret_key) | **POST** /v1.1/serviceaccounts/{serviceAccountId}/keys | 
+[**create_service_account**](ServiceAccountApi.md#create_service_account) | **POST** /v1.1/serviceaccounts | 
+[**delete_secret_key**](ServiceAccountApi.md#delete_secret_key) | **DELETE** /v1.1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+[**delete_service_account**](ServiceAccountApi.md#delete_service_account) | **DELETE** /v1.1/serviceaccounts/{serviceAccountId} | 
+[**get_jwt**](ServiceAccountApi.md#get_jwt) | **GET** /v1.1/serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
+[**get_secret_key**](ServiceAccountApi.md#get_secret_key) | **GET** /v1.1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+[**get_service_account**](ServiceAccountApi.md#get_service_account) | **GET** /v1.1/serviceaccounts/{serviceAccountId} | 
+[**list_secret_keys**](ServiceAccountApi.md#list_secret_keys) | **GET** /v1.1/serviceaccounts/{serviceAccountId}/keys | 
+[**list_service_accounts**](ServiceAccountApi.md#list_service_accounts) | **GET** /v1.1/serviceaccounts | 
+[**update_service_account**](ServiceAccountApi.md#update_service_account) | **PUT** /v1.1/serviceaccounts/{serviceAccountId} | 
 
 
 # **create_secret_key**

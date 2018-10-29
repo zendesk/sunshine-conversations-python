@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user_id** | **str** | The app user&#39;s userId. This ID is specified by the appMaker.  | 
-**credential_required** | **bool** | Flag indicating if the appUser is secured by a JSON Web Token or not. | [optional] 
 **given_name** | **str** | The app user&#39;s given name. | [optional] 
 **surname** | **str** | The app user&#39;s surname. | [optional] 
 **email** | **str** | The app user&#39;s email. | [optional] 
