@@ -200,6 +200,8 @@ Class | Method | HTTP request | Description
  - [MenuResponse](docs/MenuResponse.md)
  - [Message](docs/Message.md)
  - [MessageItem](docs/MessageItem.md)
+ - [MessageOverride](docs/MessageOverride.md)
+ - [MessageOverrideWhatsapp](docs/MessageOverrideWhatsapp.md)
  - [MessagePost](docs/MessagePost.md)
  - [MessageResponse](docs/MessageResponse.md)
  - [SecretKey](docs/SecretKey.md)
