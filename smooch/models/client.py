@@ -161,7 +161,7 @@ class Client(object):
     def platform(self):
         """
         Gets the platform of this Client.
-        The client's platform.
+        The client's platform. See Enums.md for available values.
 
         :return: The platform of this Client.
         :rtype: str
@@ -172,7 +172,7 @@ class Client(object):
     def platform(self, platform):
         """
         Sets the platform of this Client.
-        The client's platform.
+        The client's platform. See Enums.md for available values.
 
         :param platform: The platform of this Client.
         :type: str

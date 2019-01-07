@@ -36,8 +36,10 @@ from .client import Client
 from .client_info import ClientInfo
 from .confirmation import Confirmation
 from .conversation import Conversation
+from .conversation_activity import ConversationActivity
 from .destination import Destination
 from .display_settings import DisplaySettings
+from .enums import Enums
 from .get_messages_response import GetMessagesResponse
 from .integration import Integration
 from .integration_create import IntegrationCreate
@@ -75,7 +77,6 @@ from .template import Template
 from .template_create import TemplateCreate
 from .template_response import TemplateResponse
 from .template_update import TemplateUpdate
-from .typing_activity_trigger import TypingActivityTrigger
 from .webhook import Webhook
 from .webhook_create import WebhookCreate
 from .webhook_response import WebhookResponse

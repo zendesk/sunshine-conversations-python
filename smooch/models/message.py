@@ -180,7 +180,7 @@ class Message(object):
     def role(self):
         """
         Gets the role of this Message.
-        The role of the individual posting the message. Can be either *appUser* or *appMaker*.
+        The role of the individual posting the message. See Enums.md for available values.
 
         :return: The role of this Message.
         :rtype: str
@@ -191,7 +191,7 @@ class Message(object):
     def role(self, role):
         """
         Sets the role of this Message.
-        The role of the individual posting the message. Can be either *appUser* or *appMaker*.
+        The role of the individual posting the message. See Enums.md for available values.
 
         :param role: The role of this Message.
         :type: str
@@ -205,7 +205,7 @@ class Message(object):
     def type(self):
         """
         Gets the type of this Message.
-        The message type.
+        The message type. See Enums.md for available values.
 
         :return: The type of this Message.
         :rtype: str
@@ -216,7 +216,7 @@ class Message(object):
     def type(self, type):
         """
         Sets the type of this Message.
-        The message type.
+        The message type. See Enums.md for available values.
 
         :param type: The type of this Message.
         :type: str

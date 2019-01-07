@@ -50,7 +50,7 @@ class DisplaySettings(object):
     def image_aspect_ratio(self):
         """
         Gets the image_aspect_ratio of this DisplaySettings.
-        Specifies how to display all carousel images. Valid values are *horizontal* (default) and *square*.
+        Specifies how to display all carousel images. See Enums.md for available values.
 
         :return: The image_aspect_ratio of this DisplaySettings.
         :rtype: str
@@ -61,7 +61,7 @@ class DisplaySettings(object):
     def image_aspect_ratio(self, image_aspect_ratio):
         """
         Sets the image_aspect_ratio of this DisplaySettings.
-        Specifies how to display all carousel images. Valid values are *horizontal* (default) and *square*.
+        Specifies how to display all carousel images. See Enums.md for available values.
 
         :param image_aspect_ratio: The image_aspect_ratio of this DisplaySettings.
         :type: str

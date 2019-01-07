@@ -118,7 +118,7 @@ class MenuItem(object):
     def type(self):
         """
         Gets the type of this MenuItem.
-        Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus.
+        Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus. See Enums.md for available values.
 
         :return: The type of this MenuItem.
         :rtype: str
@@ -129,7 +129,7 @@ class MenuItem(object):
     def type(self, type):
         """
         Sets the type of this MenuItem.
-        Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus.
+        Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus. See Enums.md for available values.
 
         :param type: The type of this MenuItem.
         :type: str

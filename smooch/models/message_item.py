@@ -146,7 +146,7 @@ class MessageItem(object):
     def size(self):
         """
         Gets the size of this MessageItem.
-        The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. Choose from *compact* and *large*. 
+        The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. See Enums.md for available values. 
 
         :return: The size of this MessageItem.
         :rtype: str
@@ -157,7 +157,7 @@ class MessageItem(object):
     def size(self, size):
         """
         Sets the size of this MessageItem.
-        The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. Choose from *compact* and *large*. 
+        The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. See Enums.md for available values. 
 
         :param size: The size of this MessageItem.
         :type: str

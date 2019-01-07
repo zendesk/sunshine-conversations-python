@@ -40,6 +40,124 @@ class ConversationApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
+    def conversation_activity(self, app_id, user_id, conversation_activity_body, **kwargs):
+        """
+        Notify Smooch when an app maker starts or stops typing a response.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.conversation_activity(app_id, user_id, conversation_activity_body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str app_id: Identifies the app. (required)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :param ConversationActivity conversation_activity_body: Body for a triggerConversationActivity request. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.conversation_activity_with_http_info(app_id, user_id, conversation_activity_body, **kwargs)
+        else:
+            (data) = self.conversation_activity_with_http_info(app_id, user_id, conversation_activity_body, **kwargs)
+            return data
+
+    def conversation_activity_with_http_info(self, app_id, user_id, conversation_activity_body, **kwargs):
+        """
+        Notify Smooch when an app maker starts or stops typing a response.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.conversation_activity_with_http_info(app_id, user_id, conversation_activity_body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str app_id: Identifies the app. (required)
+        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
+        :param ConversationActivity conversation_activity_body: Body for a triggerConversationActivity request. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['app_id', 'user_id', 'conversation_activity_body']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method conversation_activity" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'app_id' is set
+        if ('app_id' not in params) or (params['app_id'] is None):
+            raise ValueError("Missing the required parameter `app_id` when calling `conversation_activity`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `conversation_activity`")
+        # verify the required parameter 'conversation_activity_body' is set
+        if ('conversation_activity_body' not in params) or (params['conversation_activity_body'] is None):
+            raise ValueError("Missing the required parameter `conversation_activity_body` when calling `conversation_activity`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'app_id' in params:
+            path_params['appId'] = params['app_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'conversation_activity_body' in params:
+            body_params = params['conversation_activity_body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['jwt']
+
+        return self.api_client.call_api('/v1.1/apps/{appId}/appusers/{userId}/conversation/activity', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_message(self, app_id, user_id, message_id, **kwargs):
         """
         Deletes a single message.
@@ -603,124 +721,6 @@ class ConversationApi(object):
         auth_settings = ['jwt']
 
         return self.api_client.call_api('/v1.1/apps/{appId}/appusers/{userId}/conversation/read', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def trigger_typing_activity(self, app_id, user_id, typing_activity_trigger_body, **kwargs):
-        """
-        Notify Smooch when an app maker starts or stops typing a response.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.trigger_typing_activity(app_id, user_id, typing_activity_trigger_body, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str app_id: Identifies the app. (required)
-        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param TypingActivityTrigger typing_activity_trigger_body: Body for a triggerTypingActivity request. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.trigger_typing_activity_with_http_info(app_id, user_id, typing_activity_trigger_body, **kwargs)
-        else:
-            (data) = self.trigger_typing_activity_with_http_info(app_id, user_id, typing_activity_trigger_body, **kwargs)
-            return data
-
-    def trigger_typing_activity_with_http_info(self, app_id, user_id, typing_activity_trigger_body, **kwargs):
-        """
-        Notify Smooch when an app maker starts or stops typing a response.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.trigger_typing_activity_with_http_info(app_id, user_id, typing_activity_trigger_body, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str app_id: Identifies the app. (required)
-        :param str user_id: Identifies the user. Can be either the smoochId or the userId. (required)
-        :param TypingActivityTrigger typing_activity_trigger_body: Body for a triggerTypingActivity request. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['app_id', 'user_id', 'typing_activity_trigger_body']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method trigger_typing_activity" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'app_id' is set
-        if ('app_id' not in params) or (params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `trigger_typing_activity`")
-        # verify the required parameter 'user_id' is set
-        if ('user_id' not in params) or (params['user_id'] is None):
-            raise ValueError("Missing the required parameter `user_id` when calling `trigger_typing_activity`")
-        # verify the required parameter 'typing_activity_trigger_body' is set
-        if ('typing_activity_trigger_body' not in params) or (params['typing_activity_trigger_body'] is None):
-            raise ValueError("Missing the required parameter `typing_activity_trigger_body` when calling `trigger_typing_activity`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'app_id' in params:
-            path_params['appId'] = params['app_id']
-        if 'user_id' in params:
-            path_params['userId'] = params['user_id']
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'typing_activity_trigger_body' in params:
-            body_params = params['typing_activity_trigger_body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json'])
-
-        # Authentication setting
-        auth_settings = ['jwt']
-
-        return self.api_client.call_api('/v1.1/apps/{appId}/appusers/{userId}/conversation/activity', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

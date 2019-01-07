@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The message ID, generated automatically. | 
 **author_id** | **str** | The ID of the message&#39;s author. | 
-**role** | **str** | The role of the individual posting the message. Can be either *appUser* or *appMaker*. | 
-**type** | **str** | The message type. | 
+**role** | **str** | The role of the individual posting the message. See Enums.md for available values. | 
+**type** | **str** | The message type. See Enums.md for available values. | 
 **source** | [**Source**](Source.md) | The source of the message. | [optional] 
 **name** | **str** | The display name of the message author. | 
 **text** | **str** | The message text. Required for text messages.  | 

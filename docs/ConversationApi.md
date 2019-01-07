@@ -4,13 +4,67 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**conversation_activity**](ConversationApi.md#conversation_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 [**delete_message**](ConversationApi.md#delete_message) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 [**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**get_messages**](ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**post_message**](ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
-[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 
+
+# **conversation_activity**
+> conversation_activity(app_id, user_id, conversation_activity_body)
+
+
+
+Notify Smooch when an app maker starts or stops typing a response.
+
+### Example
+```python
+from __future__ import print_statement
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.ConversationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
+conversation_activity_body = smooch.ConversationActivity() # ConversationActivity | Body for a triggerConversationActivity request.
+
+try:
+    api_instance.conversation_activity(app_id, user_id, conversation_activity_body)
+except ApiException as e:
+    print("Exception when calling ConversationApi->conversation_activity: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
+ **conversation_activity_body** | [**ConversationActivity**](ConversationActivity.md)| Body for a triggerConversationActivity request. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_message**
 > delete_message(app_id, user_id, message_id)
@@ -266,60 +320,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **trigger_typing_activity**
-> trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
-
-
-
-Notify Smooch when an app maker starts or stops typing a response.
-
-### Example
-```python
-from __future__ import print_statement
-import time
-import smooch
-from smooch.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: jwt
-smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
-smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = smooch.ConversationApi()
-app_id = 'app_id_example' # str | Identifies the app.
-user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-typing_activity_trigger_body = smooch.TypingActivityTrigger() # TypingActivityTrigger | Body for a triggerTypingActivity request.
-
-try:
-    api_instance.trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
-except ApiException as e:
-    print("Exception when calling ConversationApi->trigger_typing_activity: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **str**| Identifies the app. | 
- **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **typing_activity_trigger_body** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 
 ### Return type
 

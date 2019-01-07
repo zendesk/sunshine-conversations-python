@@ -46,7 +46,7 @@ class ClientInfo(object):
             'phone_number': 'str',
             'radio_access_technology': 'str',
             'state': 'str',
-            'timezone': 'int',
+            'timezone': 'float',
             'wifi': 'str'
         }
 
@@ -478,7 +478,7 @@ class ClientInfo(object):
         The client's timezone offset.
 
         :return: The timezone of this ClientInfo.
-        :rtype: int
+        :rtype: float
         """
         return self._timezone
 
@@ -489,7 +489,7 @@ class ClientInfo(object):
         The client's timezone offset.
 
         :param timezone: The timezone of this ClientInfo.
-        :type: int
+        :type: float
         """
 
         self._timezone = timezone

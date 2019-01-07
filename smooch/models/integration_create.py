@@ -260,7 +260,7 @@ class IntegrationCreate(object):
     def type(self):
         """
         Gets the type of this IntegrationCreate.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :return: The type of this IntegrationCreate.
         :rtype: str
@@ -271,7 +271,7 @@ class IntegrationCreate(object):
     def type(self, type):
         """
         Sets the type of this IntegrationCreate.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :param type: The type of this IntegrationCreate.
         :type: str

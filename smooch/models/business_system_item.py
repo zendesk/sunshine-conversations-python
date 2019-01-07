@@ -70,7 +70,7 @@ class BusinessSystemItem(object):
     def type(self):
         """
         Gets the type of this BusinessSystemItem.
-        The type of business system (ex. slack, hipchat, zendesk etc...)
+        The type of business system. See Enums.md for available values.
 
         :return: The type of this BusinessSystemItem.
         :rtype: str
@@ -81,7 +81,7 @@ class BusinessSystemItem(object):
     def type(self, type):
         """
         Sets the type of this BusinessSystemItem.
-        The type of business system (ex. slack, hipchat, zendesk etc...)
+        The type of business system. See Enums.md for available values.
 
         :param type: The type of this BusinessSystemItem.
         :type: str

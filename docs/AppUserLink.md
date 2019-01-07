@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The type of the channel to link. | 
+**type** | **str** | The type of the channel to link. See Enums.md for available values. | 
 **phone_number** | **str** | A String of the appUser’s phone number. It must contain the + prefix and the country code. Required for *messenger*, *twilio* and *messagebird* linking.  | [optional] 
 **address** | **str** | A String of the appUser’s email address. Required for *mailgun* linking.  | [optional] 
 **given_name** | **str** | A String of the appUser’s given name. Used as additional criteria to increase the likelihood of a match. (Optional) Used for *messenger* linking.  | [optional] 

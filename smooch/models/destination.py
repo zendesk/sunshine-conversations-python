@@ -80,7 +80,7 @@ class Destination(object):
     def integration_type(self):
         """
         Gets the integration_type of this Destination.
-        The type of the target integration.
+        The type of the target integration. See Enums.md for available values.
 
         :return: The integration_type of this Destination.
         :rtype: str
@@ -91,7 +91,7 @@ class Destination(object):
     def integration_type(self, integration_type):
         """
         Sets the integration_type of this Destination.
-        The type of the target integration.
+        The type of the target integration. See Enums.md for available values.
 
         :param integration_type: The integration_type of this Destination.
         :type: str

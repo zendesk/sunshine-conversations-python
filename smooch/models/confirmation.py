@@ -55,7 +55,7 @@ class Confirmation(object):
     def type(self):
         """
         Gets the type of this Confirmation.
-        The confirmation type.
+        The confirmation type. See Enums.md for available values.
 
         :return: The type of this Confirmation.
         :rtype: str
@@ -66,7 +66,7 @@ class Confirmation(object):
     def type(self, type):
         """
         Sets the type of this Confirmation.
-        The confirmation type.
+        The confirmation type. See Enums.md for available values.
 
         :param type: The type of this Confirmation.
         :type: str

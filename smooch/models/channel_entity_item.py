@@ -70,7 +70,7 @@ class ChannelEntityItem(object):
     def type(self):
         """
         Gets the type of this ChannelEntityItem.
-        The type of channel (ex. messenger, viber, twilio etc...)
+        The type of channel. See Enums.md for available values.
 
         :return: The type of this ChannelEntityItem.
         :rtype: str
@@ -81,7 +81,7 @@ class ChannelEntityItem(object):
     def type(self, type):
         """
         Sets the type of this ChannelEntityItem.
-        The type of channel (ex. messenger, viber, twilio etc...)
+        The type of channel. See Enums.md for available values.
 
         :param type: The type of this ChannelEntityItem.
         :type: str

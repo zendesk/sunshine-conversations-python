@@ -80,7 +80,7 @@ class AppUserLink(object):
     def type(self):
         """
         Gets the type of this AppUserLink.
-        The type of the channel to link.
+        The type of the channel to link. See Enums.md for available values.
 
         :return: The type of this AppUserLink.
         :rtype: str
@@ -91,7 +91,7 @@ class AppUserLink(object):
     def type(self, type):
         """
         Sets the type of this AppUserLink.
-        The type of the channel to link.
+        The type of the channel to link. See Enums.md for available values.
 
         :param type: The type of this AppUserLink.
         :type: str

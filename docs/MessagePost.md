@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | **str** | The role of the individual posting the message. Can be either *appUser* or *appMaker*. | 
-**type** | **str** | The message type. | 
+**role** | **str** | The role of the individual posting the message. See Enums.md for available values. | 
+**type** | **str** | The message type. See Enums.md for available values. | 
 **name** | **str** | The display name of the message author. | [optional] 
 **email** | **str** | The email address of the message author. | [optional] 
 **avatar_url** | **str** | The URL of the desired message avatar image. | [optional] 

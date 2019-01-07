@@ -355,7 +355,7 @@ class Integration(object):
     def type(self):
         """
         Gets the type of this Integration.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :return: The type of this Integration.
         :rtype: str
@@ -366,7 +366,7 @@ class Integration(object):
     def type(self, type):
         """
         Sets the type of this Integration.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :param type: The type of this Integration.
         :type: str
@@ -1599,7 +1599,7 @@ class Integration(object):
     def status(self):
         """
         Gets the status of this Integration.
-        The integration status. Possible values are active, inactive or error. [More info](https://docs.smooch.io/#integration-status).
+        The integration status. See Enums.md for available values. [More info](https://docs.smooch.io/#integration-status).
 
         :return: The status of this Integration.
         :rtype: str
@@ -1610,7 +1610,7 @@ class Integration(object):
     def status(self, status):
         """
         Sets the status of this Integration.
-        The integration status. Possible values are active, inactive or error. [More info](https://docs.smooch.io/#integration-status).
+        The integration status. See Enums.md for available values. [More info](https://docs.smooch.io/#integration-status).
 
         :param status: The status of this Integration.
         :type: str

@@ -78,7 +78,7 @@ class Source(object):
     def type(self):
         """
         Gets the type of this Source.
-        An identifier for the channel from which a message originated.
+        An identifier for the channel from which a message originated. See Enums.md for available values.
 
         :return: The type of this Source.
         :rtype: str
@@ -89,7 +89,7 @@ class Source(object):
     def type(self, type):
         """
         Sets the type of this Source.
-        An identifier for the channel from which a message originated.
+        An identifier for the channel from which a message originated. See Enums.md for available values.
 
         :param type: The type of this Source.
         :type: str

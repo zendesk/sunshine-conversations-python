@@ -80,7 +80,7 @@ class WebhookCreate(object):
     def triggers(self):
         """
         Gets the triggers of this WebhookCreate.
-        An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
+        An array of triggers you wish to have the webhook listen to. See Enums.md for available values.
 
         :return: The triggers of this WebhookCreate.
         :rtype: list[str]
@@ -91,7 +91,7 @@ class WebhookCreate(object):
     def triggers(self, triggers):
         """
         Sets the triggers of this WebhookCreate.
-        An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
+        An array of triggers you wish to have the webhook listen to. See Enums.md for available values.
 
         :param triggers: The triggers of this WebhookCreate.
         :type: list[str]

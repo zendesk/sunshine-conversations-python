@@ -90,7 +90,7 @@ class LinkRequestResponseLinkRequests(object):
     def type(self):
         """
         Gets the type of this LinkRequestResponseLinkRequests.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :return: The type of this LinkRequestResponseLinkRequests.
         :rtype: str
@@ -101,7 +101,7 @@ class LinkRequestResponseLinkRequests(object):
     def type(self, type):
         """
         Sets the type of this LinkRequestResponseLinkRequests.
-        The integration type.
+        The integration type. See Enums.md for available values.
 
         :param type: The type of this LinkRequestResponseLinkRequests.
         :type: str

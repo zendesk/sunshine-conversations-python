@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The webhook ID, generated automatically. | 
 **target** | **str** | URL to be called when the webhook is triggered. | 
-**triggers** | **list[str]** | An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*. | 
+**triggers** | **list[str]** | An array of triggers you wish to have the webhook listen to. See Enums.md for available values. | 
 **secret** | **str** | Secret which will be transmitted with each webhook invocation and can be used to verify the authenticity of the caller. | 
 **version** | **str** | The payload version of the webhook. | [optional] 
 

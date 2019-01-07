@@ -105,7 +105,7 @@ class Action(object):
     def type(self):
         """
         Gets the type of this Action.
-        The action type.
+        The action type. See Enums.md for available values.
 
         :return: The type of this Action.
         :rtype: str
@@ -116,7 +116,7 @@ class Action(object):
     def type(self, type):
         """
         Sets the type of this Action.
-        The action type.
+        The action type. See Enums.md for available values.
 
         :param type: The type of this Action.
         :type: str
@@ -339,7 +339,7 @@ class Action(object):
     def size(self):
         """
         Gets the size of this Action.
-        The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. 
+        The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. See Enums.md for available values. 
 
         :return: The size of this Action.
         :rtype: str
@@ -350,7 +350,7 @@ class Action(object):
     def size(self, size):
         """
         Sets the size of this Action.
-        The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. 
+        The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. See Enums.md for available values. 
 
         :param size: The size of this Action.
         :type: str

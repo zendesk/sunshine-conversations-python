@@ -113,12 +113,12 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1.1/apps/{appId}/appusers/{userId} | 
 *AttachmentsApi* | [**remove_attachment**](docs/AttachmentsApi.md#remove_attachment) | **POST** /v1.1/apps/{appId}/attachments/remove | 
 *AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1.1/apps/{appId}/attachments | 
+*ConversationApi* | [**conversation_activity**](docs/ConversationApi.md#conversation_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 *ConversationApi* | [**delete_message**](docs/ConversationApi.md#delete_message) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 *ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
-*ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 *IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /v1.1/apps/{appId}/integrations | 
 *IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId} | 
@@ -178,8 +178,10 @@ Class | Method | HTTP request | Description
  - [ClientInfo](docs/ClientInfo.md)
  - [Confirmation](docs/Confirmation.md)
  - [Conversation](docs/Conversation.md)
+ - [ConversationActivity](docs/ConversationActivity.md)
  - [Destination](docs/Destination.md)
  - [DisplaySettings](docs/DisplaySettings.md)
+ - [Enums](docs/Enums.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
@@ -217,7 +219,6 @@ Class | Method | HTTP request | Description
  - [TemplateCreate](docs/TemplateCreate.md)
  - [TemplateResponse](docs/TemplateResponse.md)
  - [TemplateUpdate](docs/TemplateUpdate.md)
- - [TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreate](docs/WebhookCreate.md)
  - [WebhookResponse](docs/WebhookResponse.md)

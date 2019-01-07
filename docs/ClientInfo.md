@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **phone_number** | **str** | The client&#39;s phone number. | [optional] 
 **radio_access_technology** | **str** | The client&#39;s radioAccessTechnology (Ex. HSDPA). | [optional] 
 **state** | **str** | The client&#39;s state or province. | [optional] 
-**timezone** | **int** | The client&#39;s timezone offset. | [optional] 
+**timezone** | **float** | The client&#39;s timezone offset. | [optional] 
 **wifi** | **str** | Whether or not the client has wifi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
