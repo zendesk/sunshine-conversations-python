@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **active** | **bool** | Flag indicating if the client is active. | [optional] 
 **last_seen** | **str** | The date time the client was last seen. | [optional] 
 **platform** | **str** | The client&#39;s platform. See Enums.md for available values. | 
+**integration_id** | **str** | The ID of the integration that the client was created for. | [optional] 
 **push_notification_token** | **str** | The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients.  | [optional] 
 **app_version** | **str** | A reserved string field for reporting the app version running on the device. | [optional] 
 **display_name** | **str** | The client&#39;s display name. | [optional] 
