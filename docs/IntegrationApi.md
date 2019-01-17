@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_integrations**
-> ListIntegrationsResponse list_integrations(app_id, types=types)
+> ListIntegrationsResponse list_integrations(app_id, types=types, limit=limit, offset=offset)
 
 
 
@@ -357,9 +357,11 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = smooch.IntegrationApi()
 app_id = 'app_id_example' # str | Identifies the app.
 types = 'types_example' # str | List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types=*twilio*,*line*.  (optional)
+limit = 25 # int | The number of records to return. (optional) (default to 25)
+offset = 0 # int | The number of initial records to skip before picking records to return. (optional) (default to 0)
 
 try:
-    api_response = api_instance.list_integrations(app_id, types=types)
+    api_response = api_instance.list_integrations(app_id, types=types, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IntegrationApi->list_integrations: %s\n" % e)
@@ -371,6 +373,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **types** | **str**| List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types&#x3D;*twilio*,*line*.  | [optional] 
+ **limit** | **int**| The number of records to return. | [optional] [default to 25]
+ **offset** | **int**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
 
 ### Return type
 
