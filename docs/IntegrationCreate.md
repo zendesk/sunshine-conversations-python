@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **channel_id** | **str** | LINE Channel ID. Required for *line* integrations.  | [optional] 
 **channel_secret** | **str** | LINE Channel Secret. Required for *line* integrations.  | [optional] 
 **channel_access_token** | **str** | LINE Channel Access Token. Required for *line* integrations.  | [optional] 
+**service_code** | **str** | LINE Service Code.  | [optional] 
+**switcher_secret** | **str** | LINE Switcher Secret.  | [optional] 
 **encoding_aes_key** | **str** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
 **from_address** | **str** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
 **certificate** | **str** | The binary of your APN certificate base64 encoded. Required for *apn* integrations.  | [optional] 
