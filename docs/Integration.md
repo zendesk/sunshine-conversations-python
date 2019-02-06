@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The integration ID, generated automatically. | 
 **type** | **str** | The integration type. See Enums.md for available values. | 
+**display_name** | **str** | The integration display name. Used to map a human-friendly name to an integration.  | [optional] 
 **page_access_token** | **str** | Facebook Page Access Token. Required for *messenger* integrations.  | [optional] 
 **app_id** | **str** | Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations.  | [optional] 
 **app_secret** | **str** | Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations.  | [optional] 

@@ -414,7 +414,7 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = smooch.IntegrationApi()
 app_id = 'app_id_example' # str | Identifies the app.
 integration_id = 'integration_id_example' # str | Identifies the integration.
-integration_update_body = smooch.IntegrationUpdate() # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+integration_update_body = smooch.IntegrationUpdate() # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#update-integration) 
 
 try:
     api_response = api_instance.update_integration(app_id, integration_id, integration_update_body)
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **integration_id** | **str**| Identifies the integration. | 
- **integration_update_body** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+ **integration_update_body** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#update-integration)  | 
 
 ### Return type
 
