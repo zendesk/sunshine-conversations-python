@@ -27,7 +27,6 @@ Delete specified app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -79,7 +78,6 @@ Delete specified app user's profile.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -132,7 +130,6 @@ Get the specified app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -185,7 +182,6 @@ Get an auth code for facilitating a channel transfer
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -238,7 +234,6 @@ Get specified app user's business system IDs.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -291,7 +286,6 @@ Get specified app user's channel entity IDs.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -344,7 +338,6 @@ Fetch link requests for the specified app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -399,7 +392,6 @@ Link specified app user to given channel.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -454,7 +446,6 @@ Send an image message to the conversation.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -511,7 +502,6 @@ Pre-create an app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -564,7 +554,6 @@ Unlink specified app user from given channel.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -618,7 +607,6 @@ Update the specified app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException

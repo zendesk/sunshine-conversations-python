@@ -10,10 +10,12 @@ Method | HTTP request | Description
 [**delete_integration_menu**](IntegrationApi.md#delete_integration_menu) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 [**get_integration**](IntegrationApi.md#get_integration) | **GET** /v1.1/apps/{appId}/integrations/{integrationId} | 
 [**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
+[**get_integration_profile**](IntegrationApi.md#get_integration_profile) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /v1.1/apps/{appId}/integrations | 
 [**update_integration**](IntegrationApi.md#update_integration) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId} | 
 [**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 [**update_integration_profile**](IntegrationApi.md#update_integration_profile) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
+[**upload_integration_profile_photo**](IntegrationApi.md#upload_integration_profile_photo) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile/photo | 
 
 
 # **create_integration**
@@ -25,7 +27,6 @@ Create an integration for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -78,7 +79,6 @@ Create the specified integration’s menu, overriding the app menu if configured
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -133,7 +133,6 @@ Delete the specified integration.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -185,7 +184,6 @@ Delete the specified integration’s menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -237,7 +235,6 @@ Get the specified integration.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -290,7 +287,6 @@ Get the specified integration's menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -334,6 +330,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_integration_profile**
+> GetIntegrationProfileResponse get_integration_profile(app_id, integration_id)
+
+
+
+Get the specified integration’s profile.
+
+### Example
+```python
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+
+try:
+    api_response = api_instance.get_integration_profile(app_id, integration_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->get_integration_profile: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+
+### Return type
+
+[**GetIntegrationProfileResponse**](GetIntegrationProfileResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_integrations**
 > ListIntegrationsResponse list_integrations(app_id, types=types, limit=limit, offset=offset)
 
@@ -343,7 +391,6 @@ List integrations for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -400,7 +447,6 @@ Update the specified integration.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -455,7 +501,6 @@ Update the specified integration’s menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -510,7 +555,6 @@ Update the specified integration’s profile.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -551,6 +595,60 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_integration_profile_photo**
+> UploadIntegrationProfilePhotoResponse upload_integration_profile_photo(app_id, integration_id, source)
+
+
+
+Upload a photo to be used for the the specified integration’s profile.
+
+### Example
+```python
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.IntegrationApi()
+app_id = 'app_id_example' # str | Identifies the app.
+integration_id = 'integration_id_example' # str | Identifies the integration.
+source = '/path/to/file.txt' # file | Photo to be uploaded
+
+try:
+    api_response = api_instance.upload_integration_profile_photo(app_id, integration_id, source)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IntegrationApi->upload_integration_profile_photo: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **integration_id** | **str**| Identifies the integration. | 
+ **source** | **file**| Photo to be uploaded | 
+
+### Return type
+
+[**UploadIntegrationProfilePhotoResponse**](UploadIntegrationProfilePhotoResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

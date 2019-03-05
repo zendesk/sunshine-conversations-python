@@ -17,7 +17,6 @@ Remove an attachment uploaded to Smooch.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -69,7 +68,6 @@ Upload an attachment to Smooch to use in future messages.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException

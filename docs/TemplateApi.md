@@ -20,7 +20,6 @@ Create a template for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -73,7 +72,6 @@ Delete the specified template.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -125,7 +123,6 @@ Get the specified template.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -178,7 +175,6 @@ List templates for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -233,7 +229,6 @@ Update the specified template.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException

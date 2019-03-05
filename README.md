@@ -125,10 +125,12 @@ Class | Method | HTTP request | Description
 *IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /v1.1/apps/{appId}/integrations/{integrationId} | 
 *IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
+*IntegrationApi* | [**get_integration_profile**](docs/IntegrationApi.md#get_integration_profile) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
 *IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /v1.1/apps/{appId}/integrations | 
 *IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId} | 
 *IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**update_integration_profile**](docs/IntegrationApi.md#update_integration_profile) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
+*IntegrationApi* | [**upload_integration_profile_photo**](docs/IntegrationApi.md#upload_integration_profile_photo) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile/photo | 
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1.1/apps/{appId}/menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1.1/apps/{appId}/menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1.1/apps/{appId}/menu | 
@@ -182,6 +184,7 @@ Class | Method | HTTP request | Description
  - [Destination](docs/Destination.md)
  - [DisplaySettings](docs/DisplaySettings.md)
  - [Enums](docs/Enums.md)
+ - [GetIntegrationProfileResponse](docs/GetIntegrationProfileResponse.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
@@ -219,6 +222,7 @@ Class | Method | HTTP request | Description
  - [TemplateCreate](docs/TemplateCreate.md)
  - [TemplateResponse](docs/TemplateResponse.md)
  - [TemplateUpdate](docs/TemplateUpdate.md)
+ - [UploadIntegrationProfilePhotoResponse](docs/UploadIntegrationProfilePhotoResponse.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreate](docs/WebhookCreate.md)
  - [WebhookResponse](docs/WebhookResponse.md)

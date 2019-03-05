@@ -20,7 +20,6 @@ Create a webhook for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -73,7 +72,6 @@ Delete the specified webhook.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -125,7 +123,6 @@ Get the specified webhook.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -178,7 +175,6 @@ List webhooks for the specified app.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -229,7 +225,6 @@ Update the specified webhook.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException

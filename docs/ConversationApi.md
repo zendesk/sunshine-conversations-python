@@ -21,7 +21,6 @@ Notify Smooch when an app maker starts or stops typing a response.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -75,7 +74,6 @@ Deletes a single message.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -129,7 +127,6 @@ Clears the message history for a user, permanently deleting all messages, but le
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -181,7 +178,6 @@ Get the specified app user's messages.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -238,7 +234,6 @@ Post a message to or from the app user.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -293,7 +288,6 @@ Reset the unread count of the conversation to 0.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException

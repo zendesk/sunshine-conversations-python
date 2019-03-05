@@ -18,7 +18,6 @@ Remove the specified app’s menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -69,7 +68,6 @@ Get the specified app’s menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
@@ -120,7 +118,6 @@ Configure the specified app’s menu.
 
 ### Example
 ```python
-from __future__ import print_statement
 import time
 import smooch
 from smooch.rest import ApiException
