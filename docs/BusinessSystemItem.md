@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The type of business system. See Enums.md for available values. | 
+**type** | **str** | The type of business system. See [**BusinessSystemTypeEnum**](Enums.md#BusinessSystemTypeEnum) for available values. | 
 **channel_id** | **str** | The channel id for a *slack* integration | [optional] 
 **ticket_id** | **str** | The ticket id for a *zendesk* integration | [optional] 
 **room_id** | **int** | The room id for a *hipchat* integration | [optional] 

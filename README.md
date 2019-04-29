@@ -119,6 +119,12 @@ Class | Method | HTTP request | Description
 *ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
+*DeploymentApi* | [**activate_phone_number**](docs/DeploymentApi.md#activate_phone_number) | **POST** /v1.1/whatsapp/deployments/{deploymentId}/activate | 
+*DeploymentApi* | [**confirm_code**](docs/DeploymentApi.md#confirm_code) | **POST** /v1.1/whatsapp/deployments/{deploymentId}/code/confirm | 
+*DeploymentApi* | [**create_deployment**](docs/DeploymentApi.md#create_deployment) | **POST** /v1.1/whatsapp/deployments | 
+*DeploymentApi* | [**delete_deployment**](docs/DeploymentApi.md#delete_deployment) | **DELETE** /v1.1/whatsapp/deployments/{deploymentId} | 
+*DeploymentApi* | [**get_deployment**](docs/DeploymentApi.md#get_deployment) | **GET** /v1.1/whatsapp/deployments/{deploymentId} | 
+*DeploymentApi* | [**list_deployments**](docs/DeploymentApi.md#list_deployments) | **GET** /v1.1/whatsapp/deployments | 
 *IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /v1.1/apps/{appId}/integrations | 
 *IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId} | 
@@ -181,6 +187,11 @@ Class | Method | HTTP request | Description
  - [Confirmation](docs/Confirmation.md)
  - [Conversation](docs/Conversation.md)
  - [ConversationActivity](docs/ConversationActivity.md)
+ - [Deployment](docs/Deployment.md)
+ - [DeploymentActivatePhoneNumber](docs/DeploymentActivatePhoneNumber.md)
+ - [DeploymentConfirmCode](docs/DeploymentConfirmCode.md)
+ - [DeploymentCreate](docs/DeploymentCreate.md)
+ - [DeploymentResponse](docs/DeploymentResponse.md)
  - [Destination](docs/Destination.md)
  - [DisplaySettings](docs/DisplaySettings.md)
  - [Enums](docs/Enums.md)
@@ -195,6 +206,7 @@ Class | Method | HTTP request | Description
  - [LinkRequestResponse](docs/LinkRequestResponse.md)
  - [LinkRequestResponseLinkRequests](docs/LinkRequestResponseLinkRequests.md)
  - [ListAppsResponse](docs/ListAppsResponse.md)
+ - [ListDeploymentsResponse](docs/ListDeploymentsResponse.md)
  - [ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
  - [ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
@@ -238,3 +250,28 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
 
+
+## Integration with Google Cloud Platform
+
+Swagger client is using urllib3 as default http library, however Google Cloud Platform disallows it. 
+There are two ways you can use urllib3 in Appengine Standard: patch it to use App Engine’s URLFetch or enable sockets. 
+Which one to use depends on your situation and needs. URLFetch is more cost-effective as long as your usage is within the limitations for free app. Sockets are only available for paid apps.
+
+The first solution:
+
+```
+import smooch
+from urllib3.contrib.appengine import AppEngineManager
+
+# create swagger client
+client = smooch.AppApi()
+# patch urllib3 for App Engine to use URLFetch
+client.api_client.rest_client.pool_manager = AppEngineManager()
+```
+
+You can skip this solution if you choose to go with sockets. Just add the following lines to the app.yaml.
+
+```
+env_variables:
+  GAE_USE_SOCKETS_HTTPLIB : 'true'
+```

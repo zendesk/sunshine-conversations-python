@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **message_type** | **str** |  | [optional] 
 **role** | **str** |  | [optional] 
 **webhook_triggers** | **str** |  | [optional] 
+**deployment_hosting** | **str** |  | [optional] 
+**deployment_status** | **str** |  | [optional] 
+**deployment_activation_method** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

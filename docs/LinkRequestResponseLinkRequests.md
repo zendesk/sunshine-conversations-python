@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **integration_id** | **str** | The integration ID. | 
-**type** | **str** | The integration type. See Enums.md for available values. | 
+**type** | **str** | The integration type. See [**IntegrationTypeEnum**](Enums.md#IntegrationTypeEnum) for available values. | 
 **code** | **str** | The link request code. | 
 **url** | **str** | The link request url. | 
 

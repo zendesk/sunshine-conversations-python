@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The type of channel. See Enums.md for available values. | 
+**type** | **str** | The type of channel. See [**IntegrationTypeEnum**](Enums.md#IntegrationTypeEnum) for available values. | 
 **integration_id** | **str** | The ID of the integration. | [optional] 
 **phone_number** | **str** | The phone number for a *twilio* or *messagebird* integration | [optional] 
 **user_id** | **str** | The userId for a *messenger*, *viber*, *line*, *wechat* or *twitter* integration | [optional] 
