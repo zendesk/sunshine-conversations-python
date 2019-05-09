@@ -4,7 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | An identifier for the client. Must be globally unique. | 
-**active** | **bool** | Flag indicating if the client is active. | [optional] 
+**status** | **str** | The client status. Indicates if the client is able to receive messages or not. See [**ClientStatusEnum**](Enums.md#ClientStatusEnum) for available values. | [optional] 
+**external_id** | **str** | The ID of the user on an external channel. For example, the user&#39;s phone number for Twilio, or their page-scoped user ID for Facebook Messenger. Applies only to non-SDK clients. | [optional] 
+**active** | **bool** | Deprecated - use the status property instead. | [optional] 
 **last_seen** | **str** | The date time the client was last seen. | [optional] 
 **platform** | **str** | The client&#39;s platform. See [**IntegrationTypeEnum**](Enums.md#IntegrationTypeEnum) for available values. | 
 **integration_id** | **str** | The ID of the integration that the client was created for. | [optional] 
