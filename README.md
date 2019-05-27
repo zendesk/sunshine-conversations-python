@@ -107,6 +107,7 @@ Class | Method | HTTP request | Description
 *AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /v1.1/apps/{appId}/appusers/{userId}/channels | 
 *AppUserApi* | [**get_link_requests**](docs/AppUserApi.md#get_link_requests) | **GET** /v1.1/apps/{appId}/appusers/{userId}/linkrequest | 
 *AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /v1.1/apps/{appId}/appusers/{userId}/channels | 
+*AppUserApi* | [**merge_users**](docs/AppUserApi.md#merge_users) | **POST** /v1.1/apps/{appId}/appusers/merge | 
 *AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/images | 
 *AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /v1.1/apps/{appId}/appusers | 
 *AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/channels/{channel} | 
@@ -174,6 +175,7 @@ Class | Method | HTTP request | Description
  - [AppUserBusinessSystemsResponse](docs/AppUserBusinessSystemsResponse.md)
  - [AppUserChannelsResponse](docs/AppUserChannelsResponse.md)
  - [AppUserLink](docs/AppUserLink.md)
+ - [AppUserMerge](docs/AppUserMerge.md)
  - [AppUserPreCreate](docs/AppUserPreCreate.md)
  - [AppUserResponse](docs/AppUserResponse.md)
  - [AppUserUpdate](docs/AppUserUpdate.md)
@@ -215,6 +217,7 @@ Class | Method | HTTP request | Description
  - [Menu](docs/Menu.md)
  - [MenuItem](docs/MenuItem.md)
  - [MenuResponse](docs/MenuResponse.md)
+ - [MergedUser](docs/MergedUser.md)
  - [Message](docs/Message.md)
  - [MessageItem](docs/MessageItem.md)
  - [MessageOverride](docs/MessageOverride.md)

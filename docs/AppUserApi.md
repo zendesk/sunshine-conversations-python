@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /v1.1/apps/{appId}/appusers/{userId}/channels | 
 [**get_link_requests**](AppUserApi.md#get_link_requests) | **GET** /v1.1/apps/{appId}/appusers/{userId}/linkrequest | 
 [**link_app_user**](AppUserApi.md#link_app_user) | **POST** /v1.1/apps/{appId}/appusers/{userId}/channels | 
+[**merge_users**](AppUserApi.md#merge_users) | **POST** /v1.1/apps/{appId}/appusers/merge | 
 [**post_image_message**](AppUserApi.md#post_image_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/images | 
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /v1.1/apps/{appId}/appusers | 
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/channels/{channel} | 
@@ -425,6 +426,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **merge_users**
+> merge_users(app_id, app_user_merge_body)
+
+
+
+Force the merge of two specific users, when the business has determined that they represent the same person.
+
+### Example
+```python
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AppUserApi()
+app_id = 'app_id_example' # str | Identifies the app.
+app_user_merge_body = smooch.AppUserMerge() # AppUserMerge | Body for a mergeUsers request.
+
+try:
+    api_instance.merge_users(app_id, app_user_merge_body)
+except ApiException as e:
+    print("Exception when calling AppUserApi->merge_users: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **app_user_merge_body** | [**AppUserMerge**](AppUserMerge.md)| Body for a mergeUsers request. | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
