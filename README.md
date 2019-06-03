@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Action](docs/Action.md)
+ - [ActivityResponse](docs/ActivityResponse.md)
  - [App](docs/App.md)
  - [AppCreate](docs/AppCreate.md)
  - [AppResponse](docs/AppResponse.md)

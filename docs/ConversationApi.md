@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **conversation_activity**
-> conversation_activity(app_id, user_id, conversation_activity_body)
+> ActivityResponse conversation_activity(app_id, user_id, conversation_activity_body)
 
 
 
@@ -37,7 +37,8 @@ user_id = 'user_id_example' # str | Identifies the user. Can be either the smooc
 conversation_activity_body = smooch.ConversationActivity() # ConversationActivity | Body for a triggerConversationActivity request.
 
 try:
-    api_instance.conversation_activity(app_id, user_id, conversation_activity_body)
+    api_response = api_instance.conversation_activity(app_id, user_id, conversation_activity_body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConversationApi->conversation_activity: %s\n" % e)
 ```
@@ -52,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ActivityResponse**](ActivityResponse.md)
 
 ### Authorization
 
