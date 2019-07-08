@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **media_type** | **str** | The mediaType for the message. Required for image/file messages.  | [optional] 
 **items** | [**list[MessageItem]**](MessageItem.md) | The items in the message list. Required for carousel and list messages.  | [optional] 
 **actions** | [**list[Action]**](Action.md) | The actions in the message. | [optional] 
+**block_chat_input** | **bool** | Indicates if the Web SDK chat input should be blocked. Defaults to false. Only for form messages.  | [optional] 
+**fields** | [**list[FieldPost]**](FieldPost.md) | The fields in the form. Required for form messages.  | [optional] 
 **destination** | [**Destination**](Destination.md) | Specifies which channel to deliver a message to. See [list integrations](https://docs.smooch.io/rest/#list-integrations) to get integration ID and type. | [optional] 
 **override** | [**MessageOverride**](MessageOverride.md) | Specifies channel-specific overrides to use in order to bypass Smooch&#39;s message translation logic. | [optional] 
 

@@ -32,7 +32,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -84,7 +87,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -138,7 +144,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -189,7 +198,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -240,7 +252,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -292,7 +307,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -344,7 +362,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -396,7 +417,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -452,7 +476,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -506,7 +533,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -560,7 +590,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -613,7 +646,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 

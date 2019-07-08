@@ -26,7 +26,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -80,7 +83,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -133,7 +139,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -184,7 +193,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -240,7 +252,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 
@@ -248,7 +263,7 @@ smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = smooch.ConversationApi()
 app_id = 'app_id_example' # str | Identifies the app.
 user_id = 'user_id_example' # str | Identifies the user. Can be either the smoochId or the userId.
-message_post_body = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
+message_post_body = smooch.MessagePost() # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest/#text), [image](https://docs.smooch.io/rest/#image), [carousel](https://docs.smooch.io/rest/#carousel), [list](https://docs.smooch.io/rest/#list), [form](https://docs.smooch.io/rest/#form)) 
 
 try:
     api_response = api_instance.post_message(app_id, user_id, message_post_body)
@@ -263,7 +278,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **user_id** | **str**| Identifies the user. Can be either the smoochId or the userId. | 
- **message_post_body** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
+ **message_post_body** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest/#text), [image](https://docs.smooch.io/rest/#image), [carousel](https://docs.smooch.io/rest/#carousel), [list](https://docs.smooch.io/rest/#list), [form](https://docs.smooch.io/rest/#form))  | 
 
 ### Return type
 
@@ -294,7 +309,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: jwt
+
+# OR
+
+# Configure API key authorization (alternative): jwt
 smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
 smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
 

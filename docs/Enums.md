@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **menu_item_type** | **str** |  | [optional] 
 **message_item_size** | **str** |  | [optional] 
 **message_type** | **str** |  | [optional] 
+**field_type** | **str** |  | [optional] 
+**quoted_message_type** | **str** |  | [optional] 
 **role** | **str** |  | [optional] 
 **webhook_triggers** | **str** |  | [optional] 
 
