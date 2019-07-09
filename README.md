@@ -57,6 +57,9 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
 
 # OR
 
@@ -253,6 +256,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
+
+## basicAuth
+
+- **Type**: HTTP basic authentication
 
 ## jwt
 

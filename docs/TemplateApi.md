@@ -26,6 +26,10 @@ from smooch.rest import ApiException
 from pprint import pprint
 
 
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
+
 # OR
 
 # Configure API key authorization (alternative): jwt
@@ -57,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -80,6 +84,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
+
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
 
 # OR
 
@@ -111,7 +119,7 @@ void (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -134,6 +142,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
+
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
 
 # OR
 
@@ -166,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -189,6 +201,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
+
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
 
 # OR
 
@@ -223,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -246,6 +262,10 @@ import smooch
 from smooch.rest import ApiException
 from pprint import pprint
 
+
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
 
 # OR
 
@@ -280,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
