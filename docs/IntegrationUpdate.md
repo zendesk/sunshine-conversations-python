@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **service_code** | **str** | LINE Service Code.  | [optional] 
 **switcher_secret** | **str** | LINE Switcher Secret.  | [optional] 
 **hsm_fallback_language** | **str** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
+**qr_code_url** | **str** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/).  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
