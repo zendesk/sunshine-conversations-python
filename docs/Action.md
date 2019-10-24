@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **fallback** | **str** | The webview action fallback uri. This is the link that will be used in clients that do not support webviews. Required for *webview* actions.  | [optional] 
 **size** | **str** | The size used to display the webview. Allowed values are [\&quot;compact\&quot;, \&quot;tall\&quot;, \&quot;full\&quot;]. (Optional) Used for *webview* actions. See [**ActionSizeEnum**](Enums.md#ActionSizeEnum) for available values.  | [optional] 
 **extra_channel_options** | **object** | Extra options to pass directly to the channel API. See [Extra Channel Options](https://docs.smooch.io/rest#extra-channel-options-schema) | [optional] 
+**open_on_receive** | **bool** | Flag indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
