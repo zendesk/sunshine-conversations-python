@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 **submitted** | **bool** | Indicates if the form was submitted. Generated automatically. | [optional] 
 **quoted_message** | [**QuotedMessage**](QuotedMessage.md) | The form message a formResponse message responds to. Required for formResponse messages.  | [optional] 
 **text_fallback** | **str** | The text fallback displayed in channels that do not support form messages. Only for formResponse messages. Generated automatically.  | [optional] 
+**coordinates** | [**Coordinates**](Coordinates.md) | Data representing the location being sent in the message. | [optional] 
+**location** | [**Location**](Location.md) | Additional information about the location being sent in the message. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

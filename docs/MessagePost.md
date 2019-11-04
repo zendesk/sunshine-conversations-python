@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **fields** | [**list[FieldPost]**](FieldPost.md) | The fields in the form. Required for form messages.  | [optional] 
 **destination** | [**Destination**](Destination.md) | Specifies which channel to deliver a message to. See [list integrations](https://docs.smooch.io/rest/#list-integrations) to get integration ID and type. | [optional] 
 **override** | [**MessageOverride**](MessageOverride.md) | Specifies channel-specific overrides to use in order to bypass Smooch&#39;s message translation logic. | [optional] 
+**coordinates** | [**Coordinates**](Coordinates.md) | Data representing the location being sent in the message. | [optional] 
+**location** | [**Location**](Location.md) | Additional information about the location being sent in the message. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
