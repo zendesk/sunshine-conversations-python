@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **password** | **str** | The password for your APN certificate or WhatsApp API client. Required for *WhatsApp* integrations. (this usage is deprecated) (Optional) Used for *apn* integrations.  | [optional] 
 **username** | **str** | The username for the account. Returned on successful *twitter* and *telegram* integrations. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
 **auto_update_badge** | **bool** | Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations.  | [optional] 
+**production** | **bool** | Flag specifying the APN environment to connect to (&#x60;production&#x60; if true, &#x60;sandbox&#x60; otherwise). Defaults to value inferred from certificate if not specified. (Optional) Used for *apn* integrations.  | [optional] 
 **server_key** | **str** | Your server key from the fcm console. Required for *fcm* integrations.  | [optional] 
 **sender_id** | **str** | Your sender id from the fcm console. Required for *fcm* integrations.  | [optional] 
 **tier** | **str** | Your Twitter app’s tier. Accepted values are enterprise or premium.  | [optional] 
