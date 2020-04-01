@@ -32,6 +32,7 @@ from .app_user_update import AppUserUpdate
 from .attachment_remove import AttachmentRemove
 from .attachment_response import AttachmentResponse
 from .auth_code_response import AuthCodeResponse
+from .author import Author
 from .business_system_item import BusinessSystemItem
 from .channel_entity_item import ChannelEntityItem
 from .client import Client
@@ -80,6 +81,10 @@ from .message_override_messenger import MessageOverrideMessenger
 from .message_override_whatsapp import MessageOverrideWhatsapp
 from .message_post import MessagePost
 from .message_response import MessageResponse
+from .notification_post import NotificationPost
+from .notification_post_destination import NotificationPostDestination
+from .notification_response import NotificationResponse
+from .notification_response_notification import NotificationResponseNotification
 from .option import Option
 from .quoted_message import QuotedMessage
 from .secret_key import SecretKey

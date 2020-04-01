@@ -32,6 +32,7 @@ from .models.app_user_update import AppUserUpdate
 from .models.attachment_remove import AttachmentRemove
 from .models.attachment_response import AttachmentResponse
 from .models.auth_code_response import AuthCodeResponse
+from .models.author import Author
 from .models.business_system_item import BusinessSystemItem
 from .models.channel_entity_item import ChannelEntityItem
 from .models.client import Client
@@ -80,6 +81,10 @@ from .models.message_override_messenger import MessageOverrideMessenger
 from .models.message_override_whatsapp import MessageOverrideWhatsapp
 from .models.message_post import MessagePost
 from .models.message_response import MessageResponse
+from .models.notification_post import NotificationPost
+from .models.notification_post_destination import NotificationPostDestination
+from .models.notification_response import NotificationResponse
+from .models.notification_response_notification import NotificationResponseNotification
 from .models.option import Option
 from .models.quoted_message import QuotedMessage
 from .models.secret_key import SecretKey
@@ -110,6 +115,7 @@ from .apis.conversation_api import ConversationApi
 from .apis.deployment_api import DeploymentApi
 from .apis.integration_api import IntegrationApi
 from .apis.menu_api import MenuApi
+from .apis.notification_api import NotificationApi
 from .apis.service_account_api import ServiceAccountApi
 from .apis.template_api import TemplateApi
 from .apis.webhook_api import WebhookApi

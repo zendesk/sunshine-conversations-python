@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1.1/apps/{appId}/menu | 
 *MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1.1/apps/{appId}/menu | 
 *MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1.1/apps/{appId}/menu | 
+*NotificationApi* | [**post_notification**](docs/NotificationApi.md#post_notification) | **POST** /v1/apps/{appId}/notifications | 
 *ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /v1.1/serviceaccounts/{serviceAccountId}/keys | 
 *ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /v1.1/serviceaccounts | 
 *ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /v1.1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
@@ -187,6 +188,7 @@ Class | Method | HTTP request | Description
  - [AttachmentRemove](docs/AttachmentRemove.md)
  - [AttachmentResponse](docs/AttachmentResponse.md)
  - [AuthCodeResponse](docs/AuthCodeResponse.md)
+ - [Author](docs/Author.md)
  - [BusinessSystemItem](docs/BusinessSystemItem.md)
  - [ChannelEntityItem](docs/ChannelEntityItem.md)
  - [Client](docs/Client.md)
@@ -235,6 +237,10 @@ Class | Method | HTTP request | Description
  - [MessageOverrideWhatsapp](docs/MessageOverrideWhatsapp.md)
  - [MessagePost](docs/MessagePost.md)
  - [MessageResponse](docs/MessageResponse.md)
+ - [NotificationPost](docs/NotificationPost.md)
+ - [NotificationPostDestination](docs/NotificationPostDestination.md)
+ - [NotificationResponse](docs/NotificationResponse.md)
+ - [NotificationResponseNotification](docs/NotificationResponseNotification.md)
  - [Option](docs/Option.md)
  - [QuotedMessage](docs/QuotedMessage.md)
  - [SecretKey](docs/SecretKey.md)
