@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**delete_secret_key**](AppApi.md#delete_secret_key) | **DELETE** /v1.1/apps/{appId}/keys/{keyId} | 
 [**get_app**](AppApi.md#get_app) | **GET** /v1.1/apps/{appId} | 
 [**get_app_jwt**](AppApi.md#get_app_jwt) | **GET** /v1.1/apps/{appId}/keys/{keyId}/jwt | 
+[**get_sdk_ids**](AppApi.md#get_sdk_ids) | **GET** /v1.1/apps/{appId}/sdks | 
 [**get_secret_key**](AppApi.md#get_secret_key) | **GET** /v1.1/apps/{appId}/keys/{keyId} | 
 [**list_apps**](AppApi.md#list_apps) | **GET** /v1.1/apps | 
 [**list_secret_keys**](AppApi.md#list_secret_keys) | **GET** /v1.1/apps/{appId}/keys | 
@@ -350,6 +351,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**JwtResponse**](JwtResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sdk_ids**
+> GetSdkIdsResponse get_sdk_ids(app_id)
+
+
+
+Retrieve the IDs of the three SDK integrations (`android`, `ios`, and `web`) for the specified app, to be used when initializing the SDKs.
+
+### Example
+```python
+import time
+import smooch
+from smooch.rest import ApiException
+from pprint import pprint
+
+
+# Configure HTTP basic authorization (recommended): basicAuth
+smooch.configuration.username = 'API_KEY_ID'
+smooch.configuration.password = 'API_KEY_SECRET'
+
+# OR
+
+# Configure API key authorization (alternative): jwt
+smooch.configuration.api_key['Authorization'] = 'YOUR_JWT'
+smooch.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = smooch.AppApi()
+app_id = 'app_id_example' # str | Identifies the app.
+
+try:
+    api_response = api_instance.get_sdk_ids(app_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AppApi->get_sdk_ids: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+
+### Return type
+
+[**GetSdkIdsResponse**](GetSdkIdsResponse.md)
 
 ### Authorization
 

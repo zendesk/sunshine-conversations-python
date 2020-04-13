@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /v1.1/apps/{appId}/keys/{keyId} | 
 *AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /v1.1/apps/{appId} | 
 *AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /v1.1/apps/{appId}/keys/{keyId}/jwt | 
+*AppApi* | [**get_sdk_ids**](docs/AppApi.md#get_sdk_ids) | **GET** /v1.1/apps/{appId}/sdks | 
 *AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /v1.1/apps/{appId}/keys/{keyId} | 
 *AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /v1.1/apps | 
 *AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /v1.1/apps/{appId}/keys | 
@@ -209,6 +210,7 @@ Class | Method | HTTP request | Description
  - [FieldPost](docs/FieldPost.md)
  - [GetIntegrationProfileResponse](docs/GetIntegrationProfileResponse.md)
  - [GetMessagesResponse](docs/GetMessagesResponse.md)
+ - [GetSdkIdsResponse](docs/GetSdkIdsResponse.md)
  - [Integration](docs/Integration.md)
  - [IntegrationCreate](docs/IntegrationCreate.md)
  - [IntegrationProfileUpdate](docs/IntegrationProfileUpdate.md)
