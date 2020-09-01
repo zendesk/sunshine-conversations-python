@@ -68,6 +68,9 @@ Name | Type | Description | Notes
 **hide_unsubscribe_link** | **bool** | When &#x60;true&#x60;, unsubscribe links will not be included in outbound emails. If this setting is enabled, it is expected that the business is providing the user a way to unsubscribe by some other means. (Optional) Used for *mailgun* integrations.  | [optional] 
 **status** | **str** | The integration status. See [**IntegrationStatusEnum**](Enums.md#IntegrationStatusEnum) for available values. [More info](https://docs.smooch.io/#integration-status). | [optional] 
 **error** | **str** | The error causing the integration to fail. Will be present when &#x60;status&#x60; is &#39;error&#39;. | [optional] 
+**api_secret** | **str** | A key tied to Apple Business Chat Messaging Service Provider | [optional] 
+**business_id** | **str** | A unique ID tied to the brand using Apple Business Chat | [optional] 
+**msp_id** | **str** | A unique identifier for an Apple Business Chat partner registered as a Messaging Service Provider through Apple Business Register | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -57,6 +57,9 @@ Name | Type | Description | Notes
 **api_key** | **str** | The public API key of your Mailgun account. Required for *mailgun* integrations.  | [optional] 
 **domain** | **str** | The domain used to relay email. Required for *mailgun* integrations.  | [optional] 
 **incoming_address** | **str** | Smooch will receive all emails sent to this address. Required for *mailgun* integrations.  | [optional] 
+**api_secret** | **str** | A key tied to Apple Business Chat Messaging Service Provider | [optional] 
+**business_id** | **str** | A unique ID tied to the brand using Apple Business Chat | [optional] 
+**msp_id** | **str** | A unique identifier for an Apple Business Chat partner registered as a Messaging Service Provider through Apple Business Register | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
