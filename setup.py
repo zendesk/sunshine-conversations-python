@@ -11,7 +11,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "sunshine-conversations-client"
-VERSION = "9.1.0"
+VERSION = "9.1.1"
 # To install the library, run the following
 #
 # python setup.py install
