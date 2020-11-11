@@ -3,11 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | The app&#39;s ID. | 
-**app_token** | **str** | The appToken, used to initialize the Web, iOS and Android clients and to make calls to the app user facing API. | 
-**name** | **str** | The app&#39;s name. | 
+**id** | **str** | A canonical ID that can be used to retrieve the Sunshine Conversations app. | [optional] 
+**display_name** | **str** | The friendly name of the app. | [optional] 
 **settings** | [**AppSettings**](AppSettings.md) |  | [optional] 
-**metadata** | **object** | Flat JSON object containing any custom properties associated with the app. | [optional] 
+**metadata** | [**object**](.md) | Flat object containing custom properties. Strings, numbers and booleans  are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

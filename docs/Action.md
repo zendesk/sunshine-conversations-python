@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The action type. See [**ActionTypeEnum**](Enums.md#ActionTypeEnum) for available values. | 
+**type** | **str** | The type of action. | 
 **text** | **str** | The button text. | 
-**payload** | **str** | The payload to be sent with the resulting webhook. Required for *postback* and *reply* actions.  | [optional] 
-**metadata** | **object** | Flat JSON object containing any custom properties associated with the action. | [optional] 
-**amount** | **int** | The amount being charged. It needs to be specified in cents and is an integer. Required for *buy* actions.  | [optional] 
-**currency** | **str** | The currency of the amount being charged (USD, CAD, etc.). | [optional] 
-**default** | **bool** | Flag indicating if the message action is the default for a message item in Facebook Messenger. | [optional] 
-**icon_url** | **str** | An icon to render next to the reply option (Facebook Messenger and Web Messenger only). | [optional] 
-**uri** | **str** | The action URI. This is the link that will be used in the clients when clicking the button. Required for *link* and *webview* actions.  | [optional] 
-**fallback** | **str** | The webview action fallback uri. This is the link that will be used in clients that do not support webviews. Required for *webview* actions.  | [optional] 
-**size** | **str** | The size used to display the webview. Allowed values are [\&quot;compact\&quot;, \&quot;tall\&quot;, \&quot;full\&quot;]. (Optional) Used for *webview* actions. See [**ActionSizeEnum**](Enums.md#ActionSizeEnum) for available values.  | [optional] 
-**extra_channel_options** | **object** | Extra options to pass directly to the channel API. See [Extra Channel Options](https://docs.smooch.io/rest#extra-channel-options-schema) | [optional] 
-**open_on_receive** | **bool** | Flag indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
+**amount** | **int** | The amount being charged. It needs to be specified in cents and is an integer (9.99$ -&gt; 999). | 
+**currency** | **str** | An ISO 4217 standard currency code in lowercase. Used for actions of type buy. | [optional] 
+**metadata** | [**object**](.md) | Flat object containing custom properties. Strings, numbers and booleans  are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size.  | [optional] 
+**uri** | **str** | The webview URI. This is the URI that will open in the webview when clicking the button. | 
+**default** | **bool** | Boolean value indicating whether the action is the default action for a message item in Facebook Messenger. | [optional] 
+**extra_channel_options** | [**ExtraChannelOptions**](ExtraChannelOptions.md) |  | [optional] 
+**payload** | **str** | A string payload to help you identify the action context. Used when posting the reply. You can also use metadata for more complex needs. | 
+**icon_url** | **str** | An icon to render next to the reply option. | [optional] 
+**size** | **str** | The size to display a webview. Used for actions of type webview. | [optional] 
+**fallback** | **str** | The fallback uri for channels that don’t support webviews. Used for actions of type webview. | 
+**open_on_receive** | **bool** | Boolean value indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

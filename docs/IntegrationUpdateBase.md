@@ -1,0 +1,10 @@
+# IntegrationUpdateBase
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

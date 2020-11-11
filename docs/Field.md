@@ -1,20 +1,19 @@
 # Field
 
+Properties that can be expected to receive inside a form or formResponse message field. 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | The field ID, generated automatically. | [optional] 
-**type** | **str** | The field type. See [**FieldTypeEnum**](Enums.md#FieldTypeEnum) for available values. | 
-**name** | **str** | The name of the field. Each field name must be unique per form. | 
-**label** | **str** | The label to be displayed with the field. | 
-**placeholder** | **str** | The placeholder text of the field that will be rendered. Only for form messages  | [optional] 
-**min_size** | **int** | The minimum possible length of the response. Defaults to 1 if not specified. Only for text fields in form messages.  | [optional] 
-**max_size** | **int** | The maximum possible length of the response. Defaults to 128 if not specified. Only for text fields in form messages.  | [optional] 
-**options** | [**list[Option]**](Option.md) | The field options that can be selected. The array is limited to 20 options. Only for select fields in form messages.  | [optional] 
-**select_size** | **int** | The select size, generated automatically. Only for select fields in form messages.  | [optional] 
-**text** | **str** | The text response to a text field. Required for text fields in form response messages.  | [optional] 
-**email** | **str** | The email response to an email field. Required for email fields in form response messages.  | [optional] 
-**select** | [**list[Select]**](Select.md) | The options selected as a response to a select field. Required for select fields in form response messages.  | [optional] 
+**type** | **str** | The field type. | 
+**name** | **str** | The name of the field. Must be unique per form or formResponse. | 
+**label** | **str** | The label of the field. What the field is displayed as on Web Messenger. | 
+**placeholder** | **str** | Placeholder text for the field. form message only. | [optional] 
+**min_size** | **int** | The minimum allowed length for the response for a field of type text. form message only. | [optional] [default to 1]
+**max_size** | **int** | The maximum allowed length for the response for a field of type text. form message only. | [optional] [default to 128]
+**text** | **str** | Specifies the response for a text field. | [optional] 
+**email** | **str** | Specifies the response for a email field. | [optional] 
+**select** | **list[object]** | Array of objects representing the response for a field of type select. form and formResponse messages only. | [optional] 
+**options** | **list[object]** | Array of objects representing options for a field of type select. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

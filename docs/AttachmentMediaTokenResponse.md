@@ -1,0 +1,10 @@
+# AttachmentMediaTokenResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tokens** | **dict(str, str)** | Object with key value pair where the key is the path and the value is the media JWT. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
