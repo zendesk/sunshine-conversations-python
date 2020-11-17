@@ -12,7 +12,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "9.1.1"
+__version__ = "9.2.0"
 
 # import apis into sdk package
 from sunshine_conversations_client.api.activities_api import ActivitiesApi
@@ -135,6 +135,10 @@ from sunshine_conversations_client.model.form_message import FormMessage
 from sunshine_conversations_client.model.form_response_message import FormResponseMessage
 from sunshine_conversations_client.model.image_message import ImageMessage
 from sunshine_conversations_client.model.inline_object import InlineObject
+from sunshine_conversations_client.model.instagram import Instagram
+from sunshine_conversations_client.model.instagram_all_of import InstagramAllOf
+from sunshine_conversations_client.model.instagram_update import InstagramUpdate
+from sunshine_conversations_client.model.instagram_update_all_of import InstagramUpdateAllOf
 from sunshine_conversations_client.model.integration import Integration
 from sunshine_conversations_client.model.integration_api_key import IntegrationApiKey
 from sunshine_conversations_client.model.integration_api_key_list_response import IntegrationApiKeyListResponse
@@ -192,7 +196,6 @@ from sunshine_conversations_client.model.messagebird_all_of import MessagebirdAl
 from sunshine_conversations_client.model.messenger import Messenger
 from sunshine_conversations_client.model.messenger_all_of import MessengerAllOf
 from sunshine_conversations_client.model.messenger_update import MessengerUpdate
-from sunshine_conversations_client.model.messenger_update_all_of import MessengerUpdateAllOf
 from sunshine_conversations_client.model.meta import Meta
 from sunshine_conversations_client.model.offer_control_body import OfferControlBody
 from sunshine_conversations_client.model.page import Page

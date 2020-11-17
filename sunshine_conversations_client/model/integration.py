@@ -53,6 +53,7 @@ class Integration(object):
         'viber': 'Viber',
         'messagebird': 'Messagebird',
         'whatsapp': 'Whatsapp',
+        'instagram': 'Instagram',
         'twilio': 'Twilio',
         'mailgun': 'Mailgun',
         'twitter': 'Twitter',

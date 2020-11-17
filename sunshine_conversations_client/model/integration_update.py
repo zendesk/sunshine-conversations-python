@@ -37,13 +37,13 @@ class IntegrationUpdate(object):
         'server_key': 'str',
         'sender_id': 'str',
         'can_user_create_more_conversations': 'bool',
+        'page_access_token': 'str',
         'certificate': 'str',
         'password': 'str',
         'production': 'bool',
         'auto_update_badge': 'bool',
         'hide_unsubscribe_link': 'bool',
         'from_address': 'str',
-        'page_access_token': 'str',
         'brand_color': 'str',
         'fixed_intro_pane': 'bool',
         'conversation_color': 'str',
@@ -68,13 +68,13 @@ class IntegrationUpdate(object):
         'server_key': 'serverKey',
         'sender_id': 'senderId',
         'can_user_create_more_conversations': 'canUserCreateMoreConversations',
+        'page_access_token': 'pageAccessToken',
         'certificate': 'certificate',
         'password': 'password',
         'production': 'production',
         'auto_update_badge': 'autoUpdateBadge',
         'hide_unsubscribe_link': 'hideUnsubscribeLink',
         'from_address': 'fromAddress',
-        'page_access_token': 'pageAccessToken',
         'brand_color': 'brandColor',
         'fixed_intro_pane': 'fixedIntroPane',
         'conversation_color': 'conversationColor',
@@ -96,7 +96,7 @@ class IntegrationUpdate(object):
 
     nulls = set()
 
-    def __init__(self, display_name=Undefined(), server_key=Undefined(), sender_id=Undefined(), can_user_create_more_conversations=None, certificate=Undefined(), password=None, production=None, auto_update_badge=None, hide_unsubscribe_link=None, from_address=Undefined(), page_access_token=None, brand_color='65758e', fixed_intro_pane=False, conversation_color='0099ff', action_color='0099ff', display_style='button', button_icon_url=Undefined(), button_width='58', button_height='58', integration_order=Undefined(), business_name=None, business_icon_url=None, background_image_url=None, origin_whitelist=Undefined(), prechat_capture=None, hsm_fallback_language='en_US', account_id=Undefined(), account_management_access_token=Undefined(), local_vars_configuration=None):  # noqa: E501
+    def __init__(self, display_name=Undefined(), server_key=Undefined(), sender_id=Undefined(), can_user_create_more_conversations=None, page_access_token=None, certificate=Undefined(), password=None, production=None, auto_update_badge=None, hide_unsubscribe_link=None, from_address=Undefined(), brand_color='65758e', fixed_intro_pane=False, conversation_color='0099ff', action_color='0099ff', display_style='button', button_icon_url=Undefined(), button_width='58', button_height='58', integration_order=Undefined(), business_name=None, business_icon_url=None, background_image_url=None, origin_whitelist=Undefined(), prechat_capture=None, hsm_fallback_language='en_US', account_id=Undefined(), account_management_access_token=Undefined(), local_vars_configuration=None):  # noqa: E501
         """IntegrationUpdate - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -107,13 +107,13 @@ class IntegrationUpdate(object):
         self._server_key = None
         self._sender_id = None
         self._can_user_create_more_conversations = None
+        self._page_access_token = None
         self._certificate = None
         self._password = None
         self._production = None
         self._auto_update_badge = None
         self._hide_unsubscribe_link = None
         self._from_address = None
-        self._page_access_token = None
         self._brand_color = None
         self._fixed_intro_pane = None
         self._conversation_color = None
@@ -138,6 +138,8 @@ class IntegrationUpdate(object):
         self.sender_id = sender_id
         if can_user_create_more_conversations is not None:
             self.can_user_create_more_conversations = can_user_create_more_conversations
+        if page_access_token is not None:
+            self.page_access_token = page_access_token
         self.certificate = certificate
         if password is not None:
             self.password = password
@@ -148,8 +150,6 @@ class IntegrationUpdate(object):
         if hide_unsubscribe_link is not None:
             self.hide_unsubscribe_link = hide_unsubscribe_link
         self.from_address = from_address
-        if page_access_token is not None:
-            self.page_access_token = page_access_token
         if brand_color is not None:
             self.brand_color = brand_color
         if fixed_intro_pane is not None:
@@ -303,6 +303,29 @@ class IntegrationUpdate(object):
         """
 
         self._can_user_create_more_conversations = can_user_create_more_conversations
+
+    @property
+    def page_access_token(self):
+        """Gets the page_access_token of this IntegrationUpdate.  # noqa: E501
+
+        A Facebook Page Access Token.  # noqa: E501
+
+        :return: The page_access_token of this IntegrationUpdate.  # noqa: E501
+        :rtype: str
+        """
+        return self._page_access_token
+
+    @page_access_token.setter
+    def page_access_token(self, page_access_token):
+        """Sets the page_access_token of this IntegrationUpdate.
+
+        A Facebook Page Access Token.  # noqa: E501
+
+        :param page_access_token: The page_access_token of this IntegrationUpdate.  # noqa: E501
+        :type: str
+        """
+
+        self._page_access_token = page_access_token
 
     @property
     def certificate(self):
@@ -461,29 +484,6 @@ class IntegrationUpdate(object):
             raise ValueError("Invalid value for `from_address`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._from_address = from_address
-
-    @property
-    def page_access_token(self):
-        """Gets the page_access_token of this IntegrationUpdate.  # noqa: E501
-
-        A Facebook Page Access Token.  # noqa: E501
-
-        :return: The page_access_token of this IntegrationUpdate.  # noqa: E501
-        :rtype: str
-        """
-        return self._page_access_token
-
-    @page_access_token.setter
-    def page_access_token(self, page_access_token):
-        """Sets the page_access_token of this IntegrationUpdate.
-
-        A Facebook Page Access Token.  # noqa: E501
-
-        :param page_access_token: The page_access_token of this IntegrationUpdate.  # noqa: E501
-        :type: str
-        """
-
-        self._page_access_token = page_access_token
 
     @property
     def brand_color(self):
