@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The integration type. See [**IntegrationTypeEnum**](Enums.md#IntegrationTypeEnum) for available values. | 
 **display_name** | **str** | The integration display name. Used to map a human-friendly name to an integration.  | [optional] 
-**page_access_token** | **str** | Facebook Page Access Token. Required for *messenger* integrations.  | [optional] 
-**app_id** | **str** | Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations.  | [optional] 
-**app_secret** | **str** | Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations.  | [optional] 
+**page_access_token** | **str** | Facebook Page Access Token. Required for *messenger* and *instagram* integrations.  | [optional] 
+**app_id** | **str** | Facebook App ID OR WeChat App ID. Required for *messenger*, *instagram* and *wechat* integrations.  | [optional] 
+**app_secret** | **str** | Facebook Page App Secret OR WeChat App Secret. Required for *messenger*, *instagram* and *wechat* integrations.  | [optional] 
 **account_sid** | **str** | Twilio Account SID. Required for *twilio* integrations.  | [optional] 
 **auth_token** | **str** | Twilio Auth Token. Required for *twilio* integrations.  | [optional] 
 **base_url** | **str** | Your WhatsApp API client&#39;s URL. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **from_address** | **str** | Email address to use as the &#x60;From&#x60; and &#x60;Reply-To&#x60; address if it must be different from &#x60;incomingAddress&#x60;. Only use this option if the address that you supply is configured to forward emails to the &#x60;incomingAddress&#x60;, otherwise user replies will be lost. You must also make sure that the domain is properly configured as a mail provider so as to not be flagged as spam by the user&#39;s email client.  (Optional) Used for *mailgun* integrations.  | [optional] 
 **certificate** | **str** | The binary of your APN certificate base64 encoded. Required for *apn* integrations.  | [optional] 
 **password** | **str** | The password for your APN certificate or WhatsApp API client. Required for *WhatsApp* integrations. (this usage is deprecated) (Optional) Used for *apn* integrations.  | [optional] 
-**username** | **str** | The username for the account. Returned on successful *twitter* and *telegram* integrations. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
+**username** | **str** | A twitter, telegram and facebook account username Returned on successful *twitter*, *telegram* and *instagram* integrations. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
 **auto_update_badge** | **bool** | Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations.  | [optional] 
 **production** | **bool** | Flag specifying the APN environment to connect to (&#x60;production&#x60; if true, &#x60;sandbox&#x60; otherwise). Defaults to value inferred from certificate if not specified. (Optional) Used for *apn* integrations.  | [optional] 
 **server_key** | **str** | Your server key from the fcm console. Required for *fcm* integrations.  | [optional] 
@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 **button_width** | **str** | With the button style Web Messenger, you have the option of specifying its width. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **button_height** | **str** | With the button style Web Messenger, you have the option of specifying its height. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **integration_order** | **list[str]** | Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed (Optional) Used for *Web Messenger* integrations.  | [optional] 
-**business_name** | **str** | A custom business name for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
+**business_name** | **str** | A custom business name for the Web Messenger or Instagram Business account name. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **business_icon_url** | **str** | A custom business icon url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **background_image_url** | **str** | A custom background url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **origin_whitelist** | **list[str]** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454 &#x60;scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ]&#x60;, where scheme is &#x60;http&#x60; or &#x60;https&#x60;. (Optional) Used for *Web Messenger* integrations.  | [optional] 
@@ -58,7 +58,7 @@ Name | Type | Description | Notes
 **domain** | **str** | The domain used to relay email. Required for *mailgun* integrations.  | [optional] 
 **incoming_address** | **str** | Smooch will receive all emails sent to this address. Required for *mailgun* integrations.  | [optional] 
 **api_secret** | **str** | A key tied to Apple Business Chat Messaging Service Provider | [optional] 
-**business_id** | **str** | A unique ID tied to the brand using Apple Business Chat | [optional] 
+**business_id** | **str** | A unique ID tied to the brand using Apple Business Chat or the Instagram Business ID  | [optional] 
 **msp_id** | **str** | A unique identifier for an Apple Business Chat partner registered as a Messaging Service Provider through Apple Business Register | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
