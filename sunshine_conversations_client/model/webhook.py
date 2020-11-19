@@ -158,7 +158,7 @@ class Webhook(object):
     def triggers(self):
         """Gets the triggers of this Webhook.  # noqa: E501
 
-        An array of triggers the integration is subscribed to. This property is case sensitive. Current supported triggers in v2 are `conversation:create`, `conversation:message:delivery:channel`, `conversation:message:delivery:failure`, `conversation:message:delivery:user`, `conversation:message`, `conversation:read`, `conversation:typing`, `conversation:postback`, and `user:merge`  # noqa: E501
+        An array of triggers the integration is subscribed to. This property is case sensitive. [More details](https://docs.smooch.io/rest/#section/Webhook-Triggers).  # noqa: E501
 
         :return: The triggers of this Webhook.  # noqa: E501
         :rtype: list[str]
@@ -169,7 +169,7 @@ class Webhook(object):
     def triggers(self, triggers):
         """Sets the triggers of this Webhook.
 
-        An array of triggers the integration is subscribed to. This property is case sensitive. Current supported triggers in v2 are `conversation:create`, `conversation:message:delivery:channel`, `conversation:message:delivery:failure`, `conversation:message:delivery:user`, `conversation:message`, `conversation:read`, `conversation:typing`, `conversation:postback`, and `user:merge`  # noqa: E501
+        An array of triggers the integration is subscribed to. This property is case sensitive. [More details](https://docs.smooch.io/rest/#section/Webhook-Triggers).  # noqa: E501
 
         :param triggers: The triggers of this Webhook.  # noqa: E501
         :type: list[str]
