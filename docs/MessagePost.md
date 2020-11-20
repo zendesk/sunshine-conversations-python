@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **text** | **str** | The message text. Required for text messages.  | [optional] 
 **media_url** | **str** | The mediaUrl for the message. Required for image/file messages.  | [optional] 
 **media_type** | **str** | The mediaType for the message. Required for image/file messages.  | [optional] 
+**alt_text** | **str** | An optional description of the image or the file for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **items** | [**list[MessageItem]**](MessageItem.md) | The items in the message list. Required for carousel and list messages.  | [optional] 
 **actions** | [**list[Action]**](Action.md) | The actions in the message. | [optional] 
 **block_chat_input** | **bool** | Indicates if the Web SDK chat input should be blocked. Defaults to false. Only for form messages.  | [optional] 
