@@ -59,7 +59,7 @@ class IntegrationType(object):
     def integration_type(self):
         """Gets the integration_type of this IntegrationType.  # noqa: E501
 
-        The type of the integration to deliver the message to. Will return an error if the user does not have a client of that type attached to the conversation.   # noqa: E501
+        The type of the integration to deliver the message to. Can be set to `none` if sending a [silent message](https://docs.smooch.io/guide/sending-messages/#silent-messages). Will return an error if the user does not have a client of that type attached to the conversation.   # noqa: E501
 
         :return: The integration_type of this IntegrationType.  # noqa: E501
         :rtype: str
@@ -70,7 +70,7 @@ class IntegrationType(object):
     def integration_type(self, integration_type):
         """Sets the integration_type of this IntegrationType.
 
-        The type of the integration to deliver the message to. Will return an error if the user does not have a client of that type attached to the conversation.   # noqa: E501
+        The type of the integration to deliver the message to. Can be set to `none` if sending a [silent message](https://docs.smooch.io/guide/sending-messages/#silent-messages). Will return an error if the user does not have a client of that type attached to the conversation.   # noqa: E501
 
         :param integration_type: The integration_type of this IntegrationType.  # noqa: E501
         :type: str
