@@ -340,6 +340,7 @@ Class | Method | HTTP request | Description
  - [Meta](docs/Meta.md)
  - [OfferControlBody](docs/OfferControlBody.md)
  - [Page](docs/Page.md)
+ - [Page1](docs/Page1.md)
  - [Participant](docs/Participant.md)
  - [ParticipantJoinBody](docs/ParticipantJoinBody.md)
  - [ParticipantLeaveBody](docs/ParticipantLeaveBody.md)

@@ -301,7 +301,7 @@ class MessagesApi(object):
         :param async_req bool: execute request asynchronously
         :param str app_id: Identifies the app. (required)
         :param str conversation_id: Identifies the conversation. (required)
-        :param Page page: Contains parameters for applying cursor pagination.
+        :param Page1 page: Contains parameters for applying cursor pagination.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -328,7 +328,7 @@ class MessagesApi(object):
         :param async_req bool: execute request asynchronously
         :param str app_id: Identifies the app. (required)
         :param str conversation_id: Identifies the conversation. (required)
-        :param Page page: Contains parameters for applying cursor pagination.
+        :param Page1 page: Contains parameters for applying cursor pagination.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

@@ -179,6 +179,7 @@ from sunshine_conversations_client.model.messenger_update import MessengerUpdate
 from sunshine_conversations_client.model.meta import Meta
 from sunshine_conversations_client.model.offer_control_body import OfferControlBody
 from sunshine_conversations_client.model.page import Page
+from sunshine_conversations_client.model.page1 import Page1
 from sunshine_conversations_client.model.participant import Participant
 from sunshine_conversations_client.model.participant_join_body import ParticipantJoinBody
 from sunshine_conversations_client.model.participant_leave_body import ParticipantLeaveBody
