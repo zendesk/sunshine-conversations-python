@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The type of integration. | [optional] [default to 'twilio']
+**type** | **str** | To configure a Twilio integration, acquire the required information from the user and call the Create Integration endpoint.  | [optional] [default to 'twilio']
 **account_sid** | **str** | Twilio Account SID. | 
 **auth_token** | **str** | Twilio Auth Token. | 
 **phone_number_sid** | **str** | SID for specific phone number. | 

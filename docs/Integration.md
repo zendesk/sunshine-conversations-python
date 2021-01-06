@@ -5,7 +5,7 @@ The integration.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The unique ID of the integration. | [optional] [readonly] 
-**type** | **str** | The type of integration. | 
+**type** | **str** |  | 
 **status** | [**Status**](Status.md) |  | [optional] 
 **display_name** | **str** | A human-friendly name used to identify the integration. | [optional] 
 
