@@ -55,8 +55,7 @@ class TemplateMessage(object):
         self._template = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
+        self.type = type
         self.template = template
 
     @property
@@ -79,6 +78,8 @@ class TemplateMessage(object):
         :param type: The type of this TemplateMessage.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
 
