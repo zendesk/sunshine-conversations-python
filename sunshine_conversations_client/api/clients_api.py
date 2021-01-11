@@ -37,7 +37,7 @@ class ClientsApi(object):
     def create_client(self, app_id, user_id_or_external_id, client_create, **kwargs):  # noqa: E501
         """Create Client  # noqa: E501
 
-        Create a client and link it to a channel specified by the matchCriteria.type.  # noqa: E501
+        Create a client and link it to a channel specified by the `matchCriteria.type`. Note that the client is initially created with a `pending` status. The status of the linking request can be tracked by listening to the `link:match`, `link:success` and `link:failure` webhooks (only available in v1). For more information, see [link-events](https://docs.smooch.io/rest/v1/#link-events).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_client(app_id, user_id_or_external_id, client_create, async_req=True)
@@ -64,7 +64,7 @@ class ClientsApi(object):
     def create_client_with_http_info(self, app_id, user_id_or_external_id, client_create, **kwargs):  # noqa: E501
         """Create Client  # noqa: E501
 
-        Create a client and link it to a channel specified by the matchCriteria.type.  # noqa: E501
+        Create a client and link it to a channel specified by the `matchCriteria.type`. Note that the client is initially created with a `pending` status. The status of the linking request can be tracked by listening to the `link:match`, `link:success` and `link:failure` webhooks (only available in v1). For more information, see [link-events](https://docs.smooch.io/rest/v1/#link-events).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_client_with_http_info(app_id, user_id_or_external_id, client_create, async_req=True)
