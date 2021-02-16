@@ -312,7 +312,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.MessagesApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    page = sunshine_conversations_client.Page1() # Page1 | Contains parameters for applying cursor pagination. (optional)
+    page = sunshine_conversations_client.Page() # Page | Contains parameters for applying cursor pagination. (optional)
 
     try:
         # List Messages
@@ -358,7 +358,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.MessagesApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    page = sunshine_conversations_client.Page1() # Page1 | Contains parameters for applying cursor pagination. (optional)
+    page = sunshine_conversations_client.Page() # Page | Contains parameters for applying cursor pagination. (optional)
 
     try:
         # List Messages
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **conversation_id** | **str**| Identifies the conversation. | 
- **page** | [**Page1**](.md)| Contains parameters for applying cursor pagination. | [optional] 
+ **page** | [**Page**](.md)| Contains parameters for applying cursor pagination. | [optional] 
 
 ### Return type
 
