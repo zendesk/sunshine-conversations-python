@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | Can supply only one of page[after] or page[before], not both |  -  |
+**400** | Invalid page query parameters |  -  |
 **403** | The serviceAccountId provided does not match supplied credentials |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
