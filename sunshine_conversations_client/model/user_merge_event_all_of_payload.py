@@ -35,18 +35,22 @@ class UserMergeEventAllOfPayload(object):
     openapi_types = {
         'merged_users': 'UserMergeEventAllOfPayloadMergedUsers',
         'merged_conversations': 'UserMergeEventAllOfPayloadMergedConversations',
-        'discarded_metadata': 'object'
+        'merged_clients': 'UserMergeEventAllOfPayloadMergedClients',
+        'discarded_metadata': 'object',
+        'reason': 'str'
     }
 
     attribute_map = {
         'merged_users': 'mergedUsers',
         'merged_conversations': 'mergedConversations',
-        'discarded_metadata': 'discardedMetadata'
+        'merged_clients': 'mergedClients',
+        'discarded_metadata': 'discardedMetadata',
+        'reason': 'reason'
     }
 
     nulls = set()
 
-    def __init__(self, merged_users=None, merged_conversations=Undefined(), discarded_metadata=Undefined(), local_vars_configuration=None):  # noqa: E501
+    def __init__(self, merged_users=None, merged_conversations=Undefined(), merged_clients=Undefined(), discarded_metadata=Undefined(), reason=None, local_vars_configuration=None):  # noqa: E501
         """UserMergeEventAllOfPayload - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -55,13 +59,18 @@ class UserMergeEventAllOfPayload(object):
 
         self._merged_users = None
         self._merged_conversations = None
+        self._merged_clients = None
         self._discarded_metadata = None
+        self._reason = None
         self.discriminator = None
 
         if merged_users is not None:
             self.merged_users = merged_users
         self.merged_conversations = merged_conversations
+        self.merged_clients = merged_clients
         self.discarded_metadata = discarded_metadata
+        if reason is not None:
+            self.reason = reason
 
     @property
     def merged_users(self):
@@ -113,6 +122,34 @@ class UserMergeEventAllOfPayload(object):
         self._merged_conversations = merged_conversations
 
     @property
+    def merged_clients(self):
+        """Gets the merged_clients of this UserMergeEventAllOfPayload.  # noqa: E501
+
+
+        :return: The merged_clients of this UserMergeEventAllOfPayload.  # noqa: E501
+        :rtype: UserMergeEventAllOfPayloadMergedClients
+        """
+        return self._merged_clients
+
+    @merged_clients.setter
+    def merged_clients(self, merged_clients):
+        """Sets the merged_clients of this UserMergeEventAllOfPayload.
+
+
+        :param merged_clients: The merged_clients of this UserMergeEventAllOfPayload.  # noqa: E501
+        :type: UserMergeEventAllOfPayloadMergedClients
+        """
+        if type(merged_clients) is Undefined:
+            merged_clients = None
+            self.nulls.discard("merged_clients")
+        elif merged_clients is None:
+            self.nulls.add("merged_clients")
+        else:
+            self.nulls.discard("merged_clients")
+
+        self._merged_clients = merged_clients
+
+    @property
     def discarded_metadata(self):
         """Gets the discarded_metadata of this UserMergeEventAllOfPayload.  # noqa: E501
 
@@ -141,6 +178,35 @@ class UserMergeEventAllOfPayload(object):
             self.nulls.discard("discarded_metadata")
 
         self._discarded_metadata = discarded_metadata
+
+    @property
+    def reason(self):
+        """Gets the reason of this UserMergeEventAllOfPayload.  # noqa: E501
+
+        The reason for which the users merged. * `api` - The users were merged using the API. * `channelLinking` - The users were merged as a result of initiating a channel link. * `sdkLogin` - The users were merged as a result of logging into an SDK device.   # noqa: E501
+
+        :return: The reason of this UserMergeEventAllOfPayload.  # noqa: E501
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """Sets the reason of this UserMergeEventAllOfPayload.
+
+        The reason for which the users merged. * `api` - The users were merged using the API. * `channelLinking` - The users were merged as a result of initiating a channel link. * `sdkLogin` - The users were merged as a result of logging into an SDK device.   # noqa: E501
+
+        :param reason: The reason of this UserMergeEventAllOfPayload.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["api", "channelLinking", "sdkLogin"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and reason not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `reason` ({0}), must be one of {1}"  # noqa: E501
+                .format(reason, allowed_values)
+            )
+
+        self._reason = reason
 
     def to_dict(self):
         """Returns the model properties as a dict"""

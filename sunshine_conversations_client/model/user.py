@@ -101,7 +101,7 @@ class User(object):
     def external_id(self):
         """Gets the external_id of this User.  # noqa: E501
 
-        An optional ID that if specified can also be used to retrieve the user.   # noqa: E501
+        An optional ID that can also be used to retrieve the user.   # noqa: E501
 
         :return: The external_id of this User.  # noqa: E501
         :rtype: str
@@ -112,7 +112,7 @@ class User(object):
     def external_id(self, external_id):
         """Sets the external_id of this User.
 
-        An optional ID that if specified can also be used to retrieve the user.   # noqa: E501
+        An optional ID that can also be used to retrieve the user.   # noqa: E501
 
         :param external_id: The external_id of this User.  # noqa: E501
         :type: str

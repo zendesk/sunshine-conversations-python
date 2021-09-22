@@ -1,10 +1,9 @@
-# UserTruncated
+# ClientUpdateEventAllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | The unique ID of the user. | [optional] 
-**external_id** | **str** | An optional ID that can also be used to retrieve the user.  | [optional] 
+**payload** | [**ClientUpdateEventAllOfPayload**](ClientUpdateEventAllOfPayload.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
