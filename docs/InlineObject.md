@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** | The authorization code received via /oauth/authorize | 
-**grant_type** | **str** | Must be set to authorization_code | 
+**grant_type** | **str** | Must be set to the string &#x60;authorization_code&#x60; | 
 **client_id** | **str** | Your integration’s unique identifier | 
 **client_secret** | **str** | Your integration’s secret | 
 

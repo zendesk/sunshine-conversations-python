@@ -12,7 +12,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "9.4.5"
+__version__ = "9.4.6"
 
 # import apis into sdk package
 from sunshine_conversations_client.api.activities_api import ActivitiesApi

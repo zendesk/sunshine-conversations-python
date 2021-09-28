@@ -95,7 +95,7 @@ class InlineObject(object):
     def grant_type(self):
         """Gets the grant_type of this InlineObject.  # noqa: E501
 
-        Must be set to authorization_code  # noqa: E501
+        Must be set to the string `authorization_code`  # noqa: E501
 
         :return: The grant_type of this InlineObject.  # noqa: E501
         :rtype: str
@@ -106,7 +106,7 @@ class InlineObject(object):
     def grant_type(self, grant_type):
         """Sets the grant_type of this InlineObject.
 
-        Must be set to authorization_code  # noqa: E501
+        Must be set to the string `authorization_code`  # noqa: E501
 
         :param grant_type: The grant_type of this InlineObject.  # noqa: E501
         :type: str

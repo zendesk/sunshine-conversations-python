@@ -48,6 +48,7 @@ class WebAllOf(object):
         'background_image_url': 'str',
         'origin_whitelist': 'list[str]',
         'prechat_capture': 'PrechatCapture',
+        'can_user_see_conversation_list': 'bool',
         'can_user_create_more_conversations': 'bool'
     }
 
@@ -67,12 +68,13 @@ class WebAllOf(object):
         'background_image_url': 'backgroundImageUrl',
         'origin_whitelist': 'originWhitelist',
         'prechat_capture': 'prechatCapture',
+        'can_user_see_conversation_list': 'canUserSeeConversationList',
         'can_user_create_more_conversations': 'canUserCreateMoreConversations'
     }
 
     nulls = set()
 
-    def __init__(self, type='web', brand_color='65758e', fixed_intro_pane=False, conversation_color='0099ff', action_color='0099ff', display_style='button', button_icon_url=Undefined(), button_width='58', button_height='58', integration_order=Undefined(), business_name=None, business_icon_url=None, background_image_url=None, origin_whitelist=Undefined(), prechat_capture=None, can_user_create_more_conversations=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type='web', brand_color='65758e', fixed_intro_pane=False, conversation_color='0099ff', action_color='0099ff', display_style='button', button_icon_url=Undefined(), button_width='58', button_height='58', integration_order=Undefined(), business_name=None, business_icon_url=None, background_image_url=None, origin_whitelist=Undefined(), prechat_capture=None, can_user_see_conversation_list=None, can_user_create_more_conversations=None, local_vars_configuration=None):  # noqa: E501
         """WebAllOf - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -94,6 +96,7 @@ class WebAllOf(object):
         self._background_image_url = None
         self._origin_whitelist = None
         self._prechat_capture = None
+        self._can_user_see_conversation_list = None
         self._can_user_create_more_conversations = None
         self.discriminator = None
 
@@ -124,6 +127,8 @@ class WebAllOf(object):
         self.origin_whitelist = origin_whitelist
         if prechat_capture is not None:
             self.prechat_capture = prechat_capture
+        if can_user_see_conversation_list is not None:
+            self.can_user_see_conversation_list = can_user_see_conversation_list
         if can_user_create_more_conversations is not None:
             self.can_user_create_more_conversations = can_user_create_more_conversations
 
@@ -154,7 +159,7 @@ class WebAllOf(object):
     def brand_color(self):
         """Gets the brand_color of this WebAllOf.  # noqa: E501
 
-        This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :return: The brand_color of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -165,7 +170,7 @@ class WebAllOf(object):
     def brand_color(self, brand_color):
         """Sets the brand_color of this WebAllOf.
 
-        This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :param brand_color: The brand_color of this WebAllOf.  # noqa: E501
         :type: str
@@ -177,7 +182,7 @@ class WebAllOf(object):
     def fixed_intro_pane(self):
         """Gets the fixed_intro_pane of this WebAllOf.  # noqa: E501
 
-        When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it.  # noqa: E501
+        When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it.   # noqa: E501
 
         :return: The fixed_intro_pane of this WebAllOf.  # noqa: E501
         :rtype: bool
@@ -188,7 +193,7 @@ class WebAllOf(object):
     def fixed_intro_pane(self, fixed_intro_pane):
         """Sets the fixed_intro_pane of this WebAllOf.
 
-        When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it.  # noqa: E501
+        When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it.   # noqa: E501
 
         :param fixed_intro_pane: The fixed_intro_pane of this WebAllOf.  # noqa: E501
         :type: bool
@@ -200,7 +205,7 @@ class WebAllOf(object):
     def conversation_color(self):
         """Gets the conversation_color of this WebAllOf.  # noqa: E501
 
-        This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :return: The conversation_color of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -211,7 +216,7 @@ class WebAllOf(object):
     def conversation_color(self, conversation_color):
         """Sets the conversation_color of this WebAllOf.
 
-        This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :param conversation_color: The conversation_color of this WebAllOf.  # noqa: E501
         :type: str
@@ -223,7 +228,7 @@ class WebAllOf(object):
     def action_color(self):
         """Gets the action_color of this WebAllOf.  # noqa: E501
 
-        This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :return: The action_color of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -234,7 +239,7 @@ class WebAllOf(object):
     def action_color(self, action_color):
         """Sets the action_color of this WebAllOf.
 
-        This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color.  # noqa: E501
+        This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color.   # noqa: E501
 
         :param action_color: The action_color of this WebAllOf.  # noqa: E501
         :type: str
@@ -246,7 +251,7 @@ class WebAllOf(object):
     def display_style(self):
         """Gets the display_style of this WebAllOf.  # noqa: E501
 
-        Choose how the messenger will appear on your website. Must be either button or tab.  # noqa: E501
+        Choose how the messenger will appear on your website. Must be either button or tab.   # noqa: E501
 
         :return: The display_style of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -257,7 +262,7 @@ class WebAllOf(object):
     def display_style(self, display_style):
         """Sets the display_style of this WebAllOf.
 
-        Choose how the messenger will appear on your website. Must be either button or tab.  # noqa: E501
+        Choose how the messenger will appear on your website. Must be either button or tab.   # noqa: E501
 
         :param display_style: The display_style of this WebAllOf.  # noqa: E501
         :type: str
@@ -269,7 +274,7 @@ class WebAllOf(object):
     def button_icon_url(self):
         """Gets the button_icon_url of this WebAllOf.  # noqa: E501
 
-        With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.  # noqa: E501
+        With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.   # noqa: E501
 
         :return: The button_icon_url of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -280,7 +285,7 @@ class WebAllOf(object):
     def button_icon_url(self, button_icon_url):
         """Sets the button_icon_url of this WebAllOf.
 
-        With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.  # noqa: E501
+        With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.   # noqa: E501
 
         :param button_icon_url: The button_icon_url of this WebAllOf.  # noqa: E501
         :type: str
@@ -299,7 +304,7 @@ class WebAllOf(object):
     def button_width(self):
         """Gets the button_width of this WebAllOf.  # noqa: E501
 
-        With the button style Web Messenger, you have the option of specifying the button width.  # noqa: E501
+        With the button style Web Messenger, you have the option of specifying the button width.   # noqa: E501
 
         :return: The button_width of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -310,7 +315,7 @@ class WebAllOf(object):
     def button_width(self, button_width):
         """Sets the button_width of this WebAllOf.
 
-        With the button style Web Messenger, you have the option of specifying the button width.  # noqa: E501
+        With the button style Web Messenger, you have the option of specifying the button width.   # noqa: E501
 
         :param button_width: The button_width of this WebAllOf.  # noqa: E501
         :type: str
@@ -322,7 +327,7 @@ class WebAllOf(object):
     def button_height(self):
         """Gets the button_height of this WebAllOf.  # noqa: E501
 
-        With the button style Web Messenger, you have the option of specifying the button height.  # noqa: E501
+        With the button style Web Messenger, you have the option of specifying the button height.   # noqa: E501
 
         :return: The button_height of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -333,7 +338,7 @@ class WebAllOf(object):
     def button_height(self, button_height):
         """Sets the button_height of this WebAllOf.
 
-        With the button style Web Messenger, you have the option of specifying the button height.  # noqa: E501
+        With the button style Web Messenger, you have the option of specifying the button height.   # noqa: E501
 
         :param button_height: The button_height of this WebAllOf.  # noqa: E501
         :type: str
@@ -345,7 +350,7 @@ class WebAllOf(object):
     def integration_order(self):
         """Gets the integration_order of this WebAllOf.  # noqa: E501
 
-        Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed.  # noqa: E501
+        Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed.   # noqa: E501
 
         :return: The integration_order of this WebAllOf.  # noqa: E501
         :rtype: list[str]
@@ -356,7 +361,7 @@ class WebAllOf(object):
     def integration_order(self, integration_order):
         """Sets the integration_order of this WebAllOf.
 
-        Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed.  # noqa: E501
+        Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed.   # noqa: E501
 
         :param integration_order: The integration_order of this WebAllOf.  # noqa: E501
         :type: list[str]
@@ -398,7 +403,7 @@ class WebAllOf(object):
     def business_icon_url(self):
         """Gets the business_icon_url of this WebAllOf.  # noqa: E501
 
-        A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.  # noqa: E501
+        A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.   # noqa: E501
 
         :return: The business_icon_url of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -409,7 +414,7 @@ class WebAllOf(object):
     def business_icon_url(self, business_icon_url):
         """Sets the business_icon_url of this WebAllOf.
 
-        A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.  # noqa: E501
+        A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.   # noqa: E501
 
         :param business_icon_url: The business_icon_url of this WebAllOf.  # noqa: E501
         :type: str
@@ -421,7 +426,7 @@ class WebAllOf(object):
     def background_image_url(self):
         """Gets the background_image_url of this WebAllOf.  # noqa: E501
 
-        A background image url for the conversation. Image will be tiled to fit the window.  # noqa: E501
+        A background image url for the conversation. Image will be tiled to fit the window.   # noqa: E501
 
         :return: The background_image_url of this WebAllOf.  # noqa: E501
         :rtype: str
@@ -432,7 +437,7 @@ class WebAllOf(object):
     def background_image_url(self, background_image_url):
         """Sets the background_image_url of this WebAllOf.
 
-        A background image url for the conversation. Image will be tiled to fit the window.  # noqa: E501
+        A background image url for the conversation. Image will be tiled to fit the window.   # noqa: E501
 
         :param background_image_url: The background_image_url of this WebAllOf.  # noqa: E501
         :type: str
@@ -474,7 +479,7 @@ class WebAllOf(object):
     def prechat_capture(self):
         """Gets the prechat_capture of this WebAllOf.  # noqa: E501
 
-        Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture.  # noqa: E501
+        Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture.   # noqa: E501
 
         :return: The prechat_capture of this WebAllOf.  # noqa: E501
         :rtype: PrechatCapture
@@ -485,7 +490,7 @@ class WebAllOf(object):
     def prechat_capture(self, prechat_capture):
         """Sets the prechat_capture of this WebAllOf.
 
-        Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture.  # noqa: E501
+        Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture.   # noqa: E501
 
         :param prechat_capture: The prechat_capture of this WebAllOf.  # noqa: E501
         :type: PrechatCapture
@@ -494,10 +499,33 @@ class WebAllOf(object):
         self._prechat_capture = prechat_capture
 
     @property
+    def can_user_see_conversation_list(self):
+        """Gets the can_user_see_conversation_list of this WebAllOf.  # noqa: E501
+
+        Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where `settings.multiConvoEnabled` is set to `true`*.   # noqa: E501
+
+        :return: The can_user_see_conversation_list of this WebAllOf.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_user_see_conversation_list
+
+    @can_user_see_conversation_list.setter
+    def can_user_see_conversation_list(self, can_user_see_conversation_list):
+        """Sets the can_user_see_conversation_list of this WebAllOf.
+
+        Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where `settings.multiConvoEnabled` is set to `true`*.   # noqa: E501
+
+        :param can_user_see_conversation_list: The can_user_see_conversation_list of this WebAllOf.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_user_see_conversation_list = can_user_see_conversation_list
+
+    @property
     def can_user_create_more_conversations(self):
         """Gets the can_user_create_more_conversations of this WebAllOf.  # noqa: E501
 
-        Allows users to create more than one conversation on the web messenger integration.  # noqa: E501
+        Allows users to create more than one conversation on the web messenger integration.   # noqa: E501
 
         :return: The can_user_create_more_conversations of this WebAllOf.  # noqa: E501
         :rtype: bool
@@ -508,7 +536,7 @@ class WebAllOf(object):
     def can_user_create_more_conversations(self, can_user_create_more_conversations):
         """Sets the can_user_create_more_conversations of this WebAllOf.
 
-        Allows users to create more than one conversation on the web messenger integration.  # noqa: E501
+        Allows users to create more than one conversation on the web messenger integration.   # noqa: E501
 
         :param can_user_create_more_conversations: The can_user_create_more_conversations of this WebAllOf.  # noqa: E501
         :type: bool

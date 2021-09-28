@@ -358,7 +358,7 @@ conf = sunshine_conversations_client.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 9.4.5\n"\
-               "SDK Package Version: 9.4.5".\
+               "SDK Package Version: 9.4.6".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
