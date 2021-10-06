@@ -194,7 +194,7 @@ class Field(object):
     def placeholder(self):
         """Gets the placeholder of this Field.  # noqa: E501
 
-        Placeholder text for the field. form message only.  # noqa: E501
+        Placeholder text for the field. Form message only.  # noqa: E501
 
         :return: The placeholder of this Field.  # noqa: E501
         :rtype: str
@@ -205,7 +205,7 @@ class Field(object):
     def placeholder(self, placeholder):
         """Sets the placeholder of this Field.
 
-        Placeholder text for the field. form message only.  # noqa: E501
+        Placeholder text for the field. Form message only.  # noqa: E501
 
         :param placeholder: The placeholder of this Field.  # noqa: E501
         :type: str
@@ -223,7 +223,7 @@ class Field(object):
     def min_size(self):
         """Gets the min_size of this Field.  # noqa: E501
 
-        The minimum allowed length for the response for a field of type text. form message only.  # noqa: E501
+        The minimum allowed length for the response for a field of type text. Form message only.  # noqa: E501
 
         :return: The min_size of this Field.  # noqa: E501
         :rtype: int
@@ -234,7 +234,7 @@ class Field(object):
     def min_size(self, min_size):
         """Sets the min_size of this Field.
 
-        The minimum allowed length for the response for a field of type text. form message only.  # noqa: E501
+        The minimum allowed length for the response for a field of type text. Form message only.  # noqa: E501
 
         :param min_size: The min_size of this Field.  # noqa: E501
         :type: int
@@ -252,7 +252,7 @@ class Field(object):
     def max_size(self):
         """Gets the max_size of this Field.  # noqa: E501
 
-        The maximum allowed length for the response for a field of type text. form message only.  # noqa: E501
+        The maximum allowed length for the response for a field of type text. Form message only.  # noqa: E501
 
         :return: The max_size of this Field.  # noqa: E501
         :rtype: int
@@ -263,7 +263,7 @@ class Field(object):
     def max_size(self, max_size):
         """Sets the max_size of this Field.
 
-        The maximum allowed length for the response for a field of type text. form message only.  # noqa: E501
+        The maximum allowed length for the response for a field of type text. Form message only.  # noqa: E501
 
         :param max_size: The max_size of this Field.  # noqa: E501
         :type: int
@@ -339,7 +339,7 @@ class Field(object):
     def select(self):
         """Gets the select of this Field.  # noqa: E501
 
-        Array of objects representing the response for a field of type select. form and formResponse messages only.  # noqa: E501
+        Array of objects representing the response for a field of type select. Form and formResponse messages only.  # noqa: E501
 
         :return: The select of this Field.  # noqa: E501
         :rtype: list[object]
@@ -350,7 +350,7 @@ class Field(object):
     def select(self, select):
         """Sets the select of this Field.
 
-        Array of objects representing the response for a field of type select. form and formResponse messages only.  # noqa: E501
+        Array of objects representing the response for a field of type select. Form and formResponse messages only.  # noqa: E501
 
         :param select: The select of this Field.  # noqa: E501
         :type: list[object]

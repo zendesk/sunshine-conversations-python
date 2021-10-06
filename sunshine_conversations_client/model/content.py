@@ -334,7 +334,7 @@ class Content(object):
     def block_chat_input(self):
         """Gets the block_chat_input of this Content.  # noqa: E501
 
-        true if the message should block the chat input on Web Messenger. form message only.  # noqa: E501
+        true if the message should block the chat input on Web Messenger.  # noqa: E501
 
         :return: The block_chat_input of this Content.  # noqa: E501
         :rtype: bool
@@ -345,7 +345,7 @@ class Content(object):
     def block_chat_input(self, block_chat_input):
         """Sets the block_chat_input of this Content.
 
-        true if the message should block the chat input on Web Messenger. form message only.  # noqa: E501
+        true if the message should block the chat input on Web Messenger.  # noqa: E501
 
         :param block_chat_input: The block_chat_input of this Content.  # noqa: E501
         :type: bool
