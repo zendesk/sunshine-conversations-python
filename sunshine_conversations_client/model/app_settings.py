@@ -94,7 +94,7 @@ class AppSettings(object):
     def conversation_retention_seconds(self):
         """Gets the conversation_retention_seconds of this AppSettings.  # noqa: E501
 
-        Number of seconds of inactivity before a conversation’s messages  will be automatically deleted. See  [Conversation Retention Seconds](https://docs.smooch.io/rest/#conversation-retention-seconds) for more information.   # noqa: E501
+        Number of seconds of inactivity before a conversation’s messages  will be automatically deleted. See  [Conversation Retention Seconds](https://docs.smooch.io/guide/creating-and-managing-apps/#conversation-retention-seconds) for more information.   # noqa: E501
 
         :return: The conversation_retention_seconds of this AppSettings.  # noqa: E501
         :rtype: int
@@ -105,7 +105,7 @@ class AppSettings(object):
     def conversation_retention_seconds(self, conversation_retention_seconds):
         """Sets the conversation_retention_seconds of this AppSettings.
 
-        Number of seconds of inactivity before a conversation’s messages  will be automatically deleted. See  [Conversation Retention Seconds](https://docs.smooch.io/rest/#conversation-retention-seconds) for more information.   # noqa: E501
+        Number of seconds of inactivity before a conversation’s messages  will be automatically deleted. See  [Conversation Retention Seconds](https://docs.smooch.io/guide/creating-and-managing-apps/#conversation-retention-seconds) for more information.   # noqa: E501
 
         :param conversation_retention_seconds: The conversation_retention_seconds of this AppSettings.  # noqa: E501
         :type: int
@@ -166,7 +166,7 @@ class AppSettings(object):
     def echo_postback(self):
         """Gets the echo_postback of this AppSettings.  # noqa: E501
 
-        A boolean specifying whether a message should be added to the conversation  history when a postback button is clicked. See  [Echo Postbacks](https://docs.smooch.io/rest/#echo-postbacks) for more information.   # noqa: E501
+        A boolean specifying whether a message should be added to the conversation  history when a postback button is clicked. See  [Echo Postbacks](https://docs.smooch.io/guide/creating-and-managing-apps/#echo-postbacks) for more information.   # noqa: E501
 
         :return: The echo_postback of this AppSettings.  # noqa: E501
         :rtype: bool
@@ -177,7 +177,7 @@ class AppSettings(object):
     def echo_postback(self, echo_postback):
         """Sets the echo_postback of this AppSettings.
 
-        A boolean specifying whether a message should be added to the conversation  history when a postback button is clicked. See  [Echo Postbacks](https://docs.smooch.io/rest/#echo-postbacks) for more information.   # noqa: E501
+        A boolean specifying whether a message should be added to the conversation  history when a postback button is clicked. See  [Echo Postbacks](https://docs.smooch.io/guide/creating-and-managing-apps/#echo-postbacks) for more information.   # noqa: E501
 
         :param echo_postback: The echo_postback of this AppSettings.  # noqa: E501
         :type: bool
