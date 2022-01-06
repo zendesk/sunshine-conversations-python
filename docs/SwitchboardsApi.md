@@ -31,23 +31,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -75,23 +70,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -155,23 +145,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -200,23 +185,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -282,23 +262,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -326,23 +301,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -406,23 +376,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -452,23 +417,18 @@ from pprint import pprint
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = sunshine_conversations_client.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
-)
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
-# Uncomment this if you want to use JWTs
 # Configure Bearer authorization (JWT): bearerAuth
-# configuration = sunshine_conversations_client.Configuration(
-#    access_token = 'YOUR_BEARER_TOKEN'
-#)
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
