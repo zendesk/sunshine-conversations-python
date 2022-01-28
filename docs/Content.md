@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **type** | **str** | The type of message. | [default to 'template']
 **text** | **str** | The fallback text message used when location messages are not supported by the channel. | [optional] [readonly] 
 **actions** | [**list[ActionSubset]**](ActionSubset.md) | An array of objects representing the actions associated with the message. The array length is limited by the third party channel. | [optional] 
+**payload** | **str** | The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message. | [optional] 
 **items** | [**list[Item]**](Item.md) | An array of objects representing the items associated with the message. Only present in carousel and list type messages. | 
 **display_settings** | [**CarouselMessageDisplaySettings**](CarouselMessageDisplaySettings.md) |  | [optional] 
 **media_url** | **str** | The URL for media, such as an image, attached to the message. | 

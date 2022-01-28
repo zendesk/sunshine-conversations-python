@@ -36,6 +36,7 @@ class Content(object):
         'type': 'str',
         'text': 'str',
         'actions': 'list[ActionSubset]',
+        'payload': 'str',
         'items': 'list[Item]',
         'display_settings': 'CarouselMessageDisplaySettings',
         'media_url': 'str',
@@ -54,6 +55,7 @@ class Content(object):
         'type': 'type',
         'text': 'text',
         'actions': 'actions',
+        'payload': 'payload',
         'items': 'items',
         'display_settings': 'displaySettings',
         'media_url': 'mediaUrl',
@@ -73,7 +75,7 @@ class Content(object):
     discriminator_value_class_map = {
     }
 
-    def __init__(self, type='template', text=None, actions=None, items=None, display_settings=None, media_url=None, media_size=None, media_type=None, alt_text=None, block_chat_input=None, fields=None, text_fallback=None, coordinates=None, location=None, template=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type='template', text=None, actions=None, payload=None, items=None, display_settings=None, media_url=None, media_size=None, media_type=None, alt_text=None, block_chat_input=None, fields=None, text_fallback=None, coordinates=None, location=None, template=None, local_vars_configuration=None):  # noqa: E501
         """Content - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -83,6 +85,7 @@ class Content(object):
         self._type = None
         self._text = None
         self._actions = None
+        self._payload = None
         self._items = None
         self._display_settings = None
         self._media_url = None
@@ -102,6 +105,8 @@ class Content(object):
             self.text = text
         if actions is not None:
             self.actions = actions
+        if payload is not None:
+            self.payload = payload
         self.items = items
         if display_settings is not None:
             self.display_settings = display_settings
@@ -190,6 +195,29 @@ class Content(object):
         """
 
         self._actions = actions
+
+    @property
+    def payload(self):
+        """Gets the payload of this Content.  # noqa: E501
+
+        The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message.  # noqa: E501
+
+        :return: The payload of this Content.  # noqa: E501
+        :rtype: str
+        """
+        return self._payload
+
+    @payload.setter
+    def payload(self, payload):
+        """Sets the payload of this Content.
+
+        The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message.  # noqa: E501
+
+        :param payload: The payload of this Content.  # noqa: E501
+        :type: str
+        """
+
+        self._payload = payload
 
     @property
     def items(self):
