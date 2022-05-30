@@ -309,7 +309,7 @@ class SwitchboardActionsApi(object):
     def pass_control(self, app_id, conversation_id, pass_control_body, **kwargs):  # noqa: E501
         """Pass Control  # noqa: E501
 
-        Mark the named switchboard integration as active and transition all the other switchboard integrations to standby status.  # noqa: E501
+        The passControl action marks the named switchboard integration as active and transition all the other switchboard integrations to standby status.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.pass_control(app_id, conversation_id, pass_control_body, async_req=True)
@@ -336,7 +336,7 @@ class SwitchboardActionsApi(object):
     def pass_control_with_http_info(self, app_id, conversation_id, pass_control_body, **kwargs):  # noqa: E501
         """Pass Control  # noqa: E501
 
-        Mark the named switchboard integration as active and transition all the other switchboard integrations to standby status.  # noqa: E501
+        The passControl action marks the named switchboard integration as active and transition all the other switchboard integrations to standby status.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.pass_control_with_http_info(app_id, conversation_id, pass_control_body, async_req=True)
