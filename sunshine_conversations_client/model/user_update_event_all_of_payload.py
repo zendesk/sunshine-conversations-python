@@ -92,7 +92,7 @@ class UserUpdateEventAllOfPayload(object):
     def reason(self):
         """Gets the reason of this UserUpdateEventAllOfPayload.  # noqa: E501
 
-        The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user's was updated as a result of automated locale detection on messages sent.   # noqa: E501
+        The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user was updated as a result of automated locale detection on messages sent.   # noqa: E501
 
         :return: The reason of this UserUpdateEventAllOfPayload.  # noqa: E501
         :rtype: str
@@ -103,7 +103,7 @@ class UserUpdateEventAllOfPayload(object):
     def reason(self, reason):
         """Sets the reason of this UserUpdateEventAllOfPayload.
 
-        The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user's was updated as a result of automated locale detection on messages sent.   # noqa: E501
+        The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user was updated as a result of automated locale detection on messages sent.   # noqa: E501
 
         :param reason: The reason of this UserUpdateEventAllOfPayload.  # noqa: E501
         :type: str
