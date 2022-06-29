@@ -1,5 +1,11 @@
 # Changelog
 
+## [9.8.0] - 2022-06-29
+
+### Added
+
+- `metadata` property now appear in the `conversation` object in webhook events
+
 ## [9.7.0] - 2022-05-05
 
 ### Added
