@@ -100,7 +100,7 @@ class Reply(object):
     def text(self):
         """Gets the text of this Reply.  # noqa: E501
 
-        The button text. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.  # noqa: E501
+        The button text. We recommend a non-empty value because some channels may not support empty ones. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.  # noqa: E501
 
         :return: The text of this Reply.  # noqa: E501
         :rtype: str
@@ -111,7 +111,7 @@ class Reply(object):
     def text(self, text):
         """Sets the text of this Reply.
 
-        The button text. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.  # noqa: E501
+        The button text. We recommend a non-empty value because some channels may not support empty ones. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.  # noqa: E501
 
         :param text: The text of this Reply.  # noqa: E501
         :type: str
