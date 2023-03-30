@@ -36,7 +36,7 @@ class ConversationPostbackEventAllOfPayload(object):
         'postback': 'PostbackWebhook',
         'conversation': 'ConversationTruncated',
         'user': 'User',
-        'source': 'SourceWebhook'
+        'source': 'SourceWithCampaignWebhook'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class ConversationPostbackEventAllOfPayload(object):
         The source of the postback.  # noqa: E501
 
         :return: The source of this ConversationPostbackEventAllOfPayload.  # noqa: E501
-        :rtype: SourceWebhook
+        :rtype: SourceWithCampaignWebhook
         """
         return self._source
 
@@ -157,7 +157,7 @@ class ConversationPostbackEventAllOfPayload(object):
         The source of the postback.  # noqa: E501
 
         :param source: The source of this ConversationPostbackEventAllOfPayload.  # noqa: E501
-        :type: SourceWebhook
+        :type: SourceWithCampaignWebhook
         """
 
         self._source = source

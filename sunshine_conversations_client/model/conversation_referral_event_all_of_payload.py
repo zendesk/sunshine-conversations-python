@@ -35,7 +35,7 @@ class ConversationReferralEventAllOfPayload(object):
     openapi_types = {
         'conversation': 'ConversationTruncated',
         'user': 'User',
-        'source': 'SourceWebhook',
+        'source': 'SourceWithCampaignWebhook',
         'referral': 'Referral'
     }
 
@@ -123,7 +123,7 @@ class ConversationReferralEventAllOfPayload(object):
         The source of the referral.  # noqa: E501
 
         :return: The source of this ConversationReferralEventAllOfPayload.  # noqa: E501
-        :rtype: SourceWebhook
+        :rtype: SourceWithCampaignWebhook
         """
         return self._source
 
@@ -134,7 +134,7 @@ class ConversationReferralEventAllOfPayload(object):
         The source of the referral.  # noqa: E501
 
         :param source: The source of this ConversationReferralEventAllOfPayload.  # noqa: E501
-        :type: SourceWebhook
+        :type: SourceWithCampaignWebhook
         """
 
         self._source = source

@@ -49,6 +49,7 @@ from sunshine_conversations_client.model.attachment_upload_body import Attachmen
 from sunshine_conversations_client.model.author import Author
 from sunshine_conversations_client.model.author_webhook import AuthorWebhook
 from sunshine_conversations_client.model.buy import Buy
+from sunshine_conversations_client.model.campaign import Campaign
 from sunshine_conversations_client.model.carousel_message import CarouselMessage
 from sunshine_conversations_client.model.carousel_message_display_settings import CarouselMessageDisplaySettings
 from sunshine_conversations_client.model.client import Client
@@ -215,6 +216,8 @@ from sunshine_conversations_client.model.referral_details import ReferralDetails
 from sunshine_conversations_client.model.reply import Reply
 from sunshine_conversations_client.model.source import Source
 from sunshine_conversations_client.model.source_webhook import SourceWebhook
+from sunshine_conversations_client.model.source_with_campaign_webhook import SourceWithCampaignWebhook
+from sunshine_conversations_client.model.source_with_campaign_webhook_all_of import SourceWithCampaignWebhookAllOf
 from sunshine_conversations_client.model.status import Status
 from sunshine_conversations_client.model.switchboard import Switchboard
 from sunshine_conversations_client.model.switchboard_accept_control import SwitchboardAcceptControl

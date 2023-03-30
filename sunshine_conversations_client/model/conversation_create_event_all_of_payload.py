@@ -35,7 +35,7 @@ class ConversationCreateEventAllOfPayload(object):
     openapi_types = {
         'conversation': 'ConversationTruncated',
         'creation_reason': 'str',
-        'source': 'SourceWebhook',
+        'source': 'SourceWithCampaignWebhook',
         'user': 'User',
         'referral': 'Referral'
     }
@@ -100,7 +100,7 @@ class ConversationCreateEventAllOfPayload(object):
     def creation_reason(self):
         """Gets the creation_reason of this ConversationCreateEventAllOfPayload.  # noqa: E501
 
-        The reason why the conversation was created, if applicable. * `linkRequest` - The conversation was created in order to generate a link request to transfer the user to a different channel. * `message` - The conversation was created because a message was sent. * `none` - The conversation was not created for a specific purpose. Used primarily when a conversation is created via the Create Conversation API. * `notification` - The conversation was created by a call to the Notification API. * `prechatCapture` - The conversation was created because the user completed a prechat capture form in the Web Messenger. * `startConversation` - The conversation was created because of a call to the startConversation API on one of the SDK integrations, or a start conversation event was triggered from a messaging channel.   # noqa: E501
+        The reason why the conversation was created, if applicable. * `linkRequest` - The conversation was created in order to generate a link request to transfer the user to a different channel. * `message` - The conversation was created because a message was sent. * `none` - The conversation was not created for a specific purpose. Used primarily when a conversation is created via the Create Conversation API. * `notification` - The conversation was created by a call to the Notification API. * `prechatCapture` - The conversation was created because the user completed a prechat capture form in the Web Messenger. * `startConversation` - The conversation was created because of a call to the startConversation API on one of the SDK integrations, or a start conversation event was triggered from a messaging channel. * `proactiveMessaging` - The conversation was created because the user interacted with a campaign.   # noqa: E501
 
         :return: The creation_reason of this ConversationCreateEventAllOfPayload.  # noqa: E501
         :rtype: str
@@ -111,12 +111,12 @@ class ConversationCreateEventAllOfPayload(object):
     def creation_reason(self, creation_reason):
         """Sets the creation_reason of this ConversationCreateEventAllOfPayload.
 
-        The reason why the conversation was created, if applicable. * `linkRequest` - The conversation was created in order to generate a link request to transfer the user to a different channel. * `message` - The conversation was created because a message was sent. * `none` - The conversation was not created for a specific purpose. Used primarily when a conversation is created via the Create Conversation API. * `notification` - The conversation was created by a call to the Notification API. * `prechatCapture` - The conversation was created because the user completed a prechat capture form in the Web Messenger. * `startConversation` - The conversation was created because of a call to the startConversation API on one of the SDK integrations, or a start conversation event was triggered from a messaging channel.   # noqa: E501
+        The reason why the conversation was created, if applicable. * `linkRequest` - The conversation was created in order to generate a link request to transfer the user to a different channel. * `message` - The conversation was created because a message was sent. * `none` - The conversation was not created for a specific purpose. Used primarily when a conversation is created via the Create Conversation API. * `notification` - The conversation was created by a call to the Notification API. * `prechatCapture` - The conversation was created because the user completed a prechat capture form in the Web Messenger. * `startConversation` - The conversation was created because of a call to the startConversation API on one of the SDK integrations, or a start conversation event was triggered from a messaging channel. * `proactiveMessaging` - The conversation was created because the user interacted with a campaign.   # noqa: E501
 
         :param creation_reason: The creation_reason of this ConversationCreateEventAllOfPayload.  # noqa: E501
         :type: str
         """
-        allowed_values = ["linkRequest", "message", "none", "notification", "prechatCapture", "startConversation"]  # noqa: E501
+        allowed_values = ["linkRequest", "message", "none", "notification", "prechatCapture", "startConversation", "proactiveMessaging"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and creation_reason not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `creation_reason` ({0}), must be one of {1}"  # noqa: E501
@@ -132,7 +132,7 @@ class ConversationCreateEventAllOfPayload(object):
         The source of the creation.  # noqa: E501
 
         :return: The source of this ConversationCreateEventAllOfPayload.  # noqa: E501
-        :rtype: SourceWebhook
+        :rtype: SourceWithCampaignWebhook
         """
         return self._source
 
@@ -143,7 +143,7 @@ class ConversationCreateEventAllOfPayload(object):
         The source of the creation.  # noqa: E501
 
         :param source: The source of this ConversationCreateEventAllOfPayload.  # noqa: E501
-        :type: SourceWebhook
+        :type: SourceWithCampaignWebhook
         """
 
         self._source = source
