@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**400** | Only one switchboard can be created per app |  -  |
+**400** | Switchboard has reached the max number of switchboard integrations (10) |  -  |
 **404** | Switchboard not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
