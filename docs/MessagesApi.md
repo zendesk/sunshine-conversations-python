@@ -483,6 +483,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
+**423** | Message limit reached &lt;aside class&#x3D;\&quot;notice\&quot;&gt;To learn more about the conversation message limit, consult the section in the introduction linked &lt;a href&#x3D;\&quot;#section/Introduction/Conversation-Size-Limits\&quot;&gt;here&lt;/a&gt;.&lt;/aside&gt;  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
