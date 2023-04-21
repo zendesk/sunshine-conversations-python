@@ -37,7 +37,8 @@ class User(object):
         'external_id': 'str',
         'signed_up_at': 'str',
         'profile': 'Profile',
-        'metadata': 'object'
+        'metadata': 'object',
+        'identities': 'list[Identity]'
     }
 
     attribute_map = {
@@ -45,12 +46,13 @@ class User(object):
         'external_id': 'externalId',
         'signed_up_at': 'signedUpAt',
         'profile': 'profile',
-        'metadata': 'metadata'
+        'metadata': 'metadata',
+        'identities': 'identities'
     }
 
     nulls = set()
 
-    def __init__(self, id=None, external_id=Undefined(), signed_up_at=None, profile=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, external_id=Undefined(), signed_up_at=None, profile=None, metadata=None, identities=None, local_vars_configuration=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -62,6 +64,7 @@ class User(object):
         self._signed_up_at = None
         self._profile = None
         self._metadata = None
+        self._identities = None
         self.discriminator = None
 
         if id is not None:
@@ -73,6 +76,8 @@ class User(object):
             self.profile = profile
         if metadata is not None:
             self.metadata = metadata
+        if identities is not None:
+            self.identities = identities
 
     @property
     def id(self):
@@ -189,6 +194,29 @@ class User(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def identities(self):
+        """Gets the identities of this User.  # noqa: E501
+
+        The user's connected identities.  # noqa: E501
+
+        :return: The identities of this User.  # noqa: E501
+        :rtype: list[Identity]
+        """
+        return self._identities
+
+    @identities.setter
+    def identities(self, identities):
+        """Sets the identities of this User.
+
+        The user's connected identities.  # noqa: E501
+
+        :param identities: The identities of this User.  # noqa: E501
+        :type: list[Identity]
+        """
+
+        self._identities = identities
 
     def to_dict(self):
         """Returns the model properties as a dict"""

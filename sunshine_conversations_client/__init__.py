@@ -12,7 +12,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "9.13.0"
+__version__ = "9.14.0"
 
 # import apis into sdk package
 from sunshine_conversations_client.api.activities_api import ActivitiesApi
@@ -155,6 +155,7 @@ from sunshine_conversations_client.model.field import Field
 from sunshine_conversations_client.model.file_message import FileMessage
 from sunshine_conversations_client.model.form_message import FormMessage
 from sunshine_conversations_client.model.form_response_message import FormResponseMessage
+from sunshine_conversations_client.model.identity import Identity
 from sunshine_conversations_client.model.image_message import ImageMessage
 from sunshine_conversations_client.model.inline_object import InlineObject
 from sunshine_conversations_client.model.instagram import Instagram

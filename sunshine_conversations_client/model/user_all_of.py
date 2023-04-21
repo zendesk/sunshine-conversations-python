@@ -35,18 +35,20 @@ class UserAllOf(object):
     openapi_types = {
         'signed_up_at': 'str',
         'profile': 'Profile',
-        'metadata': 'object'
+        'metadata': 'object',
+        'identities': 'list[Identity]'
     }
 
     attribute_map = {
         'signed_up_at': 'signedUpAt',
         'profile': 'profile',
-        'metadata': 'metadata'
+        'metadata': 'metadata',
+        'identities': 'identities'
     }
 
     nulls = set()
 
-    def __init__(self, signed_up_at=None, profile=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, signed_up_at=None, profile=None, metadata=None, identities=None, local_vars_configuration=None):  # noqa: E501
         """UserAllOf - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -56,6 +58,7 @@ class UserAllOf(object):
         self._signed_up_at = None
         self._profile = None
         self._metadata = None
+        self._identities = None
         self.discriminator = None
 
         if signed_up_at is not None:
@@ -64,6 +67,8 @@ class UserAllOf(object):
             self.profile = profile
         if metadata is not None:
             self.metadata = metadata
+        if identities is not None:
+            self.identities = identities
 
     @property
     def signed_up_at(self):
@@ -127,6 +132,29 @@ class UserAllOf(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def identities(self):
+        """Gets the identities of this UserAllOf.  # noqa: E501
+
+        The user's connected identities.  # noqa: E501
+
+        :return: The identities of this UserAllOf.  # noqa: E501
+        :rtype: list[Identity]
+        """
+        return self._identities
+
+    @identities.setter
+    def identities(self, identities):
+        """Sets the identities of this UserAllOf.
+
+        The user's connected identities.  # noqa: E501
+
+        :param identities: The identities of this UserAllOf.  # noqa: E501
+        :type: list[Identity]
+        """
+
+        self._identities = identities
 
     def to_dict(self):
         """Returns the model properties as a dict"""

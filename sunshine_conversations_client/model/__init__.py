@@ -126,6 +126,7 @@ from sunshine_conversations_client.model.field import Field
 from sunshine_conversations_client.model.file_message import FileMessage
 from sunshine_conversations_client.model.form_message import FormMessage
 from sunshine_conversations_client.model.form_response_message import FormResponseMessage
+from sunshine_conversations_client.model.identity import Identity
 from sunshine_conversations_client.model.image_message import ImageMessage
 from sunshine_conversations_client.model.inline_object import InlineObject
 from sunshine_conversations_client.model.instagram import Instagram
