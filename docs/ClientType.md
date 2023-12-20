@@ -1,6 +1,6 @@
 # ClientType
 
-The type of integration that the client represents. Can be any of the supported integration types, or sdk for integrations of type ios, android, and web.
+The type of integration that the client represents. Can be any of the supported integration types, or sdk for integrations of type ios, android, unity and web.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
