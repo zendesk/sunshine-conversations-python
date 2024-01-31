@@ -352,7 +352,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sunshine_conversations_client.AttachmentsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    access = 'public' # str | The access level for the attachment. Currently the available access levels are public and private. (default to 'public')
+    access = 'public' # str | The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. (default to 'public')
     source = '/path/to/file' # file | 
     _for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
     conversation_id = 'c616a583e4c240a871818541' # str | Links the attachment getting uploaded to the conversation ID. (optional)
@@ -395,7 +395,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sunshine_conversations_client.AttachmentsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    access = 'public' # str | The access level for the attachment. Currently the available access levels are public and private. (default to 'public')
+    access = 'public' # str | The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. (default to 'public')
     source = '/path/to/file' # file | 
     _for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
     conversation_id = 'c616a583e4c240a871818541' # str | Links the attachment getting uploaded to the conversation ID. (optional)
@@ -413,7 +413,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
- **access** | **str**| The access level for the attachment. Currently the available access levels are public and private. | [default to &#39;public&#39;]
+ **access** | **str**| The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. | [default to &#39;public&#39;]
  **source** | **file**|  | 
  **_for** | **str**| Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. | [optional] 
  **conversation_id** | **str**| Links the attachment getting uploaded to the conversation ID. | [optional] 

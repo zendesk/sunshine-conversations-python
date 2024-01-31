@@ -413,7 +413,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str app_id: Identifies the app. (required)
-        :param str access: The access level for the attachment. Currently the available access levels are public and private. (required)
+        :param str access: The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. (required)
         :param file source: (required)
         :param str _for: Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details.
         :param str conversation_id: Links the attachment getting uploaded to the conversation ID.
@@ -442,7 +442,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str app_id: Identifies the app. (required)
-        :param str access: The access level for the attachment. Currently the available access levels are public and private. (required)
+        :param str access: The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. (required)
         :param file source: (required)
         :param str _for: Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details.
         :param str conversation_id: Links the attachment getting uploaded to the conversation ID.
