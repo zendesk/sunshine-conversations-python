@@ -72,7 +72,7 @@ class AppleAllOf(object):
     def type(self):
         """Gets the type of this AppleAllOf.  # noqa: E501
 
-        To configure an Apple Business Chat integration, acquire the required information and call the Create Integration endpoint.   # noqa: E501
+        To configure an Apple Messages for Business integration, acquire the required information and call the Create Integration endpoint.   # noqa: E501
 
         :return: The type of this AppleAllOf.  # noqa: E501
         :rtype: str
@@ -83,7 +83,7 @@ class AppleAllOf(object):
     def type(self, type):
         """Sets the type of this AppleAllOf.
 
-        To configure an Apple Business Chat integration, acquire the required information and call the Create Integration endpoint.   # noqa: E501
+        To configure an Apple Messages for Business integration, acquire the required information and call the Create Integration endpoint.   # noqa: E501
 
         :param type: The type of this AppleAllOf.  # noqa: E501
         :type: str
@@ -95,7 +95,7 @@ class AppleAllOf(object):
     def business_id(self):
         """Gets the business_id of this AppleAllOf.  # noqa: E501
 
-        Apple Business Chat ID.  # noqa: E501
+        Apple Messages for Business ID.  # noqa: E501
 
         :return: The business_id of this AppleAllOf.  # noqa: E501
         :rtype: str
@@ -106,7 +106,7 @@ class AppleAllOf(object):
     def business_id(self, business_id):
         """Sets the business_id of this AppleAllOf.
 
-        Apple Business Chat ID.  # noqa: E501
+        Apple Messages for Business ID.  # noqa: E501
 
         :param business_id: The business_id of this AppleAllOf.  # noqa: E501
         :type: str
