@@ -4,7 +4,7 @@ The payload of the event. The contents of this object depend on the type of even
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**User2**](User2.md) | The user associated with the conversation. | [optional] 
+**user** | [**User**](User.md) | The user associated with the conversation. | [optional] 
 **conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation in which the message was sent. | [optional] 
 **message** | [**ConversationMessageDeliveryPayloadMessage**](ConversationMessageDeliveryPayloadMessage.md) |  | [optional] 
 **destination** | [**ConversationMessageDeliveryPayloadDestination**](ConversationMessageDeliveryPayloadDestination.md) |  | [optional] 
