@@ -34,6 +34,9 @@ class AndroidAllOf(object):
     """
     openapi_types = {
         'type': 'str',
+        'project_id': 'str',
+        'client_email': 'str',
+        'private_key': 'str',
         'server_key': 'str',
         'sender_id': 'str',
         'can_user_create_more_conversations': 'bool',
@@ -42,6 +45,9 @@ class AndroidAllOf(object):
 
     attribute_map = {
         'type': 'type',
+        'project_id': 'projectId',
+        'client_email': 'clientEmail',
+        'private_key': 'privateKey',
         'server_key': 'serverKey',
         'sender_id': 'senderId',
         'can_user_create_more_conversations': 'canUserCreateMoreConversations',
@@ -50,7 +56,7 @@ class AndroidAllOf(object):
 
     nulls = set()
 
-    def __init__(self, type='android', server_key=Undefined(), sender_id=Undefined(), can_user_create_more_conversations=None, attachments_enabled=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type='android', project_id=Undefined(), client_email=Undefined(), private_key=Undefined(), server_key=Undefined(), sender_id=Undefined(), can_user_create_more_conversations=None, attachments_enabled=None, local_vars_configuration=None):  # noqa: E501
         """AndroidAllOf - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -58,6 +64,9 @@ class AndroidAllOf(object):
         self.local_vars_configuration = local_vars_configuration
 
         self._type = None
+        self._project_id = None
+        self._client_email = None
+        self._private_key = None
         self._server_key = None
         self._sender_id = None
         self._can_user_create_more_conversations = None
@@ -66,6 +75,9 @@ class AndroidAllOf(object):
 
         if type is not None:
             self.type = type
+        self.project_id = project_id
+        self.client_email = client_email
+        self.private_key = private_key
         self.server_key = server_key
         self.sender_id = sender_id
         if can_user_create_more_conversations is not None:
@@ -77,7 +89,7 @@ class AndroidAllOf(object):
     def type(self):
         """Gets the type of this AndroidAllOf.  # noqa: E501
 
-        To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/). Copy the `serverKey` and `senderId` from the Cloud Messaging tab in the settings of your project and call the create integrations endpoint with this data. If you would like to continue using your legacy GCM `serverKey` you can also obtain it from the [Google Developer Console](https://console.developers.google.com/).   # noqa: E501
+        <aside class=\"notice\">Firebase Cloud Messaging has deprecated its legacy APIs for HTTP and XMPP. Legacy credentials <code>serverKey</code> and <code>senderId</code> will stop working as of June 2024 and must be replaced with OAuth 2.0 access token based credentials.</aside>  To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/).  Generate a private key from the Service accounts tab in the settings.  Copy the `project_id`, `client_email` and `private_key` from the generated JSON file and call the create integrations endpoint with this data.   # noqa: E501
 
         :return: The type of this AndroidAllOf.  # noqa: E501
         :rtype: str
@@ -88,13 +100,112 @@ class AndroidAllOf(object):
     def type(self, type):
         """Sets the type of this AndroidAllOf.
 
-        To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/). Copy the `serverKey` and `senderId` from the Cloud Messaging tab in the settings of your project and call the create integrations endpoint with this data. If you would like to continue using your legacy GCM `serverKey` you can also obtain it from the [Google Developer Console](https://console.developers.google.com/).   # noqa: E501
+        <aside class=\"notice\">Firebase Cloud Messaging has deprecated its legacy APIs for HTTP and XMPP. Legacy credentials <code>serverKey</code> and <code>senderId</code> will stop working as of June 2024 and must be replaced with OAuth 2.0 access token based credentials.</aside>  To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/).  Generate a private key from the Service accounts tab in the settings.  Copy the `project_id`, `client_email` and `private_key` from the generated JSON file and call the create integrations endpoint with this data.   # noqa: E501
 
         :param type: The type of this AndroidAllOf.  # noqa: E501
         :type: str
         """
 
         self._type = type
+
+    @property
+    def project_id(self):
+        """Gets the project_id of this AndroidAllOf.  # noqa: E501
+
+        Your project ID from your generated private key file.  # noqa: E501
+
+        :return: The project_id of this AndroidAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this AndroidAllOf.
+
+        Your project ID from your generated private key file.  # noqa: E501
+
+        :param project_id: The project_id of this AndroidAllOf.  # noqa: E501
+        :type: str
+        """
+        if type(project_id) is Undefined:
+            project_id = None
+            self.nulls.discard("project_id")
+        elif project_id is None:
+            self.nulls.add("project_id")
+        else:
+            self.nulls.discard("project_id")
+        if (self.local_vars_configuration.client_side_validation and
+                project_id is not None and len(project_id) < 1):
+            raise ValueError("Invalid value for `project_id`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._project_id = project_id
+
+    @property
+    def client_email(self):
+        """Gets the client_email of this AndroidAllOf.  # noqa: E501
+
+        Your client email from your generated private key file.  # noqa: E501
+
+        :return: The client_email of this AndroidAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_email
+
+    @client_email.setter
+    def client_email(self, client_email):
+        """Sets the client_email of this AndroidAllOf.
+
+        Your client email from your generated private key file.  # noqa: E501
+
+        :param client_email: The client_email of this AndroidAllOf.  # noqa: E501
+        :type: str
+        """
+        if type(client_email) is Undefined:
+            client_email = None
+            self.nulls.discard("client_email")
+        elif client_email is None:
+            self.nulls.add("client_email")
+        else:
+            self.nulls.discard("client_email")
+        if (self.local_vars_configuration.client_side_validation and
+                client_email is not None and len(client_email) < 1):
+            raise ValueError("Invalid value for `client_email`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._client_email = client_email
+
+    @property
+    def private_key(self):
+        """Gets the private_key of this AndroidAllOf.  # noqa: E501
+
+        Your private key from your generated private key file.  # noqa: E501
+
+        :return: The private_key of this AndroidAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._private_key
+
+    @private_key.setter
+    def private_key(self, private_key):
+        """Sets the private_key of this AndroidAllOf.
+
+        Your private key from your generated private key file.  # noqa: E501
+
+        :param private_key: The private_key of this AndroidAllOf.  # noqa: E501
+        :type: str
+        """
+        if type(private_key) is Undefined:
+            private_key = None
+            self.nulls.discard("private_key")
+        elif private_key is None:
+            self.nulls.add("private_key")
+        else:
+            self.nulls.discard("private_key")
+        if (self.local_vars_configuration.client_side_validation and
+                private_key is not None and len(private_key) < 1):
+            raise ValueError("Invalid value for `private_key`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._private_key = private_key
 
     @property
     def server_key(self):
