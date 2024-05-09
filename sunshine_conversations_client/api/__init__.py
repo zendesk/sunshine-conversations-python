@@ -10,6 +10,7 @@ from sunshine_conversations_client.api.attachments_api import AttachmentsApi
 from sunshine_conversations_client.api.clients_api import ClientsApi
 from sunshine_conversations_client.api.conversations_api import ConversationsApi
 from sunshine_conversations_client.api.custom_integration_api_keys_api import CustomIntegrationApiKeysApi
+from sunshine_conversations_client.api.devices_api import DevicesApi
 from sunshine_conversations_client.api.integrations_api import IntegrationsApi
 from sunshine_conversations_client.api.messages_api import MessagesApi
 from sunshine_conversations_client.api.o_auth_endpoints_api import OAuthEndpointsApi
