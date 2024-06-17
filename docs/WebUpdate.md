@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
+**default_responder_id** | **str** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
 **brand_color** | **str** | This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color. | [optional] [default to '65758e']
 **fixed_intro_pane** | **bool** | When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it. | [optional] [default to False]
 **conversation_color** | **str** | This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color. | [optional] [default to '0099ff']

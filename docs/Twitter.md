@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **consumer_secret** | **str** | The consumer key secret for your Twitter app. | 
 **access_token_key** | **str** | The access token key obtained from your user via oauth. | 
 **access_token_secret** | **str** | The access token secret obtained from your user via oauth. | 
+**default_responder_id** | **str** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
