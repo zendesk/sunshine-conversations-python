@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_devices
-> ClientListResponse list_devices(app_id, user_id_or_external_id)
+> DeviceListResponse list_devices(app_id, user_id_or_external_id)
 
 List Devices
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClientListResponse**](ClientListResponse.md)
+[**DeviceListResponse**](DeviceListResponse.md)
 
 ### Authorization
 

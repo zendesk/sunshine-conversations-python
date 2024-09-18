@@ -12,7 +12,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "12.8.0"
+__version__ = "13.0.0"
 
 # import apis into sdk package
 from sunshine_conversations_client.api.activities_api import ActivitiesApi
@@ -153,6 +153,7 @@ from sunshine_conversations_client.model.default_responder_default_responder imp
 from sunshine_conversations_client.model.default_responder_id import DefaultResponderId
 from sunshine_conversations_client.model.destination import Destination
 from sunshine_conversations_client.model.device import Device
+from sunshine_conversations_client.model.device_list_response import DeviceListResponse
 from sunshine_conversations_client.model.device_response import DeviceResponse
 from sunshine_conversations_client.model.event_sub_schema import EventSubSchema
 from sunshine_conversations_client.model.extra_channel_options import ExtraChannelOptions
