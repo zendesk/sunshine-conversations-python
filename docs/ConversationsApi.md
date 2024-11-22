@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_conversation**](ConversationsApi.md#create_conversation) | **POST** /v2/apps/{appId}/conversations | Create Conversation
 [**delete_conversation**](ConversationsApi.md#delete_conversation) | **DELETE** /v2/apps/{appId}/conversations/{conversationId} | Delete Conversation
+[**download_message_ref**](ConversationsApi.md#download_message_ref) | **POST** /v2/apps/{appId}/conversations/{conversationId}/download | Download Message Ref
 [**get_conversation**](ConversationsApi.md#get_conversation) | **GET** /v2/apps/{appId}/conversations/{conversationId} | Get Conversation
 [**list_conversations**](ConversationsApi.md#list_conversations) | **GET** /v2/apps/{appId}/conversations | List Conversations
 [**update_conversation**](ConversationsApi.md#update_conversation) | **PATCH** /v2/apps/{appId}/conversations/{conversationId} | Update Conversation
@@ -243,6 +244,125 @@ Name | Type | Description  | Notes
 **200** | Ok |  -  |
 **400** | Conversation c93bb9c14dde8ffb94564eae cannot be deleted because it is the default. |  -  |
 **404** | Conversation not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## download_message_ref
+> object download_message_ref(app_id, conversation_id, download_message_ref_body)
+
+Download Message Ref
+
+When a third party channel provides a reference of a data, this API can be used to download the reference and fetch the full data. Currently, only apple channel is supported.
+
+### Example
+
+Basic Authentication (basicAuth):
+```python
+from __future__ import print_function
+import time
+import sunshine_conversations_client
+from sunshine_conversations_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.smooch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sunshine_conversations_client.Configuration(
+    host = "https://api.smooch.io"
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: basicAuth
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# Configure Bearer authorization (JWT): bearerAuth
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Enter a context with an instance of the API client
+with sunshine_conversations_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sunshine_conversations_client.ConversationsApi(api_client)
+    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
+    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
+    download_message_ref_body = {"userId":"6e416caac6a5e9544e3fb6d7","apple":{"interactiveDateRef":{"url":"https://p61-content.icloud.com/M58C0A1A2EB62B6E899B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00","bid":"com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension","key":"00c0d1827fdc858fe7b42421de1fb289c2ee0a9463d787ce4f118506f970bd6e38","signature":"81a619c81da5a01c6139219a5d20e17430c631e1eb","owner":"M58C0A2A1EB62B4E859B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00"}}} # DownloadMessageRefBody | 
+
+    try:
+        # Download Message Ref
+        api_response = api_instance.download_message_ref(app_id, conversation_id, download_message_ref_body)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ConversationsApi->download_message_ref: %s\n" % e)
+```
+
+Bearer (JWT) Authentication (bearerAuth):
+```python
+from __future__ import print_function
+import time
+import sunshine_conversations_client
+from sunshine_conversations_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.smooch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sunshine_conversations_client.Configuration(
+    host = "https://api.smooch.io"
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: basicAuth
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# Configure Bearer authorization (JWT): bearerAuth
+# Uncomment this if you want to use JWTs
+#configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Enter a context with an instance of the API client
+with sunshine_conversations_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sunshine_conversations_client.ConversationsApi(api_client)
+    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
+    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
+    download_message_ref_body = {"userId":"6e416caac6a5e9544e3fb6d7","apple":{"interactiveDateRef":{"url":"https://p61-content.icloud.com/M58C0A1A2EB62B6E899B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00","bid":"com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension","key":"00c0d1827fdc858fe7b42421de1fb289c2ee0a9463d787ce4f118506f970bd6e38","signature":"81a619c81da5a01c6139219a5d20e17430c631e1eb","owner":"M58C0A2A1EB62B4E859B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00"}}} # DownloadMessageRefBody | 
+
+    try:
+        # Download Message Ref
+        api_response = api_instance.download_message_ref(app_id, conversation_id, download_message_ref_body)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ConversationsApi->download_message_ref: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **str**| Identifies the app. | 
+ **conversation_id** | **str**| Identifies the conversation. | 
+ **download_message_ref_body** | [**DownloadMessageRefBody**](DownloadMessageRefBody.md)|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Ok |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
