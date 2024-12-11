@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **signed_up_at** | **str** |  | [optional] 
+**to_be_retained** | **bool** |  | [optional] 
 **profile** | [**Profile**](Profile.md) |  | [optional] 
 **metadata** | **object** |  | [optional] 
 **identities** | [**list[Identity]**](Identity.md) | The user&#39;s connected identities. | [optional] [readonly] 
