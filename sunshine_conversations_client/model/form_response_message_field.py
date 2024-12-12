@@ -39,6 +39,7 @@ class FormResponseMessageField(object):
         'text': 'str',
         'email': 'str',
         'select': 'list[object]',
+        'options': 'list[object]',
         'quoted_message_id': 'str'
     }
 
@@ -49,12 +50,13 @@ class FormResponseMessageField(object):
         'text': 'text',
         'email': 'email',
         'select': 'select',
+        'options': 'options',
         'quoted_message_id': 'quotedMessageId'
     }
 
     nulls = set()
 
-    def __init__(self, type=None, name=None, label=None, text=None, email=None, select=None, quoted_message_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type=None, name=None, label=None, text=None, email=None, select=None, options=None, quoted_message_id=None, local_vars_configuration=None):  # noqa: E501
         """FormResponseMessageField - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -67,6 +69,7 @@ class FormResponseMessageField(object):
         self._text = None
         self._email = None
         self._select = None
+        self._options = None
         self._quoted_message_id = None
         self.discriminator = None
 
@@ -79,6 +82,8 @@ class FormResponseMessageField(object):
             self.email = email
         if select is not None:
             self.select = select
+        if options is not None:
+            self.options = options
         if quoted_message_id is not None:
             self.quoted_message_id = quoted_message_id
 
@@ -255,6 +260,29 @@ class FormResponseMessageField(object):
         """
 
         self._select = select
+
+    @property
+    def options(self):
+        """Gets the options of this FormResponseMessageField.  # noqa: E501
+
+        Array of objects representing the response for a field of type options. Form and formResponse messages only.  # noqa: E501
+
+        :return: The options of this FormResponseMessageField.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """Sets the options of this FormResponseMessageField.
+
+        Array of objects representing the response for a field of type options. Form and formResponse messages only.  # noqa: E501
+
+        :param options: The options of this FormResponseMessageField.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._options = options
 
     @property
     def quoted_message_id(self):
