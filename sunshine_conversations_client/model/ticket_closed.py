@@ -34,7 +34,7 @@ class TicketClosed(object):
     """
     openapi_types = {
         'type': 'str',
-        'data': 'object'
+        'data': 'dict(str, object)'
     }
 
     attribute_map = {
@@ -91,7 +91,7 @@ class TicketClosed(object):
         No additional data is supplied with the \"ticketClosed\" activity type at this time.  # noqa: E501
 
         :return: The data of this TicketClosed.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, object)
         """
         return self._data
 
@@ -102,7 +102,7 @@ class TicketClosed(object):
         No additional data is supplied with the \"ticketClosed\" activity type at this time.  # noqa: E501
 
         :param data: The data of this TicketClosed.  # noqa: E501
-        :type: object
+        :type: dict(str, object)
         """
 
         self._data = data
