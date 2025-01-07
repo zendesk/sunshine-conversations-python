@@ -44,7 +44,7 @@ class TransferToEmail(object):
 
     nulls = set()
 
-    def __init__(self, type='transferToEmail', data=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type='ticket:transfer:email', data=None, local_vars_configuration=None):  # noqa: E501
         """TransferToEmail - a model defined in OpenAPI"""  # noqa: E501
         
         if local_vars_configuration is None:
@@ -88,7 +88,7 @@ class TransferToEmail(object):
     def data(self):
         """Gets the data of this TransferToEmail.  # noqa: E501
 
-        No additional data is supplied with the \"transferToEmail\" activity type at this time.  # noqa: E501
+        No additional data is supplied with the \"ticket:transfer:email\" activity type at this time.  # noqa: E501
 
         :return: The data of this TransferToEmail.  # noqa: E501
         :rtype: dict(str, object)
@@ -99,7 +99,7 @@ class TransferToEmail(object):
     def data(self, data):
         """Sets the data of this TransferToEmail.
 
-        No additional data is supplied with the \"transferToEmail\" activity type at this time.  # noqa: E501
+        No additional data is supplied with the \"ticket:transfer:email\" activity type at this time.  # noqa: E501
 
         :param data: The data of this TransferToEmail.  # noqa: E501
         :type: dict(str, object)
