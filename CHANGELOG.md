@@ -1,5 +1,11 @@
 # Changelog
 
+## [14.3.0] - 2024-12-30
+
+### Added
+
+- Added new read-only `activity` property to [Messages](http://127.0.0.1:8081/#tag/Messages/operation/listMessages) to denote system activities.
+
 ## [14.2.0] - 2024-12-11
 
 ### Added
