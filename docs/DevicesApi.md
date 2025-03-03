@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Get Device
 
-Fetches a specific Device.  ```shell /v2/apps/:appId/users/:userId ``` 
+Fetches a specific Device. 
 
 ### Example
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Device not found |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 List Devices
 
-Get all the devices for a particular user. The Devices are sorted based on last seen time.  ```shell /v2/apps/:appId/users/:userId/devices ``` 
+Get all the devices for a particular user. The Devices are sorted based on last seen time. 
 
 ### Example
 

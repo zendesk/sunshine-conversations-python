@@ -126,8 +126,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**400** | Switchboard has reached the max number of switchboard integrations (10) |  -  |
-**404** | Switchboard not found |  -  |
+**400** | Bad request |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Not Found |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Switchboard not found |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -409,7 +409,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     switchboard_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard.
     switchboard_integration_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard integration.
-    switchboard_integration_update_body = {"name":"bot","integrationType":"zd:agentWorkspace","deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
+    switchboard_integration_update_body = {"deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
 
     try:
         # Update Switchboard Integration
@@ -451,7 +451,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     switchboard_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard.
     switchboard_integration_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard integration.
-    switchboard_integration_update_body = {"name":"bot","integrationType":"zd:agentWorkspace","deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
+    switchboard_integration_update_body = {"deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
 
     try:
         # Update Switchboard Integration
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Enabled switchboard must have an associated default switchboardIntegration |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

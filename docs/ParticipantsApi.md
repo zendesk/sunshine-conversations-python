@@ -49,7 +49,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ParticipantsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    participant_join_body = sunshine_conversations_client.ParticipantJoinBody() # ParticipantJoinBody | 
+    participant_join_body = {"userId":"67a11490f0305f4a391e9f8a","subscribeSDKClient":true} # ParticipantJoinBody | 
 
     try:
         # Join Conversation
@@ -90,7 +90,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ParticipantsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    participant_join_body = sunshine_conversations_client.ParticipantJoinBody() # ParticipantJoinBody | 
+    participant_join_body = {"userId":"67a11490f0305f4a391e9f8a","subscribeSDKClient":true} # ParticipantJoinBody | 
 
     try:
         # Join Conversation
@@ -125,8 +125,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**400** | Too many participants |  -  |
-**404** | Conversation not found |  -  |
+**400** | Bad request |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -170,7 +170,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ParticipantsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    participant_leave_body = sunshine_conversations_client.ParticipantLeaveBody() # ParticipantLeaveBody | 
+    participant_leave_body = {"userId":"67a11490f0305f4a391e9f8a"} # ParticipantLeaveBody | 
 
     try:
         # Leave Conversation
@@ -211,7 +211,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ParticipantsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    participant_leave_body = sunshine_conversations_client.ParticipantLeaveBody() # ParticipantLeaveBody | 
+    participant_leave_body = {"userId":"67a11490f0305f4a391e9f8a"} # ParticipantLeaveBody | 
 
     try:
         # Leave Conversation
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | User is not a member of the conversation |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | Invalid page query parameters |  -  |
+**400** | Bad request |  -  |
 **404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

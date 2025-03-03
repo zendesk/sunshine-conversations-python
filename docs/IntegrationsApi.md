@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**400** | Invalid integration type |  -  |
+**400** | Bad request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -241,8 +241,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | SDK integrations configured on Admin Center cannot be deleted |  -  |
-**404** | Integration not found |  -  |
+**400** | Bad request |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Integration not found |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | Invalid query parameters |  -  |
+**400** | Bad request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -523,7 +523,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     integration_id = '029c31f25a21b47effd7be90' # str | The id of the integration.
-    integration_update = sunshine_conversations_client.IntegrationUpdate() # IntegrationUpdate | 
+    integration_update = {"displayName":"My Test Integration"} # IntegrationUpdate | 
 
     try:
         # Update Integration
@@ -564,7 +564,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     integration_id = '029c31f25a21b47effd7be90' # str | The id of the integration.
-    integration_update = sunshine_conversations_client.IntegrationUpdate() # IntegrationUpdate | 
+    integration_update = {"displayName":"My Test Integration"} # IntegrationUpdate | 
 
     try:
         # Update Integration
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**404** | Integration not found |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

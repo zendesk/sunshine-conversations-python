@@ -49,7 +49,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ClientsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     user_id_or_external_id = '42589ad070d43be9b00ff7e5' # str | The user's id or externalId.
-    client_create = {"matchCriteria":{"type":"mailgun","integrationId":"582dedf230e788746891281a","primary":true,"address":"steveb@channel5.com","subject":"New message from {appName}"},"confirmation":{"type":"immediate","message":{"author":{"type":"business","displayName":"Steve","avatarUrl":"https://www.gravatar.com/image.jpg"},"content":{"type":"text","text":"Hello!"},"metadata":{"lang":"en-ca"}}},"target":{"conversationId":"029c31f25a21b47effd7be90"}} # ClientCreate | 
+    client_create = sunshine_conversations_client.ClientCreate() # ClientCreate | 
 
     try:
         # Create Client
@@ -90,7 +90,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.ClientsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     user_id_or_external_id = '42589ad070d43be9b00ff7e5' # str | The user's id or externalId.
-    client_create = {"matchCriteria":{"type":"mailgun","integrationId":"582dedf230e788746891281a","primary":true,"address":"steveb@channel5.com","subject":"New message from {appName}"},"confirmation":{"type":"immediate","message":{"author":{"type":"business","displayName":"Steve","avatarUrl":"https://www.gravatar.com/image.jpg"},"content":{"type":"text","text":"Hello!"},"metadata":{"lang":"en-ca"}}},"target":{"conversationId":"029c31f25a21b47effd7be90"}} # ClientCreate | 
+    client_create = sunshine_conversations_client.ClientCreate() # ClientCreate | 
 
     try:
         # Create Client
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | Invalid page query parameters |  -  |
+**400** | Bad request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -364,8 +364,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
-**400** | Cannot remove a client of type &#39;sdk&#39; |  -  |
-**404** | Client not found |  -  |
+**400** | Bad request |  -  |
+**404** | Not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
