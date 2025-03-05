@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## download_message_ref
-> object download_message_ref(app_id, conversation_id, download_message_ref_body)
+> dict(str, object) download_message_ref(app_id, conversation_id, download_message_ref_body)
 
 Download Message Ref
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+**dict(str, object)**
 
 ### Authorization
 
