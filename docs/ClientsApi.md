@@ -77,12 +77,12 @@ configuration = sunshine_conversations_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+#configuration.username = 'YOUR_USERNAME'
+#configuration.password = 'YOUR_PASSWORD'
 
 # Configure Bearer authorization (JWT): bearerAuth
 # Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
