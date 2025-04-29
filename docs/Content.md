@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **type** | **str** | The type of message. | [default to 'template']
 **text** | **str** | The fallback text message used when location messages are not supported by the channel. | [optional] [readonly] 
 **html_text** | **str** | HTML text content of the message. Can be provided in place of &#x60;text&#x60;. Cannot be used with &#x60;markdownText&#x60;. If no &#x60;text&#x60; is provided, will be converted to &#x60;text&#x60; upon reception to be displayed on channels that do not support rich text. See [rich text](https://docs.smooch.io/guide/structured-messages/rich-text) documentation for more information. | [optional] 
+**block_chat_input** | **bool** | When set to true, the chat input will be disabled on supported client implementations when the message is the most recent one in the history. Can be used for guided flows or to temporarily disable the user&#39;s ability to send messages in the conversation. | [optional] 
 **markdown_text** | **str** | Markdown text content of the message. Can be provided in place of &#x60;text&#x60;. Cannot be used with &#x60;htmlText&#x60;. Will be converted to &#x60;htmlText&#x60; upon reception. If converted &#x60;htmlText&#x60; exceeds 4096 characters, the message will be rejected. If no &#x60;text&#x60; is provided, will be converted to &#x60;text&#x60; upon reception to be displayed on channels that do not support rich text. See [rich text](https://docs.smooch.io/guide/structured-messages/rich-text) documentation for more information. | [optional] 
 **actions** | [**list[ActionSubset]**](ActionSubset.md) | An array of objects representing the actions associated with the message. The array length is limited by the third party channel. | [optional] 
 **payload** | **str** | The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message. | [optional] 
@@ -17,7 +18,6 @@ Name | Type | Description | Notes
 **alt_text** | **str** | An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **attachment_id** | **str** | An identifier used by Sunshine Conversations for internal purposes. | [optional] 
 **submitted** | **bool** | Flag which states whether the form is submitted. | [optional] [readonly] 
-**block_chat_input** | **bool** | true if the message should block the chat input on Web Messenger. | [optional] 
 **fields** | [**list[FormResponseMessageField]**](FormResponseMessageField.md) | Array of field objects that contain the submitted fields. | 
 **text_fallback** | **str** | A string containing the &#x60;label: value&#x60; of all fields, each separated by a newline character. | [optional] [readonly] 
 **coordinates** | [**LocationMessageCoordinates**](LocationMessageCoordinates.md) |  | 

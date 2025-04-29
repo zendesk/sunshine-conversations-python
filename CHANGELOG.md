@@ -1,5 +1,9 @@
 # Changelog
 
+## [15.3.2] - 2025-04-21
+
+- Added new optional field `blockChatInput` to all message types
+
 ## [15.3.1] - 2025-04-08
 
 - Updated tooling to resolve package publishing issue.
@@ -31,7 +35,7 @@
 - Changed typing of `metadata` fields from `object` to `dict(str, object)`
 - Changed return type of `download_message_ref()` from `object` to `dict(str, object)`
 - Changed typing of device `info` property from `object` to `dict(str, object)`
-- Removed `switchboard_id` and `app_id` properties in `default_responder` schema 
+- Removed `switchboard_id` and `app_id` properties in `default_responder` schema
 - Removed `deployment_id` in WhatsApp Integration
 
 ## [14.4.0] - 2025-03-03
