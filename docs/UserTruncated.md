@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The unique ID of the user. | [optional] 
+**authenticated** | **bool** | Whether or not the user has authenticated, either via JWT or via the Help Center | [optional] [readonly] 
 **external_id** | **str** | An optional ID that can also be used to retrieve the user.  | [optional] 
 **zendesk_id** | **str** | The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API.  | [optional] 
 

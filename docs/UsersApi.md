@@ -481,11 +481,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## sync_user
-> UserResponse sync_user(app_id, zendesk_id)
+> UserResponse sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
 
 Synchronize User
 
-Synchronize a messaging user with its core Zendesk user counterpart. Messaging users are separate objects linked to a core Zendesk user record by `zendeskId`. It is possible for changes to be made to the core Zendesk user record in a way that causes the messaging user to fall out of sync. The core Zendesk user might change their primary email, for example. This endpoint can be used to update the messaging user with the `profile.givenName`, `profile.surname`, `externalId`, and primary email identity of its core Zendesk user counterpart. Note that only the primary email identity of the core Zendesk user will be synchronized, and it will be set on the `identities` array, not in the `profile`. Note also that in some circumstances, a single call to this API might produce changes on more than one messaging user. If the `externalId` or email being synchronized already exists on a different messaging user within the account, the conflict will be resolved by merging those messaging users together, if possible. If a conflicting messaging user is already linked to a core Zendesk user by `zendeskId` it cannot be merged. In this case, the conflicting `externalId` or email will instead be removed and reassigned to the messaging user that is being synchronized
+Synchronize a messaging user with its core Zendesk user counterpart. Messaging users are separate objects linked to a core Zendesk user record by `zendeskId`. It is possible for changes to be made to the core Zendesk user record in a way that causes the messaging user to fall out of sync. The core Zendesk user might have their primary email changed, for example. This endpoint can be used to update the messaging user with the `profile.givenName`, `profile.surname`, `externalId`, and primary email identity of its core Zendesk user counterpart.<br/><br/>It is also possible for two Zendesk users to be merged. In such a case, this API can be used to apply that merger on the messaging side. The surviving Zendesk user id can be specified via the `survivingZendeskId` parameter of the request body, and the outgoing `zendeskId` is specified in the request path. <aside class=\"notice\">Only the primary email identity of the core Zendesk user will be synchronized, and it will be set on the identities array, not in the profile.</aside> <br/> <aside class=\"notice\">In some circumstances, a single call to this API might produce changes on more than one messaging user. If the externalId or email being synchronized already exists on a different messaging user within the account, the conflict will be resolved by merging those messaging users together, if possible. If a conflicting messaging user is already linked to a core Zendesk user by zendeskId it cannot be merged. In this case, the conflicting externalId or email will instead be removed and reassigned to the messaging user that is being synchronized.</aside>
 
 ### Example
 
@@ -520,10 +520,11 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.UsersApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     zendesk_id = '35436' # str | The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API. 
+    sync_user_body = sunshine_conversations_client.SyncUserBody() # SyncUserBody |  (optional)
 
     try:
         # Synchronize User
-        api_response = api_instance.sync_user(app_id, zendesk_id)
+        api_response = api_instance.sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->sync_user: %s\n" % e)
@@ -560,10 +561,11 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.UsersApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     zendesk_id = '35436' # str | The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API. 
+    sync_user_body = sunshine_conversations_client.SyncUserBody() # SyncUserBody |  (optional)
 
     try:
         # Synchronize User
-        api_response = api_instance.sync_user(app_id, zendesk_id)
+        api_response = api_instance.sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->sync_user: %s\n" % e)
@@ -575,6 +577,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **zendesk_id** | **str**| The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API.  | 
+ **sync_user_body** | [**SyncUserBody**](SyncUserBody.md)|  | [optional] 
 
 ### Return type
 
@@ -586,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
