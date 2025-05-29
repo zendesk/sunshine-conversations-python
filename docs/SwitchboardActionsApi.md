@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## release_control
-> object release_control(app_id, conversation_id)
+> object release_control(app_id, conversation_id, release_control_body=release_control_body)
 
 Release Control
 
@@ -411,10 +411,11 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.SwitchboardActionsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
+    release_control_body = sunshine_conversations_client.ReleaseControlBody() # ReleaseControlBody |  (optional)
 
     try:
         # Release Control
-        api_response = api_instance.release_control(app_id, conversation_id)
+        api_response = api_instance.release_control(app_id, conversation_id, release_control_body=release_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->release_control: %s\n" % e)
@@ -451,10 +452,11 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.SwitchboardActionsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
+    release_control_body = sunshine_conversations_client.ReleaseControlBody() # ReleaseControlBody |  (optional)
 
     try:
         # Release Control
-        api_response = api_instance.release_control(app_id, conversation_id)
+        api_response = api_instance.release_control(app_id, conversation_id, release_control_body=release_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->release_control: %s\n" % e)
@@ -466,6 +468,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **conversation_id** | **str**| Identifies the conversation. | 
+ **release_control_body** | [**ReleaseControlBody**](ReleaseControlBody.md)|  | [optional] 
 
 ### Return type
 
@@ -477,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

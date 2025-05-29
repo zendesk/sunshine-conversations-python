@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authorize**](OAuthEndpointsApi.md#authorize) | **GET** /oauth/authorize | Authorize
 [**get_token**](OAuthEndpointsApi.md#get_token) | **POST** /oauth/token | Get Token
+[**get_token_info**](OAuthEndpointsApi.md#get_token_info) | **GET** /v2/tokenInfo | Get Token Info
 [**revoke_access**](OAuthEndpointsApi.md#revoke_access) | **DELETE** /oauth/authorization | Revoke Access
 
 
@@ -127,6 +128,63 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Ok |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## get_token_info
+> AppResponse get_token_info()
+
+Get Token Info
+
+This endpoint can be used to retrieve the app linked to the OAuth token.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import sunshine_conversations_client
+from sunshine_conversations_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.smooch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sunshine_conversations_client.Configuration(
+    host = "https://api.smooch.io"
+)
+
+# Enter a context with an instance of the API client
+with sunshine_conversations_client.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = sunshine_conversations_client.OAuthEndpointsApi(api_client)
+
+    try:
+        # Get Token Info
+        api_response = api_instance.get_token_info()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling OAuthEndpointsApi->get_token_info: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AppResponse**](AppResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
