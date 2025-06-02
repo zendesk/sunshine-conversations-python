@@ -1,6 +1,6 @@
 # DefaultResponderDefaultResponder
 
-The default responder for the integration. This is the responder that will be used to send messages to the user. For more information, refer to the <a href=\"https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\">Per-channel default responder</a> guide. 
+The default responder for the integration. This is the responder that will be used to send messages to the user. For more information, refer to the <a href=\"https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/switchboard/#default-integration-assignment\">Switchboard guide</a>. 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
