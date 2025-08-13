@@ -1,6 +1,6 @@
 # MessageOverride
 
-A raw payload containing a message that is sent directly to a channel. Messages for [Apple Messages for Business](https://docs.smooch.io/guide/apple-messages-for-business/#passthrough-api), [Line](https://docs.smooch.io/guide/line/#passthrough-api), [Messenger](https://docs.smooch.io/guide/facebook-messenger/#passthrough-api), [Whatsapp](https://docs.smooch.io/guide/whatsapp/#passthrough-api) channels are supported.
+A raw payload containing a message that is sent directly to a channel. See [message overrides](https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/message-overrides/) for more information.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

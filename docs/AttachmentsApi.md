@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 Upload Attachment
 
-Upload an attachment to Sunshine Conversations to use in future messages. Files are uploaded using the multipart/form-data content type. Use the returned mediaUrl to send a file, image or carousel message. <aside class=\"notice\">Note that Sunshine Conversations limits the size and type of file you can upload to the platform. See the <a href=\"https://docs.smooch.io/guide/validating-files\">file validation</a> guide for more details.</aside> 
+Upload an attachment to Sunshine Conversations to use in future messages. Files are uploaded using the multipart/form-data content type. Use the returned mediaUrl to send a file, image or carousel message. <aside class=\"notice\">Note that Sunshine Conversations limits the size and type of file you can upload to the platform. See the <a href=\"https://support.zendesk.com/hc/en-us/articles/8435939957914#topic_v1r_rwr_mdc\">file validation</a> guide for more details.</aside> 
 
 ### Example
 
