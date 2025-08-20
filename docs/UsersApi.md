@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 Delete User
 
-Delete a user, its clients and its conversation history. The user is considered completely deleted once the `user:delete` webhook is fired. To only delete a user’s personal information, see [Delete User Personal Information](#operation/deleteUserPersonalInformation).
+Delete a user, its clients and its conversation history. The user is considered completely deleted once the `user:delete` webhook is fired. To only delete a user’s personal information, see [Delete User Personal Information](#operation/DeleteUserPersonalInformation).
 
 ### Example
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 Delete User Personal Information
 
-Delete a user’s personal information. Calling this API will clear `givenName`, `surname`, `email` and `avatarUrl` and every custom property for the specified user. For every client owned by the user, it will also clear `displayName`, `avatarUrl` and any channel specific information stored in the info and raw fields. Calling this API doesn’t delete the user’s conversation history. To fully delete the user, see [Delete User](#operation/deleteUser).
+Delete a user’s personal information. Calling this API will clear `givenName`, `surname`, `email` and `avatarUrl` and every custom property for the specified user. For every client owned by the user, it will also clear `displayName`, `avatarUrl` and any channel specific information stored in the info and raw fields. Calling this API doesn’t delete the user’s conversation history. To fully delete the user, see [Delete User](#operation/DeleteUser).
 
 ### Example
 
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 
 Synchronize User
 
-Synchronize a messaging user with its core Zendesk user counterpart. Messaging users are separate objects linked to a core Zendesk user record by `zendeskId`. It is possible for changes to be made to the core Zendesk user record in a way that causes the messaging user to fall out of sync. The core Zendesk user might have their primary email changed, for example. This endpoint can be used to update the messaging user with the `profile.givenName`, `profile.surname`, `externalId`, and primary email identity of its core Zendesk user counterpart.<br/><br/>It is also possible for two Zendesk users to be merged. In such a case, this API can be used to apply that merger on the messaging side. The surviving Zendesk user id can be specified via the `survivingZendeskId` parameter of the request body, and the outgoing `zendeskId` is specified in the request path. <aside class=\"notice\">Only the primary email identity of the core Zendesk user will be synchronized, and it will be set on the identities array, not in the profile.</aside> <br/> <aside class=\"notice\">In some circumstances, a single call to this API might produce changes on more than one messaging user. If the externalId or email being synchronized already exists on a different messaging user within the account, the conflict will be resolved by merging those messaging users together, if possible. If a conflicting messaging user is already linked to a core Zendesk user by zendeskId it cannot be merged. In this case, the conflicting externalId or email will instead be removed and reassigned to the messaging user that is being synchronized.</aside>
+Synchronize a messaging user with its core Zendesk user counterpart. Messaging users are separate objects linked to a core Zendesk user record by `zendeskId`. It is possible for changes to be made to the core Zendesk user record in a way that causes the messaging user to fall out of sync. The core Zendesk user might have their primary email changed, for example. This endpoint can be used to update the messaging user with the `profile.givenName`, `profile.surname`, `externalId`, and primary email identity of its core Zendesk user counterpart.<br/><br/>It is also possible for two Zendesk users to be merged. In such a case, this API can be used to apply that merger on the messaging side. The surviving Zendesk user id can be specified via the `survivingZendeskId` parameter of the request body, and the outgoing `zendeskId` is specified in the request path. <aside class=\"notice\"><strong>Note:</strong> Only the primary email identity of the core Zendesk user will be synchronized, and it will be set on the identities array, not in the profile.</aside> <br/> <aside class=\"notice\"><strong>Note:</strong> In some circumstances, a single call to this API might produce changes on more than one messaging user. If the externalId or email being synchronized already exists on a different messaging user within the account, the conflict will be resolved by merging those messaging users together, if possible. If a conflicting messaging user is already linked to a core Zendesk user by zendeskId it cannot be merged. In this case, the conflicting externalId or email will instead be removed and reassigned to the messaging user that is being synchronized.</aside>
 
 ### Example
 

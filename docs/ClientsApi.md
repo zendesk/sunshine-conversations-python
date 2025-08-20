@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Create Client
 
-Create a client and link it to a channel specified by the `matchCriteria.type`. Note that the client is initially created with a `pending` status. The status of the linking request can be tracked by listening to the `link:match`, `link:success` and `link:failure` webhooks (only available in v1). For more information, see [link-events](https://docs.smooch.io/rest/v1/#link-events).
+Create a client and link it to a channel specified by the `matchCriteria.type`. Note that the client is initially created with a `pending` status. The status of the linking request can be tracked by listening to the `client:add`, `client:update` and `client:removed` webhooks. For more information, see [channel transfer](https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/channel-transfer/).
 
 ### Example
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 List Clients
 
-Get all the clients for a particular user, including both linked clients and pending clients. This API is paginated through [cursor pagination](#section/Introduction/API-pagination-and-records-limits).  ```shell /v2/apps/:appId/users/:userId/clients?page[after]=5ebee0975ac5304b664a12fa ``` 
+Get all the clients for a particular user, including both linked clients and pending clients. This API is paginated through [cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits).  ```shell /v2/apps/:appId/users/:userId/clients?page[after]=5ebee0975ac5304b664a12fa ``` 
 
 ### Example
 

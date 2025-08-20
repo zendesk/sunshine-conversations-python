@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 Delete Conversation
 
-Delete an entire conversation record, along with its messages and attachments. Note that the default conversation cannot be deleted, but the messages contained [can be](#deleteAllMessages).
+Delete an entire conversation record, along with its messages and attachments. Note that the default conversation cannot be deleted, but the messages contained [can be](#operation/DeleteAllMessages).
 
 ### Example
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 List Conversations
 
-Lists all conversations that a user is part of. This API is paginated through [cursor pagination](#section/Introduction/API-pagination-and-records-limits). ```shell /v2/apps/:appId/conversations?filter[userId]=42589ad070d43be9b00ff7e5 ``` 
+Lists all conversations that a user is part of. This API is paginated through [cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits). ```shell /v2/apps/:appId/conversations?filter[userId]=42589ad070d43be9b00ff7e5 ``` 
 
 ### Example
 
