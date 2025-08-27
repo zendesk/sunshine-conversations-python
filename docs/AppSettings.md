@@ -1,7 +1,9 @@
 # AppSettings
 
 Customizable app settings.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation_retention_seconds** | **int** | Number of seconds of inactivity before a conversation’s messages  will be automatically deleted. See  [Conversation Retention Seconds](https://docs.smooch.io/guide/creating-and-managing-apps/#conversation-retention-seconds) for more information.  | [optional] 
@@ -12,6 +14,23 @@ Name | Type | Description | Notes
 **multi_convo_enabled** | **bool** | A boolean specifying whether users are allowed to be part of several conversations. Enabling &#x60;multiConvo&#x60; is **irreversible**.  | [optional] 
 **app_localization_enabled** | **bool** | A boolean specifying whether the messages authored by the Sunshine Conversations platform should be localized.  | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.app_settings import AppSettings
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of AppSettings from a JSON string
+app_settings_instance = AppSettings.from_json(json)
+# print the JSON string representation of the object
+print(AppSettings.to_json())
+
+# convert the object into a dict
+app_settings_dict = app_settings_instance.to_dict()
+# create an instance of AppSettings from a dict
+app_settings_from_dict = AppSettings.from_dict(app_settings_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

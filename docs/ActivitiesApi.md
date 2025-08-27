@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## post_activity
-> object post_activity(app_id, conversation_id, activity_post)
+> object post_activity(app_idconversation_idactivity_post)
 
 Post Activity
 
@@ -51,7 +51,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Activity
-        api_response = api_instance.post_activity(app_id, conversation_id, activity_post)
+        api_response = api_instance.post_activity(app_idconversation_idactivity_post)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ActivitiesApi->post_activity: %s\n" % e)
@@ -92,7 +92,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Activity
-        api_response = api_instance.post_activity(app_id, conversation_id, activity_post)
+        api_response = api_instance.post_activity(app_idconversation_idactivity_post)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ActivitiesApi->post_activity: %s\n" % e)

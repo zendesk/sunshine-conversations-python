@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## delete_attachment
-> object delete_attachment(app_id, attachment_delete_body)
+> object delete_attachment(app_idattachment_delete_body)
 
 Delete Attachment
 
@@ -51,7 +51,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Attachment
-        api_response = api_instance.delete_attachment(app_id, attachment_delete_body)
+        api_response = api_instance.delete_attachment(app_idattachment_delete_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AttachmentsApi->delete_attachment: %s\n" % e)
@@ -91,7 +91,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Attachment
-        api_response = api_instance.delete_attachment(app_id, attachment_delete_body)
+        api_response = api_instance.delete_attachment(app_idattachment_delete_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AttachmentsApi->delete_attachment: %s\n" % e)
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## upload_attachment
-> AttachmentResponse upload_attachment(app_id, access, source, _for=_for, conversation_id=conversation_id)
+> AttachmentResponse upload_attachment(app_idaccesssourcevar_for=var_forconversation_id=conversation_id)
 
 Upload Attachment
 
@@ -165,13 +165,13 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.AttachmentsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     access = 'public' # str | The access level for the attachment. Currently the only available access level is public. Private is not supported. (default to 'public')
-    source = '/path/to/file' # file | 
-    _for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
+    source = None # bytearray | 
+    var_for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
     conversation_id = 'c616a583e4c240a871818541' # str | Links the attachment getting uploaded to the conversation ID. (optional)
 
     try:
         # Upload Attachment
-        api_response = api_instance.upload_attachment(app_id, access, source, _for=_for, conversation_id=conversation_id)
+        api_response = api_instance.upload_attachment(app_idaccesssourcevar_for=var_forconversation_id=conversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AttachmentsApi->upload_attachment: %s\n" % e)
@@ -208,13 +208,13 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     api_instance = sunshine_conversations_client.AttachmentsApi(api_client)
     app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
     access = 'public' # str | The access level for the attachment. Currently the only available access level is public. Private is not supported. (default to 'public')
-    source = '/path/to/file' # file | 
-    _for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
+    source = None # bytearray | 
+    var_for = 'message' # str | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. (optional)
     conversation_id = 'c616a583e4c240a871818541' # str | Links the attachment getting uploaded to the conversation ID. (optional)
 
     try:
         # Upload Attachment
-        api_response = api_instance.upload_attachment(app_id, access, source, _for=_for, conversation_id=conversation_id)
+        api_response = api_instance.upload_attachment(app_idaccesssourcevar_for=var_forconversation_id=conversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AttachmentsApi->upload_attachment: %s\n" % e)
@@ -226,8 +226,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **str**| Identifies the app. | 
  **access** | **str**| The access level for the attachment. Currently the only available access level is public. Private is not supported. | [default to &#39;public&#39;]
- **source** | **file**|  | 
- **_for** | **str**| Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. | [optional] 
+ **source** | **bytearray**|  | 
+ **var_for** | **str**| Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. | [optional] 
  **conversation_id** | **str**| Links the attachment getting uploaded to the conversation ID. | [optional] 
 
 ### Return type

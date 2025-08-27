@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## join_conversation
-> ParticipantResponse join_conversation(app_id, conversation_id, participant_join_body)
+> ParticipantResponse join_conversation(app_idconversation_idparticipant_join_body)
 
 Join Conversation
 
@@ -53,7 +53,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Join Conversation
-        api_response = api_instance.join_conversation(app_id, conversation_id, participant_join_body)
+        api_response = api_instance.join_conversation(app_idconversation_idparticipant_join_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->join_conversation: %s\n" % e)
@@ -94,7 +94,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Join Conversation
-        api_response = api_instance.join_conversation(app_id, conversation_id, participant_join_body)
+        api_response = api_instance.join_conversation(app_idconversation_idparticipant_join_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->join_conversation: %s\n" % e)
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## leave_conversation
-> object leave_conversation(app_id, conversation_id, participant_leave_body)
+> object leave_conversation(app_idconversation_idparticipant_leave_body)
 
 Leave Conversation
 
@@ -174,7 +174,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Leave Conversation
-        api_response = api_instance.leave_conversation(app_id, conversation_id, participant_leave_body)
+        api_response = api_instance.leave_conversation(app_idconversation_idparticipant_leave_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->leave_conversation: %s\n" % e)
@@ -215,7 +215,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Leave Conversation
-        api_response = api_instance.leave_conversation(app_id, conversation_id, participant_leave_body)
+        api_response = api_instance.leave_conversation(app_idconversation_idparticipant_leave_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->leave_conversation: %s\n" % e)
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_participants
-> ParticipantListResponse list_participants(app_id, conversation_id, page=page)
+> ParticipantListResponse list_participants(app_idconversation_idpage=page)
 
 List Participants
 
@@ -294,7 +294,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Participants
-        api_response = api_instance.list_participants(app_id, conversation_id, page=page)
+        api_response = api_instance.list_participants(app_idconversation_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->list_participants: %s\n" % e)
@@ -335,7 +335,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Participants
-        api_response = api_instance.list_participants(app_id, conversation_id, page=page)
+        api_response = api_instance.list_participants(app_idconversation_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ParticipantsApi->list_participants: %s\n" % e)

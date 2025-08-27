@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 ## create_conversation
-> ConversationResponse create_conversation(app_id, conversation_create_body)
+> ConversationResponse create_conversation(app_idconversation_create_body)
 
 Create Conversation
 
@@ -56,7 +56,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Conversation
-        api_response = api_instance.create_conversation(app_id, conversation_create_body)
+        api_response = api_instance.create_conversation(app_idconversation_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->create_conversation: %s\n" % e)
@@ -96,7 +96,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Conversation
-        api_response = api_instance.create_conversation(app_id, conversation_create_body)
+        api_response = api_instance.create_conversation(app_idconversation_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->create_conversation: %s\n" % e)
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_conversation
-> object delete_conversation(app_id, conversation_id)
+> object delete_conversation(app_idconversation_id)
 
 Delete Conversation
 
@@ -173,7 +173,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Conversation
-        api_response = api_instance.delete_conversation(app_id, conversation_id)
+        api_response = api_instance.delete_conversation(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->delete_conversation: %s\n" % e)
@@ -213,7 +213,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Conversation
-        api_response = api_instance.delete_conversation(app_id, conversation_id)
+        api_response = api_instance.delete_conversation(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->delete_conversation: %s\n" % e)
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## download_message_ref
-> dict(str, object) download_message_ref(app_id, conversation_id, download_message_ref_body)
+> Dict[str, object] download_message_ref(app_idconversation_iddownload_message_ref_body)
 
 Download Message Ref
 
@@ -292,7 +292,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Download Message Ref
-        api_response = api_instance.download_message_ref(app_id, conversation_id, download_message_ref_body)
+        api_response = api_instance.download_message_ref(app_idconversation_iddownload_message_ref_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->download_message_ref: %s\n" % e)
@@ -333,7 +333,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Download Message Ref
-        api_response = api_instance.download_message_ref(app_id, conversation_id, download_message_ref_body)
+        api_response = api_instance.download_message_ref(app_idconversation_iddownload_message_ref_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->download_message_ref: %s\n" % e)
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**dict(str, object)**
+**Dict[str, object]**
 
 ### Authorization
 
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_conversation
-> ConversationResponse get_conversation(app_id, conversation_id)
+> ConversationResponse get_conversation(app_idconversation_id)
 
 Get Conversation
 
@@ -410,7 +410,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Conversation
-        api_response = api_instance.get_conversation(app_id, conversation_id)
+        api_response = api_instance.get_conversation(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->get_conversation: %s\n" % e)
@@ -450,7 +450,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Conversation
-        api_response = api_instance.get_conversation(app_id, conversation_id)
+        api_response = api_instance.get_conversation(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->get_conversation: %s\n" % e)
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_conversations
-> ConversationListResponse list_conversations(app_id, filter, page=page)
+> ConversationListResponse list_conversations(app_idfilterpage=page)
 
 List Conversations
 
@@ -528,7 +528,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Conversations
-        api_response = api_instance.list_conversations(app_id, filter, page=page)
+        api_response = api_instance.list_conversations(app_idfilterpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->list_conversations: %s\n" % e)
@@ -569,7 +569,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Conversations
-        api_response = api_instance.list_conversations(app_id, filter, page=page)
+        api_response = api_instance.list_conversations(app_idfilterpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->list_conversations: %s\n" % e)
@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## post_conversion_events
-> dict(str, object) post_conversion_events(app_id, conversation_id, conversion_events_body)
+> Dict[str, object] post_conversion_events(app_idconversation_idconversion_events_body)
 
 Post Conversion Events
 
@@ -649,7 +649,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Conversion Events
-        api_response = api_instance.post_conversion_events(app_id, conversation_id, conversion_events_body)
+        api_response = api_instance.post_conversion_events(app_idconversation_idconversion_events_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->post_conversion_events: %s\n" % e)
@@ -690,7 +690,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Conversion Events
-        api_response = api_instance.post_conversion_events(app_id, conversation_id, conversion_events_body)
+        api_response = api_instance.post_conversion_events(app_idconversation_idconversion_events_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->post_conversion_events: %s\n" % e)
@@ -706,7 +706,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**dict(str, object)**
+**Dict[str, object]**
 
 ### Authorization
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_conversation
-> ConversationResponse update_conversation(app_id, conversation_id, conversation_update_body)
+> ConversationResponse update_conversation(app_idconversation_idconversation_update_body)
 
 Update Conversation
 
@@ -768,7 +768,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Conversation
-        api_response = api_instance.update_conversation(app_id, conversation_id, conversation_update_body)
+        api_response = api_instance.update_conversation(app_idconversation_idconversation_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->update_conversation: %s\n" % e)
@@ -809,7 +809,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Conversation
-        api_response = api_instance.update_conversation(app_id, conversation_id, conversation_update_body)
+        api_response = api_instance.update_conversation(app_idconversation_idconversation_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ConversationsApi->update_conversation: %s\n" % e)

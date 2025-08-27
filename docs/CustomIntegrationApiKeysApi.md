@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## create_custom_integration_key
-> IntegrationApiKeyResponse create_custom_integration_key(app_id, integration_id, integration_api_key)
+> IntegrationApiKeyResponse create_custom_integration_key(app_idintegration_idintegration_api_key)
 
 Create Integration Key
 
@@ -54,7 +54,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Integration Key
-        api_response = api_instance.create_custom_integration_key(app_id, integration_id, integration_api_key)
+        api_response = api_instance.create_custom_integration_key(app_idintegration_idintegration_api_key)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->create_custom_integration_key: %s\n" % e)
@@ -95,7 +95,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Integration Key
-        api_response = api_instance.create_custom_integration_key(app_id, integration_id, integration_api_key)
+        api_response = api_instance.create_custom_integration_key(app_idintegration_idintegration_api_key)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->create_custom_integration_key: %s\n" % e)
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_custom_integration_key
-> object delete_custom_integration_key(app_id, integration_id, key_id)
+> object delete_custom_integration_key(app_idintegration_idkey_id)
 
 Delete Integration Key
 
@@ -173,7 +173,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Integration Key
-        api_response = api_instance.delete_custom_integration_key(app_id, integration_id, key_id)
+        api_response = api_instance.delete_custom_integration_key(app_idintegration_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->delete_custom_integration_key: %s\n" % e)
@@ -214,7 +214,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Integration Key
-        api_response = api_instance.delete_custom_integration_key(app_id, integration_id, key_id)
+        api_response = api_instance.delete_custom_integration_key(app_idintegration_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->delete_custom_integration_key: %s\n" % e)
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_custom_integration_key
-> IntegrationApiKeyResponse get_custom_integration_key(app_id, integration_id, key_id)
+> IntegrationApiKeyResponse get_custom_integration_key(app_idintegration_idkey_id)
 
 Get Integration Key
 
@@ -292,7 +292,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Integration Key
-        api_response = api_instance.get_custom_integration_key(app_id, integration_id, key_id)
+        api_response = api_instance.get_custom_integration_key(app_idintegration_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->get_custom_integration_key: %s\n" % e)
@@ -333,7 +333,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Integration Key
-        api_response = api_instance.get_custom_integration_key(app_id, integration_id, key_id)
+        api_response = api_instance.get_custom_integration_key(app_idintegration_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->get_custom_integration_key: %s\n" % e)
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_custom_integration_keys
-> IntegrationApiKeyListResponse list_custom_integration_keys(app_id, integration_id)
+> IntegrationApiKeyListResponse list_custom_integration_keys(app_idintegration_id)
 
 List Integration Keys
 
@@ -410,7 +410,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Integration Keys
-        api_response = api_instance.list_custom_integration_keys(app_id, integration_id)
+        api_response = api_instance.list_custom_integration_keys(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->list_custom_integration_keys: %s\n" % e)
@@ -450,7 +450,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Integration Keys
-        api_response = api_instance.list_custom_integration_keys(app_id, integration_id)
+        api_response = api_instance.list_custom_integration_keys(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomIntegrationApiKeysApi->list_custom_integration_keys: %s\n" % e)

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## get_device
-> DeviceResponse get_device(app_id, user_id_or_external_id, device_id)
+> DeviceResponse get_device(app_iduser_id_or_external_iddevice_id)
 
 Get Device
 
@@ -52,7 +52,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Device
-        api_response = api_instance.get_device(app_id, user_id_or_external_id, device_id)
+        api_response = api_instance.get_device(app_iduser_id_or_external_iddevice_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DevicesApi->get_device: %s\n" % e)
@@ -93,7 +93,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Device
-        api_response = api_instance.get_device(app_id, user_id_or_external_id, device_id)
+        api_response = api_instance.get_device(app_iduser_id_or_external_iddevice_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DevicesApi->get_device: %s\n" % e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_devices
-> DeviceListResponse list_devices(app_id, user_id_or_external_id)
+> DeviceListResponse list_devices(app_iduser_id_or_external_id)
 
 List Devices
 
@@ -171,7 +171,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Devices
-        api_response = api_instance.list_devices(app_id, user_id_or_external_id)
+        api_response = api_instance.list_devices(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DevicesApi->list_devices: %s\n" % e)
@@ -211,7 +211,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Devices
-        api_response = api_instance.list_devices(app_id, user_id_or_external_id)
+        api_response = api_instance.list_devices(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DevicesApi->list_devices: %s\n" % e)

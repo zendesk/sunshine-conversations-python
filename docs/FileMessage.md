@@ -1,6 +1,8 @@
 # FileMessage
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The type of message. | [default to 'file']
@@ -14,6 +16,23 @@ Name | Type | Description | Notes
 **markdown_text** | **str** | Markdown text content of the message. Can be provided in place of &#x60;text&#x60;. Cannot be used with &#x60;htmlText&#x60;. Will be converted to &#x60;htmlText&#x60; upon reception. If converted &#x60;htmlText&#x60; exceeds 4096 characters, the message will be rejected. If no &#x60;text&#x60; is provided, will be converted to &#x60;text&#x60; upon reception to be displayed on channels that do not support rich text. See [rich text](https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/structured-messages/#rich-text) documentation for more information. | [optional] 
 **attachment_id** | **str** | An identifier used by Sunshine Conversations for internal purposes. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.file_message import FileMessage
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of FileMessage from a JSON string
+file_message_instance = FileMessage.from_json(json)
+# print the JSON string representation of the object
+print(FileMessage.to_json())
+
+# convert the object into a dict
+file_message_dict = file_message_instance.to_dict()
+# create an instance of FileMessage from a dict
+file_message_from_dict = FileMessage.from_dict(file_message_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

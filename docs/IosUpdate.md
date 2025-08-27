@@ -1,6 +1,8 @@
 # IosUpdate
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
@@ -12,6 +14,23 @@ Name | Type | Description | Notes
 **can_user_see_conversation_list** | **bool** | Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where &#x60;settings.multiConvoEnabled&#x60; is set to &#x60;true&#x60;*.  | [optional] 
 **can_user_create_more_conversations** | **bool** | Allows users to create more than one conversation on the iOS integration. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.ios_update import IosUpdate
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of IosUpdate from a JSON string
+ios_update_instance = IosUpdate.from_json(json)
+# print the JSON string representation of the object
+print(IosUpdate.to_json())
+
+# convert the object into a dict
+ios_update_dict = ios_update_instance.to_dict()
+# create an instance of IosUpdate from a dict
+ios_update_from_dict = IosUpdate.from_dict(ios_update_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

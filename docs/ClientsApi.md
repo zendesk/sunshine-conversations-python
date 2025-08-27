@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## create_client
-> ClientResponse create_client(app_id, user_id_or_external_id, client_create)
+> ClientResponse create_client(app_iduser_id_or_external_idclient_create)
 
 Create Client
 
@@ -53,7 +53,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Client
-        api_response = api_instance.create_client(app_id, user_id_or_external_id, client_create)
+        api_response = api_instance.create_client(app_iduser_id_or_external_idclient_create)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->create_client: %s\n" % e)
@@ -94,7 +94,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Client
-        api_response = api_instance.create_client(app_id, user_id_or_external_id, client_create)
+        api_response = api_instance.create_client(app_iduser_id_or_external_idclient_create)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->create_client: %s\n" % e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_clients
-> ClientListResponse list_clients(app_id, user_id_or_external_id, page=page)
+> ClientListResponse list_clients(app_iduser_id_or_external_idpage=page)
 
 List Clients
 
@@ -172,7 +172,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Clients
-        api_response = api_instance.list_clients(app_id, user_id_or_external_id, page=page)
+        api_response = api_instance.list_clients(app_iduser_id_or_external_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->list_clients: %s\n" % e)
@@ -213,7 +213,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Clients
-        api_response = api_instance.list_clients(app_id, user_id_or_external_id, page=page)
+        api_response = api_instance.list_clients(app_iduser_id_or_external_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->list_clients: %s\n" % e)
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## remove_client
-> object remove_client(app_id, user_id_or_external_id, client_id)
+> object remove_client(app_iduser_id_or_external_idclient_id)
 
 Remove Client
 
@@ -292,7 +292,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Remove Client
-        api_response = api_instance.remove_client(app_id, user_id_or_external_id, client_id)
+        api_response = api_instance.remove_client(app_iduser_id_or_external_idclient_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->remove_client: %s\n" % e)
@@ -333,7 +333,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Remove Client
-        api_response = api_instance.remove_client(app_id, user_id_or_external_id, client_id)
+        api_response = api_instance.remove_client(app_iduser_id_or_external_idclient_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ClientsApi->remove_client: %s\n" % e)

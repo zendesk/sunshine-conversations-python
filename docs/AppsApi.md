@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_apps
-> AppListResponse list_apps(page=page, filter=filter)
+> AppListResponse list_apps(page=pagefilter=filter)
 
 List Apps
 
@@ -397,7 +397,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Apps
-        api_response = api_instance.list_apps(page=page, filter=filter)
+        api_response = api_instance.list_apps(page=pagefilter=filter)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppsApi->list_apps: %s\n" % e)
@@ -437,7 +437,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Apps
-        api_response = api_instance.list_apps(page=page, filter=filter)
+        api_response = api_instance.list_apps(page=pagefilter=filter)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppsApi->list_apps: %s\n" % e)
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_app
-> AppResponse update_app(app_id, app_update_body)
+> AppResponse update_app(app_idapp_update_body)
 
 Update App
 
@@ -515,7 +515,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update App
-        api_response = api_instance.update_app(app_id, app_update_body)
+        api_response = api_instance.update_app(app_idapp_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppsApi->update_app: %s\n" % e)
@@ -555,7 +555,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update App
-        api_response = api_instance.update_app(app_id, app_update_body)
+        api_response = api_instance.update_app(app_idapp_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppsApi->update_app: %s\n" % e)

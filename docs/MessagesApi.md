@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## delete_all_messages
-> object delete_all_messages(app_id, conversation_id)
+> object delete_all_messages(app_idconversation_id)
 
 Delete All Messages
 
@@ -53,7 +53,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete All Messages
-        api_response = api_instance.delete_all_messages(app_id, conversation_id)
+        api_response = api_instance.delete_all_messages(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->delete_all_messages: %s\n" % e)
@@ -93,7 +93,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete All Messages
-        api_response = api_instance.delete_all_messages(app_id, conversation_id)
+        api_response = api_instance.delete_all_messages(app_idconversation_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->delete_all_messages: %s\n" % e)
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_message
-> object delete_message(app_id, conversation_id, message_id)
+> object delete_message(app_idconversation_idmessage_id)
 
 Delete Message
 
@@ -171,7 +171,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Message
-        api_response = api_instance.delete_message(app_id, conversation_id, message_id)
+        api_response = api_instance.delete_message(app_idconversation_idmessage_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->delete_message: %s\n" % e)
@@ -212,7 +212,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Message
-        api_response = api_instance.delete_message(app_id, conversation_id, message_id)
+        api_response = api_instance.delete_message(app_idconversation_idmessage_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->delete_message: %s\n" % e)
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_messages
-> MessageListResponse list_messages(app_id, conversation_id, page=page)
+> MessageListResponse list_messages(app_idconversation_idpage=page)
 
 List Messages
 
@@ -291,7 +291,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Messages
-        api_response = api_instance.list_messages(app_id, conversation_id, page=page)
+        api_response = api_instance.list_messages(app_idconversation_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->list_messages: %s\n" % e)
@@ -332,7 +332,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Messages
-        api_response = api_instance.list_messages(app_id, conversation_id, page=page)
+        api_response = api_instance.list_messages(app_idconversation_idpage=page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->list_messages: %s\n" % e)
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## post_message
-> MessagePostResponse post_message(app_id, conversation_id, message_post)
+> MessagePostResponse post_message(app_idconversation_idmessage_post)
 
 Post Message
 
@@ -411,7 +411,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Message
-        api_response = api_instance.post_message(app_id, conversation_id, message_post)
+        api_response = api_instance.post_message(app_idconversation_idmessage_post)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->post_message: %s\n" % e)
@@ -452,7 +452,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Message
-        api_response = api_instance.post_message(app_id, conversation_id, message_post)
+        api_response = api_instance.post_message(app_idconversation_idmessage_post)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling MessagesApi->post_message: %s\n" % e)

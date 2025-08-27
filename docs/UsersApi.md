@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 ## create_user
-> UserResponse create_user(app_id, user_create_body)
+> UserResponse create_user(app_iduser_create_body)
 
 Create User
 
@@ -55,7 +55,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create User
-        api_response = api_instance.create_user(app_id, user_create_body)
+        api_response = api_instance.create_user(app_iduser_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->create_user: %s\n" % e)
@@ -95,7 +95,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create User
-        api_response = api_instance.create_user(app_id, user_create_body)
+        api_response = api_instance.create_user(app_iduser_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->create_user: %s\n" % e)
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_user
-> object delete_user(app_id, user_id_or_external_id)
+> object delete_user(app_iduser_id_or_external_id)
 
 Delete User
 
@@ -172,7 +172,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete User
-        api_response = api_instance.delete_user(app_id, user_id_or_external_id)
+        api_response = api_instance.delete_user(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->delete_user: %s\n" % e)
@@ -212,7 +212,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete User
-        api_response = api_instance.delete_user(app_id, user_id_or_external_id)
+        api_response = api_instance.delete_user(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->delete_user: %s\n" % e)
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_user_personal_information
-> UserResponse delete_user_personal_information(app_id, user_id_or_external_id)
+> UserResponse delete_user_personal_information(app_iduser_id_or_external_id)
 
 Delete User Personal Information
 
@@ -289,7 +289,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete User Personal Information
-        api_response = api_instance.delete_user_personal_information(app_id, user_id_or_external_id)
+        api_response = api_instance.delete_user_personal_information(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->delete_user_personal_information: %s\n" % e)
@@ -329,7 +329,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete User Personal Information
-        api_response = api_instance.delete_user_personal_information(app_id, user_id_or_external_id)
+        api_response = api_instance.delete_user_personal_information(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->delete_user_personal_information: %s\n" % e)
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_user
-> UserResponse get_user(app_id, user_id_or_external_id)
+> UserResponse get_user(app_iduser_id_or_external_id)
 
 Get User
 
@@ -406,7 +406,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get User
-        api_response = api_instance.get_user(app_id, user_id_or_external_id)
+        api_response = api_instance.get_user(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
@@ -446,7 +446,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get User
-        api_response = api_instance.get_user(app_id, user_id_or_external_id)
+        api_response = api_instance.get_user(app_iduser_id_or_external_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->get_user: %s\n" % e)
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## sync_user
-> UserResponse sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
+> UserResponse sync_user(app_idzendesk_idsync_user_body=sync_user_body)
 
 Synchronize User
 
@@ -524,7 +524,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Synchronize User
-        api_response = api_instance.sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
+        api_response = api_instance.sync_user(app_idzendesk_idsync_user_body=sync_user_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->sync_user: %s\n" % e)
@@ -565,7 +565,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Synchronize User
-        api_response = api_instance.sync_user(app_id, zendesk_id, sync_user_body=sync_user_body)
+        api_response = api_instance.sync_user(app_idzendesk_idsync_user_body=sync_user_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->sync_user: %s\n" % e)
@@ -600,7 +600,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_user
-> UserResponse update_user(app_id, user_id_or_external_id, user_update_body)
+> UserResponse update_user(app_iduser_id_or_external_iduser_update_body)
 
 Update User
 
@@ -643,7 +643,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update User
-        api_response = api_instance.update_user(app_id, user_id_or_external_id, user_update_body)
+        api_response = api_instance.update_user(app_iduser_id_or_external_iduser_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->update_user: %s\n" % e)
@@ -684,7 +684,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update User
-        api_response = api_instance.update_user(app_id, user_id_or_external_id, user_update_body)
+        api_response = api_instance.update_user(app_iduser_id_or_external_iduser_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UsersApi->update_user: %s\n" % e)

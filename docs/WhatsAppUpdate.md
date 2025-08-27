@@ -1,6 +1,8 @@
 # WhatsAppUpdate
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
@@ -9,6 +11,23 @@ Name | Type | Description | Notes
 **account_id** | **str** | The business ID associated with the WhatsApp account. In combination with accountManagementAccessToken, it’s used for Message Template Reconstruction. | [optional] 
 **account_management_access_token** | **str** | An access token associated with the accountId used to query the WhatsApp Account Management API. In combination with accountId, it’s used for Message Template Reconstruction. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.whats_app_update import WhatsAppUpdate
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of WhatsAppUpdate from a JSON string
+whats_app_update_instance = WhatsAppUpdate.from_json(json)
+# print the JSON string representation of the object
+print(WhatsAppUpdate.to_json())
+
+# convert the object into a dict
+whats_app_update_dict = whats_app_update_instance.to_dict()
+# create an instance of WhatsAppUpdate from a dict
+whats_app_update_from_dict = WhatsAppUpdate.from_dict(whats_app_update_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

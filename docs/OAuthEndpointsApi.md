@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## authorize
-> authorize(client_id, response_type, state=state, redirect_uri=redirect_uri)
+> authorize(client_idresponse_typestate=stateredirect_uri=redirect_uri)
 
 Authorize
 
@@ -42,7 +42,7 @@ with sunshine_conversations_client.ApiClient() as api_client:
 
     try:
         # Authorize
-        api_instance.authorize(client_id, response_type, state=state, redirect_uri=redirect_uri)
+        api_instance.authorize(client_idresponse_typestate=stateredirect_uri=redirect_uri)
     except ApiException as e:
         print("Exception when calling OAuthEndpointsApi->authorize: %s\n" % e)
 ```
@@ -77,7 +77,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_token
-> object get_token(inline_object)
+> GetToken200Response get_token(get_token_request)
 
 Get Token
 
@@ -101,11 +101,11 @@ configuration = sunshine_conversations_client.Configuration(
 with sunshine_conversations_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = sunshine_conversations_client.OAuthEndpointsApi(api_client)
-    inline_object = sunshine_conversations_client.InlineObject() # InlineObject | 
+    get_token_request = sunshine_conversations_client.GetTokenRequest() # GetTokenRequest | 
 
     try:
         # Get Token
-        api_response = api_instance.get_token(inline_object)
+        api_response = api_instance.get_token(get_token_request)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling OAuthEndpointsApi->get_token: %s\n" % e)
@@ -115,11 +115,11 @@ with sunshine_conversations_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**InlineObject**](InlineObject.md)|  | 
+ **get_token_request** | [**GetTokenRequest**](GetTokenRequest.md)|  | 
 
 ### Return type
 
-**object**
+[**GetToken200Response**](GetToken200Response.md)
 
 ### Authorization
 

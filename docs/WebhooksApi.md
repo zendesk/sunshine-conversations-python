@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## create_webhook
-> WebhookResponse create_webhook(app_id, integration_id, webhook_create_body)
+> WebhookResponse create_webhook(app_idintegration_idwebhook_create_body)
 
 Create Webhook
 
@@ -55,7 +55,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Webhook
-        api_response = api_instance.create_webhook(app_id, integration_id, webhook_create_body)
+        api_response = api_instance.create_webhook(app_idintegration_idwebhook_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->create_webhook: %s\n" % e)
@@ -96,7 +96,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Webhook
-        api_response = api_instance.create_webhook(app_id, integration_id, webhook_create_body)
+        api_response = api_instance.create_webhook(app_idintegration_idwebhook_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->create_webhook: %s\n" % e)
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_webhook
-> object delete_webhook(app_id, integration_id, webhook_id)
+> object delete_webhook(app_idintegration_idwebhook_id)
 
 Delete Webhook
 
@@ -177,7 +177,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Webhook
-        api_response = api_instance.delete_webhook(app_id, integration_id, webhook_id)
+        api_response = api_instance.delete_webhook(app_idintegration_idwebhook_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->delete_webhook: %s\n" % e)
@@ -218,7 +218,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Webhook
-        api_response = api_instance.delete_webhook(app_id, integration_id, webhook_id)
+        api_response = api_instance.delete_webhook(app_idintegration_idwebhook_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->delete_webhook: %s\n" % e)
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_webhook
-> WebhookResponse get_webhook(app_id, integration_id, webhook_id)
+> WebhookResponse get_webhook(app_idintegration_idwebhook_id)
 
 Get Webhook
 
@@ -297,7 +297,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Webhook
-        api_response = api_instance.get_webhook(app_id, integration_id, webhook_id)
+        api_response = api_instance.get_webhook(app_idintegration_idwebhook_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->get_webhook: %s\n" % e)
@@ -338,7 +338,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Webhook
-        api_response = api_instance.get_webhook(app_id, integration_id, webhook_id)
+        api_response = api_instance.get_webhook(app_idintegration_idwebhook_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->get_webhook: %s\n" % e)
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_webhooks
-> WebhookListResponse list_webhooks(app_id, integration_id)
+> WebhookListResponse list_webhooks(app_idintegration_id)
 
 List Webhooks
 
@@ -416,7 +416,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Webhooks
-        api_response = api_instance.list_webhooks(app_id, integration_id)
+        api_response = api_instance.list_webhooks(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->list_webhooks: %s\n" % e)
@@ -456,7 +456,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Webhooks
-        api_response = api_instance.list_webhooks(app_id, integration_id)
+        api_response = api_instance.list_webhooks(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->list_webhooks: %s\n" % e)
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_webhook
-> WebhookResponse update_webhook(app_id, integration_id, webhook_id, webhook_body)
+> WebhookResponse update_webhook(app_idintegration_idwebhook_idwebhook_body)
 
 Update Webhook
 
@@ -536,7 +536,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Webhook
-        api_response = api_instance.update_webhook(app_id, integration_id, webhook_id, webhook_body)
+        api_response = api_instance.update_webhook(app_idintegration_idwebhook_idwebhook_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
@@ -578,7 +578,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Webhook
-        api_response = api_instance.update_webhook(app_id, integration_id, webhook_id, webhook_body)
+        api_response = api_instance.update_webhook(app_idintegration_idwebhook_idwebhook_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)

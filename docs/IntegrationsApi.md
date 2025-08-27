@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## create_integration
-> IntegrationResponse create_integration(app_id, integration)
+> IntegrationResponse create_integration(app_idintegration)
 
 Create Integration
 
@@ -54,7 +54,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Integration
-        api_response = api_instance.create_integration(app_id, integration)
+        api_response = api_instance.create_integration(app_idintegration)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->create_integration: %s\n" % e)
@@ -94,7 +94,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Integration
-        api_response = api_instance.create_integration(app_id, integration)
+        api_response = api_instance.create_integration(app_idintegration)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->create_integration: %s\n" % e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_integration
-> object delete_integration(app_id, integration_id)
+> object delete_integration(app_idintegration_id)
 
 Delete Integration
 
@@ -171,7 +171,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Integration
-        api_response = api_instance.delete_integration(app_id, integration_id)
+        api_response = api_instance.delete_integration(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->delete_integration: %s\n" % e)
@@ -211,7 +211,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Integration
-        api_response = api_instance.delete_integration(app_id, integration_id)
+        api_response = api_instance.delete_integration(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->delete_integration: %s\n" % e)
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_integration
-> IntegrationResponse get_integration(app_id, integration_id)
+> IntegrationResponse get_integration(app_idintegration_id)
 
 Get Integration
 
@@ -289,7 +289,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Integration
-        api_response = api_instance.get_integration(app_id, integration_id)
+        api_response = api_instance.get_integration(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->get_integration: %s\n" % e)
@@ -329,7 +329,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Integration
-        api_response = api_instance.get_integration(app_id, integration_id)
+        api_response = api_instance.get_integration(app_idintegration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->get_integration: %s\n" % e)
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_integrations
-> IntegrationListResponse list_integrations(app_id, page=page, filter=filter)
+> IntegrationListResponse list_integrations(app_idpage=pagefilter=filter)
 
 List Integrations
 
@@ -407,7 +407,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Integrations
-        api_response = api_instance.list_integrations(app_id, page=page, filter=filter)
+        api_response = api_instance.list_integrations(app_idpage=pagefilter=filter)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->list_integrations: %s\n" % e)
@@ -448,7 +448,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Integrations
-        api_response = api_instance.list_integrations(app_id, page=page, filter=filter)
+        api_response = api_instance.list_integrations(app_idpage=pagefilter=filter)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->list_integrations: %s\n" % e)
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_integration
-> IntegrationResponse update_integration(app_id, integration_id, integration_update)
+> IntegrationResponse update_integration(app_idintegration_idintegration_update)
 
 Update Integration
 
@@ -527,7 +527,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Integration
-        api_response = api_instance.update_integration(app_id, integration_id, integration_update)
+        api_response = api_instance.update_integration(app_idintegration_idintegration_update)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->update_integration: %s\n" % e)
@@ -568,7 +568,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Integration
-        api_response = api_instance.update_integration(app_id, integration_id, integration_update)
+        api_response = api_instance.update_integration(app_idintegration_idintegration_update)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IntegrationsApi->update_integration: %s\n" % e)

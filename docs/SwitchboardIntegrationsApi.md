@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## create_switchboard_integration
-> SwitchboardIntegrationResponse create_switchboard_integration(app_id, switchboard_id, switchboard_integration_create_body)
+> SwitchboardIntegrationResponse create_switchboard_integration(app_idswitchboard_idswitchboard_integration_create_body)
 
 Create Switchboard Integration
 
@@ -54,7 +54,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Switchboard Integration
-        api_response = api_instance.create_switchboard_integration(app_id, switchboard_id, switchboard_integration_create_body)
+        api_response = api_instance.create_switchboard_integration(app_idswitchboard_idswitchboard_integration_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->create_switchboard_integration: %s\n" % e)
@@ -95,7 +95,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Switchboard Integration
-        api_response = api_instance.create_switchboard_integration(app_id, switchboard_id, switchboard_integration_create_body)
+        api_response = api_instance.create_switchboard_integration(app_idswitchboard_idswitchboard_integration_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->create_switchboard_integration: %s\n" % e)
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_switchboard_integration
-> object delete_switchboard_integration(app_id, switchboard_id, switchboard_integration_id)
+> object delete_switchboard_integration(app_idswitchboard_idswitchboard_integration_id)
 
 Delete Switchboard Integration
 
@@ -175,7 +175,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Switchboard Integration
-        api_response = api_instance.delete_switchboard_integration(app_id, switchboard_id, switchboard_integration_id)
+        api_response = api_instance.delete_switchboard_integration(app_idswitchboard_idswitchboard_integration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->delete_switchboard_integration: %s\n" % e)
@@ -216,7 +216,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Switchboard Integration
-        api_response = api_instance.delete_switchboard_integration(app_id, switchboard_id, switchboard_integration_id)
+        api_response = api_instance.delete_switchboard_integration(app_idswitchboard_idswitchboard_integration_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->delete_switchboard_integration: %s\n" % e)
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## list_switchboard_integrations
-> SwitchboardIntegrationListResponse list_switchboard_integrations(app_id, switchboard_id)
+> SwitchboardIntegrationListResponse list_switchboard_integrations(app_idswitchboard_id)
 
 List Switchboard Integrations
 
@@ -294,7 +294,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Switchboard Integrations
-        api_response = api_instance.list_switchboard_integrations(app_id, switchboard_id)
+        api_response = api_instance.list_switchboard_integrations(app_idswitchboard_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->list_switchboard_integrations: %s\n" % e)
@@ -334,7 +334,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Switchboard Integrations
-        api_response = api_instance.list_switchboard_integrations(app_id, switchboard_id)
+        api_response = api_instance.list_switchboard_integrations(app_idswitchboard_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->list_switchboard_integrations: %s\n" % e)
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_switchboard_integration
-> SwitchboardIntegrationResponse update_switchboard_integration(app_id, switchboard_id, switchboard_integration_id, switchboard_integration_update_body)
+> SwitchboardIntegrationResponse update_switchboard_integration(app_idswitchboard_idswitchboard_integration_idswitchboard_integration_update_body)
 
 Update Switchboard Integration
 
@@ -413,7 +413,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Switchboard Integration
-        api_response = api_instance.update_switchboard_integration(app_id, switchboard_id, switchboard_integration_id, switchboard_integration_update_body)
+        api_response = api_instance.update_switchboard_integration(app_idswitchboard_idswitchboard_integration_idswitchboard_integration_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->update_switchboard_integration: %s\n" % e)
@@ -455,7 +455,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Switchboard Integration
-        api_response = api_instance.update_switchboard_integration(app_id, switchboard_id, switchboard_integration_id, switchboard_integration_update_body)
+        api_response = api_instance.update_switchboard_integration(app_idswitchboard_idswitchboard_integration_idswitchboard_integration_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardIntegrationsApi->update_switchboard_integration: %s\n" % e)

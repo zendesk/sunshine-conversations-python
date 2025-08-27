@@ -1,6 +1,8 @@
 # SwitchboardOfferControlFailure
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The unique ID of the event. May be used to ensure that an event is not processed twice in the case of a webhook that is re-tried due to an error or timeout. | [optional] 
@@ -8,6 +10,23 @@ Name | Type | Description | Notes
 **created_at** | **str** | A timestamp signifying when the event was generated. Formatted as &#x60;YYYY-MM-DDThh:mm:ss.SSSZ&#x60;. | [optional] 
 **payload** | [**SwitchboardAcceptControlFailureAllOfPayload**](SwitchboardAcceptControlFailureAllOfPayload.md) |  | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.switchboard_offer_control_failure import SwitchboardOfferControlFailure
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of SwitchboardOfferControlFailure from a JSON string
+switchboard_offer_control_failure_instance = SwitchboardOfferControlFailure.from_json(json)
+# print the JSON string representation of the object
+print(SwitchboardOfferControlFailure.to_json())
+
+# convert the object into a dict
+switchboard_offer_control_failure_dict = switchboard_offer_control_failure_instance.to_dict()
+# create an instance of SwitchboardOfferControlFailure from a dict
+switchboard_offer_control_failure_from_dict = SwitchboardOfferControlFailure.from_dict(switchboard_offer_control_failure_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

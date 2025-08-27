@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## create_app_key
-> AppKeyResponse create_app_key(app_id, app_key_create_body)
+> AppKeyResponse create_app_key(app_idapp_key_create_body)
 
 Create App Key
 
@@ -53,7 +53,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create App Key
-        api_response = api_instance.create_app_key(app_id, app_key_create_body)
+        api_response = api_instance.create_app_key(app_idapp_key_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->create_app_key: %s\n" % e)
@@ -93,7 +93,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create App Key
-        api_response = api_instance.create_app_key(app_id, app_key_create_body)
+        api_response = api_instance.create_app_key(app_idapp_key_create_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->create_app_key: %s\n" % e)
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_app_key
-> object delete_app_key(app_id, key_id)
+> object delete_app_key(app_idkey_id)
 
 Delete App Key
 
@@ -169,7 +169,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete App Key
-        api_response = api_instance.delete_app_key(app_id, key_id)
+        api_response = api_instance.delete_app_key(app_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->delete_app_key: %s\n" % e)
@@ -209,7 +209,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete App Key
-        api_response = api_instance.delete_app_key(app_id, key_id)
+        api_response = api_instance.delete_app_key(app_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->delete_app_key: %s\n" % e)
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## get_app_key
-> AppKeyResponse get_app_key(app_id, key_id)
+> AppKeyResponse get_app_key(app_idkey_id)
 
 Get App Key
 
@@ -286,7 +286,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get App Key
-        api_response = api_instance.get_app_key(app_id, key_id)
+        api_response = api_instance.get_app_key(app_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->get_app_key: %s\n" % e)
@@ -326,7 +326,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get App Key
-        api_response = api_instance.get_app_key(app_id, key_id)
+        api_response = api_instance.get_app_key(app_idkey_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AppKeysApi->get_app_key: %s\n" % e)

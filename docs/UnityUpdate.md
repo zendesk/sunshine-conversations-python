@@ -1,6 +1,8 @@
 # UnityUpdate
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
@@ -8,6 +10,23 @@ Name | Type | Description | Notes
 **can_user_see_conversation_list** | **bool** | Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where &#x60;settings.multiConvoEnabled&#x60; is set to &#x60;true&#x60;*.  | [optional] 
 **can_user_create_more_conversations** | **bool** | Allows users to create more than one conversation on the Unity integration. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.unity_update import UnityUpdate
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of UnityUpdate from a JSON string
+unity_update_instance = UnityUpdate.from_json(json)
+# print the JSON string representation of the object
+print(UnityUpdate.to_json())
+
+# convert the object into a dict
+unity_update_dict = unity_update_instance.to_dict()
+# create an instance of UnityUpdate from a dict
+unity_update_from_dict = UnityUpdate.from_dict(unity_update_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## delete_switchboard
-> object delete_switchboard(app_id, switchboard_id)
+> object delete_switchboard(app_idswitchboard_id)
 
 Delete Switchboard
 
@@ -168,7 +168,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Switchboard
-        api_response = api_instance.delete_switchboard(app_id, switchboard_id)
+        api_response = api_instance.delete_switchboard(app_idswitchboard_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardsApi->delete_switchboard: %s\n" % e)
@@ -208,7 +208,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Switchboard
-        api_response = api_instance.delete_switchboard(app_id, switchboard_id)
+        api_response = api_instance.delete_switchboard(app_idswitchboard_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardsApi->delete_switchboard: %s\n" % e)
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## update_switchboard
-> SwitchboardResponse update_switchboard(app_id, switchboard_id, switchboard_update_body)
+> SwitchboardResponse update_switchboard(app_idswitchboard_idswitchboard_update_body)
 
 Update Switchboard
 
@@ -400,7 +400,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Switchboard
-        api_response = api_instance.update_switchboard(app_id, switchboard_id, switchboard_update_body)
+        api_response = api_instance.update_switchboard(app_idswitchboard_idswitchboard_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardsApi->update_switchboard: %s\n" % e)
@@ -441,7 +441,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Switchboard
-        api_response = api_instance.update_switchboard(app_id, switchboard_id, switchboard_update_body)
+        api_response = api_instance.update_switchboard(app_idswitchboard_idswitchboard_update_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardsApi->update_switchboard: %s\n" % e)

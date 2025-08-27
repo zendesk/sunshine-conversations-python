@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## accept_control
-> object accept_control(app_id, conversation_id, accept_control_body)
+> object accept_control(app_idconversation_idaccept_control_body)
 
 Accept Control
 
@@ -54,7 +54,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Accept Control
-        api_response = api_instance.accept_control(app_id, conversation_id, accept_control_body)
+        api_response = api_instance.accept_control(app_idconversation_idaccept_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->accept_control: %s\n" % e)
@@ -95,7 +95,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Accept Control
-        api_response = api_instance.accept_control(app_id, conversation_id, accept_control_body)
+        api_response = api_instance.accept_control(app_idconversation_idaccept_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->accept_control: %s\n" % e)
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## offer_control
-> object offer_control(app_id, conversation_id, offer_control_body)
+> object offer_control(app_idconversation_idoffer_control_body)
 
 Offer Control
 
@@ -175,7 +175,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Offer Control
-        api_response = api_instance.offer_control(app_id, conversation_id, offer_control_body)
+        api_response = api_instance.offer_control(app_idconversation_idoffer_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->offer_control: %s\n" % e)
@@ -216,7 +216,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Offer Control
-        api_response = api_instance.offer_control(app_id, conversation_id, offer_control_body)
+        api_response = api_instance.offer_control(app_idconversation_idoffer_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->offer_control: %s\n" % e)
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## pass_control
-> object pass_control(app_id, conversation_id, pass_control_body)
+> object pass_control(app_idconversation_idpass_control_body)
 
 Pass Control
 
@@ -295,7 +295,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Pass Control
-        api_response = api_instance.pass_control(app_id, conversation_id, pass_control_body)
+        api_response = api_instance.pass_control(app_idconversation_idpass_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->pass_control: %s\n" % e)
@@ -336,7 +336,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Pass Control
-        api_response = api_instance.pass_control(app_id, conversation_id, pass_control_body)
+        api_response = api_instance.pass_control(app_idconversation_idpass_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->pass_control: %s\n" % e)
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 ## release_control
-> object release_control(app_id, conversation_id, release_control_body=release_control_body)
+> object release_control(app_idconversation_idrelease_control_body=release_control_body)
 
 Release Control
 
@@ -415,7 +415,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Release Control
-        api_response = api_instance.release_control(app_id, conversation_id, release_control_body=release_control_body)
+        api_response = api_instance.release_control(app_idconversation_idrelease_control_body=release_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->release_control: %s\n" % e)
@@ -456,7 +456,7 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Release Control
-        api_response = api_instance.release_control(app_id, conversation_id, release_control_body=release_control_body)
+        api_response = api_instance.release_control(app_idconversation_idrelease_control_body=release_control_body)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SwitchboardActionsApi->release_control: %s\n" % e)

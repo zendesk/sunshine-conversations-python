@@ -1,6 +1,8 @@
 # IntegrationUpdate
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display_name** | **str** | A human-friendly name used to identify the integration. &#x60;displayName&#x60; can be unset by changing it to &#x60;null&#x60;. | [optional] 
@@ -28,16 +30,33 @@ Name | Type | Description | Notes
 **button_icon_url** | **str** | With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format. | [optional] 
 **button_width** | **str** | With the button style Web Messenger, you have the option of specifying the button width. | [optional] [default to '58']
 **button_height** | **str** | With the button style Web Messenger, you have the option of specifying the button height. | [optional] [default to '58']
-**integration_order** | **list[str]** | Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed. | [optional] 
+**integration_order** | **List[str]** | Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed. | [optional] 
 **business_name** | **str** | A custom business name for the Web Messenger. | [optional] 
 **business_icon_url** | **str** | A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format. | [optional] 
 **background_image_url** | **str** | A background image url for the conversation. Image will be tiled to fit the window. | [optional] 
-**origin_whitelist** | **list[str]** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454: scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ], where scheme is http or https.  | [optional] 
+**origin_whitelist** | **List[str]** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454: scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ], where scheme is http or https.  | [optional] 
 **prechat_capture** | [**PrechatCapture**](PrechatCapture.md) | Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture. | [optional] 
 **hsm_fallback_language** | **str** | Specify a fallback language to use when sending WhatsApp message template using the short hand syntax. Defaults to en_US. See WhatsApp documentation for more info. | [optional] [default to 'en_US']
 **account_id** | **str** | The business ID associated with the WhatsApp account. In combination with accountManagementAccessToken, it’s used for Message Template Reconstruction. | [optional] 
 **account_management_access_token** | **str** | An access token associated with the accountId used to query the WhatsApp Account Management API. In combination with accountId, it’s used for Message Template Reconstruction. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.integration_update import IntegrationUpdate
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of IntegrationUpdate from a JSON string
+integration_update_instance = IntegrationUpdate.from_json(json)
+# print the JSON string representation of the object
+print(IntegrationUpdate.to_json())
+
+# convert the object into a dict
+integration_update_dict = integration_update_instance.to_dict()
+# create an instance of IntegrationUpdate from a dict
+integration_update_from_dict = IntegrationUpdate.from_dict(integration_update_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

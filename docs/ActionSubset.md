@@ -1,13 +1,15 @@
 # ActionSubset
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The type of action. | 
 **text** | **str** | The button text. | 
 **amount** | **int** | The amount being charged. It needs to be specified in cents and is an integer (9.99$ -&gt; 999). | 
 **currency** | **str** | An ISO 4217 standard currency code in lowercase. Used for actions of type buy. | [optional] 
-**metadata** | **dict(str, object)** | Flat object containing custom properties. Strings, numbers and booleans  are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size.  | [optional] 
+**metadata** | **Dict[str, object]** | Flat object containing custom properties. Strings, numbers and booleans  are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size.  | [optional] 
 **uri** | **str** | The webview URI. This is the URI that will open in the webview when clicking the button. | 
 **default** | **bool** | Boolean value indicating whether the action is the default action for a message item in Facebook Messenger. | [optional] 
 **extra_channel_options** | [**ExtraChannelOptions**](ExtraChannelOptions.md) |  | [optional] 
@@ -16,6 +18,23 @@ Name | Type | Description | Notes
 **fallback** | **str** | The fallback uri for channels that don’t support webviews. Used for actions of type webview. | 
 **open_on_receive** | **bool** | Boolean value indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
 
+## Example
+
+```python
+from sunshine_conversations_client.model.action_subset import ActionSubset
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of ActionSubset from a JSON string
+action_subset_instance = ActionSubset.from_json(json)
+# print the JSON string representation of the object
+print(ActionSubset.to_json())
+
+# convert the object into a dict
+action_subset_dict = action_subset_instance.to_dict()
+# create an instance of ActionSubset from a dict
+action_subset_from_dict = ActionSubset.from_dict(action_subset_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
