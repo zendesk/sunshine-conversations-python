@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**update_switchboard**](SwitchboardsApi.md#update_switchboard) | **PATCH** /v2/apps/{appId}/switchboards/{switchboardId} | Update Switchboard
 
 
-## create_switchboard
+# **create_switchboard**
 > SwitchboardResponse create_switchboard(app_id)
 
 Create Switchboard
@@ -19,30 +19,36 @@ Create a switchboard.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.switchboard_response import SwitchboardResponse
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -53,51 +59,16 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     try:
         # Create Switchboard
         api_response = api_instance.create_switchboard(app_id)
+        print("The response of SwitchboardsApi->create_switchboard:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling SwitchboardsApi->create_switchboard: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.SwitchboardsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-
-    try:
-        # Create Switchboard
-        api_response = api_instance.create_switchboard(app_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SwitchboardsApi->create_switchboard: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -117,6 +88,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -125,8 +97,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## delete_switchboard
-> object delete_switchboard(app_idswitchboard_id)
+# **delete_switchboard**
+> object delete_switchboard(app_id, switchboard_id)
 
 Delete Switchboard
 
@@ -134,30 +106,35 @@ Deletes the switchboard and all its switchboard integrations. The integrations l
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -168,53 +145,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Switchboard
-        api_response = api_instance.delete_switchboard(app_idswitchboard_id)
+        api_response = api_instance.delete_switchboard(app_id, switchboard_id)
+        print("The response of SwitchboardsApi->delete_switchboard:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling SwitchboardsApi->delete_switchboard: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.SwitchboardsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    switchboard_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard.
-
-    try:
-        # Delete Switchboard
-        api_response = api_instance.delete_switchboard(app_idswitchboard_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SwitchboardsApi->delete_switchboard: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -235,6 +176,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -242,39 +184,46 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## list_switchboards
+# **list_switchboards**
 > SwitchboardListResponse list_switchboards(app_id)
 
 List Switchboards
 
-Lists all switchboards belonging to the app. 
+Lists all switchboards belonging to the app.
+
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.switchboard_list_response import SwitchboardListResponse
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -285,51 +234,16 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
     try:
         # List Switchboards
         api_response = api_instance.list_switchboards(app_id)
+        print("The response of SwitchboardsApi->list_switchboards:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling SwitchboardsApi->list_switchboards: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.SwitchboardsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-
-    try:
-        # List Switchboards
-        api_response = api_instance.list_switchboards(app_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SwitchboardsApi->list_switchboards: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -349,6 +263,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -356,8 +271,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## update_switchboard
-> SwitchboardResponse update_switchboard(app_idswitchboard_idswitchboard_update_body)
+# **update_switchboard**
+> SwitchboardResponse update_switchboard(app_id, switchboard_id, switchboard_update_body)
 
 Update Switchboard
 
@@ -365,30 +280,37 @@ Updates a switchboard record.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.switchboard_response import SwitchboardResponse
+from sunshine_conversations_client.models.switchboard_update_body import SwitchboardUpdateBody
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -400,54 +322,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Switchboard
-        api_response = api_instance.update_switchboard(app_idswitchboard_idswitchboard_update_body)
+        api_response = api_instance.update_switchboard(app_id, switchboard_id, switchboard_update_body)
+        print("The response of SwitchboardsApi->update_switchboard:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling SwitchboardsApi->update_switchboard: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.SwitchboardsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    switchboard_id = '5d8cff3cd55b040010928b5b' # str | Identifies the switchboard.
-    switchboard_update_body = sunshine_conversations_client.SwitchboardUpdateBody() # SwitchboardUpdateBody | 
-
-    try:
-        # Update Switchboard
-        api_response = api_instance.update_switchboard(app_idswitchboard_idswitchboard_update_body)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SwitchboardsApi->update_switchboard: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -469,6 +354,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |

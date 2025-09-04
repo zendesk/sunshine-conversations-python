@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**post_message**](MessagesApi.md#post_message) | **POST** /v2/apps/{appId}/conversations/{conversationId}/messages | Post Message
 
 
-## delete_all_messages
-> object delete_all_messages(app_idconversation_id)
+# **delete_all_messages**
+> object delete_all_messages(app_id, conversation_id)
 
 Delete All Messages
 
@@ -19,30 +19,35 @@ Delete all messages of a particular conversation.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -53,53 +58,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete All Messages
-        api_response = api_instance.delete_all_messages(app_idconversation_id)
+        api_response = api_instance.delete_all_messages(app_id, conversation_id)
+        print("The response of MessagesApi->delete_all_messages:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling MessagesApi->delete_all_messages: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.MessagesApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-
-    try:
-        # Delete All Messages
-        api_response = api_instance.delete_all_messages(app_idconversation_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling MessagesApi->delete_all_messages: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -120,6 +89,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -127,8 +97,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## delete_message
-> object delete_message(app_idconversation_idmessage_id)
+# **delete_message**
+> object delete_message(app_id, conversation_id, message_id)
 
 Delete Message
 
@@ -136,30 +106,35 @@ Delete a single message of a particular conversation.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -171,54 +146,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Message
-        api_response = api_instance.delete_message(app_idconversation_idmessage_id)
+        api_response = api_instance.delete_message(app_id, conversation_id, message_id)
+        print("The response of MessagesApi->delete_message:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling MessagesApi->delete_message: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.MessagesApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    message_id = '029c31f25a21b47effd7be90' # str | The id of the message.
-
-    try:
-        # Delete Message
-        api_response = api_instance.delete_message(app_idconversation_idmessage_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling MessagesApi->delete_message: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -240,6 +178,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -247,39 +186,55 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## list_messages
-> MessageListResponse list_messages(app_idconversation_idpage=page)
+# **list_messages**
+> MessageListResponse list_messages(app_id, conversation_id, page=page)
 
 List Messages
 
-List all messages for a particular conversation. This API is paginated through [cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits), in the _backwards_ direction, with the most recent (i.e. last) page of messages being returned by default. The `hasMore` flag indicates whether more messages exist in the direction you are currently paginating through. To page backwards in the history, use the `beforeCursor` or follow the `prev` link. The page size limit is fixed at 100 messages per page.  ```shell /v2/apps/:appId/conversations/:conversationId/messages?page[before]=5f32b88acf6bf25073b2be56 ``` 
+List all messages for a particular conversation. This API is paginated through
+[cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits), in the _backwards_ direction, with the
+most recent (i.e. last) page of messages being returned by default. The `hasMore` flag indicates whether more messages
+exist in the direction you are currently paginating through. To page backwards in the history, use the `beforeCursor` or follow the `prev`
+link. The page size limit is fixed at 100 messages per page.
+
+```shell
+/v2/apps/:appId/conversations/:conversationId/messages?page[before]=5f32b88acf6bf25073b2be56
+```
+
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.message_list_response import MessageListResponse
+from sunshine_conversations_client.models.page import Page
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -291,54 +246,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Messages
-        api_response = api_instance.list_messages(app_idconversation_idpage=page)
+        api_response = api_instance.list_messages(app_id, conversation_id, page=page)
+        print("The response of MessagesApi->list_messages:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling MessagesApi->list_messages: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.MessagesApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    page = sunshine_conversations_client.Page() # Page | Contains parameters for applying cursor pagination. (optional)
-
-    try:
-        # List Messages
-        api_response = api_instance.list_messages(app_idconversation_idpage=page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling MessagesApi->list_messages: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -360,6 +278,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -367,8 +286,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## post_message
-> MessagePostResponse post_message(app_idconversation_idmessage_post)
+# **post_message**
+> MessagePostResponse post_message(app_id, conversation_id, message_post)
 
 Post Message
 
@@ -376,30 +295,37 @@ Send a message in a particular conversation.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.message_post import MessagePost
+from sunshine_conversations_client.models.message_post_response import MessagePostResponse
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -411,54 +337,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Post Message
-        api_response = api_instance.post_message(app_idconversation_idmessage_post)
+        api_response = api_instance.post_message(app_id, conversation_id, message_post)
+        print("The response of MessagesApi->post_message:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling MessagesApi->post_message: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.MessagesApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    conversation_id = '029c31f25a21b47effd7be90' # str | Identifies the conversation.
-    message_post = sunshine_conversations_client.MessagePost() # MessagePost | 
-
-    try:
-        # Post Message
-        api_response = api_instance.post_message(app_idconversation_idmessage_post)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling MessagesApi->post_message: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -480,6 +369,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |

@@ -1,5 +1,9 @@
 # Changelog
 
+## [17.0.1] - 2025-09-02
+
+- Fixes import issue
+
 ## [17.0.0] - 2025-08-25
 
 - Fixes https://github.com/zendesk/sunshine-conversations-python/issues/18

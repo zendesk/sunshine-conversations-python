@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**update_integration**](IntegrationsApi.md#update_integration) | **PATCH** /v2/apps/{appId}/integrations/{integrationId} | Update Integration
 
 
-## create_integration
-> IntegrationResponse create_integration(app_idintegration)
+# **create_integration**
+> IntegrationResponse create_integration(app_id, integration)
 
 Create Integration
 
@@ -20,30 +20,37 @@ The Create Integration endpoint allows you to provision apps with front-end mess
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.integration import Integration
+from sunshine_conversations_client.models.integration_response import IntegrationResponse
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -54,53 +61,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Integration
-        api_response = api_instance.create_integration(app_idintegration)
+        api_response = api_instance.create_integration(app_id, integration)
+        print("The response of IntegrationsApi->create_integration:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling IntegrationsApi->create_integration: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    integration = sunshine_conversations_client.Integration() # Integration | 
-
-    try:
-        # Create Integration
-        api_response = api_instance.create_integration(app_idintegration)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IntegrationsApi->create_integration: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -121,6 +92,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -128,8 +100,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## delete_integration
-> object delete_integration(app_idintegration_id)
+# **delete_integration**
+> object delete_integration(app_id, integration_id)
 
 Delete Integration
 
@@ -137,30 +109,35 @@ Delete the specified integration.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -171,53 +148,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Integration
-        api_response = api_instance.delete_integration(app_idintegration_id)
+        api_response = api_instance.delete_integration(app_id, integration_id)
+        print("The response of IntegrationsApi->delete_integration:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling IntegrationsApi->delete_integration: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    integration_id = '029c31f25a21b47effd7be90' # str | The id of the integration.
-
-    try:
-        # Delete Integration
-        api_response = api_instance.delete_integration(app_idintegration_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IntegrationsApi->delete_integration: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -238,6 +179,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -246,8 +188,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## get_integration
-> IntegrationResponse get_integration(app_idintegration_id)
+# **get_integration**
+> IntegrationResponse get_integration(app_id, integration_id)
 
 Get Integration
 
@@ -255,30 +197,36 @@ Get integration.
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.integration_response import IntegrationResponse
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -289,53 +237,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Integration
-        api_response = api_instance.get_integration(app_idintegration_id)
+        api_response = api_instance.get_integration(app_id, integration_id)
+        print("The response of IntegrationsApi->get_integration:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling IntegrationsApi->get_integration: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    integration_id = '029c31f25a21b47effd7be90' # str | The id of the integration.
-
-    try:
-        # Get Integration
-        api_response = api_instance.get_integration(app_idintegration_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IntegrationsApi->get_integration: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -356,6 +268,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -363,39 +276,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## list_integrations
-> IntegrationListResponse list_integrations(app_idpage=pagefilter=filter)
+# **list_integrations**
+> IntegrationListResponse list_integrations(app_id, page=page, filter=filter)
 
 List Integrations
 
-List available integrations. This API is paginated through [cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits). ```shell /v2/apps/:appId/integrations?page[after]=5e1606762556d93e9c176f69&page[size]=10&filter[types]=custom,web ``` 
+List available integrations. This API is paginated through [cursor pagination](#section/Introduction/API-Pagination-and-Records-Limits).
+```shell
+/v2/apps/:appId/integrations?page[after]=5e1606762556d93e9c176f69&page[size]=10&filter[types]=custom,web
+```
+
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.integration_list_filter import IntegrationListFilter
+from sunshine_conversations_client.models.integration_list_response import IntegrationListResponse
+from sunshine_conversations_client.models.page import Page
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -407,54 +332,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # List Integrations
-        api_response = api_instance.list_integrations(app_idpage=pagefilter=filter)
+        api_response = api_instance.list_integrations(app_id, page=page, filter=filter)
+        print("The response of IntegrationsApi->list_integrations:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling IntegrationsApi->list_integrations: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    page = sunshine_conversations_client.Page() # Page | Contains parameters for applying cursor pagination. (optional)
-    filter = sunshine_conversations_client.IntegrationListFilter() # IntegrationListFilter | Contains parameters for filtering the results. (optional)
-
-    try:
-        # List Integrations
-        api_response = api_instance.list_integrations(app_idpage=pagefilter=filter)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IntegrationsApi->list_integrations: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -476,6 +364,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -483,8 +372,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## update_integration
-> IntegrationResponse update_integration(app_idintegration_idintegration_update)
+# **update_integration**
+> IntegrationResponse update_integration(app_id, integration_id, integration_update)
 
 Update Integration
 
@@ -492,30 +381,37 @@ Allows you to update certain fields of existing integrations. If updating a spec
 
 ### Example
 
-Basic Authentication (basicAuth):
+* Basic Authentication (basicAuth):
+* Bearer (JWT) Authentication (bearerAuth):
+
 ```python
-from __future__ import print_function
-import time
 import sunshine_conversations_client
+from sunshine_conversations_client.models.integration_response import IntegrationResponse
+from sunshine_conversations_client.models.integration_update import IntegrationUpdate
 from sunshine_conversations_client.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.smooch.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = sunshine_conversations_client.Configuration(
     host = "https://api.smooch.io"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = sunshine_conversations_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
 
 # Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
+configuration = sunshine_conversations_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 # Enter a context with an instance of the API client
 with sunshine_conversations_client.ApiClient(configuration) as api_client:
@@ -527,54 +423,17 @@ with sunshine_conversations_client.ApiClient(configuration) as api_client:
 
     try:
         # Update Integration
-        api_response = api_instance.update_integration(app_idintegration_idintegration_update)
+        api_response = api_instance.update_integration(app_id, integration_id, integration_update)
+        print("The response of IntegrationsApi->update_integration:\n")
         pprint(api_response)
-    except ApiException as e:
+    except Exception as e:
         print("Exception when calling IntegrationsApi->update_integration: %s\n" % e)
 ```
 
-Bearer (JWT) Authentication (bearerAuth):
-```python
-from __future__ import print_function
-import time
-import sunshine_conversations_client
-from sunshine_conversations_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.smooch.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = sunshine_conversations_client.Configuration(
-    host = "https://api.smooch.io"
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure HTTP basic authorization: basicAuth
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# Configure Bearer authorization (JWT): bearerAuth
-# Uncomment this if you want to use JWTs
-#configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# Enter a context with an instance of the API client
-with sunshine_conversations_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = sunshine_conversations_client.IntegrationsApi(api_client)
-    app_id = '5d8cff3cd55b040010928b5b' # str | Identifies the app.
-    integration_id = '029c31f25a21b47effd7be90' # str | The id of the integration.
-    integration_update = {"displayName":"My Test Integration"} # IntegrationUpdate | 
-
-    try:
-        # Update Integration
-        api_response = api_instance.update_integration(app_idintegration_idintegration_update)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IntegrationsApi->update_integration: %s\n" % e)
-```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -596,6 +455,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |

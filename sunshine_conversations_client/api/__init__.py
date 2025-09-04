@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 # flake8: noqa
 
 # import apis into api package
@@ -20,4 +18,3 @@ from sunshine_conversations_client.api.switchboard_integrations_api import Switc
 from sunshine_conversations_client.api.switchboards_api import SwitchboardsApi
 from sunshine_conversations_client.api.users_api import UsersApi
 from sunshine_conversations_client.api.webhooks_api import WebhooksApi
-
