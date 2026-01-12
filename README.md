@@ -1,3 +1,7 @@
+# Deprecation notice
+
+Zendesk is no longer automatically updating this repository based on changes to the Sunshine Conversations OpenAPI specification. We encourage users to refer to the [Sunshine Conversations OpenAPI specification](https://github.com/zendesk/sunshine-conversations-api-spec) and our [Developer Documentation](https://developer.zendesk.com/documentation/conversations/) for details on working with the Sunshine Conversations API.
+
 # sunshine-conversations-client
 # Introduction
 
